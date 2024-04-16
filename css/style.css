@@ -1873,7 +1873,7 @@ fieldset[disabled] .s-btn {
 
 @media (max-width: 61.9em) {
   .s-header-v2__nav {
-    background: #122620;
+    /* background: #122620; */
     padding: 1.25rem 0;
   }
 }
