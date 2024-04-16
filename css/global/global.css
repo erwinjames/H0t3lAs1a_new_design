@@ -7212,7 +7212,7 @@
 ------------------------------------*/
 /* Text Colors */
 .g-color--primary {
-  color: #13b1cd !important;
+  color: #D6AD60 !important;
 }
 
 .g-color--blueviolet {
@@ -7238,7 +7238,9 @@
 .g-color--dark-light {
   color: #242526 !important;
 }
-
+.g-color--cream{
+  color:#F4EBD0 !important;
+}
 .g-color--heading {
   color: #242424 !important;
 }
@@ -7246,7 +7248,12 @@
 .g-color--white {
   color: #fff !important;
 }
-
+.g-color--gold{
+  color:#D6AD60 !important;
+}
+.g-color--darkgreen{
+  color:#122620 !important;
+}
 .g-color--text {
   color: #656565 !important;
 }
@@ -7304,7 +7311,9 @@
 .g-bg-color--gold {
   background-color: #b99769 !important;
 }
-
+.g-bg-color--lightgold{
+  background-color: #D6AD60 !important;
+}
 .g-bg-color--body {
   background-color: #fff !important;
 }
@@ -7324,7 +7333,9 @@
 .g-bg-color--white {
   background-color: #fff !important;
 }
-
+.g-bg-color--darkgreen {
+  background-color: #122620 !important;
+}
 .g-bg-color--text {
   background-color: #656565 !important;
 }

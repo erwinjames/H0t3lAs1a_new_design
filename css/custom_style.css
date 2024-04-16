@@ -5,7 +5,7 @@
 
 .rooms-page-item {
 	-webkit-box-shadow: 2px 15px 75px 6px #EBEBEB;
-	box-shadow: 2px 15px 75px 6px #EBEBEB;
+	box-shadow: -7px 9px 20px 0px #b5b5b5;
 	margin-bottom: 100px;
 }
 
@@ -14,12 +14,13 @@
 }
 
 .rooms-page-item .room-pic-slider.owl-carousel .owl-nav button[type=button] {
-	color: #ffffff;
+	color: #122620;
 	font-size: 26px;
 	height: 69px;
 	width: 52px;
-	background: #13b1cd;
+	background: #D6AD60;
 	line-height: 72px;
+	border-color: #D6AD60;
 	position: absolute;
 	left: 0;
 	top: 50%;
@@ -36,6 +37,8 @@
 	padding-top: 33px;
 	padding-right: 30px;
 	padding-bottom: 34px;
+	padding-left: 30px;
+
 }
 
 .rooms-page-item .room-text .room-title {
@@ -60,7 +63,7 @@
 	left: -40px;
 	bottom: 7px;
 	font-size: 14px;
-	font-family: "Open Sans", sans-serif;
+	font-family: Lato, sans-serif;
 	font-weight: 300;
 	line-height: 14px;
 	color: #2d220f;
@@ -69,7 +72,7 @@
 .rooms-page-item .room-text .room-title .room-price h2 {
 	font-size: 36px;
 	color: #081624;
-	font-family: "Open Sans", sans-serif;
+	font-family: Lato, sans-serif;
 	font-weight: 400;
 }
 
@@ -78,7 +81,7 @@
 	right: -37px;
 	bottom: 13px;
 	color: #2d220f;
-	font-family: "Open Sans", sans-serif;
+	font-family: Lato, sans-serif;
 	font-weight: 300;
 }
 
@@ -110,14 +113,15 @@
 
 .rooms-page-item .room-text .room-features .room-info i {
 	display: block;
-	color: #13b1cd;
+	color: #D6AD60;
 	margin-bottom: -4px;
 }
 
 .rooms-page-item .room-text .room-features .room-info span {
 	display: block;
 	font-size: 14px;
-	font-family: "Open Sans", sans-serif;
+	font-family: Lato, sans-serif;
 	font-weight: 400;
-	color: #2d220f;
+	color: #F4EBD0;
 }
+
