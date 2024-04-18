@@ -7272,6 +7272,9 @@
 .g-color--white-opacity {
   color: rgba(255, 255, 255, 0.8) !important;
 }
+.g-color--gold-opacity {
+  color: #D6AD60 !important;
+}
 
 .g-color--white-opacity-light {
   color: rgba(255, 255, 255, 0.5) !important;
