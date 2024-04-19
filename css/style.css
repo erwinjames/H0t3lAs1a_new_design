@@ -1897,6 +1897,19 @@ fieldset[disabled] .s-btn {
 .s-header-v2__nav-item .dropdown-backdrop {
   position: relative;
 }
+.s-header-v2__nav-link-btn {
+  position: relative;
+  display: block;
+  font-size: 0.8125rem;
+  /* font-weight: 700; */
+  font-family: Montserrat, sans-serif;
+  color: #D6AD60;
+  text-transform: uppercase;
+  margin: 1.5rem 0 .9rem;
+  transition-duration: 300ms;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.7, 1, 0.7, 1);
+}
 
 .s-header-v2__nav-link {
   position: relative;

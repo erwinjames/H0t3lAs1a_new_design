@@ -2,7 +2,6 @@
 .room-section {
 	padding-bottom: 0;
 }
-
 .rooms-page-item {
 	-webkit-box-shadow: 2px 15px 75px 6px #EBEBEB;
 	box-shadow: -7px 9px 20px 0px #b5b5b5;
@@ -89,12 +88,12 @@
 	margin-bottom: 20px;
 }
 
-.rooms-page-item .room-text .room-desc p {
+/* .rooms-page-item .room-text .room-desc p {
 	font-size: 16px;
 	color: #242424;
 	line-height: 32px;
 	letter-spacing: 0.2px;
-}
+} */
 
 .rooms-page-item .room-text .room-features {
 	overflow: hidden;

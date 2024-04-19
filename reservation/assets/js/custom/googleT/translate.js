@@ -1,13 +1,29 @@
-// script.js
-// Function to translate all text elements on the page
+// Function to translate specific elements on the page
 function translatePage(targetLanguage) {
-  const elementsToTranslate = document.querySelectorAll('[data-translate]');
+  const elementsToTranslate = document.querySelectorAll('.translate');
+  
   elementsToTranslate.forEach(element => {
-    const originalText = element.dataset.translate;
-    googleTranslate(targetLanguage, originalText, translatedText => {
-      element.textContent = translatedText;
+    const originalText = element.textContent.trim();
+    const sentences = originalText.split(/[.!]/); // Split the text into sentences
+
+    let translatedText = '';
+
+    sentences.forEach(sentence => {
+      googleTranslate(targetLanguage, sentence, translatedSentence => {
+        translatedText += translatedSentence + ' '; // Concatenate translated sentences
+        element.textContent = translatedText;
+      });
     });
   });
+
+  // Toggle visibility of language buttons based on target language
+  if (targetLanguage === 'en') {
+    englishButton.style.display = 'none';
+    japaneseButton.style.display = 'inline-block';
+  } else if (targetLanguage === 'ja') {
+    japaneseButton.style.display = 'none';
+    englishButton.style.display = 'inline-block';
+  }
 }
 
 // Google Translate function
