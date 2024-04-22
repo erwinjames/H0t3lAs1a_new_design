@@ -151,48 +151,52 @@ var KTCreateAccount = function () {
 			form,
 			{
 				fields: {
-					account_type: {
-						validators: {
-							notEmpty: {
-								message: 'Account type is required'
-							}
-						}
-					}
-				},
-				plugins: {
-					trigger: new FormValidation.plugins.Trigger(),
-					bootstrap: new FormValidation.plugins.Bootstrap5({
-						rowSelector: '.fv-row',
-                        eleInvalidClass: '',
-                        eleValidClass: ''
-					})
-				}
-			}
-		));
-
-		// Step 2
-		validations.push(FormValidation.formValidation(
-			form,
-			{
-				fields: {
-					'account_team_size': {
+					'account_name': {
 						validators: {
 							notEmpty: {
 								message: 'Time size is required'
 							}
 						}
 					},
-					'account_name': {
+					'p_name': {
 						validators: {
 							notEmpty: {
 								message: 'Account name is required'
 							}
 						}
 					},
-					'account_plan': {
+					'address': {
 						validators: {
 							notEmpty: {
 								message: 'Account plan is required'
+							}
+						}
+					},
+					'tel-num': {
+						validators: {
+							notEmpty: {
+								message: 'Account name is required'
+							}
+						}
+					},
+					'fax-num': {
+						validators: {
+							notEmpty: {
+								message: 'Account name is required'
+							}
+						}
+					},
+					'email': {
+						validators: {
+							notEmpty: {
+								message: 'Account name is required'
+							}
+						}
+					},
+					'c-mail': {
+						validators: {
+							notEmpty: {
+								message: 'Account name is required'
 							}
 						}
 					}
@@ -202,8 +206,32 @@ var KTCreateAccount = function () {
 					// Bootstrap Framework Integration
 					bootstrap: new FormValidation.plugins.Bootstrap5({
 						rowSelector: '.fv-row',
-                        eleInvalidClass: '',
-                        eleValidClass: ''
+						eleInvalidClass: '',
+						eleValidClass: ''
+					})
+				}
+			}
+		));
+		// Step 2
+		validations.push(FormValidation.formValidation(
+			form,
+			{
+				fields: {
+					'CheckInOut': {
+						validators: {
+							notEmpty: {
+								message: 'Time size is required'
+							}
+						}
+					}
+				},
+				plugins: {
+					trigger: new FormValidation.plugins.Trigger(),
+					// Bootstrap Framework Integration
+					bootstrap: new FormValidation.plugins.Bootstrap5({
+						rowSelector: '.fv-row',
+						eleInvalidClass: '',
+						eleValidClass: ''
 					})
 				}
 			}

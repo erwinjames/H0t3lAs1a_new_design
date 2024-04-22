@@ -142,18 +142,18 @@
 															<!--begin::Input group-->
 															<div class="mb-10 fv-row">
 																<!--begin::Label-->
-																<label class="form-label mb-3" data-translate="Name">Name</label>
+																<label class="form-label mb-3 translate">Name</label>
 																<!--end::Label-->
 																<!--begin::Input-->
-																<input type="text" class="form-control form-control-lg form-control-solid" name="account_name" placeholder="" value="" />
+																<input type="text" class="form-control form-control-lg form-control-solid" name="account_name" placeholder="*" value="" />
 																<!--end::Input-->
 															</div>
                                                             <div class="mb-10 fv-row">
 																<!--begin::Label-->
-																<label class="form-label mb-3" data-translate="Phonetic pronunciation of the name:">Phonetic pronunciation of the name:</label>
+																<label class="form-label mb-3">Phonetic pronunciation of the name:</label>
 																<!--end::Label-->
 																<!--begin::Input-->
-																<input type="text" class="form-control form-control-lg form-control-solid" name="p_name" placeholder="" value="" />
+																<input type="text" class="form-control form-control-lg form-control-solid" name="p_name" placeholder="*" value="" />
 																<!--end::Input-->
 															</div>
 															<!--end::Input group-->
@@ -184,7 +184,7 @@
 																		<!--end:Label-->
 																		<!--begin:Input-->
 																		<span class="form-check form-check-custom form-check-solid">
-																			<input class="form-check-input" type="radio" name="gender" value="1" />
+																			<input class="form-check-input" type="radio" name="gender" value="Female" />
 																		</span>
 																		<!--end:Input-->
 																	</label>
@@ -209,7 +209,7 @@
 																		<!--end:Label-->
 																		<!--begin:Input-->
 																		<span class="form-check form-check-custom form-check-solid">
-																			<input class="form-check-input" type="radio"  name="gender" value="2" />
+																			<input class="form-check-input" type="radio"  name="gender" value="Male" />
 																		</span>
 																		<!--end:Input-->
 																	</label>
@@ -223,7 +223,7 @@
 																<label class="form-label mb-3" data-translate="Address:">Address:</label>
 																<!--end::Label-->
 																<!--begin::Input-->
-																<input type="text" class="form-control form-control-lg form-control-solid" name="address" placeholder="" value="" />
+																<input type="text" class="form-control form-control-lg form-control-solid" name="address" placeholder="*" value="" />
 																<!--end::Input-->
 															</div>
                                                             <div class="mb-10 fv-row">
@@ -231,7 +231,7 @@
 																<label class="form-label mb-3" data-translate="Telephone number:">Telephone number:</label>
 																<!--end::Label-->
 																<!--begin::Input-->
-																<input type="tel" class="form-control form-control-lg form-control-solid" name="telnum" placeholder="xxx-xxx-xxxx" value="" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" />
+																<input type="tel" class="form-control form-control-lg form-control-solid" name="tel-num" placeholder="xxx-xxx-xxxx" value="" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" />
 																<!--end::Input-->
 															</div>
                                                             <div class="mb-10 fv-row">
@@ -239,7 +239,7 @@
 																<label class="form-label mb-3" data-translate="FAX:">FAX:</label>
 																<!--end::Label-->
 																<!--begin::Input-->
-																<input type="tel" class="form-control form-control-lg form-control-solid" name="faxnum" placeholder="xxx-xxx-xxxx" value="" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" />
+																<input type="tel" class="form-control form-control-lg form-control-solid" name="fax-num" placeholder="xxx-xxx-xxxx" value="" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" />
 																<!--end::Input-->
                                                             </div>
                                                             <div class="mb-10 fv-row">
@@ -247,7 +247,7 @@
 																<label class="form-label mb-3" data-translate="E-mail:">E-mail:</label>
 																<!--end::Label-->
 																<!--begin::Input-->
-																<input type="email" class="form-control form-control-lg form-control-solid" name="email" placeholder="" value="" />
+																<input type="email" class="form-control form-control-lg form-control-solid" name="email" placeholder="*" value="" />
 																<!--end::Input-->
 															</div>
                                                             <div class="mb-10 fv-row">
@@ -255,7 +255,7 @@
 																<label class="form-label mb-3" data-translate="Confirm E-mail:">Confirm E-mail:</label>
 																<!--end::Label-->
 																<!--begin::Input-->
-																<input type="email" class="form-control form-control-lg form-control-solid" name="cmail" placeholder="" value="" />
+																<input type="email" class="form-control form-control-lg form-control-solid" name="c-mail" placeholder="*" value="" />
 																<!--end::Input-->
 															</div>
 														</div>
@@ -316,7 +316,7 @@
 																	</span>
 																</label>
 																<!--end::Label-->
-																<input type="text" class="form-control form-control-solid" placeholder="" name="card_name" value="" />
+																<input type="text" class="form-control form-control-solid" placeholder="*" name="card_name" value="" />
 															</div>
 															<!--end::Input group-->
 															<!--begin::Input group-->
@@ -464,7 +464,7 @@
                                                                             <!--end::Label-->
                                                                             <!--begin::Col-->
                                                                             <div class="col-lg-8 fv-row">
-                                                                                <input type="number" name="num_of_adults" class="form-control form-control-lg form-control-solid" placeholder="" value="" />
+                                                                                <input type="number" name="num_of_adults" class="form-control form-control-lg form-control-solid" placeholder="*" value="" />
                                                                             </div>
                                                                             <!--end::Col-->
                                                                         </div>
@@ -472,11 +472,11 @@
                                                                         <!--begin::Input group-->
                                                                         <div class="row mb-6">
                                                                             <!--begin::Label-->
-                                                                            <label class="col-lg-4 col-form-label required fw-semibold fs-6" data-translate="Number of childer (11 years old and under)">Number of children (11 years old and under):</label>
+                                                                            <label class="col-lg-4 col-form-label required fw-semibold fs-6">Number of children (11 years old and under):</label>
                                                                             <!--end::Label-->
                                                                             <!--begin::Col-->
                                                                             <div class="col-lg-8 fv-row">
-                                                                                <input type="number" name="num_of_child" class="form-control form-control-lg form-control-solid" placeholder="" value="" />
+                                                                                <input type="number" name="num_of_child" class="form-control form-control-lg form-control-solid" placeholder="*" value="" />
                                                                             </div>
                                                                             <!--end::Col-->
                                                                         </div>
@@ -491,7 +491,7 @@
                                                                             <!--end::Label-->
                                                                             <!--begin::Col-->
                                                                             <div class="col-lg-8 fv-row">
-                                                                                <select id="roomType" name="roomType" aria-label="Select a Room Type .. " data-control="select2" data-placeholder="" class="form-select form-select-solid form-select-lg fw-semibold">
+                                                                                <select id="roomType" name="roomType" aria-label="Select a Room Type .. " data-control="select2" data-placeholder="*" class="form-select form-select-solid form-select-lg fw-semibold">
                                                                                     <option value="" data-translate="Select a Room Type...">Select a Room Type...</option>
                                                                                     <option value="Economy Plus" data-translate="Economy Plus">Economy Plus</option>
                                                                                     <option value="Standard" data-translate="Standard">Standard</option>
@@ -509,12 +509,12 @@
                                                                         <!--begin::Input group-->
                                                                         <div class="row mb-6">
                                                                             <!--begin::Label-->
-                                                                            <label class="col-lg-4 col-form-label required fw-semibold fs-6" data-translate="Number of rooms:">Number of rooms:</label>
+                                                                            <label class="col-lg-4 col-form-label required fw-semibold fs-6">Number of rooms:</label>
                                                                             <!--end::Label-->
                                                                             <!--begin::Col-->
                                                                             <div class="col-lg-8 fv-row">
                                                                                 <!--begin::Input-->
-                                                                                <select name="num_rooms" aria-label="Select a Number of Rooms" data-control="select2" data-placeholder="" class="form-select form-select-solid form-select-lg">
+                                                                                <select name="num_rooms" aria-label="Select a Number of Rooms" data-control="select2" data-placeholder="*" class="form-select form-select-solid form-select-lg">
                                                                                     <option value="" data-translate="Select a Number of Rooms...">Select a Number of Rooms...</option>
                                                                                     <option value="1">1</option>
                                                                                     <option value="2">2</option>
@@ -535,11 +535,11 @@
                                                                         <!--begin::Input group-->
                                                                         <div class="row mb-6">
                                                                             <!--begin::Label-->
-                                                                            <label class="col-lg-4 col-form-label required fw-semibold fs-6" data-translate="Number of Guests:">Number of Guests:</label>
+                                                                            <label class="col-lg-4 col-form-label required fw-semibold fs-6">Number of Guests:</label>
                                                                             <!--end::Label-->
                                                                             <!--begin::Col-->
                                                                             <div class="col-lg-8 fv-row">
-                                                                                <select name="numOfguest" aria-label="Select a Timezone" data-control="select2" data-placeholder="" class="form-select form-select-solid form-select-lg">
+                                                                                <select name="numOfguest" aria-label="Select a Timezone" data-control="select2" data-placeholder="*" class="form-select form-select-solid form-select-lg">
                                                                                     <option value="">Select a Timezone..</option>
                                                                                     <option data-bs-offset="-39600" value="1">1</option>
                                                                                     <option data-bs-offset="-39600" value="2">2</option>
@@ -552,11 +552,11 @@
                                                                         <!--begin::Input group-->
                                                                         <div class="row mb-6">
                                                                             <!--begin::Label-->
-                                                                            <label class="col-lg-4 col-form-label fw-semibold fs-6" data-translate="Preferred bed type:">Preferred bed type:</label>
+                                                                            <label class="col-lg-4 col-form-label fw-semibold fs-6">Preferred bed type:</label>
                                                                             <!--end::Label-->
                                                                             <!--begin::Col-->
                                                                             <div class="col-lg-8 fv-row">
-                                                                                <select name="preBedType" aria-label="Select a Preferred bed type" data-control="select2" data-placeholder="" class="form-select form-select-solid form-select-lg">
+                                                                                <select name="preBedType" aria-label="Select a Preferred bed type" data-control="select2" data-placeholder="*" class="form-select form-select-solid form-select-lg">
                                                                                     <option value="" data-translate="Select a Preferred bed type..">Select a Preferred bed type..</option>
                                                                                     <option value="twin" data-translate="Twin">Twin</option>
                                                                                     <option value="double" data-translate="Double">Double</option>
@@ -570,11 +570,11 @@
                                                                         <!--begin::Input group-->
                                                                         <div class="row mb-6">
                                                                             <!--begin::Label-->
-                                                                            <label class="col-lg-4 col-form-label fw-semibold fs-6" data-translate="Number of guests">Number of guests:</label>
+                                                                            <label class="col-lg-4 col-form-label fw-semibold fs-6">Number of guests:</label>
                                                                             <!--end::Label-->
                                                                             <!--begin::Col-->
                                                                             <div class="col-lg-8 fv-row">
-                                                                                <select name="numOfguest" aria-label="Select a Currency" data-control="select2" data-placeholder="" class="form-select form-select-solid form-select-lg">
+                                                                                <select name="numOfguest" aria-label="Select a Currency" data-control="select2" data-placeholder="*" class="form-select form-select-solid form-select-lg">
                                                                                     <option value="" data-translate="Select a Number of guests">Select a Number of Guests..</option>
                                                                                     <option value="1">1</option>
                                                                                     <option value="2">2</option>
@@ -587,18 +587,18 @@
                                                                         <!--begin::Input group-->
                                                                         <div class="row mb-6" id="extraBedRow" style="display: none;">
                                                                             <!--begin::Label-->
-                                                                            <label class="col-lg-4 col-form-label fw-semibold fs-6" data-translate="Extra Bed:">Extra Bed:</label>
+                                                                            <label class="col-lg-4 col-form-label fw-semibold fs-6">Extra Bed:</label>
                                                                             <!--end::Label-->
                                                                             <!--begin::Col-->
                                                                             <div class="col-lg-8 fv-row">
-                                                                                <select name="extrabed" aria-label="Select a Extra Bed" data-control="select2" data-placeholder="" class="form-select form-select-solid form-select-lg">
+                                                                                <select name="extrabed" aria-label="Select a Extra Bed" data-control="select2" data-placeholder="*" class="form-select form-select-solid form-select-lg">
                                                                                     <option value="">Select a Extra Bed..</option>
                                                                                     <option data-kt-flag="flags/united-states.svg" value="0">0</option>
                                                                                     <option data-kt-flag="flags/united-states.svg" value="1">1</option>
                                                                                 </select>
                                                                                 
                                                                             <!--begin::Hint-->
-                                                                                <div class="form-text" data-translate="Only Executive and Junior Suite rooms can accommodate an extra bed.">Only Executive and Junior Suite rooms can accommodate an extra bed.</div>
+                                                                                <div class="form-text">Only Executive and Junior Suite rooms can accommodate an extra bed.</div>
                                                                             <!--end::Hint-->    
                                                                             </div>
                                                                             <!--end::Col-->
@@ -610,7 +610,7 @@
                                                                             <div class="col-lg-8 fv-row">
                                                                                     <label for="" class="form-label" data-translate="Flight # / Arrival Time :">Flight # / Arrival Time :</label>
                                                                                     <!--begin::Hint-->
-                                                                                        <div class="form-text" data-translate="Please indicate here Including FLIGT NO. and ARRIVAL TIME in case of AIRPORT PICK-UP:">Please indicate here including FLIGHT NO. and ARRIVAL TIME in case of AIRPORT PICK-UP:</div>
+                                                                                        <div class="form-text">Please indicate here including FLIGHT NO. and ARRIVAL TIME in case of AIRPORT PICK-UP:</div>
                                                                                     <!--end::Hint--> 
                                                                             </div>
                                                                             <!--end::Col-->
@@ -852,8 +852,7 @@
 		<!--end::Vendors Javascript-->
         <script src="assets/plugins/custom/datatables/datatables.bundle.js"></script>
 		<!--begin::Custom Javascript(used for this page only)-->
-		<script src="assets/js/custom/landing.js"></script>
-		<script src="assets/js/custom/pages/pricing/general.js"></script>
+		
 		<script src="assets/js/custom/googleT/translate.js"></script>
         <script src="assets/js/custom/utilities/modals/create-account.js"></script>
 		<script src="assets/js/widgets.bundle.js"></script>
@@ -894,9 +893,6 @@
                 }
             });
         });
-    </script>
-		<!--end::Custom Javascript-->
-		<!--end::Javascript-->
+    	</script>
 	</body>
-	<!--end::Body-->
 </html>

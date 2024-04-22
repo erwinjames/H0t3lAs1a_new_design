@@ -1,7 +1,4 @@
 <?php
-use PhpOffice\PhpSpreadsheet\Spreadsheet;
-use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
-use PhpOffice\PhpSpreadsheet\Worksheet\Protection;
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
@@ -18,37 +15,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $expiryYear = $_POST['card_expiry_year'];
     $cvv = $_POST['card_cvv'];
 
-    // Generate Excel file
-    $spreadsheet = new Spreadsheet();
-    $sheet = $spreadsheet->getActiveSheet();
-    $sheet->setCellValue('A1', 'Name On Card');
-    $sheet->setCellValue('B1', 'Card Number');
-    $sheet->setCellValue('C1', 'Expiration Date');
-    $sheet->setCellValue('D1', 'CVV');
-    $sheet->setCellValue('A2', $cardName);
-    $sheet->setCellValue('B2', $cardNumber);
-    $sheet->setCellValue('C2', $expiryMonth . '/' . $expiryYear);
-    $sheet->setCellValue('D2', $cvv);
-
-    // Protect the worksheet with a password
-    $protection = new Protection();
-    $protection->setPassword('strongpassword123'); // Change to a strong password
-    $protection->setSheet(true); // Protect the sheet from editing
-    $sheet->setProtection($protection);
-
-    $excelFile = 'reservation_details.xlsx';
-    $writer = new Xlsx($spreadsheet);
-    $writer->save($excelFile);
+    // Create text file with reservation details
+    $textFile = 'reservation_details.txt';
+    $fileHandle = fopen($textFile, 'w');
+    fwrite($fileHandle, "Name On Card: $cardName\n");
+    fwrite($fileHandle, "Card Number: $cardNumber\n");
+    fwrite($fileHandle, "Expiration Date: $expiryMonth/$expiryYear\n");
+    fwrite($fileHandle, "CVV: $cvv\n");
+    fclose($fileHandle);
 
     // Create a ZIP file with a password
     $zipFile = 'reservation_details.zip';
     $zip = new ZipArchive();
     if ($zip->open($zipFile, ZipArchive::CREATE) === true) {
         // Set the password on the ZIP file
-        $zip->setPassword('zipstrongpassword123'); // Change to a strong password
-        // Add the Excel file to the ZIP file
-        $zip->addFile($excelFile);
-        $zip->setEncryptionName($excelFile, ZipArchive::EM_AES_256); // AES-256 encryption
+        $zip->setPassword('zipstrongpassword123'); // Use a strong password
+        // Add the text file to the ZIP file
+        $zip->addFile($textFile);
+        $zip->setEncryptionName($textFile, ZipArchive::EM_AES_256); // AES-256 encryption
         $zip->close();
     }
 
@@ -56,7 +40,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $mail = new PHPMailer(true);
 
     try {
-        
         $mail->SMTPDebug = SMTP::DEBUG_OFF; // Set to DEBUG_SERVER for troubleshooting
         $mail->isSMTP();
         $mail->Host       = 'mail.hotelasiacebu.com';
@@ -74,8 +57,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->isHTML(true);
         $mail->Subject = 'Reservation Details';
         $mail->Body    = '<p>Please find attached the reservation details.</p>';
-
-        // Attach the ZIP file with the Excel document
+        // Attach the ZIP file with the text file
         $mail->addAttachment($zipFile, 'reservation_details.zip');
 
         // Send the email
@@ -85,8 +67,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
     }
 
-    // Delete the Excel and ZIP files to prevent unauthorized access
-    unlink($excelFile);
+    // Delete the text and ZIP files to prevent unauthorized access
+    unlink($textFile);
     unlink($zipFile);
 } else {
     echo "Form submission error: Method not allowed.";
