@@ -26,7 +26,7 @@ async function translatePage(targetLanguage) {
 
     for (const sentence of sentences) {
       const translatedSentence = await googleTranslate(targetLanguage, sentence.trim());
-      translatedText += `${translatedSentence}`;
+      translatedText += `${translatedSentence}  `;
     }
 
     element.textContent = translatedText.trim();
