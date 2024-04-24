@@ -236,56 +236,6 @@ var KTCreateAccount = function () {
 				}
 			}
 		));
-
-		// Step 3
-		validations.push(FormValidation.formValidation(
-			form,
-			{
-				fields: {
-					'business_name': {
-						validators: {
-							notEmpty: {
-								message: 'Busines name is required'
-							}
-						}
-					},
-					'business_descriptor': {
-						validators: {
-							notEmpty: {
-								message: 'Busines descriptor is required'
-							}
-						}
-					},
-					'business_type': {
-						validators: {
-							notEmpty: {
-								message: 'Busines type is required'
-							}
-						}
-					},
-					'business_email': {
-						validators: {
-							notEmpty: {
-								message: 'Busines email is required'
-							},
-							emailAddress: {
-								message: 'The value is not a valid email address'
-							}
-						}
-					}
-				},
-				plugins: {
-					trigger: new FormValidation.plugins.Trigger(),
-					// Bootstrap Framework Integration
-					bootstrap: new FormValidation.plugins.Bootstrap5({
-						rowSelector: '.fv-row',
-                        eleInvalidClass: '',
-                        eleValidClass: ''
-					})
-				}
-			}
-		));
-
 		// Step 4
 		validations.push(FormValidation.formValidation(
 			form,
