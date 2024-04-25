@@ -79,13 +79,27 @@ var KTCreateAccount = (function () {
                   },
                   email: {
                     validators: {
-                      notEmpty: { message: "E-mail is required" },
-                    },
+                        regexp: {
+                          regexp: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+                          message: "The value is not a valid email address",
+                        },
+                        notEmpty: { message: "Email address is required" },
+                      },
                   },
                   c_mail: {
                     validators: {
-                      notEmpty: { message: "Confirm E-mail is required" },
-                    },
+                        regexp: {
+                          regexp: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+                          message: "The value is not a valid email address",
+                        },
+                        notEmpty: { message: "Confirm Email address is required" },
+                        identical: {
+                            compare: function () {
+                                return s.querySelector('[name="email"]').value;
+                            },
+                            message: 'The email and its confirm are not the same',
+                         },
+                      },
                   },
               },
               plugins: {
@@ -104,43 +118,6 @@ var KTCreateAccount = (function () {
                 CheckInOut: {
                   validators: {
                     notEmpty: { message: "Must Select a preffered date to reserve" },
-                  },
-                },
-              },
-              plugins: {
-                trigger: new FormValidation.plugins.Trigger(),
-                bootstrap: new FormValidation.plugins.Bootstrap5({
-                  rowSelector: ".fv-row",
-                  eleInvalidClass: "",
-                  eleValidClass: "",
-                }),
-              },
-            })
-          ),
-          s.push(
-            FormValidation.formValidation(i, {
-              fields: {
-                business_name: {
-                  validators: {
-                    notEmpty: { message: "Busines name is required" },
-                  },
-                },
-                business_descriptor: {
-                  validators: {
-                    notEmpty: { message: "Busines descriptor is required" },
-                  },
-                },
-                business_type: {
-                  validators: {
-                    notEmpty: { message: "Busines type is required" },
-                  },
-                },
-                business_email: {
-                  validators: {
-                    notEmpty: { message: "Busines email is required" },
-                    emailAddress: {
-                      message: "The value is not a valid email address",
-                    },
                   },
                 },
               },
@@ -182,6 +159,43 @@ var KTCreateAccount = (function () {
                       min: 3,
                       max: 4,
                       message: "CVV must contain 3 to 4 digits only",
+                    },
+                  },
+                },
+              },
+              plugins: {
+                trigger: new FormValidation.plugins.Trigger(),
+                bootstrap: new FormValidation.plugins.Bootstrap5({
+                  rowSelector: ".fv-row",
+                  eleInvalidClass: "",
+                  eleValidClass: "",
+                }),
+              },
+            })
+          ),
+          s.push(
+            FormValidation.formValidation(i, {
+              fields: {
+                business_name: {
+                  validators: {
+                    notEmpty: { message: "Busines name is required" },
+                  },
+                },
+                business_descriptor: {
+                  validators: {
+                    notEmpty: { message: "Busines descriptor is required" },
+                  },
+                },
+                business_type: {
+                  validators: {
+                    notEmpty: { message: "Busines type is required" },
+                  },
+                },
+                business_email: {
+                  validators: {
+                    notEmpty: { message: "Busines email is required" },
+                    emailAddress: {
+                      message: "The value is not a valid email address",
                     },
                   },
                 },
