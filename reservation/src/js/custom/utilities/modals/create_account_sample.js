@@ -16,11 +16,11 @@ var KTCreateAccount = (function () {
           (o = t.querySelector('[data-kt-stepper-action="submit"]')),
           (a = t.querySelector('[data-kt-stepper-action="next"]')),
           (r = new KTStepper(t)).on("kt.stepper.changed", function (e) {
-            4 === r.getCurrentStepIndex()
+            5 === r.getCurrentStepIndex()
               ? (o.classList.remove("d-none"),
                 o.classList.add("d-inline-block"),
                 a.classList.add("d-none"))
-              : 5 === r.getCurrentStepIndex()
+              : 6 === r.getCurrentStepIndex()
               ? (o.classList.add("d-none"), a.classList.add("d-none"))
               : (o.classList.remove("d-inline-block"),
                 o.classList.remove("d-none"),
@@ -79,27 +79,31 @@ var KTCreateAccount = (function () {
                   },
                   email: {
                     validators: {
-                        regexp: {
-                          regexp: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-                          message: "The value is not a valid email address",
-                        },
-                        notEmpty: { message: "Email address is required" },
+                      notEmpty: {
+                        message: "Email address is required"
                       },
+                      regexp: {
+                        regexp: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+                        message: "The value is not a valid email address"
+                      }
+                    }
                   },
                   c_mail: {
                     validators: {
-                        regexp: {
-                          regexp: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-                          message: "The value is not a valid email address",
-                        },
-                        notEmpty: { message: "Confirm Email address is required" },
-                        identical: {
-                            compare: function () {
-                                return s.querySelector('[name="email"]').value;
-                            },
-                            message: 'The email and its confirm are not the same',
-                         },
+                      notEmpty: {
+                        message: "Confirm Email address is required"
                       },
+                      identical: {
+                        compare: function () {
+                          return i.querySelector('[name="email"]').value;
+                        },
+                        message: "The email and its confirmation do not match"
+                      },
+                      regexp: {
+                        regexp: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+                        message: "The value is not a valid email address"
+                      }
+                    }
                   },
               },
               plugins: {
@@ -176,29 +180,51 @@ var KTCreateAccount = (function () {
           s.push(
             FormValidation.formValidation(i, {
               fields: {
-                business_name: {
+                num_of_adults: {
                   validators: {
-                    notEmpty: { message: "Busines name is required" },
+                    notEmpty: { message: "Number of adults is required" },
                   },
                 },
-                business_descriptor: {
+                num_of_child: {
                   validators: {
-                    notEmpty: { message: "Busines descriptor is required" },
+                    notEmpty: { message: "Number of child is required" },
                   },
                 },
-                business_type: {
+                roomType: {
                   validators: {
-                    notEmpty: { message: "Busines type is required" },
+                    notEmpty: { message: "Room type is required" },
                   },
                 },
-                business_email: {
+                num_rooms: {
                   validators: {
-                    notEmpty: { message: "Busines email is required" },
-                    emailAddress: {
-                      message: "The value is not a valid email address",
+                    notEmpty: { message: "Number rooms is required" },
+                   
+                  },
+                },
+                numGuest: {
+                    validators: {
+                      notEmpty: { message: "Number guest is required" },
+                     
                     },
                   },
-                },
+                  preBedType: {
+                    validators: {
+                      notEmpty: { message: "Preferred Bed Type is required" },
+                      
+                    },
+                  },
+                  extrabedselect: {
+                    validators: {
+                      notEmpty: { message: "Extra Bed is required" },
+                      
+                    },
+                  },
+                  flightAndArrival: {
+                    validators: {
+                      notEmpty: { message: "This section is required" },
+                      
+                    },
+                  },
               },
               plugins: {
                 trigger: new FormValidation.plugins.Trigger(),

