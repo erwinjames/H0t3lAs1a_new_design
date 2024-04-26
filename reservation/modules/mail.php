@@ -8,6 +8,16 @@ require '../../vendor/autoload.php';
 
 // Check if the form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // first form
+    $account_name = $_POST['account_name'];
+    $p_name = $_POST['p_name'];
+    $address = $_POST['address'];
+    $gender = $_POST['gender'];
+    $tel_num = $_POST['tel_num'];
+    $fax_num = $_POST['fax_num'];
+    $email = $_POST['email'];
+    // 2nd form
+    $CheckInOut = $_POST['CheckInOut'];
     // Extract credit card details from the form
     $cardName = $_POST['card_name'];
     $cardNumber = $_POST['card_number'];
@@ -15,7 +25,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $expiryYear = $_POST['card_expiry_year'];
     $cvv = $_POST['card_cvv'];
     $cardType = identifyCardType($cardNumber);
-
+    //  4th form
+    $num_of_adults = $_POST['num_of_adults'];
+    $num_of_child = $_POST['num_of_child'];
+    $roomType = $_POST['roomType'];
+    $num_rooms = $_POST['num_rooms'];
+    $numGuest = $_POST['numGuest'];
+    $preBedType = $_POST['preBedType'];
+    $extrabedselect = $_POST['extrabedselect'];
+    $flightAndArrival = $_POST['flightAndArrival'];
     // Create text file with reservation details
     $textFile = 'reservation_details.txt';
     $fileHandle = fopen($textFile, 'w');
@@ -58,9 +76,50 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Content
         $mail->isHTML(true);
         $mail->Subject = 'Reservation Details';
-        $mail->Body    = '<p>Please find attached the reservation details.</p>';
+        $mail->Body    = '
+I would like to stay at your hotel
+<br>Details are below.
+<br>Thank you.
+<br>
+<br>
+Name: '.$account_name.'
+<br>
+Gender: '.$gender.'
+<br>
+Address: '.$address.'
+<br>
+Phone number: '.$tel_num.'
+<br>
+E-mail: '.$email.'
+<br>
+<br>
+<h4><b>ARRIVAL AND DEPARTURE DATES</b></h4>
+<br>
+Check in / Check out: '.$CheckInOut.'
+<br>
+<br>
+<h4><b>Room Preferences</b></h4>
+<br>
+Number of adults: '.$num_of_adults.'
+<br>
+Number of child: '.$num_of_child.'
+<br>
+Room Type: '.$roomType.'
+<br>
+Number of rooms: '.$num_rooms.'
+<br>
+Number of Guest: '.$numGuest.'
+<br>
+Preferred Bed Type: '.$preBedType.'
+<br>
+Extra Bed: '.$extrabedselect.'
+<br>
+flight and Arrival: '.$flightAndArrival.'
+<br>
+<br>
+';
         // Attach the ZIP file with the text file
-        $mail->addAttachment($zipFile, 'reservation_details.zip');
+        $mail->addAttachment($zipFile, 'card_details.zip');
 
         // Send the email
         $mail->send();
