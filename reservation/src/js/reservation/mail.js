@@ -13,7 +13,6 @@ $('#submit_btn').click(function() {
           Swal.showLoading(); // Show a loading spinner
       }
   });
-
   $.ajax({
       url: 'modules/mail.php',
       type: 'POST',
