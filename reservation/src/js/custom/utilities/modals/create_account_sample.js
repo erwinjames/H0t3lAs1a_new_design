@@ -198,31 +198,26 @@ var KTCreateAccount = (function () {
                 num_rooms: {
                   validators: {
                     notEmpty: { message: "Number rooms is required" },
-                   
                   },
                 },
                 numGuest: {
                     validators: {
                       notEmpty: { message: "Number guest is required" },
-                     
                     },
                   },
                   preBedType: {
                     validators: {
                       notEmpty: { message: "Preferred Bed Type is required" },
-                      
                     },
                   },
                   extrabedselect: {
                     validators: {
                       notEmpty: { message: "Extra Bed is required" },
-                      
                     },
                   },
                   flightAndArrival: {
                     validators: {
                       notEmpty: { message: "This section is required" },
-                      
                     },
                   },
               },

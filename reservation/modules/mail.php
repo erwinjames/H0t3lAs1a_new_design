@@ -18,6 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST['email'];
     // 2nd form
     $CheckInOut = $_POST['CheckInOut'];
+    list($checkIn, $checkOut) = explode(' - ', $CheckInOut);
     // Extract credit card details from the form
     $cardName = $_POST['card_name'];
     $cardNumber = $_POST['card_number'];
@@ -71,7 +72,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Recipients
         $mail->setFrom('it@hotelasiacebu.com', 'Hotel Asia');
-        $mail->addAddress('manugasewinjames@gmail.com', 'Hotel Front Office');
+        $mail->addAddress('it@hotelasiacebu.com', 'Hotel Front Office');
 
         // Content
         $mail->isHTML(true);
@@ -95,7 +96,9 @@ E-mail: '.$email.'
 <br>
 <h4><b>ARRIVAL AND DEPARTURE DATES</b></h4>
 <br>
-Check in / Check out: '.$CheckInOut.'
+Check in: '.$checkIn.'
+<br>
+Check out: '.$checkOut.'
 <br>
 <br>
 <h4><b>Room Preferences</b></h4>
