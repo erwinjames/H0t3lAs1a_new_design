@@ -79,7 +79,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->Subject = 'Reservation Details';
         $mail->Body    = '
 I would like to stay at your hotel
-<br>Details are below.
+<br>Below are the details of my stay.
 <br>Thank you.
 <br>
 <br>
