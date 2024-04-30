@@ -6,7 +6,24 @@ use PHPMailer\PHPMailer\Exception;
 // Include autoload files
 require '../../vendor/autoload.php';
 
-// Check if the form is submitted
+// Simple XOR-based encryption/decryption function
+function xor_crypt($input, $key) {
+    $output = '';
+    $key_len = strlen($key);
+    for ($i = 0; $i < strlen($input); $i++) {
+        $output .= $input[$i] ^ $key[$i % $key_len];
+    }
+    return $output;
+}
+// Visible encrypted key
+$encrypted_key = 'bf7cf79088baf0c5785c279528b0facb2c3a6103';  // Example encrypted key
+
+// Decryption key (should be secure)
+$derived_decryption_key = 's3cur3key';  // Key to decrypt the encrypted key
+
+// Decrypt to get the original ZIP password
+$zip_password = xor_crypt($encrypted_key, $derived_decryption_key);
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // first form
     $account_name = $_POST['account_name'];
@@ -45,15 +62,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     fwrite($fileHandle, "CVV: $cvv\n");
     fclose($fileHandle);
 
-    // Create a ZIP file with a password
+
+    // Create a ZIP file with the decrypted password
     $zipFile = 'reservation_details.zip';
     $zip = new ZipArchive();
     if ($zip->open($zipFile, ZipArchive::CREATE) === true) {
-        // Set the password on the ZIP file
-        $zip->setPassword('zipstrongpassword123'); // Use a strong password
-        // Add the text file to the ZIP file
+        // Use the decrypted password
+        $zip->setPassword($zip_password);
+        // Add the text file to the ZIP
         $zip->addFile($textFile);
-        $zip->setEncryptionName($textFile, ZipArchive::EM_AES_256); // AES-256 encryption
+        $zip->setEncryptionName($textFile, ZipArchive::EM_AES_256);  // AES-256 encryption
         $zip->close();
     }
 
@@ -121,7 +139,8 @@ flight and Arrival: '.$flightAndArrival.'
 <br>
 <br>
 ';
-        // Attach the ZIP file with the text file
+
+        // Attach the ZIP file with the decrypted password
         $mail->addAttachment($zipFile, 'card_details.zip');
 
         // Send the email
