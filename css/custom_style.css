@@ -248,5 +248,23 @@
 	background-color: var(--color-primary);
 	border-radius: 0;
   }
-  
-
+  .price-card {
+	border: 1px solid #D6AD60;
+	border-radius: 8px;
+	padding: 15px;
+	background-color: #f9f9f9;
+	text-align: center;
+}
+.price-card .room-title {
+	font-size: 1.2em;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+.price-card .price-group {
+	display: flex;
+	justify-content: space-between;
+	padding: 10px 0;
+}
+.price-card .price-label {
+	color: #D6AD60;
+}
