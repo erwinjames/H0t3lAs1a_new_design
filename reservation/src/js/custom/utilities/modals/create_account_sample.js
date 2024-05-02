@@ -54,54 +54,54 @@ var KTCreateAccount = (function () {
               fields: {
                 account_name: {
                   validators: {
-                    notEmpty: { message: "Account type is required" },
+                    notEmpty: { message: "Account type is required ( アカウントの種類は必須です )" },
                   },
                 },
                 p_name: {
                     validators: {
-                      notEmpty: { message: "Phonetic pronunciation is required" },
+                      notEmpty: { message: "Phonetic pronunciation is required ( 発音は必須です )" },
                     },
                   },
                   address: {
                     validators: {
-                      notEmpty: { message: "Address is required" },
+                      notEmpty: { message: "Address is required ( 住所は必須です )" },
                     },
                   },
                   tel_num: {
                     validators: {
-                      notEmpty: { message: "Telephone number is required" },
+                      notEmpty: { message: "Telephone number is required ( 電話番号は必須です )" },
                     },
                   },
                   fax_num: {
                     validators: {
-                      notEmpty: { message: "FAX is required" },
+                      notEmpty: { message: "FAX is required ( FAXは必須です )" },
                     },
                   },
                   email: {
                     validators: {
                       notEmpty: {
-                        message: "Email address is required"
+                        message: "Email address is required ( メールアドレスは必須です )"
                       },
                       regexp: {
                         regexp: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-                        message: "The value is not a valid email address"
+                        message: "The value is not a valid email address ( 値は有効な電子メール アドレスではありません )"
                       }
                     }
                   },
                   c_mail: {
                     validators: {
                       notEmpty: {
-                        message: "Confirm Email address is required"
+                        message: "Confirm Email address is required ( メールアドレスが必要であることを確認してください )"
                       },
                       identical: {
                         compare: function () {
                           return i.querySelector('[name="email"]').value;
                         },
-                        message: "The email and its confirmation do not match"
+                        message: "The email and its confirmation do not match ( メールとその確認が一致しません )"
                       },
                       regexp: {
                         regexp: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-                        message: "The value is not a valid email address"
+                        message: "The value is not a valid email address ( 値は有効な電子メール アドレスではありません )"
                       }
                     }
                   },
@@ -121,7 +121,7 @@ var KTCreateAccount = (function () {
               fields: {
                 CheckInOut: {
                   validators: {
-                    notEmpty: { message: "Must Select a preffered date to reserve" },
+                    notEmpty: { message: "Must Select a preffered date to reserve ( 予約するには希望日を選択する必要があります )" },
                   },
                 },
               },
