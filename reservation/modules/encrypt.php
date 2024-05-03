@@ -18,6 +18,6 @@ $derived_decryption_key = 's3cur3key';
 $zip_password = xor_crypt($encrypted_key, $derived_decryption_key);
 
 // Ensure the decrypted password is correct
-echo "Decrypted password: $zip_password";  // Check if this outputs 'zipstrongpassword123'
+echo "Decrypted password: $zip_password";
 
 ?>
