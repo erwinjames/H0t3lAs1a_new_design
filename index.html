@@ -657,23 +657,23 @@ All classrooms are private, providing ample space for individual meetings betwee
                     <p class="text-uppercase g-font-size-14--xs g-font-weight--700 g-color--primary g-letter-spacing--2 g-margin-b-25--xs translate">Feedback</p>
                     <h2 class="g-font-size-32--xs g-font-size-36--md translate">Send us a note</h2>
                 </div>
-                <form>
+                <form method="post" id="web_contact">
                     <div class="row g-margin-b-40--xs">
                         <div class="col-sm-6 g-margin-b-20--xs g-margin-b-0--md">
                             <div class="g-margin-b-20--xs">
-                                <input type="text" class="form-control s-form-v2__input g-radius--50 translate" placeholder="* Name">
+                                <input type="text" name="contact_Name" class="form-control s-form-v2__input g-radius--50 translate" placeholder="* Name">
                             </div>
                             <div class="g-margin-b-20--xs">
-                                <input type="email" class="form-control s-form-v2__input g-radius--50 translate" placeholder="* Email">
+                                <input type="email" name="contact_email" class="form-control s-form-v2__input g-radius--50 translate" placeholder="* Email">
                             </div>
-                            <input type="text" class="form-control s-form-v2__input g-radius--50 translate" placeholder="* Phone">
+                            <input type="text" name="contact_phone" class="form-control s-form-v2__input g-radius--50 translate" placeholder="* Phone">
                         </div>
                         <div class="col-sm-6">
-                            <textarea class="form-control s-form-v2__input g-radius--10 g-padding-y-20--xs translate" rows="8" placeholder="* Your message"></textarea>
+                            <textarea name="contact_message" class="form-control s-form-v2__input g-radius--10 g-padding-y-20--xs translate" rows="8" placeholder="* Your message"></textarea>
                         </div>
                     </div>
                     <div class="g-text-center--xs">
-                        <button type="submit" class="text-uppercase s-btn s-btn--md s-btn--primary-bg g-radius--50 g-padding-x-80--xs translate">Submit</button>
+                        <button type="submit" class="text-uppercase s-btn s-btn--md s-btn--primary-bg g-radius--50 g-padding-x-80--xs translate" id="web_contact_submit">Submit</button>
                     </div>
                 </form>
             </div>
@@ -770,6 +770,8 @@ All classrooms are private, providing ample space for individual meetings betwee
         <script type="text/javascript" src="js/components/google-map.min.js"></script>
         <script type="text/javascript" src="js/components/wow.min.js"></script>
         <script src="reservation/assets/js/custom/googleT/translate.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="js/contact.js"></script>
         <!--========== END JAVASCRIPTS ==========-->
 
     </body>
