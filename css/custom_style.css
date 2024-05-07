@@ -115,14 +115,13 @@
 .rooms-page-item .room-text .room-features .room-info i {
 	display: block;
 	color: #D6AD60;
-	margin-bottom: -4px;
 }
 
 .rooms-page-item .room-text .room-features .room-info span {
-	display: block;
-	font-size: 14px;
+	/* display: block; */
+	font-size: 12px;
 	font-family: Lato, sans-serif;
-	font-weight: 400;
+	/* font-weight: 400; */
 	color: #F4EBD0;
 }
 
