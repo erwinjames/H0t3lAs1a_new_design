@@ -82,10 +82,12 @@
 	color: #2d220f;
 	font-family: Lato, sans-serif;
 	font-weight: 300;
+	
 }
 
 .rooms-page-item .room-text .room-desc {
 	margin-bottom: 20px;
+	font-family: Lato, sans-serif;
 }
 
 /* .rooms-page-item .room-text .room-desc p {
