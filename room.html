@@ -23,7 +23,8 @@
         <!-- Theme Styles -->
         <link href="css/style.css" rel="stylesheet" type="text/css"/>
         <link href="css/global/global.css" rel="stylesheet" type="text/css"/>
-        <link rel="stylesheet" href="css/custom_style.css">
+        <link rel="stylesheet" href="css/uikit.min.css" />
+        <link rel="stylesheet" href="css/custom_style.css" />
         <!-- Favicon -->
         <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
         <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
@@ -32,7 +33,6 @@
 
     <!-- Body -->
     <body>
-
         <!--========== HEADER ==========-->
         <header class="navbar-fixed-top s-header-v2 js__header-sticky">
             <!-- Navbar -->
@@ -107,466 +107,240 @@
         <!--========== END PROMO BLOCK ==========-->
 
         <!--========== PAGE CONTENT ==========-->
-        <!-- Mockup -->
-        <!-- <div class="container g-margin-t-o-150--xs">
-            <div class="center-block s-mockup-v1">
-                <img class="img-responsive" src="img/mockups/devices-01.png" alt="Mockup Image">
-            </div>
-        </div> -->
-        <!-- End Mockup -->
         <div class="g-bg-color--cream">
             <div class="container g-padding-y-0--xs g-padding-y-125--xsm">
                 <div class="row g-row-col--5 g-margin-b-80--xs">
-                    
-                    <div class="wow fadeInUp animated" data-wow-duration=".3" data-wow-delay=".1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
-                    <div class="rooms-page-item  g-bg-color--darkgreen">
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <div class="room-pic-slider owl-carousel owl-loaded owl-drag">
-                                <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(-1116px, 0px, 0px); transition: all 0.8s ease 0s; width: 3348px;"><div class="owl-item cloned" style="width: 558px;"><div class="single-room-pic">
-                                        <img src="img/rooms/5th/IMG_5192.jpg" alt="">
-                                    </div></div><div class="owl-item active" style="width: 558px;"><div class="single-room-pic">
-                                        <img src="img/rooms/5th/IMG_5194.jpg" alt="">
-                                    </div></div><div class="owl-item" style="width: 558px;"><div class="single-room-pic">
-                                        <img src="img/rooms/5th/IMG_5195.jpg" alt="">
-                                    </div></div><div class="owl-item" style="width: 558px;"><div class="single-room-pic">
-                                        <img src="img/rooms/5th/IMG_5196.jpg" alt="">
-                                    </div></div></div></div><div class="owl-nav"><button type="button" role="presentation" class="owl-prev"><i class="lnr lnr-arrow-left"></i></button><button type="button" role="presentation" class="owl-next"><i class="lnr lnr-arrow-right"></i></button></div><div class="owl-dots disabled"></div></div>
+                    <div class="uk-padding  uk-padding-remove-horizontal">
+                        <div class="uk-container">
+            
+                            <!-- ROOMS LIST -->
+                            <div class="uk-position-relative uk-visible-toggle uk-margin-small-top">
+                                <ul class="list-wrapper uk-child-width-1-2@xl uk-child-width-1-2@l uk-child-width-1-2@m uk-child-width-1-1@s data-uk-grid uk-grid-match uk-margin-large-bottom"  data-uk-grid>
+                                    <li class="list-item"><!-- room item #1 -->
+                                        <div class="impx-room-item medium uk-box-shadow-large">
+                                            <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s" data-uk-grid>
+                                                <div class="uk-card-media-left uk-cover-container uk-position-relative">
+                                                    <canvas width="290" height="180"></canvas>
+                                                    <img src="img/rooms/1st/IMG_5162.jpg" alt="" data-uk-cover>
+                                                    <div class="impx-overlay light overlay-squared padding-xwide"></div>
+                                                </div>
+                                                <div class="uk-card-body uk-position-relative impx-padding-medium">
+                                                    <div class="uk-card-header uk-padding-remove-horizontal">
+                                                        <h4 class="uk-card-title uk-margin-remove-bottom">Economy Plus</h4>
+                                                        <p class="uk-text-meta uk-margin-remove-top">This room has one double bed. It is one size narrower than the standard. There is no bathtub, only a shower. It is comfortable because you can reach it without moving around. </p>
+                                                    </div>
+                                                    <span class="uk-card-badge uk-label g-bg-color--darkgreen">from 1650/net</span>
+                                                    <!-- <ul class="uk-list room-fac">
+                                                        <li><span class="impx-text-aqua" data-uk-icon="icon: check; ratio: 1;"></span> Beatus in maximarum timore</li>
+                                                        <li><span class="impx-text-aqua" data-uk-icon="icon: check; ratio: 1;"></span> Oculis Compensabatur</li>
+                                                        <li><span class="impx-text-aqua" data-uk-icon="icon: check; ratio: 1;"></span> Dolorisnos veriusque nihil</li>
+                                                    </ul> -->
+            
+                                                     <div class="uk-card-footer uk-padding-remove-horizontal uk-padding-remove-bottom">
+                                                        <a href="roomrates.html" class="uk-button uk-button-text g-color--lightgold">Read more &raquo;</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li><!-- room item #1 end -->
+                                    <li class="list-item"><!-- room item #2 -->
+                                        <div class="impx-room-item medium uk-box-shadow-large">
+                                            <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s" data-uk-grid>
+                                                <div class="uk-card-media-left uk-cover-container uk-position-relative">
+                                                    <canvas width="290" height="180"></canvas>
+                                                    <img src="img/rooms/3rd/IMG_5179.jpg" alt="" data-uk-cover>
+                                                    <div class="impx-overlay light overlay-squared padding-xwide"></div>
+                                                </div>
+                                                <div class="uk-card-body uk-position-relative impx-padding-medium">
+                                                    <div class="uk-card-header uk-padding-remove-horizontal">
+                                                        <h4 class="uk-card-title uk-margin-remove-bottom">Standard</h4>
+                                                        <p class="uk-text-meta uk-margin-remove-top">This room offers a choice of either a double bed or twin beds. The bath has a bathtub where you can soak in hot water. </p>
+                                                    </div>
+                                                    <span class="uk-card-badge uk-label g-bg-color--darkgreen">from 1800/net</span>
+                                                    <!-- <ul class="uk-list room-fac">
+                                                        <li><span class="impx-text-aqua" data-uk-icon="icon: check; ratio: 1;"></span> Beatus in maximarum timore</li>
+                                                        <li><span class="impx-text-aqua" data-uk-icon="icon: check; ratio: 1;"></span> Oculis Compensabatur</li>
+                                                        <li><span class="impx-text-aqua" data-uk-icon="icon: check; ratio: 1;"></span> Dolorisnos veriusque nihil</li>
+                                                    </ul> -->
+            
+                                                    <div class="uk-card-footer uk-padding-remove-horizontal uk-padding-remove-bottom">
+                                                        <a href="roomrates.html" class="uk-button uk-button-text g-color--lightgold">Read more &raquo;</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li><!-- room item #2 end -->
+                                    <li class="list-item"><!-- room item #3 -->
+                                        <div class="impx-room-item medium uk-box-shadow-large">
+                                            <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s" data-uk-grid>
+                                                <div class="uk-card-body uk-position-relative impx-padding-medium">
+                                                    <div class="uk-card-header uk-padding-remove-horizontal">
+                                                        <h4 class="uk-card-title uk-margin-remove-bottom">Deluxe</h4>
+                                                        <p class="uk-text-meta uk-margin-remove-top">First, a disclaimer – the entire process of writing a blog post often takes more than a couple of hours, even if you can type eighty words as per minute and your writing skills are sharp. </p>
+                                                    </div>
+                                                    <span class="uk-card-badge uk-label g-bg-color--darkgreen">from 2000/net</span>
+                                                    <!-- <ul class="uk-list room-fac">
+                                                        <li><span class="impx-text-aqua" data-uk-icon="icon: check; ratio: 1;"></span> Beatus in maximarum timore</li>
+                                                        <li><span class="impx-text-aqua" data-uk-icon="icon: check; ratio: 1;"></span> Oculis Compensabatur</li>
+                                                        <li><span class="impx-text-aqua" data-uk-icon="icon: check; ratio: 1;"></span> Dolorisnos veriusque nihil</li>
+                                                    </ul> -->
+            
+                                                    <div class="uk-card-footer uk-padding-remove-horizontal uk-padding-remove-bottom">
+                                                        <a href="roomrates.html" class="uk-button uk-button-text g-color--lightgold">Read more &raquo;</a>
+                                                    </div>
+                                                </div>
+                                                <div class="uk-card-media-right uk-cover-container uk-position-relative">
+                                                    <canvas width="290" height="180"></canvas>
+                                                    <img src="img/rooms/4th/IMG_5191.jpg" alt="" data-uk-cover>
+                                                    <div class="impx-overlay light overlay-squared padding-xwide"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li><!-- room item #3 end -->
+                                    <li class="list-item"><!-- room item #4 -->
+                                        <div class="impx-room-item medium uk-box-shadow-large">
+                                            <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s" data-uk-grid>
+                                                <div class="uk-card-body uk-position-relative impx-padding-medium">
+                                                    <div class="uk-card-header uk-padding-remove-horizontal">
+                                                        <h4 class="uk-card-title uk-margin-remove-bottom">Deluxe Plus</h4>
+                                                        <p class="uk-text-meta uk-margin-remove-top">This room offers a choice of either a double bed or twin beds. The room is larger than the deluxe type, so you can sleep comfortably.</p>
+                                                    </div>
+                                                    <span class="uk-card-badge uk-label g-bg-color--darkgreen">from 2500/net</span>
+                                                    <!-- <ul class="uk-list room-fac">
+                                                        <li><span class="impx-text-aqua" data-uk-icon="icon: check; ratio: 1;"></span> Beatus in maximarum timore</li>
+                                                        <li><span class="impx-text-aqua" data-uk-icon="icon: check; ratio: 1;"></span> Oculis Compensabatur</li>
+                                                        <li><span class="impx-text-aqua" data-uk-icon="icon: check; ratio: 1;"></span> Dolorisnos veriusque nihil</li>
+                                                    </ul> -->
+            
+                                                    <div class="uk-card-footer uk-padding-remove-horizontal uk-padding-remove-bottom">
+                                                        <a href="roomrates.html" class="uk-button uk-button-text g-color--lightgold">Read more &raquo;</a>
+                                                    </div>
+                                                </div>
+                                                <div class="uk-card-media-right uk-cover-container uk-position-relative">
+                                                    <canvas width="290" height="180"></canvas>
+                                                    <img src="img/rooms/6th/IMG_5210.jpg" alt="" data-uk-cover>
+                                                    <div class="impx-overlay light overlay-squared padding-xwide"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li><!-- room item #4 end -->
+                                    <li class="list-item"><!-- room item #5 -->
+                                        <div class="impx-room-item medium uk-box-shadow-large">
+                                            <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s" data-uk-grid>
+                                                <div class="uk-card-body uk-position-relative impx-padding-medium">
+                                                    <div class="uk-card-header uk-padding-remove-horizontal">
+                                                        <h4 class="uk-card-title uk-margin-remove-bottom">Tatami Room /Japanese Style</h4>
+                                                        <p class="uk-text-meta uk-margin-remove-top">It is a room with a single tatami mat with a low-type double bed that creates an open space. There is also a washing area in the bath, so you can relax like you are at home in Japan. </p>
+                                                    </div>
+                                                    <span class="uk-card-badge uk-label g-bg-color--darkgreen">from 2500/net</span>
+                                                    <!-- <ul class="uk-list room-fac">
+                                                        <li><span class="impx-text-aqua" data-uk-icon="icon: check; ratio: 1;"></span> Beatus in maximarum timore</li>
+                                                        <li><span class="impx-text-aqua" data-uk-icon="icon: check; ratio: 1;"></span> Oculis Compensabatur</li>
+                                                        <li><span class="impx-text-aqua" data-uk-icon="icon: check; ratio: 1;"></span> Dolorisnos veriusque nihil</li>
+                                                    </ul> -->
+            
+                                                    <div class="uk-card-footer uk-padding-remove-horizontal uk-padding-remove-bottom">
+                                                        <a href="roomrates.html" class="uk-button uk-button-text g-color--lightgold">Read more &raquo;</a>
+                                                    </div>
+                                                </div>
+                                                <div class="uk-card-media-right uk-cover-container uk-position-relative">
+                                                    <canvas width="290" height="180"></canvas>
+                                                    <img src="img/rooms/5th/IMG_5193.jpg" alt="" data-uk-cover>
+                                                    <div class="impx-overlay light overlay-squared padding-xwide"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li><!-- room item #5 end -->
+                                    <li class="list-item"><!-- room item #6 -->
+                                        <div class="impx-room-item medium uk-box-shadow-large">
+                                            <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s" data-uk-grid>
+                                                <div class="uk-card-body uk-position-relative impx-padding-medium">
+                                                    <div class="uk-card-header uk-padding-remove-horizontal">
+                                                        <h4 class="uk-card-title uk-margin-remove-bottom">Superior</h4>
+                                                        <p class="uk-text-meta uk-margin-remove-top">It’s important to stay detail oriented with every project we tackle. Staying focused allows us to turn every project we complete into something we love. </p>
+                                                    </div>
+                                                    <span class="uk-card-badge uk-label g-bg-color--darkgreen">from 2800/net</span>
+                                                    <!-- <ul class="uk-list room-fac">
+                                                        <li><span class="impx-text-aqua" data-uk-icon="icon: check; ratio: 1;"></span> Beatus in maximarum timore</li>
+                                                        <li><span class="impx-text-aqua" data-uk-icon="icon: check; ratio: 1;"></span> Oculis Compensabatur</li>
+                                                        <li><span class="impx-text-aqua" data-uk-icon="icon: check; ratio: 1;"></span> Dolorisnos veriusque nihil</li>
+                                                    </ul> -->
+            
+                                                    <div class="uk-card-footer uk-padding-remove-horizontal uk-padding-remove-bottom">
+                                                        <a href="roomrates.html" class="uk-button uk-button-text g-color--lightgold">Read more &raquo;</a>
+                                                    </div>
+                                                </div>
+                                                <div class="uk-card-media-right uk-cover-container uk-position-relative">
+                                                    <canvas width="290" height="180"></canvas>
+                                                    <img src="img/rooms/5th/IMG_5193.jpg" alt="" data-uk-cover>
+                                                    <div class="impx-overlay light overlay-squared padding-xwide"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li><!-- room item #6 end -->
+                                    <li class="list-item"><!-- room item #7 -->
+                                        <div class="impx-room-item medium uk-box-shadow-large">
+                                            <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s" data-uk-grid>
+                                                <div class="uk-card-body uk-position-relative impx-padding-medium">
+                                                    <div class="uk-card-header uk-padding-remove-horizontal">
+                                                        <h4 class="uk-card-title uk-margin-remove-bottom">Executive</h4>
+                                                        <p class="uk-text-meta uk-margin-remove-top">This room has one queen size bed. There is a large kitchen where you can easily prepare your own meals. </p>
+                                                    </div>
+                                                    <span class="uk-card-badge uk-label g-bg-color--darkgreen">from 3500/net</span>
+                                                    <!-- <ul class="uk-list room-fac">
+                                                        <li><span class="impx-text-aqua" data-uk-icon="icon: check; ratio: 1;"></span> Beatus in maximarum timore</li>
+                                                        <li><span class="impx-text-aqua" data-uk-icon="icon: check; ratio: 1;"></span> Oculis Compensabatur</li>
+                                                        <li><span class="impx-text-aqua" data-uk-icon="icon: check; ratio: 1;"></span> Dolorisnos veriusque nihil</li>
+                                                    </ul> -->
+            
+                                                    <div class="uk-card-footer uk-padding-remove-horizontal uk-padding-remove-bottom">
+                                                        <a href="roomrates.html" class="uk-button uk-button-text g-color--lightgold">Read more &raquo;</a>
+                                                    </div>
+                                                </div>
+                                                <div class="uk-card-media-right uk-cover-container uk-position-relative">
+                                                    <canvas width="290" height="180"></canvas>
+                                                    <img src="img/rooms/5th/IMG_5193.jpg" alt="" data-uk-cover>
+                                                    <div class="impx-overlay light overlay-squared padding-xwide"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li><!-- room item #7 end -->
+                                    <li class="list-item"><!-- room item #8 -->
+                                        <div class="impx-room-item medium uk-box-shadow-large">
+                                            <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s" data-uk-grid>
+                                                <div class="uk-card-body uk-position-relative impx-padding-medium">
+                                                    <div class="uk-card-header uk-padding-remove-horizontal">
+                                                        <h4 class="uk-card-title uk-margin-remove-bottom">Junior Suite</h4>
+                                                        <p class="uk-text-meta uk-margin-remove-top">This room has one queen size bed. There is a large kitchen where you can easily prepare your own meals.</p>
+                                                    </div>
+                                                    <span class="uk-card-badge uk-label g-bg-color--darkgreen">from 4200/net</span>
+                                                    <!-- <ul class="uk-list room-fac">
+                                                        <li><span class="impx-text-aqua" data-uk-icon="icon: check; ratio: 1;"></span> Beatus in maximarum timore</li>
+                                                        <li><span class="impx-text-aqua" data-uk-icon="icon: check; ratio: 1;"></span> Oculis Compensabatur</li>
+                                                        <li><span class="impx-text-aqua" data-uk-icon="icon: check; ratio: 1;"></span> Dolorisnos veriusque nihil</li>
+                                                    </ul> -->
+            
+                                                    <div class="uk-card-footer uk-padding-remove-horizontal uk-padding-remove-bottom">
+                                                        <a href="roomrates.html" class="uk-button uk-button-text g-color--lightgold">Read more &raquo;</a>
+                                                    </div>
+                                                </div>
+                                                <div class="uk-card-media-right uk-cover-container uk-position-relative">
+                                                    <canvas width="290" height="180"></canvas>
+                                                    <img src="img/rooms/5th/IMG_5193.jpg" alt="" data-uk-cover>
+                                                    <div class="impx-overlay light overlay-squared padding-xwide"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li><!-- room item #8 end -->
+                                </ul>
+                                <!-- rooms items end -->
                             </div>
-                            <div class="col-lg-6">
-                                <div class="room-text">
-                                    <div class="room-title">
-                                        <h2 class="text-uppercase g-font-size-14--xs g-font-weight--700 g-color--primary g-letter-spacing--2 g-margin-b-25--xs translate">Economy Plus</h2>
-                                        <!-- <div class="room-price g-color--primary">
-                                            <span>Start from</span>
-                                            <h2>1650</h2>
-                                            <sub>/net</sub>
-                                        </div> -->
-                                    </div>
-                                    <div class="room-desc">
-                                        <p class="g-color--cream translate">This room has one double bed. It is one size narrower than the standard. There is no bathtub, only a shower. It is comfortable because you can reach it without moving around.</p>
-                                    </div>
-                                    <div class="room-features">
-                                        <div class="room-info">
-                                            <i class="fa fa-television"></i>
-                                            <span class=" translate">Smart TV</span>
-                                        </div>
-                                        <div class="room-info">
-                                            <i class="fa fa-wifi"></i>
-                                            <span class=" translate">High Wi-fii</span>
-                                        </div>
-                                        <div class="room-info">
-                                            <i class="fa fa-snowflake"></i>
-                                            <span class=" translate">AC</span>
-                                        </div>
-                                        <div class="room-info">
-                                            <i class="fa fa-parking"></i>
-                                            <span class=" translate">Parking</span>
-                                        </div>
-                                    </div>
-                                   <a id="economy_btn" class="text-uppercase s-btn s-btn--md s-btn--white-brd g-radius--50 translate">Reserve Now</a>
-                                </div>
-                            </div>
+            
+                            <!-- room paging -->
+                            <div id="pagination-container"></div>
+                            <!-- room paging end -->
                         </div>
-                    </div>
-                    </div>
-                    <!-- Plan -->
-                    <div class="wow fadeInUp animated" data-wow-duration=".3" data-wow-delay=".1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
-                    <div class="rooms-page-item  g-bg-color--darkgreen">
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <div class="room-pic-slider owl-carousel owl-loaded owl-drag">
-                                <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(-1116px, 0px, 0px); transition: all 0.8s ease 0s; width: 3348px;"><div class="owl-item cloned" style="width: 558px;"><div class="single-room-pic">
-                                        <img src="img/rooms/3rd/IMG_5177.jpg" alt="">
-                                    </div></div><div class="owl-item cloned" style="width: 558px;"><div class="single-room-pic">
-                                        <img src="img/rooms/3rd/IMG_5178.jpg" alt="">
-                                    </div></div><div class="owl-item active" style="width: 558px;"><div class="single-room-pic">
-                                        <img src="img/rooms/3rd/IMG_5179.jpg" alt="">
-                                    </div></div><div class="owl-item" style="width: 558px;"><div class="single-room-pic">
-                                        <img src="img/rooms/3rd/IMG_5181.jpg" alt="">
-                                    </div></div><div class="owl-item cloned" style="width: 558px;"><div class="single-room-pic">
-                                        <img src="img/rooms/3rd/IMG_5182.jpg" alt="">
-                                    </div></div></div></div><div class="owl-nav"><button type="button" role="presentation" class="owl-prev"><i class="lnr lnr-arrow-left"></i></button><button type="button" role="presentation" class="owl-next"><i class="lnr lnr-arrow-right"></i></button></div><div class="owl-dots disabled"></div></div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="room-text">
-                                    <div class="room-title">
-                                        <h2 class="text-uppercase g-font-size-14--xs g-font-weight--700 g-color--primary g-letter-spacing--2 g-margin-b-25--xs translate">Standard Room</h2>
-                                        <!-- <div class="room-price">
-                                            <span>From</span>
-                                            <h2>$99</h2>
-                                            <sub>/night</sub>
-                                        </div> -->
-                                    </div>
-                                    <div class="room-desc">
-                                        <p class="g-color--cream translate">This room offers a choice of either a double bed or twin beds. The bath has a bathtub where you can soak in hot water.</p>
-                                    </div>
-                                    <div class="room-features">
-                                        <div class="room-info">
-                                            <i class="fa fa-television"></i>
-                                            <span class=" translate">Smart TV</span>
-                                        </div>
-                                        <div class="room-info">
-                                            <i class="fa fa-wifi"></i>
-                                            <span class=" translate">High Wi-fii</span>
-                                        </div>
-                                        <div class="room-info">
-                                            <i class="fa fa-snowflake"></i>
-                                            <span class=" translate">AC</span>
-                                        </div>
-                                        <div class="room-info">
-                                            <i class="fa fa-parking"></i>
-                                            <span class=" translate">Parking</span>
-                                        </div>
-                                    </div>
-                                   <a id="standard_btn" class="text-uppercase s-btn s-btn--md s-btn--white-brd g-radius--50 translate">Reserve Now</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    </div>
-                    <div class="wow fadeInUp animated" data-wow-duration=".3" data-wow-delay=".1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
-                    <div class="rooms-page-item  g-bg-color--darkgreen">
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <div class="room-pic-slider owl-carousel owl-loaded owl-drag">
-                                <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(-1116px, 0px, 0px); transition: all 0.8s ease 0s; width: 3348px;"><div class="owl-item cloned" style="width: 558px;"><div class="single-room-pic">
-                                        <img src="img/rooms/4th/IMG_5184.jpg" alt="">
-                                    </div></div><div class="owl-item cloned" style="width: 558px;"><div class="single-room-pic">
-                                        <img src="img/rooms/4th/IMG_5185.jpg" alt="">
-                                    </div></div><div class="owl-item active" style="width: 558px;"><div class="single-room-pic">
-                                        <img src="img/rooms/4th/IMG_5186.jpg" alt="">
-                                    </div></div><div class="owl-item" style="width: 558px;"><div class="single-room-pic">
-                                        <img src="img/rooms/4th/IMG_5187.jpg" alt="">
-                                    </div></div><div class="owl-item cloned" style="width: 558px;"><div class="single-room-pic">
-                                        <img src="img/rooms/4th/IMG_5188.jpg" alt="">
-                                    </div></div><div class="owl-item cloned" style="width: 558px;"><div class="single-room-pic">
-                                        <img src="img/rooms/4th/IMG_5189.jpg" alt="">
-                                    </div></div></div></div><div class="owl-nav"><button type="button" role="presentation" class="owl-prev"><i class="lnr lnr-arrow-left"></i></button><button type="button" role="presentation" class="owl-next"><i class="lnr lnr-arrow-right"></i></button></div><div class="owl-dots disabled"></div></div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="room-text">
-                                    <div class="room-title">
-                                        <h2 class="text-uppercase g-font-size-14--xs g-font-weight--700 g-color--primary g-letter-spacing--2 g-margin-b-25--xs translate">Deluxe</h2>
-                                        <!-- <div class="room-price">
-                                            <span>From</span>
-                                            <h2>$99</h2>
-                                            <sub>/night</sub>
-                                        </div> -->
-                                    </div>
-                                    <div class="room-desc">
-                                        <p class="g-color--cream translate">This room offers a choice of either a double bed or twin beds. The bathtub in the bath is a stone bath with a luxurious feel.</p>
-                                    </div>
-                                    <div class="room-features">
-                                        <div class="room-info">
-                                            <i class="fa fa-television"></i>
-                                            <span class=" translate">Smart TV</span>
-                                        </div>
-                                        <div class="room-info">
-                                            <i class="fa fa-wifi"></i>
-                                            <span class=" translate">High Wi-fii</span>
-                                        </div>
-                                        <div class="room-info">
-                                            <i class="fa fa-snowflake"></i>
-                                            <span class=" translate">AC</span>
-                                        </div>
-                                        <div class="room-info">
-                                            <i class="fa fa-parking"></i>
-                                            <span class=" translate">Parking</span>
-                                        </div>
-                                    </div>
-                                    <a id="deluxe_btn" class="text-uppercase s-btn s-btn--md s-btn--white-brd g-radius--50 translate">Reserve Now</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    </div>
-                    <!-- End Plan -->
-                    <div class="wow fadeInUp animated" data-wow-duration=".3" data-wow-delay=".1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
-                    <div class="rooms-page-item  g-bg-color--darkgreen">
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <div class="room-pic-slider owl-carousel owl-loaded owl-drag">
-                                <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(-1116px, 0px, 0px); transition: all 0.8s ease 0s; width: 3348px;"><div class="owl-item cloned" style="width: 558px;"><div class="single-room-pic">
-                                        <img src="img/rooms/6th/IMG_5200.jpg" alt="">
-                                    </div></div><div class="owl-item cloned" style="width: 558px;"><div class="single-room-pic">
-                                        <img src="img/rooms/6th/IMG_5201.jpg" alt="">
-                                    </div></div><div class="owl-item active" style="width: 558px;"><div class="single-room-pic">
-                                        <img src="img/rooms/6th/IMG_5202.jpg" alt="">
-                                    </div></div><div class="owl-item" style="width: 558px;"><div class="single-room-pic">
-                                        <img src="img/rooms/6th/IMG_5208.jpg" alt="">
-                                    </div></div><div class="owl-item cloned" style="width: 558px;"><div class="single-room-pic">
-                                        <img src="img/rooms/6th/IMG_5204.jpg" alt="">
-                                    </div></div><div class="owl-item cloned" style="width: 558px;"><div class="single-room-pic">
-                                        <img src="img/rooms/6th/IMG_5205.jpg    " alt="">
-                                    </div></div></div></div><div class="owl-nav"><button type="button" role="presentation" class="owl-prev"><i class="lnr lnr-arrow-left"></i></button><button type="button" role="presentation" class="owl-next"><i class="lnr lnr-arrow-right"></i></button></div><div class="owl-dots disabled"></div></div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="room-text">
-                                    <div class="room-title">
-                                        <h2 class="text-uppercase g-font-size-14--xs g-font-weight--700 g-color--primary g-letter-spacing--2 g-margin-b-25--xs translate">Deluxe Plus</h2>
-                                        <!-- <div class="room-price">
-                                            <span>From</span>
-                                            <h2>$99</h2>
-                                            <sub>/night</sub>
-                                        </div> -->
-                                    </div>
-                                    <div class="room-desc">
-                                        <p class="g-color--cream translate">This room offers a choice of either a double bed or twin beds. The room is larger than the deluxe type, so you can sleep comfortably.</p>
-                                    </div>
-                                    <div class="room-features">
-                                        <div class="room-info">
-                                            <i class="fa fa-television"></i>
-                                            <span class=" translate">Smart TV</span>
-                                        </div>
-                                        <div class="room-info">
-                                            <i class="fa fa-wifi"></i>
-                                            <span class=" translate">High Wi-fii</span>
-                                        </div>
-                                        <div class="room-info">
-                                            <i class="fa fa-snowflake"></i>
-                                            <span class=" translate">AC</span>
-                                        </div>
-                                        <div class="room-info">
-                                            <i class="fa fa-parking"></i>
-                                            <span class=" translate">Parking</span>
-                                        </div>
-                                    </div>
-                                    <a id="deluxe_plus_btn" class="text-uppercase s-btn s-btn--md s-btn--white-brd g-radius--50 translate">Reserve Now</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    </div>
-                    <!-- End Plan -->
-                    <div class="wow fadeInUp animated" data-wow-duration=".3" data-wow-delay=".1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
-                    <div class="rooms-page-item  g-bg-color--darkgreen">
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <div class="room-pic-slider owl-carousel owl-loaded owl-drag">
-                                <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(-1116px, 0px, 0px); transition: all 0.8s ease 0s; width: 3348px;"><div class="owl-item cloned" style="width: 558px;"><div class="single-room-pic">
-                                        <img src="img/rooms/5th/IMG_5192.jpg" alt="">
-                                    </div></div><div class="owl-item cloned" style="width: 558px;"><div class="single-room-pic">
-                                        <img src="img/rooms/5th/IMG_5193.jpg" alt="">
-                                    </div></div><div class="owl-item active" style="width: 558px;"><div class="single-room-pic">
-                                        <img src="img/rooms/5th/IMG_5194.jpg" alt="">
-                                    </div></div><div class="owl-item" style="width: 558px;"><div class="single-room-pic">
-                                        <img src="img/rooms/5th/IMG_5195.jpg" alt="">
-                                    </div></div><div class="owl-item cloned" style="width: 558px;"><div class="single-room-pic">
-                                        <img src="img/rooms/5th/IMG_5196.jpg" alt="">
-                                    </div></div><div class="owl-item cloned" style="width: 558px;"><div class="single-room-pic">
-                                        <img src="img/rooms/5th/IMG_5197.jpg" alt="">
-                                    </div></div></div></div><div class="owl-nav"><button type="button" role="presentation" class="owl-prev"><i class="lnr lnr-arrow-left"></i></button><button type="button" role="presentation" class="owl-next"><i class="lnr lnr-arrow-right"></i></button></div><div class="owl-dots disabled"></div></div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="room-text">
-                                    <div class="room-title">
-                                        <h2 class="text-uppercase g-font-size-14--xs g-font-weight--700 g-color--primary g-letter-spacing--2 g-margin-b-25--xs translate">Tatami</h2>
-                                        <!-- <div class="room-price">
-                                            <span>From</span>
-                                            <h2>$99</h2>
-                                            <sub>/night</sub>
-                                        </div> -->
-                                    </div>
-                                    <div class="room-desc">
-                                        <p class="g-color--cream translate">It is a room with a single tatami mat with a low-type double bed that creates an open space. There is also a washing area in the bath, so you can relax like you are at home in Japan.</p>
-                                    </div>
-                                    <div class="room-features">
-                                        <div class="room-info">
-                                            <i class="fa fa-television"></i>
-                                            <span class=" translate">Smart TV</span>
-                                        </div>
-                                        <div class="room-info">
-                                            <i class="fa fa-wifi"></i>
-                                            <span class=" translate">High Wi-fii</span>
-                                        </div>
-                                        <div class="room-info">
-                                            <i class="fa fa-snowflake"></i>
-                                            <span class=" translate">AC</span>
-                                        </div>
-                                        <div class="room-info">
-                                            <i class="fa fa-parking"></i>
-                                            <span class=" translate">Parking</span>
-                                        </div>
-                                    </div>
-                                    <a id="tatami_btn" class="text-uppercase s-btn s-btn--md s-btn--white-brd g-radius--50 translate">Reserve Now</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    </div>
-                    <!-- End Plan -->
-                    <div class="wow fadeInUp animated" data-wow-duration=".3" data-wow-delay=".1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
-                    <div class="rooms-page-item  g-bg-color--darkgreen">
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <div class="room-pic-slider owl-carousel owl-loaded owl-drag">
-                                <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(-1116px, 0px, 0px); transition: all 0.8s ease 0s; width: 3348px;"><div class="owl-item cloned" style="width: 558px;"><div class="single-room-pic">
-                                        <img src="img/building/other_building/IMG_5125.jpg" alt="">
-                                    </div></div><div class="owl-item cloned" style="width: 558px;"><div class="single-room-pic">
-                                        <img src="img/building/other_building/IMG_5125.jpg" alt="">
-                                    </div></div><div class="owl-item active" style="width: 558px;"><div class="single-room-pic">
-                                        <img src="img/building/other_building/IMG_5125.jpg" alt="">
-                                    </div></div><div class="owl-item" style="width: 558px;"><div class="single-room-pic">
-                                        <img src="img/building/other_building/IMG_5125.jpg" alt="">
-                                    </div></div><div class="owl-item cloned" style="width: 558px;"><div class="single-room-pic">
-                                        <img src="img/building/other_building/IMG_5125.jpg" alt="">
-                                    </div></div><div class="owl-item cloned" style="width: 558px;"><div class="single-room-pic">
-                                        <img src="img/building/other_building/IMG_5125.jpg" alt="">
-                                    </div></div></div></div><div class="owl-nav"><button type="button" role="presentation" class="owl-prev"><i class="lnr lnr-arrow-left"></i></button><button type="button" role="presentation" class="owl-next"><i class="lnr lnr-arrow-right"></i></button></div><div class="owl-dots disabled"></div></div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="room-text">
-                                    <div class="room-title">
-                                        <h2 class="text-uppercase g-font-size-14--xs g-font-weight--700 g-color--primary g-letter-spacing--2 g-margin-b-25--xs translate">Superior</h2>
-                                        <!-- <div class="room-price">
-                                            <span>From</span>
-                                            <h2>$99</h2>
-                                            <sub>/night</sub>
-                                        </div> -->
-                                    </div>
-                                    <div class="room-desc">
-                                        <p class="g-color--cream translate">This room has one queen size bed. There is a large kitchen where you can easily prepare your own meals.</p>
-                                    </div>
-                                    <div class="room-features">
-                                        <div class="room-info">
-                                            <i class="fa fa-television"></i>
-                                            <span class=" translate">Smart TV</span>
-                                        </div>
-                                        <div class="room-info">
-                                            <i class="fa fa-wifi"></i>
-                                            <span class=" translate">High Wi-fii</span>
-                                        </div>
-                                        <div class="room-info">
-                                            <i class="fa fa-snowflake"></i>
-                                            <span class=" translate">AC</span>
-                                        </div>
-                                        <div class="room-info">
-                                            <i class="fa fa-parking"></i>
-                                            <span class="">Parking</span>
-                                        </div>
-                                    </div>
-                                    <a id="superior_btn" class="text-uppercase s-btn s-btn--md s-btn--white-brd g-radius--50 translate">Reserve Now</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    </div>
-                    <!-- End Plan -->
-                    <div class="wow fadeInUp animated" data-wow-duration=".3" data-wow-delay=".1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
-                    <div class="rooms-page-item  g-bg-color--darkgreen">
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <div class="room-pic-slider owl-carousel owl-loaded owl-drag">
-                                <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(-1116px, 0px, 0px); transition: all 0.8s ease 0s; width: 3348px;"><div class="owl-item cloned" style="width: 558px;"><div class="single-room-pic">
-                                        <img src="img/building/other_building/IMG_5125.jpg" alt="">
-                                    </div></div><div class="owl-item cloned" style="width: 558px;"><div class="single-room-pic">
-                                        <img src="img/building/other_building/IMG_5125.jpg" alt="">
-                                    </div></div><div class="owl-item active" style="width: 558px;"><div class="single-room-pic">
-                                        <img src="img/building/other_building/IMG_5125.jpg" alt="">
-                                    </div></div><div class="owl-item" style="width: 558px;"><div class="single-room-pic">
-                                        <img src="img/building/other_building/IMG_5125.jpg" alt="">
-                                    </div></div><div class="owl-item cloned" style="width: 558px;"><div class="single-room-pic">
-                                        <img src="img/building/other_building/IMG_5125.jpg" alt="">
-                                    </div></div><div class="owl-item cloned" style="width: 558px;"><div class="single-room-pic">
-                                        <img src="img/building/other_building/IMG_5125.jpg" alt="">
-                                    </div></div></div></div><div class="owl-nav"><button type="button" role="presentation" class="owl-prev"><i class="lnr lnr-arrow-left"></i></button><button type="button" role="presentation" class="owl-next"><i class="lnr lnr-arrow-right"></i></button></div><div class="owl-dots disabled"></div></div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="room-text">
-                                    <div class="room-title">
-                                        <h2 class="g-font-size-14--xs g-font-weight--700 g-color--primary g-letter-spacing--2 g-margin-b-25--xs translate">Executive</h2>
-                                        <!-- <div class="room-price">
-                                            <span>From</span>
-                                            <h2>$99</h2>
-                                            <sub>/night</sub>
-                                        </div> -->
-                                    </div>
-                                    <div class="room-desc">
-                                        <p class="g-color--cream translate">This room offers a choice of either a queen-size bed or twin beds. It is more spacious than the Deluxe Plus and has a sofa set. It has a large kitchen and a stone bath.</p>
-                                    </div>
-                                    <div class="room-features">
-                                        <div class="room-info">
-                                            <i class="fa fa-television"></i>
-                                            <span class=" translate">Smart TV</span>
-                                        </div>
-                                        <div class="room-info">
-                                            <i class="fa fa-wifi"></i>
-                                            <span class=" translate">High Wi-fii</span>
-                                        </div>
-                                        <div class="room-info">
-                                            <i class="fa fa-snowflake"></i>
-                                            <span class=" translate">AC</span>
-                                        </div>
-                                        <div class="room-info">
-                                            <i class="fa fa-parking"></i>
-                                            <span class=" translate">Parking</span>
-                                        </div>
-                                    </div>
-                                    <a id="executive_btn" class="text-uppercase s-btn s-btn--md s-btn--white-brd g-radius--50 translate">Reserve Now</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    </div>
-                    <!-- End Plan -->
-                    <div class="wow fadeInUp animated" data-wow-duration=".3" data-wow-delay=".1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
-                    <div class="rooms-page-item  g-bg-color--darkgreen">
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <div class="room-pic-slider owl-carousel owl-loaded owl-drag">
-                                <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(-1116px, 0px, 0px); transition: all 0.8s ease 0s; width: 3348px;"><div class="owl-item cloned" style="width: 558px;"><div class="single-room-pic">
-                                        <img src="img/building/other_building/IMG_5125.jpg" alt="">
-                                    </div></div><div class="owl-item cloned" style="width: 558px;"><div class="single-room-pic">
-                                        <img src="img/building/other_building/IMG_5125.jpg" alt="">
-                                    </div></div><div class="owl-item active" style="width: 558px;"><div class="single-room-pic">
-                                        <img src="img/building/other_building/IMG_5125.jpg" alt="">
-                                    </div></div><div class="owl-item" style="width: 558px;"><div class="single-room-pic">
-                                        <img src="img/building/other_building/IMG_5125.jpg" alt="">
-                                    </div></div><div class="owl-item cloned" style="width: 558px;"><div class="single-room-pic">
-                                        <img src="img/building/other_building/IMG_5125.jpg" alt="">
-                                    </div></div><div class="owl-item cloned" style="width: 558px;"><div class="single-room-pic">
-                                        <img src="img/building/other_building/IMG_5125.jpg" alt="">
-                                    </div></div></div></div><div class="owl-nav"><button type="button" role="presentation" class="owl-prev"><i class="lnr lnr-arrow-left"></i></button><button type="button" role="presentation" class="owl-next"><i class="lnr lnr-arrow-right"></i></button></div><div class="owl-dots disabled"></div></div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="room-text">
-                                    <div class="room-title">
-                                        <h2 class="g-font-size-14--xs g-font-weight--700 g-color--primary g-letter-spacing--2 g-margin-b-25--xs translate">Junior Suite</h2>
-                                        <!-- <div class="room-price">
-                                            <span>From</span>
-                                            <h2>$99</h2>
-                                            <sub>/night</sub>
-                                        </div> -->
-                                    </div>
-                                    <div class="room-desc">
-                                        <p class="g-color--cream translate">This room offers a choice of either a queen-size bed or twin beds. It is more spacious than the Deluxe Plus and has a sofa set. It has a large kitchen and a stone bath.</p>
-                                    </div>
-                                    <div class="room-features">
-                                        <div class="room-info">
-                                            <i class="fa fa-television"></i>
-                                            <span class=" translate">Smart TV</span>
-                                        </div>
-                                        <div class="room-info">
-                                            <i class="fa fa-wifi"></i>
-                                            <span class=" translate">High Wi-fii</span>
-                                        </div>
-                                        <div class="room-info">
-                                            <i class="fa fa-snowflake"></i>
-                                            <span class=" translate">AC</span>
-                                        </div>
-                                        <div class="room-info">
-                                            <i class="fa fa-parking"></i>
-                                            <span class=" translate">Parking</span>
-                                        </div>
-                                    </div>
-                                    <a id="junior_btn" class="text-uppercase s-btn s-btn--md s-btn--white-brd g-radius--50 translate">Reserve Now</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    </div>
-                    <!-- End Plan -->
+                    </div>	
                 </div>
             </div>
         </div>
@@ -582,8 +356,8 @@
                                 <li><a class="g-font-size-15--xs g-color--white-opacity translate" href="roomrates.html">Room Rates</a></li>
                                 <li><a class="g-font-size-15--xs g-color--white-opacity translate" href="restaurant.html">Restaurant</a></li>
                                 <li><a class="g-font-size-15--xs g-color--white-opacity translate" href="contacts.html">Location</a></li>
-                                <li><a class="g-font-size-15--xs g-color--white-opacity translate" href="">Reservations</a></li>
-                                <li><a class="g-font-size-15--xs g-color--white-opacity translate" href="">Caea School</a></li>
+                                <li><a class="g-font-size-15--xs g-color--white-opacity translate" href="reservation/reservation.html">Reservations</a></li>
+                                <li><a class="g-font-size-15--xs g-color--white-opacity translate" href="https://caea-ph.com/">Caea School</a></li>
                             </ul>
                         </div>
                         <div class="col-sm-2 g-margin-b-20--xs g-margin-b-0--md">
@@ -647,10 +421,14 @@
         <script type="text/javascript" src="js/components/swiper.min.js"></script>
         <script type="text/javascript" src="js/components/wow.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/simplePagination.js/1.6/jquery.simplePagination.js"></script>
+        <script src="js/uikit.min.js"></script>
+        <script src="js/uikit-icons.min.js"></script>
         <script src="js/custom_script.js"></script>
         <script src="reservation/assets/js/custom/googleT/translate.js"></script>
         <!--========== END JAVASCRIPTS ==========-->
         <script src="js/room.js"></script>
+        <script src="js/pagination.js"></script>
 
     </body>
     <!-- End Body -->
