@@ -1,0 +1,43 @@
+[
+    {
+      "id": 1,
+      "room_name": "Deluxe Suite",
+      "room_description": "A spacious suite with a king-size bed, separate living area, and a luxurious bathroom.",
+      "room_price": 250.0,
+      "room_images": [
+        "deluxe_suite_1.jpg",
+        "deluxe_suite_2.jpg"
+      ]
+    },
+    {
+      "id": 2,
+      "room_name": "Standard Room",
+      "room_description": "A comfortable room with a queen-size bed and all essential amenities.",
+      "room_price": 100.0,
+      "room_images": [
+        "standard_room_1.jpg",
+        "standard_room_2.jpg"
+      ]
+    },
+    {
+      "id": 3,
+      "room_name": "Family Room",
+      "room_description": "A large room with two double beds, perfect for families.",
+      "room_price": 150.0,
+      "room_images": [
+        "family_room_1.jpg",
+        "family_room_2.jpg"
+      ]
+    },
+    {
+      "id": 4,
+      "room_name": "Penthouse Suite",
+      "room_description": "An exclusive penthouse suite with panoramic views, a private balcony, and personalized services.",
+      "room_price": 500.0,
+      "room_images": [
+        "penthouse_suite_1.jpg",
+        "penthouse_suite_2.jpg"
+      ]
+    }
+  ]
+  
