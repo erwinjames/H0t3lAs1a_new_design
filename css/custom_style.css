@@ -109,11 +109,20 @@
 a,
 .uk-link {
 	color: #31a9a9;
+	text-decoration: none
 }
 a:hover,
 .uk-link:hover {
 	color: #333333;
 	text-decoration: none;
+}
+a,
+.uk-transition-toggle{
+	text-decoration: none;
+}
+a,
+.uk-transition-toggle:hover {
+ 	text-decoration: none;
 }
 /* [ 1.1.4 Heading ] */
 h1,
