@@ -83,8 +83,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->isSMTP();
         $mail->Host       = 'mail.hotelasiacebu.com';
         $mail->SMTPAuth   = true;
-        $mail->Username   = 'it@hotelasiacebu.com'; // SMTP username
-        $mail->Password   = 'sTxGLCy+ciHH'; // SMTP password
+        $mail->Username   = ''; // SMTP username
+        $mail->Password   = ''; // SMTP password
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port       = 587;
 
