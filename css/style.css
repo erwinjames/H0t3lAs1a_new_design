@@ -2060,6 +2060,7 @@ fieldset[disabled] .s-btn {
   background: url("../img/widgets/worldmap.png") no-repeat center center;
   background-size: cover;
   content: " ";
+  filter: drop-shadow(0.1rem 0.30rem 0.10rem #e4c489);
 }
 
 /*----------------------------------
