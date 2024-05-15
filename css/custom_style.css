@@ -3256,9 +3256,9 @@ i.icon-bg {
  	height: 930px;
  }
  .impx-slide-container.style1 {
- 	margin-bottom: 0;
- 	height: 755px;
- }
+    margin-bottom: -29px;
+    height: 750px;
+}
 .impx-slide-container.style1.inner-page {
  	height: 440px;
  }
@@ -3493,3 +3493,4 @@ i.icon-bg {
 	border: 2px solid #d6ad60;
 	border-radius: 50%;
 }
+.hidden { display: none; }
