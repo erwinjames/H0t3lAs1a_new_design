@@ -836,7 +836,7 @@ h6.uk-article-title  {
 }
 .impx-img-stacked img:nth-child(2) {
 	position: absolute;
-	top: 75px;
+	top: 320px;
 	z-index: 2;
 	left: 130px;
 	width: 85%;
