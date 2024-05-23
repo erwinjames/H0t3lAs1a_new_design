@@ -161,23 +161,8 @@
 							    	
 							    </div>
 						    </li><!-- highlight item #3 end -->
-						    <li class="uk-text-center uk-grid-margin uk-first-column"><!-- highlight item #4 -->
-						    	<div class="uk-card uk-card-default uk-card-body impx-padding-medium">
-							    	<i class="fa fa-heart-o fa-2x impx-text-gold"></i>
-							    	<h3 class="uk-margin-remove-bottom uk-margin-small-top" style="font-weight: bold;">Mini Gym</h3>
-							    	
-							    </div>
-						    </li><!-- highlight item #4 end -->
-						    <li class="uk-text-center uk-grid-margin"><!-- highlight item #5 -->
-						    	<div class="uk-card uk-card-default uk-card-body impx-padding-medium">
-							    	<i class="fa fa-child fa-2x impx-text-gold"></i>
-							    	<h3 class="uk-margin-remove-bottom uk-margin-small-top" style="font-weight: bold;">Restaurant</h3>
-							    	
-							    </div>
-						    </li><!-- highlight item #5 end -->
 						</ul>
 						<!-- highlight end -->
-
 						<!-- room description -->
 						<h4 style="font-weight: bold;">Room Type</h4>
 						<p class="impx-text-large"  id="room-name"></p>
@@ -507,36 +492,43 @@
         <script src="js/uikit-icons.min.js"></script>
         <!--========== END JAVASCRIPTS ==========-->
         <script>
-            // Function to get the room ID from the URL query parameters
-            function getRoomId() {
-                const queryString = window.location.search;
-                const urlParams = new URLSearchParams(queryString);
-                return urlParams.get('id'); // Extract the 'id' parameter
-            }
-    
-            const roomId = getRoomId(); // Get the room ID from the URL
-    
-            // AJAX call to fetch room details
-            $.ajax({
-                url: 'js/roomdetails.json', // Path to the JSON file
-                type: 'GET',
-                dataType: 'json',
-                success: function(data) {
-                    // Find the room with the matching ID
-                    const room = data.find(r => r.id == roomId);
-    
-                    if (room) {
-                        populateSlider(room.room_images); // Populate the slider with room images
-                        updateRoomDetails(room);
-                    } else {
-                        console.error('Room not found.');
-                    }
-                },
-                error: function(xhr, status, error) {
-                    console.error('Error fetching room data:', status, error);
-                }
-            });
-    
+           // Function to get the room ID from the URL query parameters
+				function getRoomId() {
+					const queryString = window.location.search;
+					const urlParams = new URLSearchParams(queryString);
+					return urlParams.get('id'); // Extract the 'id' parameter
+				}
+
+				const roomId = getRoomId(); // Get the room ID from the URL
+
+				// AJAX call to fetch room details
+				$.ajax({
+					url: 'js/roomdetails.json', // Path to the JSON file
+					type: 'GET',
+					dataType: 'json',
+					success: function(data) {
+						// Find the room with the matching ID
+						const room = data.find(r => r.id == roomId);
+
+						if (room) {
+							populateSlider(room.room_images); // Populate the slider with room images
+							updateRoomDetails(room);
+							
+							// Hide bathtub feature for specific room IDs
+							if (roomId == 1 || roomId == 2 || roomId == 3) {
+								document.querySelectorAll('.uk-card-body i.fa-bathtub').forEach(element => {
+									element.closest('li').style.display = 'none';
+								});
+							}
+						} else {
+							console.error('Room not found.');
+						}
+					},
+					error: function(xhr, status, error) {
+						console.error('Error fetching room data:', status, error);
+					}
+				});
+
             // Function to update the room details on the page
             function updateRoomDetails(room) {
                 $('#room-name').text(room.room_name);
