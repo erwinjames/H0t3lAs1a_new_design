@@ -9,7 +9,7 @@
     {
       "id": 2,
       "room_name": "Standard Room",
-      "room_description": "This room offers a choice of either a double bed or twin beds. The bath has a bathtub where you can soak in hot water.",
+      "room_description": "This room offers a choice of either a double bed or twin beds. There is a bathtub available for soaking in hot water.",
       "room_price": 100.0,
       "room_images": ["img/rooms/2nd/IMG_5170.jpg", "img/rooms/2nd/IMG_5171.jpg", "img/rooms/2nd/IMG_5172.jpg"]
     },
