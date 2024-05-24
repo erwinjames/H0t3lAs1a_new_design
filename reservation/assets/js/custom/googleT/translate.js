@@ -42,8 +42,8 @@ function resetToOriginal() {
   const elementsToTranslate = document.querySelectorAll('.translate');
 
   elementsToTranslate.forEach(element => {
-    const originalText = element.getAttribute('data-original-text') || element.textContent.trim(); // Get original text
-    element.textContent = originalText; // Reset to original
+    const originalHTML = element.getAttribute('data-original-html') || element.innerHTML.trim(); // Get original HTML
+    element.innerHTML = originalHTML; // Reset to original
   });
 
   toggleLanguageButtons(); // Update button visibility
@@ -56,22 +56,30 @@ async function translatePage(targetLanguage) {
   const elementsToTranslate = document.querySelectorAll('.translate');
 
   for (const element of elementsToTranslate) {
-    // Store original text for reverting later
-    if (!element.hasAttribute('data-original-text')) {
-      element.setAttribute('data-original-text', element.textContent.trim());
+    // Store original HTML for reverting later
+    if (!element.hasAttribute('data-original-html')) {
+      element.setAttribute('data-original-html', element.innerHTML.trim());
     }
 
-    const originalText = element.textContent.trim();
-    const sentences = originalText.split(/[.!?]/).filter(sentence => sentence.trim());
+    const originalHTML = element.innerHTML.trim();
+    const segments = originalHTML.split(/(<br>)/i); // Split by <br> tags
 
-    let translatedText = '';
+    let translatedHTML = '';
 
-    for (const sentence of sentences) {
-      const translatedSentence = await googleTranslate(targetLanguage, sentence.trim());
-      translatedText += `${translatedSentence}  `;
+    for (const segment of segments) {
+      if (segment.toLowerCase() === '<br>') {
+        translatedHTML += segment; // Preserve the <br> tags
+      } else {
+        const sentences = segment.split(/[.!?]/).filter(sentence => sentence.trim());
+
+        for (const sentence of sentences) {
+          const translatedSentence = await googleTranslate(targetLanguage, sentence.trim());
+          translatedHTML += `${translatedSentence}. `;
+        }
+      }
     }
 
-    element.textContent = translatedText.trim(); // Translate and update
+    element.innerHTML = translatedHTML.trim(); // Translate and update
   }
 }
 
@@ -95,11 +103,11 @@ function googleTranslate(targetLanguage, text) {
 }
 
 // Event listeners for language buttons
-englishButton.addEventListener('click', () => {
+document.getElementById('englishButton').addEventListener('click', () => {
   toggleTranslation(); // Toggle translation mode
 });
 
-japaneseButton.addEventListener('click', () => {
+document.getElementById('japaneseButton').addEventListener('click', () => {
   toggleTranslation(); // Toggle translation mode
 });
 

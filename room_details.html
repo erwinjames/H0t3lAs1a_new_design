@@ -348,7 +348,7 @@
 										<div class="uk-card uk-card-default uk-box-shadow-large uk-box-shadow-hover-xlarge impx-service-card other-item g-bg-color--darkgreen">
 								        	<div class="uk-card-media-top">
 								        		<div class="uk-position-relative">
-									                <img src="img/rooms/1st/IMG_5162.jpg" alt="">
+									                <img src="img/room/Superior/Edited/IMG_5477 (1).jpg" alt="">
 									                <div class="impx-overlay light overlay-squared padding-xwide"></div>
 									            </div>
 								                <div class="uk-card-body impx-padding-small uk-position-relative uk-position-z-index">
@@ -364,7 +364,7 @@
 										<div class="uk-card uk-card-default uk-box-shadow-large uk-box-shadow-hover-xlarge impx-service-card other-item g-bg-color--darkgreen">
 								        	<div class="uk-card-media-top">
 								        		<div class="uk-position-relative">
-									                <img src="img/rooms/2nd/IMG_5168.jpg" alt="">
+									                <img src="img/room/Executive-twin/IMG_5396.JPG" alt="">
 									                <div class="impx-overlay light overlay-squared padding-xwide"></div>
 									            </div>
 								                <div class="uk-card-body impx-padding-small uk-position-relative uk-position-z-index">
@@ -380,7 +380,7 @@
 										<div class="uk-card uk-card-default uk-box-shadow-large uk-box-shadow-hover-xlarge impx-service-card other-item g-bg-color--darkgreen">
 								        	<div class="uk-card-media-top uk-light">
 								        		<div class="uk-position-relative">
-									                <img src="img/rooms/3rd/IMG_5177.jpg" alt="">
+									                <img src="img/room/Junior-Suite/IMG_5459.JPG" alt="">
 									                <div class="impx-overlay light overlay-squared padding-xwide"></div>
 									            </div>
 								                <div class="uk-card-body impx-padding-small uk-position-relative uk-position-z-index">
@@ -492,86 +492,88 @@
         <script src="js/uikit-icons.min.js"></script>
         <!--========== END JAVASCRIPTS ==========-->
         <script>
-           // Function to get the room ID from the URL query parameters
-				function getRoomId() {
-					const queryString = window.location.search;
-					const urlParams = new URLSearchParams(queryString);
-					return urlParams.get('id'); // Extract the 'id' parameter
-				}
-
-				const roomId = getRoomId(); // Get the room ID from the URL
-
-				// AJAX call to fetch room details
-				$.ajax({
-					url: 'js/roomdetails.json', // Path to the JSON file
-					type: 'GET',
-					dataType: 'json',
-					success: function(data) {
-						// Find the room with the matching ID
-						const room = data.find(r => r.id == roomId);
-
-						if (room) {
-							populateSlider(room.room_images); // Populate the slider with room images
-							updateRoomDetails(room);
-							
-							// Hide bathtub feature for specific room IDs
-							if (roomId == 1 || roomId == 2 || roomId == 3) {
-								document.querySelectorAll('.uk-card-body i.fa-bathtub').forEach(element => {
-									element.closest('li').style.display = 'none';
-								});
-							}
-						} else {
-							console.error('Room not found.');
+			// Function to get the room ID from the URL query parameters
+			function getRoomId() {
+				const queryString = window.location.search;
+				const urlParams = new URLSearchParams(queryString);
+				return urlParams.get('id'); // Extract the 'id' parameter
+			}
+		
+			const roomId = getRoomId(); // Get the room ID from the URL
+		
+			// AJAX call to fetch room details
+			$.ajax({
+				url: 'js/roomdetails.json', // Path to the JSON file
+				type: 'GET',
+				dataType: 'json',
+				success: function(data) {
+					// Find the room with the matching ID
+					const room = data.find(r => r.id == roomId);
+		
+					if (room) {
+						populateSlider(room.room_images); // Populate the slider with room images
+						updateRoomDetails(room);
+						
+						// Hide bathtub feature for specific room IDs
+						if (roomId == 1 || roomId == 2 || roomId == 3) {
+							document.querySelectorAll('.uk-card-body i.fa-bathtub').forEach(element => {
+								element.closest('li').style.display = 'none';
+							});
 						}
-					},
-					error: function(xhr, status, error) {
-						console.error('Error fetching room data:', status, error);
+					} else {
+						console.error('Room not found.');
 					}
+				},
+				error: function(xhr, status, error) {
+					console.error('Error fetching room data:', status, error);
+				}
+			});
+		
+			// Function to update the room details on the page
+			function updateRoomDetails(room) {
+				$('#room-name').text(room.room_name);
+				$('#room-description').html(room.room_description); // Use html() instead of text() to render HTML
+				$('#room-price').text(`$${room.room_price.toFixed(2)}`);
+				
+				const imageContainer = $('#room-images');
+				imageContainer.empty(); // Clear any existing images
+				
+				// Add the new images
+				room.room_images.forEach(image => {
+					imageContainer.append(`<img src="${image}" alt="${room.room_name}" />`);
 				});
-
-            // Function to update the room details on the page
-            function updateRoomDetails(room) {
-                $('#room-name').text(room.room_name);
-                $('#room-description').text(room.room_description);
-                $('#room-price').text(`$${room.room_price.toFixed(2)}`);
-                
-                const imageContainer = $('#room-images');
-                imageContainer.empty(); // Clear any existing images
-                
-                // Add the new images
-                room.room_images.forEach(image => {
-                    imageContainer.append(`<img src="${image}" alt="${room.room_name}" />`);
-                });
-            }
-            // Function to populate the UKit slider
-            function populateSlider(images) {
-                const slideshowItems = $('#slider-content'); // Slideshow content
-                const thumbNav = $('#slider-thumbnails'); // Thumbnail navigation
-    
-                // Clear existing content
-                slideshowItems.empty();
-                thumbNav.empty();
-    
-                // Add new images to the slider
-                images.forEach((image, index) => {
-                    slideshowItems.append(`
-                        <li class="${index === 0 ? 'uk-active uk-transition-active' : ''}">
-                            <img src="${image}" alt="Room Image" data-uk-cover class="uk-cover" />
-                        </li>
-                    `);
-    
-                    // Add thumbnails
-                    thumbNav.append(`
-                        <li data-uk-slideshow-item="${index}" class="${index === 0 ? 'uk-active' : ''}">
-                            <a href="#"><img src="${image}" width="120" alt="Thumbnail" /></a>
-                        </li>
-                    `);
-                });
-    
-                // Reinitialize the UKit slideshow to ensure correct behavior
-                UIkit.slideshow('.uk-slideshow', { animation: 'fade' });
-            }
-        </script>
+			}
+		
+			// Function to populate the UKit slider
+			function populateSlider(images) {
+				const slideshowItems = $('#slider-content'); // Slideshow content
+				const thumbNav = $('#slider-thumbnails'); // Thumbnail navigation
+		
+				// Clear existing content
+				slideshowItems.empty();
+				thumbNav.empty();
+		
+				// Add new images to the slider
+				images.forEach((image, index) => {
+					slideshowItems.append(`
+						<li class="${index === 0 ? 'uk-active uk-transition-active' : ''}">
+							<img src="${image}" alt="Room Image" data-uk-cover class="uk-cover" />
+						</li>
+					`);
+		
+					// Add thumbnails
+					thumbNav.append(`
+						<li data-uk-slideshow-item="${index}" class="${index === 0 ? 'uk-active' : ''}">
+							<a href="#"><img src="${image}" width="120" alt="Thumbnail" /></a>
+						</li>
+					`);
+				});
+		
+				// Reinitialize the UKit slideshow to ensure correct behavior
+				UIkit.slideshow('.uk-slideshow', { animation: 'fade' });
+			}
+		</script>
+		
 
     </body>
     <!-- End Body -->
