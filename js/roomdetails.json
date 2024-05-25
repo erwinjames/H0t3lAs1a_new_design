@@ -4,56 +4,65 @@
       "room_name": "Economy Plus",
       "room_description": "This room has one Double sized bed. It is one size smaller than the standard room. It has a shower and doesn't have a bathtub.",
       "room_price": 250.0,
-      "room_images": ["img/room/Economy-Plus/IMG_5528.JPG", "img/room/Economy-Plus/IMG_5514.JPG", "img/room/Economy-Plus/IMG_5515.JPG", "img/room/Economy-Plus/IMG_5525.JPG", "img/room/Economy-Plus/IMG_5524.JPG"]
+      "room_images": ["img/room/Economy-Plus/IMG_5528.JPG", "img/room/Economy-Plus/IMG_5514.JPG", "img/room/Economy-Plus/IMG_5515.JPG", "img/room/Economy-Plus/IMG_5525.JPG", "img/room/Economy-Plus/IMG_5524.JPG"],
+      "room_number": ["707","706","708","603","605","704"]
     },
     {
       "id": 2,
       "room_name": "Economy",
       "room_description": "This room has one Semi Double sized bed. It has a shower and doesn't have a bathtub.",
       "room_price": 250.0,
-      "room_images": ["img/room/economy/IMG_5397.JPG", "img/room/economy/IMG_5405.JPG", "img/room/economy/IMG_5403.JPG", "img/room/economy/IMG_5399.JPG", "img/room/economy/IMG_5413.JPG"]
+      "room_images": ["img/room/economy/IMG_5397.JPG", "img/room/economy/IMG_5405.JPG", "img/room/economy/IMG_5403.JPG", "img/room/economy/IMG_5399.JPG", "img/room/economy/IMG_5413.JPG"],
+      "room_number": ["203","303","403","404"]
+      
     },
     {
       "id": 3,
       "room_name": "Standard Room",
       "room_description": "You can choose from the following types of room. <br>- one Double sized bed Room <br>- Twin bed Room <br>The standard room has a bathtub.",
       "room_price": 100.0,
-      "room_images": ["img/room/standard/edited/IMG_5339.jpg", "img/room/standard/edited/IMG_5338.jpg", "img/room/standard/edited/IMG_5340.jpg", "img/room/standard/edited/IMG_5351.jpg", "img/room/standard/edited/IMG_5354.jpg"]
+      "room_images": ["img/room/standard/edited/IMG_5339.jpg", "img/room/standard/edited/IMG_5338.jpg", "img/room/standard/edited/IMG_5340.jpg", "img/room/standard/edited/IMG_5351.jpg", "img/room/standard/edited/IMG_5354.jpg"],
+      "room_number": ["201","205","207","206","204","301","304","306","307","305","209","208","309","703","702","308"]
     },
     {
       "id": 4,
       "room_name": "Deluxe",
       "room_description": "You can choose from the following types of room. <br/> - One Double sized bed Room <br/> - Twin bed Room Deluxe Room and higher have a bathtub made of stone.",
       "room_price": 100.0,
-      "room_images": ["img/room/Deluxe-Single/IMG_5444.jpg", "img/room/Deluxe-Single/IMG_5439.jpg", "img/room/Deluxe-Single/IMG_5452.jpg", "img/room/Deluxe-Single/IMG_5438.jpg", "img/room/Deluxe-Single/IMG_5450.jpg"]
+      "room_images": ["img/room/Deluxe-Single/IMG_5444.jpg", "img/room/Deluxe-Single/IMG_5439.jpg", "img/room/Deluxe-Single/IMG_5452.jpg", "img/room/Deluxe-Single/IMG_5438.jpg", "img/room/Deluxe-Single/IMG_5450.jpg"],
+      "room_number": ["401","405","402","407","406","409"]
     },
     {
       "id": 5,
       "room_name": "Deluxe Plus",
       "room_description": "You can choose from the following types of room. <br/> - One Double sized bed Room. <br/> - Twin bed Room . <br/> <br/> This room is more spacious than the Deluxe Room, so you can be more comfortable.",
       "room_price": 100.0,
-      "room_images": ["img/room/Deluxe-Plus/IMG_5200.jpg", "img/room/Deluxe-Plus/IMG_5202.jpg", "img/room/Deluxe-Plus-twin/IMG_5437.JPG", "img/room/Deluxe-Plus-twin/IMG_5430.JPG", "img/room/Deluxe-Plus-twin/IMG_5432.JPG"]
+      "room_images": ["img/room/Deluxe-Plus/IMG_5200.jpg", "img/room/Deluxe-Plus/IMG_5202.jpg", "img/room/Deluxe-Plus-twin/IMG_5437.JPG", "img/room/Deluxe-Plus-twin/IMG_5430.JPG", "img/room/Deluxe-Plus-twin/IMG_5432.JPG"],
+      "room_number": ["501","502","606","604","602"]
     },
     {
       "id": 6,
       "room_name": "Superior",
       "room_description": "This room has One Queen Sized Bed. It has a kitchen where you can cook by yourself in this room.",
       "room_price": 100.0,
-      "room_images": ["img/room/Superior/Edited/IMG_5477 (1).jpg", "img/room/Superior/Edited/IMG_5478 (1).jpg", "img/room/Superior/Edited/IMG_5482 (1).jpg", "img/room/Superior/Edited/IMG_5489 (1).jpg", "img/room/Superior/Edited/IMG_5490 (1).jpg"]
+      "room_images": ["img/room/Superior/Edited/IMG_5477 (1).jpg", "img/room/Superior/Edited/IMG_5478 (1).jpg", "img/room/Superior/Edited/IMG_5482 (1).jpg", "img/room/Superior/Edited/IMG_5489 (1).jpg", "img/room/Superior/Edited/IMG_5490 (1).jpg"],
+      "room_number": ["503"]
     },
     {
       "id": 7,
       "room_name": "Executive",
       "room_description": "You can choose from the following types of room. <br/> <br/> - One Bed Room (Room has one Queen sized bed). <br/> - Twin Bed Room (Room has one queen sized bed plus one single sized bed). <br/> <br/> This room is much bigger than the Deluxe Plus, and has a very comfortable sofa.",
       "room_price": 100.0,
-      "room_images": ["img/room/Executive/IMG_5362.JPG", "img/room/Executive/IMG_5358.JPG", "img/room/Executive/IMG_5360.JPG", "img/room/Executive/IMG_5365.JPG", "img/room/Executive/IMG_5366.JPG"]
+      "room_images": ["img/room/Executive/IMG_5362.JPG", "img/room/Executive/IMG_5358.JPG", "img/room/Executive/IMG_5360.JPG", "img/room/Executive/IMG_5365.JPG", "img/room/Executive/IMG_5366.JPG"],
+      "room_number": ["302","202"]
     },
     {
       "id": 8,
       "room_name": "Junior Suite",
       "room_description": "You can choose from one queen-size bed or twin beds.This room has a wide kitchen and a sofa set, and is the best room in Hotel asia. It is highly recommended for a long-term stay because you can relax comfortably here.",
       "room_price": 100.0,
-      "room_images": ["img/room/Junior-Suite/IMG_5459.JPG", "img/room/Junior-Suite/IMG_5470.JPG", "img/room/Junior-Suite/IMG_5460.JPG", "img/room/Junior-Suite/IMG_5454.JPG", "img/room/Junior-Suite/IMG_5495.JPG"]
+      "room_images": ["img/room/Junior-Suite/IMG_5459.JPG", "img/room/Junior-Suite/IMG_5470.JPG", "img/room/Junior-Suite/IMG_5460.JPG", "img/room/Junior-Suite/IMG_5454.JPG", "img/room/Junior-Suite/IMG_5495.JPG"],
+      "room_number": ["408","504"]
     }
   ]
   

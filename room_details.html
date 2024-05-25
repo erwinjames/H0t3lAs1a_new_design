@@ -31,6 +31,15 @@
         <!-- Favicon -->
         <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
         <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+				<style>
+			    #room-number-list {
+					column-count: 2;
+					column-gap: 40px;
+					}
+				#room-number-list li {
+					break-inside: avoid-column;
+				}
+				</style>
     </head>
     <!-- End Head -->
 
@@ -173,13 +182,9 @@
 								<p id="room-description"></p>
 							</div>
 							<div class="uk-width-1-2@xl uk-width-1-2@l uk-width-1-2@m uk-width-1-2@s">
-								<h5 style="font-weight: bold;">More Facilities</h5>
-								<ul class="uk-list uk-list-bullet impx-list">
-									<li>Free Wifi</li>
-									<li>24/7 Reception</li>
-									<li>Room Service</li>
-                                    <li>Mini Bar</li>
-                                    <li>Karaoke Area</li>
+								<h5 style="font-weight: bold;">Room number</h5>
+								<ul class="uk-list uk-list-bullet impx-list" id="room-number-list">
+									<!-- Room numbers will be dynamically inserted here -->
 								</ul>
 							</div>
 						</div>
@@ -491,7 +496,7 @@
         <script src="js/uikit.min.js"></script>
         <script src="js/uikit-icons.min.js"></script>
         <!--========== END JAVASCRIPTS ==========-->
-        <script>
+		<script>
 			// Function to get the room ID from the URL query parameters
 			function getRoomId() {
 				const queryString = window.location.search;
@@ -513,7 +518,7 @@
 					if (room) {
 						populateSlider(room.room_images); // Populate the slider with room images
 						updateRoomDetails(room);
-						
+		
 						// Hide bathtub feature for specific room IDs
 						if (roomId == 1 || roomId == 2 || roomId == 3) {
 							document.querySelectorAll('.uk-card-body i.fa-bathtub').forEach(element => {
@@ -534,14 +539,29 @@
 				$('#room-name').text(room.room_name);
 				$('#room-description').html(room.room_description); // Use html() instead of text() to render HTML
 				$('#room-price').text(`$${room.room_price.toFixed(2)}`);
-				
+		
 				const imageContainer = $('#room-images');
 				imageContainer.empty(); // Clear any existing images
-				
+		
 				// Add the new images
 				room.room_images.forEach(image => {
 					imageContainer.append(`<img src="${image}" alt="${room.room_name}" />`);
 				});
+		
+				// Update room number
+				const roomNumberContainer = $('#room-number-list');
+				roomNumberContainer.empty(); // Clear any existing room numbers
+		
+				// Separate room numbers by groups of 5
+				const roomNumbers = room.room_number;
+				const numColumns = 2;
+				const rows = Math.ceil(roomNumbers.length / numColumns);
+		
+				for (let i = 0; i < rows; i++) {
+					const col1 = roomNumbers[i] || "";
+					const col2 = roomNumbers[i + rows] || "";
+					roomNumberContainer.append(`<li>${col1}</li><li>${col2}</li>`);
+				}
 			}
 		
 			// Function to populate the UKit slider
@@ -574,7 +594,6 @@
 			}
 		</script>
 		
-
     </body>
     <!-- End Body -->
 </html>
