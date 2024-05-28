@@ -38,8 +38,9 @@
 			.impx-menu-page-group {
 				display: flex;
 				flex-direction: column;
-				height: 500px;
-				padding: 45px 5px 20px 25px;
+				height: 700px;
+				padding: 15px 5px 5px 0px;
+				/* padding: 45px 5px 20px 25px; */
 			}
 			.impx-menu-page-scrollable {
 				overflow-y: auto;
@@ -68,7 +69,7 @@
 			/* Scrollbar for Firefox */
 			.impx-menu-page-scrollable {
 				scrollbar-width: thin;
-				scrollbar-color:  #d6ad60 #d6ad6000;
+				scrollbar-color:  #fefefe00 #ffffff00;
 				scrollbar-radius: 10px; /* Firefox does not support scrollbar-radius, but we include for completeness */
 			}
 
@@ -88,6 +89,55 @@
 
 			.impx-menu-page-scrollable::-moz-scrollbar-thumb:hover {
 				background: #d6ad60;
+			}
+			.menu .btn_dl {
+				margin-inline: auto;
+				margin-block-start: 26px;
+			}
+			.btn_dl{
+			    position: relative;
+				color: hsl(38, 61%, 73%);
+				font-size: 1rem;
+				font-weight: 400;
+				text-transform: uppercase;
+				letter-spacing: 3px;
+				max-width: max-content;
+				border: 2px solid hsl(38, 61%, 73%);
+				padding: 12px 45px;
+				overflow: hidden;
+				z-index: 1;
+			}
+			.btn_dl::before {
+			content: "";
+			position: absolute;
+			bottom: 100%;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 200%;
+			height: 200%;
+			border-radius: 50%;
+			background-color: hsl(38, 61%, 73%);
+			transition: 500ms ease;
+			z-index: -1;
+			}
+
+			.btn_dl .text { transition: 250ms ease; }
+
+			.btn_dl .text-2 {
+			position: absolute;
+			top: 100%;
+			left: 50%;
+			transform: translateX(-50%);
+			min-width: max-content;
+			color: hsla(30, 8%, 5%, 1);
+			}
+			.btn_dl:is(:hover, :focus-visible)::before { bottom: -50%; }
+
+			.btn_dl:is(:hover, :focus-visible) .text-1 { transform: translateY(-40px); }
+
+			.btn_dl:is(:hover, :focus-visible) .text-2 {
+			top: 50%;
+			transform: translate(-50%, -50%);
 			}
 		</style>
     </head>
@@ -193,19 +243,23 @@
             <div class="uk-container">
                 <div class="uk-grid">
                     <!-- Image -->
-                    <div class="uk-width-2-5@xl uk-width-2-5@l uk-width-2-5@m uk-width-1-1@s uk-vertical-align-bottom uk-position-relative uk-position-z-index impx-negative-top xxlarge">
-                        <img src="img/jap_ramen.png" alt="Chef Stand" class="img-resto-intro uk-align-center"/>
+					<!-- impx-negative-top -->
+                    <div class="uk-width-2-5@xl uk-width-2-5@l uk-width-2-5@m uk-width-1-1@s uk-vertical-align-bottom uk-position-relative uk-position-z-index  xxlarge">
+                        <img src="img/hannya/kitchen.jpg" alt="Chef Stand" class="img-resto-intro uk-align-center"/>
                     </div>
                     <!-- Image End -->
                     <!-- Contact Info -->
                     <div class="uk-width-3-5@xl uk-width-3-5@l uk-width-3-5@m uk-width-1-1@s impx-intro resto">
-                        <h2 class="g-color--gold translate" style="font-weight: bold;">Reserve Your Seat, Savor the Treat!</h2>
-                        <p class="impx-text-normal uk-margin-bottom g-color--white-opacity-light translate">At our delightful restaurant, we invite you to experience culinary magic like never before. Picture this: the soft glow of ambient lighting, the tantalizing aroma of freshly prepared dishes, and the gentle hum of conversation. But wait, there’s more! By reserving your table in advance, you’re not just securing a spot; you’re unlocking a world of gastronomic delights.</p>                        
-                        <ul class="impx-list-inline impx-hours">
+                        <h2 class="g-color--gold translate" style="font-weight: bold;">Han-nya Japanese Restaurant</h2>
+                        <p class="impx-text-normal uk-margin-bottom g-color--white-opacity-light translate">
+							Han-nya Japanese Restaurant is open 24 hours daily. It is located at the ground floor of Hotel Asia. For breakfast choices, you can have Japanese, American/Western and Filipino dishes. You can enjoy more than 100 kinds of dishes such as fried or grilled fish, nigiri sushi, buckwheat noodle, etc. at very affordable prices.
+							You can also enjoy different dishes every day for one month!We serve not only meals but also fresh fruits, ice cream, coffee, etc..
+						</p>                        
+                        <!-- <ul class="impx-list-inline impx-hours">
                             <li><i class="fa fa-check impx-text-gold"></i><strong class="impx-text-gold translate">Breakfast</strong> <span class="impx-text-normal g-color--white-opacity-light">6.00 AM  - 10.00 AM</span></li>
                             <li><i class="fa fa-check impx-text-gold"></i><strong class="impx-text-gold translate">Lunch</strong><span class="impx-text-normal g-color--white-opacity-light"> 10.00 AM - 2.00 PM</span></li>
                             <li><i class="fa fa-check impx-text-gold"></i><strong class="impx-text-gold translate">Dinner</strong><span class="impx-text-normal g-color--white-opacity-light"> 4.00 PM - 12.00 PM</span></li>
-                        </ul>
+                        </ul> -->
                     </div>
                     <!-- Contact Info End -->                    
                 </div>
@@ -272,7 +326,7 @@
                             	<div data-uk-grid>
 	                                <div class="uk-width-1-3@xl uk-width-1-3@l uk-width-1-3@m uk-width-1-1@s">
 	                                	<div class="uk-position-relative">
-	                                    	<img src="img/hannya/Menu/new/chahan.jpg" alt="resort">
+	                                    	<img src="img/hannya/Menu/chahan.jpg" alt="resort">
 	                                    	<div class="impx-overlay light overlay-outline padding-medium"></div>
 	                                	</div>
 	                                </div>
@@ -299,15 +353,11 @@
 			</div>
 		</div>
 		<!-- HIGHLIGHT -->
-
-
-
 		<!-- https://github.com/DNXEMPIRE-1/grilli-restaurant.git -->
 		<!-- MENU BOOK -->
-		<div id="impx-menu-carousel" class="impx-menu-carousel uk-padding uk-position-relative uk-padding-remove-horizontal mobile-rmv-pad vert uk-background-fixed uk-background-center-center uk-height-1-1">
+		<div style="overflow: hidden;" id="impx-menu-carousel" class="impx-menu-carousel uk-padding uk-position-relative uk-padding-remove-horizontal mobile-rmv-pad vert uk-background-fixed uk-background-center-center uk-height-1-1">
 			<div class="impx-overlay darkestgreen"></div>
-			<div class="uk-container uk-container-large">
-
+			<div class="uk-container uk-container-large menu">
 				<!-- Intro -->
 				<div class="uk-grid uk-light">
 					<div class="uk-width-xlarge-2-3 uk-width-large-2-3 uk-width-medium-3-4  uk-width-xlarge-1-1 uk-container-center impx-margin-top">
@@ -317,7 +367,6 @@
 					</div>
 				</div>
 				<!-- Intro End -->
-
 				<!-- Menu groups -->
 				<div class="uk-grid uk-flex uk-flex-center">
 					<div class="uk-width-1-1">
@@ -332,11 +381,8 @@
 			    							<div class="uk-grid uk-grid-medium uk-margin-medium-bottom impx-margin-bottom">
 			    								<div class="uk-width-2-3@xl uk-width-2-3@l uk-width-2-3@m uk-width-4-5@s impx-menu-page-group-title">
 			    									<h4 class="uk-margin-remove translate" style="font-weight: bold;">JAPANESE BARBECUE</h4>
-			    									<p>BEEF</p>
-			    								</div>
-                                                <div class="uk-width-1-3@xl uk-width-1-3@l uk-width-1-3@m uk-width-1-5@s uk-container-center">
-                                                    <img src="img/hannya/Yakiniku-Japanese-barbecue.jpg" alt="Menu Image" class="uk-align-center" />
-                                                </div>
+			    									<p style="color:#c7c7c7ba">BEEF</p>
+			    								</div>	
 			    							</div>
 											<div class="impx-menu-page-scrollable">
 												<ul class="impx-menu-page menu-list" id="menu-list">
@@ -394,7 +440,7 @@
 														<div class="impx-menu-page-item  impx-chef-selection">
 															<div class="uk-width-2-3@xl uk-width-2-3@l uk-width-2-3@m uk-width-4-5@s impx-menu-page-group-title">
 																<h4 class="uk-margin-remove" style="font-weight: bold;"></h4>
-																<p>SEA FOOD</p>
+																<p style="color:#c7c7c7ba">SEA FOOD</p>
 															</div>
 														</div>
 													</li>
@@ -433,9 +479,6 @@
 			    									<h4 class="uk-margin-remove" style="font-weight: bold;">Appetizer</h4>
 			    									
 			    								</div>
-                                                <div class="uk-width-1-3@xl uk-width-1-3@l uk-width-1-3@m uk-width-1-5@s">
-                                                    <img src="img/hannya/maguro-natto-2.jpg" alt="Menu Image" class="uk-align-center" />
-                                                </div>
 			    							</div>
 											<div class="impx-menu-page-scrollable">
 												<ul class="impx-menu-page menu-list" id="menu-list">
@@ -540,9 +583,6 @@
 			    									<h4 class="translate" class="uk-margin-remove" style="font-weight: bold;">Sashimi</h4>
 			    									<!-- <p class="translate">paragraph</p> -->
 			    								</div>
-                                                <div class="uk-width-1-3@xl uk-width-1-3@l uk-width-1-3@m uk-width-1-5@s uk-container-center">
-                                                    <img src="img/hannya/sashimi.jpg" alt="Menu Image" class="uk-align-center" />
-                                                </div>
 			    							</div>
 											<div class="impx-menu-page-scrollable">
 												<ul class="impx-menu-page menu-list" id="menu-list">
@@ -670,9 +710,6 @@
 			    									<h4 class="translate" class="uk-margin-remove" style="font-weight: bold;">GRILLED</h4>
 			    									<!-- <p class="translate">paragraph</p> -->
 			    								</div>
-                                                <div class="uk-width-1-3@xl uk-width-1-3@l uk-width-1-3@m uk-width-1-5@s uk-container-center">
-                                                    <img src="img/hannya/yakitori-chicken-ginger-galic-superJumbo.jpg" alt="Menu Image" class="uk-align-center" />
-                                                </div>
 			    							</div>
 											<div class="impx-menu-page-scrollable">
 												<ul class="impx-menu-page menu-list" id="menu-list">
@@ -871,10 +908,7 @@
 											<div class="uk-grid uk-grid-medium uk-margin-medium-bottom impx-margin-bottom">
 												<div class="uk-width-2-3@xl uk-width-2-3@l uk-width-2-3@m uk-width-4-5@s impx-menu-page-group-title">
 													<h4 class="translate" class="uk-margin-remove" style="font-weight: bold;">Kushiage</h4>
-													<p class="translate">One order is more than 3 pieces.</p>
-												</div>
-												<div class="uk-width-1-3@xl uk-width-1-3@l uk-width-1-3@m uk-width-1-5@s uk-container-center">
-													<img src="img/hannya/kushiage.webp" alt="Menu Image" class="uk-align-center" />
+													<p class="translate" style="color:#c7c7c7ba">One order is more than 3 pieces.</p>
 												</div>
 											</div>
 
@@ -1028,9 +1062,6 @@
 												<div class="uk-width-2-3@xl uk-width-2-3@l uk-width-2-3@m uk-width-4-5@s impx-menu-page-group-title">
 													<h4 class="translate" class="uk-margin-remove" style="font-weight: bold;">Deep Fried</h4>
 													<!-- <p class="translate">One order is more than 3 pieces.</p> -->
-												</div>
-												<div class="uk-width-1-3@xl uk-width-1-3@l uk-width-1-3@m uk-width-1-5@s uk-container-center">
-													<img src="img/hannya/deepfriedtemp.jpg" alt="Menu Image" class="uk-align-center" />
 												</div>
 											</div>
 
@@ -1196,9 +1227,6 @@
 													<h4 class="translate" class="uk-margin-remove" style="font-weight: bold;">Salad</h4>
 													<!-- <p class="translate">One order is more than 3 pieces.</p> -->
 												</div>
-												<div class="uk-width-1-3@xl uk-width-1-3@l uk-width-1-3@m uk-width-1-5@s uk-container-center">
-													<img src="img/hannya/tofusalad.jpg" alt="Menu Image" class="uk-align-center" />
-												</div>
 											</div>
 
 											<!-- Scrollable Menu List -->
@@ -1278,7 +1306,7 @@
 													</li>
 													<div class="uk-width-2-3@xl uk-width-2-3@l uk-width-2-3@m uk-width-4-5@s impx-menu-page-group-title">
 														<h4 class="translate" class="uk-margin-remove" style="font-weight: bold;"></h4>
-														<p class="translate">Soup</p>
+														<p class="translate" style="color:white">Soup</p>
 													</div>
 													<li id="item8">
 														<div class="impx-menu-page-item">
@@ -1392,9 +1420,6 @@
 													<h4 class="translate" class="uk-margin-remove" style="font-weight: bold;">麺物 NOODLES</h4>
 													<!-- <p class="translate">One order is more than 3 pieces.</p> -->
 												</div>
-												<div class="uk-width-1-3@xl uk-width-1-3@l uk-width-1-3@m uk-width-1-5@s uk-container-center">
-													<img src="img/hannya/Tempura-Udon-update-18.jpg" alt="Menu Image" class="uk-align-center" />
-												</div>
 											</div>
 
 											<!-- Scrollable Menu List -->
@@ -1468,7 +1493,7 @@
 													</li>
 													<div class="uk-width-2-3@xl uk-width-2-3@l uk-width-2-3@m uk-width-4-5@s impx-menu-page-group-title">
 														<h4 class="translate" class="uk-margin-remove" style="font-weight: bold;"></h4>
-														<p class="translate">*コールド又はホットスープ大根おろしちからうどん</p>
+														<p class="translate" style="color:white">*コールド又はホットスープ大根おろしちからうどん</p>
 													</div>
 													<li id="item7">
 														<div class="impx-menu-page-item">
@@ -1484,7 +1509,7 @@
 													</li>
 													<div class="uk-width-2-3@xl uk-width-2-3@l uk-width-2-3@m uk-width-4-5@s impx-menu-page-group-title">
 														<h4 class="translate" class="uk-margin-remove" style="font-weight: bold;"></h4>
-														<p class="translate">コールド又はホットスープ大根おろしうどん</p>
+														<p class="translate" style="color:white">コールド又はホットスープ大根おろしうどん</p>
 													</div>
 													<li id="item8">
 														<div class="impx-menu-page-item">
@@ -1534,9 +1559,6 @@
 												<div class="uk-width-2-3@xl uk-width-2-3@l uk-width-2-3@m uk-width-4-5@s impx-menu-page-group-title">
 													<h4 class="translate" class="uk-margin-remove" style="font-weight: bold;">ラーメン RA-MEN & 焼きそば YAKI-SOBA</h4>
 													<!-- <p class="translate">One order is more than 3 pieces.</p> -->
-												</div>
-												<div class="uk-width-1-3@xl uk-width-1-3@l uk-width-1-3@m uk-width-1-5@s uk-container-center">
-													<img src="img/hannya/ramen.jpg" alt="Menu Image" class="uk-align-center" />
 												</div>
 											</div>
 
@@ -1607,9 +1629,6 @@
 													<div class="uk-width-2-3@xl uk-width-2-3@l uk-width-2-3@m uk-width-4-5@s impx-menu-page-group-title">
 														<h4 class="translate" class="uk-margin-remove" style="font-weight: bold;">SUSHI DELUXE ALA CARTE</h4>
 														<!-- <p class="translate">One order is more than 3 pieces.</p> -->
-													</div>
-													<div class="uk-width-1-3@xl uk-width-1-3@l uk-width-1-3@m uk-width-1-5@s uk-container-center">
-														<img src="img/hannya/alacarte.jpg" alt="Menu Image" class="uk-align-center" />
 													</div>
 												</div>
 	
@@ -1751,9 +1770,6 @@
 													<h4 class="translate" class="uk-margin-remove" style="font-weight: bold;">SUSHI</h4>
 													<!-- <p class="translate">One order is more than 3 pieces.</p> -->
 												</div>
-												<div class="uk-width-1-3@xl uk-width-1-3@l uk-width-1-3@m uk-width-1-5@s uk-container-center">
-													<img src="img/hannya/sushi.webp" alt="Menu Image" class="uk-align-center" />
-												</div>
 											</div>
 
 											<!-- Scrollable Menu List -->
@@ -1891,9 +1907,6 @@
 													<div class="uk-width-2-3@xl uk-width-2-3@l uk-width-2-3@m uk-width-4-5@s impx-menu-page-group-title">
 														<h4 class="translate" class="uk-margin-remove" style="font-weight: bold;">SET MENU</h4>
 														<!-- <p class="translate">One order is more than 3 pieces.</p> -->
-													</div>
-													<div class="uk-width-1-3@xl uk-width-1-3@l uk-width-1-3@m uk-width-1-5@s uk-container-center">
-														<img src="img/hannya/recommended-menu-beef.jpg" alt="Menu Image" class="uk-align-center" />
 													</div>
 												</div>
 	
@@ -2145,7 +2158,7 @@
 														<li id="item8">
 															<div class="impx-menu-page-item">
 																<div class="impx-menu-page-content">
-																	<h6 class="translate" style="font-weight: bold;">*キャベツ豆腐豚肉味噌炒めセット</h6>
+																	<h6 class="translate" style="font-weight: bold;color:white;">*キャベツ豆腐豚肉味噌炒めセット</h6>
 																	<div class="impx-menu-page-price">
 																		<h5>P 380</h5>
 																	</div>
@@ -2189,9 +2202,6 @@
 												<div class="uk-width-2-3@xl uk-width-2-3@l uk-width-2-3@m uk-width-4-5@s impx-menu-page-group-title">
 													<h4 class="translate" class="uk-margin-remove" style="font-weight: bold;">NO SET MENU</h4>
 													<!-- <p class="translate">One order is more than 3 pieces.</p> -->
-												</div>
-												<div class="uk-width-1-3@xl uk-width-1-3@l uk-width-1-3@m uk-width-1-5@s uk-container-center">
-													<img src="img/hannya/TENJU-4-1_972x972.jpeg" alt="Menu Image" class="uk-align-center" />
 												</div>
 											</div>
 
@@ -2345,9 +2355,6 @@
 															<h4 class="translate" class="uk-margin-remove" style="font-weight: bold;">HAN-NYA SANDWICH & BURGER</h4>
 															<!-- <p class="translate">One order is more than 3 pieces.</p> -->
 														</div>
-														<div class="uk-width-1-3@xl uk-width-1-3@l uk-width-1-3@m uk-width-1-5@s uk-container-center">
-															<img src="img/hannya/clubhouse.jpg" alt="Menu Image" class="uk-align-center" />
-														</div>
 													</div>
 		
 													<!-- Scrollable Menu List -->
@@ -2411,9 +2418,6 @@
 												<div class="uk-width-2-3@xl uk-width-2-3@l uk-width-2-3@m uk-width-4-5@s impx-menu-page-group-title">
 													<h4 class="translate" class="uk-margin-remove" style="font-weight: bold;">Midnight Menu</h4>
 													<p class="translate">After 10:30 PM</p>
-												</div>
-												<div class="uk-width-1-3@xl uk-width-1-3@l uk-width-1-3@m uk-width-1-5@s uk-container-center">
-													<img src="img/hannya/Shoyu-Ramen3.jpg" alt="Menu Image" class="uk-align-center" />
 												</div>
 											</div>
 
@@ -2672,7 +2676,13 @@
 						</div>
 						<!-- Menu Carousel Group End -->
 					</div>
+					<a style="text-decoration: none;" target="_blank" href="include/jpg2pdf.pdf" class="btn_dl">
+						<span class="text text-1">View All Menu</span>
+						<span class="text text-2" aria-hidden="true">View All Menu</span>
+					  </a>
 				</div>
+				<img src="img/hannya/shape-5.png" width="600" loading="lazy" alt="shape" class="shape shape-2 move-anim">
+				<img src="img/hannya/shape-6.png" width="343" loading="lazy" alt="shape" class="shape shape-3 move-anim">
 				<!-- Menu Carousel End -->
     		</div>
 		</div>
@@ -2684,73 +2694,73 @@
                <div class="uk-flex-center" data-uk-grid>
                     <div class="uk-width-2-3@xl uk-width-2-3@l uk-width-1-1@m uk-text-center uk-margin-small-bottom"><!-- gallery intro -->
                         <h2 class="uk-margin-remove-bottom translate">Food Gallery</h2>
-                        <p class="impx-text-normal uk-margin-remove-bottom uk-margin-small-top impx-margin-bottom-small translate">Taste bud bliss, artistic appeal.</p>
+                        <p class="impx-text-normal uk-margin-remove-bottom uk-margin-small-top impx-margin-bottom-small translate"></p>
                     </div><!-- gallery intro end -->
                 </div>
 
                 <!-- gallery items -->
            		<div class="uk-child-width-1-4@xl uk-child-width-1-4@l uk-child-width-1-4@m uk-child-width-1-3@s uk-grid-medium impx-margin-top-small" data-uk-grid="masonry : true" data-uk-lightbox>
                     <div class="grid-item uk-margin-bottom"><!-- gallery item #1 -->
-                    	<a class="uk-inline-clip uk-transition-toggle" href="img/hannya/Menu/new/0000342_salmon-sashimi_550.jpeg" data-caption="Salmon Sashimi">
-	                        <img src="img/hannya/Menu/new/0000342_salmon-sashimi_550.jpeg" alt="">
+                    	<a class="uk-inline-clip uk-transition-toggle" href="img/hannya/Menu/new/joKarubi.jpg" data-caption="Jo Karubi">
+	                        <img src="img/hannya/Menu/new/joKarubi.jpg" alt="">
 	                        <div class="uk-transition-fade uk-position-cover uk-overlay uk-overlay-primary">
-                                <h5 class="translate">Salmon Sashimi</h5>
+                                <h5 class="translate">Jo Karubi</h5>
 	                        </div>
 	                    </a>
                     </div><!-- gallery item #1  end -->
                     <div class="grid-item" data-uk-lightbox><!-- gallery item #2 -->
-                        <a class="uk-inline-clip uk-transition-toggle" href="img/hannya/Menu/new/130.-002_Tonkatsu-Set.jpg" data-caption="Tonkatsu">
-	                        <img src="img/hannya/Menu/new/130.-002_Tonkatsu-Set.jpg" alt="">
+                        <a class="uk-inline-clip uk-transition-toggle" href="img/hannya/Menu/new/JoTanshio.jpg" data-caption="Jo Tanshio">
+	                        <img src="img/hannya/Menu/new/JoTanshio.jpg" alt="">
 	                        <div class="uk-transition-fade uk-position-cover uk-overlay uk-overlay-primary">
-								<h5 class="translate">Tonkatsu</h5>
+								<h5 class="translate">Jo Tanshio</h5>
 	                        </div>
 	                    </a>
                     </div><!-- gallery item #2 end -->
                     <div class="grid-item" data-uk-lightbox><!-- gallery item #3 -->
-                        <a class="uk-inline-clip uk-transition-toggle" href="img/hannya/Menu/new/182516_tempuracover.jpg"  data-caption="Tempura">
-	                        <img src="img/hannya/Menu/new/182516_tempuracover.jpg" alt="">
+                        <a class="uk-inline-clip uk-transition-toggle" href="img/hannya/Menu/new/JapaneseSausage.jpg"  data-caption="Japanese Sausage ">
+	                        <img src="img/hannya/Menu/new/JapaneseSausage.jpg" alt="">
 	                        <div class="uk-transition-fade uk-position-cover uk-overlay uk-overlay-primary">
-								<h5 class="translate">Tempura</h5>
+								<h5 class="translate">Japanese Sausage </h5>
 	                        </div>
 	                    </a>
                     </div><!-- gallery item #3 end -->
                     <div class="grid-item" data-uk-lightbox><!-- gallery item #4 -->
-                        <a class="uk-inline-clip uk-transition-toggle" href="img/hannya/Menu/new/bacon-wrapped-asparagus-recipe.jpeg"  data-caption="Asparagus">
-	                        <img src="img/hannya/Menu/new/bacon-wrapped-asparagus-recipe.jpeg" alt="">
+                        <a class="uk-inline-clip uk-transition-toggle" href="img/hannya/Menu/new/KatsuNi.jpg"  data-caption="Katsu Ni ">
+	                        <img src="img/hannya/Menu/new/KatsuNi.jpg" alt="">
 	                        <div class="uk-transition-fade uk-position-cover uk-overlay uk-overlay-primary">
-								<h5 class="translate">Asparagus</h5>
+								<h5 class="translate">Katsu Ni </h5>
 	                        </div>
 	                    </a>
                     </div><!-- gallery item #4 end -->
                     <div class="grid-item" data-uk-lightbox><!-- gallery item #5 -->
-                        <a class="uk-inline-clip uk-transition-toggle" href="img/hannya/Menu/new/beefteppanyaki_set_1920x1080_3c51d572-8bd7-4ab5-8687-c28eebfe3485.webp"  data-caption="Teppanyaki">
-	                        <img src="img/hannya/Menu/new/beefteppanyaki_set_1920x1080_3c51d572-8bd7-4ab5-8687-c28eebfe3485.webp" alt="">
+                        <a class="uk-inline-clip uk-transition-toggle" href="img/hannya/Menu/new/KazunokoMatsumaeZuke.jpg"  data-caption="Kazunoko Matsumae Zuke">
+	                        <img src="img/hannya/Menu/new/KazunokoMatsumaeZuke.jpg" alt="">
 	                        <div class="uk-transition-fade uk-position-cover uk-overlay uk-overlay-primary">
-								<h5 class="translate">Teppanyaki</h5>
+								<h5 class="translate">Kazunoko Matsumae Zuke</h5>
 	                        </div>
 	                    </a>
                     </div><!-- gallery item #5 end -->
                     <div class="grid-item" data-uk-lightbox><!-- gallery item #6 -->
-                        <a class="uk-inline-clip uk-transition-toggle" href="img/hannya/Menu/new/CaliforniaMaki_1200x1200.webp"  data-caption="California Maki">
-	                        <img src="img/hannya/Menu/new/CaliforniaMaki_1200x1200.webp" alt="">
+                        <a class="uk-inline-clip uk-transition-toggle" href="img/hannya/Menu/new/KinpiraGobou.jpg"  data-caption="Kinpira Gobou ">
+	                        <img src="img/hannya/Menu/new/KinpiraGobou.jpg" alt="">
 	                        <div class="uk-transition-fade uk-position-cover uk-overlay uk-overlay-primary">
-								<h5 class="translate">California Maki</h5>
+								<h5 class="translate">Kinpira Gobou</h5>
 	                        </div>
 	                    </a>
                     </div><!-- gallery item #6 end -->
                     <div class="grid-item" data-uk-lightbox><!-- gallery item #7 -->
-                        <a class="uk-inline-clip uk-transition-toggle" href="img/hannya/Menu/new/chahan.jpg" data-caption="Chahan">
-	                        <img src="img/hannya/Menu/new/chahan.jpg" alt="">
+                        <a class="uk-inline-clip uk-transition-toggle" href="img/hannya/Menu/new/MarinatedSquid.jpg" data-caption="Marinated Squid ">
+	                        <img src="img/hannya/Menu/new/MarinatedSquid.jpg" alt="">
 	                        <div class="uk-transition-fade uk-position-cover uk-overlay uk-overlay-primary">
-								<h5 class="translate">Chahan</h5>
+								<h5 class="translate">Marinated Squid</h5>
 	                        </div>
 	                    </a>
                     </div><!-- gallery item #7 -->
                     <div class="grid-item" data-uk-lightbox>
-                        <a class="uk-inline-clip uk-transition-toggle" href="img/hannya/Menu/new/ChickenTeppanyakiweb.webp" data-caption="Chicken Teppanyaki">
-	                        <img src="img/hannya/Menu/new/ChickenTeppanyakiweb.webp" alt="">
+                        <a class="uk-inline-clip uk-transition-toggle" href="img/hannya/Menu/new/Nikujaga.jpg" data-caption="Chicken Teppanyaki">
+	                        <img src="img/hannya/Menu/new/Nikujaga.jpg" alt="">
 	                        <div class="uk-transition-fade uk-position-cover uk-overlay uk-overlay-primary">
-								<h5 class="translate">Chicken Teppanyaki</h5>
+								<h5 class="translate">Nikujaga (Beef & Potato) </h5>
 	                        </div>
 	                    </a>
                     </div><!-- gallery item #7 end -->
@@ -2880,18 +2890,18 @@
 		<script>
 			$('#owl-carousel').owlCarousel({
 				loop: false,
-				margin: 30,
+				margin: 0,
 				dots: false,
-				nav: true,
+				nav: false,
 				responsive: {
 					0: {
 						items: 1
 					},
 					600: {
-						items: 2
+						items: 1
 					},
 					1000: {
-						items: 3
+						items: 2
 					}
 				}
 			});
