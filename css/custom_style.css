@@ -2318,7 +2318,7 @@ i.icon-bg {
 
 /* [ 2.1.2. Menu Carousel ] */
 .impx-menu-carousel {
-	background-image: url('../img/background-11.jpg');
+	/* background-image: url('../img/background-11.jpg'); */
 	background-repeat: no-repeat
 }
 .impx-menu-carousel .uk-slidenav-previous:before, 
@@ -2510,6 +2510,7 @@ i.icon-bg {
     position: relative;
     z-index: 3;
     color: #fff;
+	text-transform: uppercase;
 }
 .impx-menu-page-group p {
 	margin: 0;
@@ -2555,6 +2556,7 @@ i.icon-bg {
 	margin-bottom: 5px;
 	font-size: 18px;
 	color:#ffffff;
+	text-transform: lowercase;
 }
 .impx-menu-page-group .menu-list .impx-menu-page-content p {
 	margin-right: 0;
