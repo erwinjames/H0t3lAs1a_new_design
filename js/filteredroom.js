@@ -1,6 +1,6 @@
 $(document).ready(function() {
     const bedTypeOptions = {
-        "Standard": ["semidouble size", "single", "double size", "kingsize"],
+        "Standard": ["semidouble size", "single", "double size", "Queen Size"],
         "Deluxe": ["semidouble size", "single", "double size"],
         "Deluxe Plus": ["double"],
         "Junior Suite": ["queen size"],
