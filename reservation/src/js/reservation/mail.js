@@ -46,7 +46,7 @@ $('#submit_btn').click(function() {
                 allowOutsideClick: false
             }).then((result) => {
                 if (result.isConfirmed) {
-                    window.location.href = '../index.html'; // Redirect to index.html
+                    window.location.href = 'index.html'; // Redirect to index.html
                 }
             });
         },

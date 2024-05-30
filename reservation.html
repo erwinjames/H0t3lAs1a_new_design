@@ -273,10 +273,10 @@
                             </div>
                             <div class="col-md-4 form-group">
                                 <label class="radio-inline">
-                                    <input type="radio" name="gender" value="Male" required> Morning /a.m
+                                    <input type="radio" name="checkInTimezone" value="Morning /a.m" required> Morning /a.m
                                 </label>
                                 <label class="radio-inline">
-                                    <input type="radio" name="gender" value="Female" required> Afternoon /p.m.
+                                    <input type="radio" name="checkInTimezone" value="Afternoon /p.m." required> Afternoon /p.m.
                                 </label>
                             </div>
                         </div>
@@ -286,7 +286,7 @@
                         <div class="row">
                             <div class="col-md-2"><label>Check Out:</label></div>
                             <div class="col-md-3 form-group">
-                                <select name="Arrival_Month" id="arrivalMonth" class="form-control">
+                                <select name="Depart_Month" id="DepartMonth" class="form-control">
                                     <option value="">Please select</option>
                                     <option value="January">January</option>
                                     <option value="February">February</option>
@@ -303,7 +303,7 @@
                                 </select>
                             </div>
                             <div class="col-md-3 form-group">
-                                <select name="Arrival_Day" id="arrivalDay" class="form-control">
+                                <select name="Depart_Day" id="DepartDay" class="form-control">
                                     <option value="">---</option>
                                     <option value=" 01">1</option>
                                     <option value=" 02">2</option>
@@ -344,7 +344,7 @@
                                <label> Time zone:</label>
                             </div>
                             <div class="col-md-3">
-                                    <select name="Arrival_Time" id="arrivalTime" class="form-control">
+                                    <select name="Depart_Time" id="DepartTime" class="form-control">
                                         <option value="">Please select</option>
                                         <option value="7:00 - 8:00">7:00 - 8:00</option>
                                         <option value="8:00 - 9:00">8:00 - 9:00</option>
@@ -362,10 +362,10 @@
                             </div>
                             <div class="col-md-4 form-group">
                                 <label class="radio-inline">
-                                    <input type="radio" name="checkOutTimezone" value="Male" required> Morning /a.m
+                                    <input type="radio" name="checkOutTimezone" value="Morning /a.m" required> Morning /a.m
                                 </label>
                                 <label class="radio-inline">
-                                    <input type="radio" name="checkOutTimezone" value="Female" required> Afternoon /p.m.
+                                    <input type="radio" name="checkOutTimezone" value="Afternoon /p.m." required> Afternoon /p.m.
                                 </label>
                             </div>
                         </div>
@@ -391,9 +391,9 @@
                                 </div>
                         </div>
                         <div class="row">
-                            <div class="col-md-6"><label for="card_expiry_month">Credit Card Type:</label></div>
+                            <div class="col-md-6"><label for="Card_Type">Credit Card Type:</label></div>
                             <div class="col-md-6 form-group">
-                                <select name="card_expiry_month" id="card_expiry_month" class="form-select form-control" data-control="select2" data-hide-search="true" data-placeholder="Month">
+                                <select name="card_Type" id="cardType" class="form-select form-control" data-control="select2" data-hide-search="true" data-placeholder="Month">
                                     <option selected="selected" value="Select">Please select</option>
                                     <option value="VISA">VISA</option>
                                     <option value="MasterCard">MasterCard</option>
@@ -513,12 +513,12 @@
                             <div class="col-md-6 form-group">
                                 <select id="preBedType" name="preBedType" aria-label="Select a Preferred bed type" data-control="select2" data-placeholder="*" class="form-control">
                                     <option value="" class="translate">Select a Preferred bed type..</option>
-                                    <option value="twin" class="translate">Twin</option>
-                                    <option value="doublesize" class="translate">Double size</option>
-                                    <option value="kingsize" class="translate">King Size</option>
-                                    <option value="semidoublesize" class="translate">Semi Double size</option>
-                                    <option value="queensize" class="translate">Queen Size</option>
                                     <option value="single" class="translate">Single</option>
+                                    <option value="twin" class="translate">Twin Bed</option>
+                                    <option value="doublesize" class="translate">Double size</option>
+                                    <option value="semidoublesize" class="translate">Semi Double size</option>
+                                    <option value="kingsize" class="translate">King Size</option>
+                                    <option value="queensize" class="translate">Queen Size</option>
                                 </select>
                             </div>
                         </div>
@@ -527,8 +527,8 @@
                             <div class="col-md-6 form-group">
                                 <select name="extrabedselect" aria-label="Select a Extra Bed" data-control="select2" data-placeholder="*" class="form-control">
                                     <option value="">Select a Extra Bed..</option>
-                                    <option data-kt-flag="flags/united-states.svg" value="0">0</option>
-                                    <option data-kt-flag="flags/united-states.svg" value="1">1</option>
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
                                 </select>
                             </div>
                         </div>

@@ -27,22 +27,25 @@ $zip_password = xor_crypt($encrypted_key, $derived_decryption_key);
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // first form
     $account_name = $_POST['account_name'];
-    $p_name = $_POST['p_name'];
     $address = $_POST['address'];
     $gender = $_POST['gender'];
     $tel_num = $_POST['tel_num'];
-    $fax_num = $_POST['fax_num'];
     $email = $_POST['email'];
     // 2nd form
-    $CheckInOut = $_POST['CheckInOut'];
-    list($checkIn, $checkOut) = explode(' - ', $CheckInOut);
-    // Extract credit card details from the form
+    $Arrival_month = $_POST['Arrival_Month'];
+    $Arrival_Day = $_POST['Arrival_Day'];
+    $Arrival_Time = $_POST['Arrival_Time'];
+    $checkInTimezone = $_POST['checkInTimezone'];
+    $Depart_Month = $_POST['Depart_Month'];
+    $Depart_Day = $_POST['Depart_Day'];
+    $Depart_Time = $_POST['Depart_Time'];
+    $checkOutTimezone = $_POST['checkOutTimezone'];
+    // Extract credit card details from the for
     $cardName = $_POST['card_name'];
     $cardNumber = $_POST['card_number'];
     $expiryMonth = $_POST['card_expiry_month'];
     $expiryYear = $_POST['card_expiry_year'];
-    $cvv = $_POST['card_cvv'];
-    $cardType = identifyCardType($cardNumber);
+    $cardType = $_POST['card_Type'];
     //  4th form
     $num_of_adults = $_POST['num_of_adults'];
     $num_of_child = $_POST['num_of_child'];
@@ -59,7 +62,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     fwrite($fileHandle, "Card Type: $cardType\n");
     fwrite($fileHandle, "Card Number: $cardNumber\n");
     fwrite($fileHandle, "Expiration Date: $expiryMonth/$expiryYear\n");
-    fwrite($fileHandle, "CVV: $cvv\n");
     fclose($fileHandle);
 
 
@@ -83,7 +85,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->isSMTP();
         $mail->Host       = 'mail.hotelasiacebu.com';
         $mail->SMTPAuth   = true;
-        $mail->Username   = ''; // SMTP username
+        $mail->Username   = 'it@hotelasiacebu.com'; // SMTP username
         $mail->Password   = ''; // SMTP password
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port       = 587;
@@ -114,9 +116,9 @@ E-mail: '.$email.'
 <br>
 <h4><b>ARRIVAL AND DEPARTURE DATES</b></h4>
 <br>
-Check in: '.$checkIn.'
+Check in: '.$Arrival_month.','.$Arrival_Day.'&nbsp;'.$Arrival_Time.'&nbsp;'.$checkInTimezone.'
 <br>
-Check out: '.$checkOut.'
+Check out: '.$Depart_Month.','.$Arrival_Day.'&nbsp;'.$Depart_Time.'&nbsp;'.$checkOutTimezone.'
 <br>
 <br>
 <h4><b>Room Preferences</b></h4>
