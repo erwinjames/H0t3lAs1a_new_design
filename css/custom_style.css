@@ -836,10 +836,11 @@ h6.uk-article-title  {
 }
 .impx-img-stacked img:nth-child(2) {
 	position: absolute;
-	top: 320px;
+	top: 250px;
 	z-index: 2;
 	left: 130px;
 	width: 85%;
+	filter: drop-shadow(10px 15px 5px #6969699b);
 }
 
 /* [ 1.1.16 Tabs ] */

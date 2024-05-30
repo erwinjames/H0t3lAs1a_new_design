@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+    <!-- Begin Head -->
+    <head>
+        <!-- Basic -->
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Homepage</title>
+
+        <!-- Web Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i|Montserrat:400,700" rel="stylesheet">
+
+        <!-- Vendor Styles -->
+        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="css/animate.css" rel="stylesheet" type="text/css"/>
+        <link href="vendor/themify/themify.css" rel="stylesheet" type="text/css"/>
+        <link href="vendor/scrollbar/scrollbar.min.css" rel="stylesheet" type="text/css"/>
+        <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css"/>
+        <link href="vendor/swiper/swiper.min.css" rel="stylesheet" type="text/css"/>
+        <link href="vendor/cubeportfolio/css/cubeportfolio.min.css" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+        <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/formvalidation/0.6.2-dev/css/formValidation.min.css" integrity="sha512-B9GRVQaYJ7aMZO3WC2UvS9xds1D+gWQoNiXiZYRlqIVszL073pHXi0pxWxVycBk0fnacKIE3UHuWfSeETDCe7w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        
+        <!-- Theme Styles -->
+        <link href="css/style.css" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" href="css/custom_style.css">
+        <link rel="stylesheet" href="css/uikit.min.css">
+        <link rel="stylesheet" href="css/media-query.css">
+        <link href="css/global/global.css" rel="stylesheet" type="text/css"/>
+
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+        <style>
+            .mt-5 {
+                margin-top: 120px; /* Adjust this value as needed */
+            }
+            .panel {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adding box shadow */
+           
+        }
+        .panel-body{
+            padding: 4% 8% 10% 8%;
+        }
+        .panel-heading{
+            padding: 5% 0 5% 0;
+        }
+        .notice{
+            font-weight: bold;
+            font-size: 16px;
+            color: #F00;
+            margin-bottom: 20px;
+            border-left: #FF0000 12px solid;
+            padding-left: 5px;
+        }
+        label{
+            font-weight: bold;
+            font-size:16px;
+            color:rgba(94, 94, 94, 0.959);
+        }
+        </style>
+    </head>
+    <!-- End Head -->
+
+    <!-- Body -->
+    <body>
+
+        <header class="navbar-fixed-top s-header-v2 js__header-sticky">
+            <!-- Navbar -->
+            <nav class="s-header-v2__navbar">
+                <div class="container g-display-table--lg">
+                    <!-- Navbar Row -->
+                    <div class="s-header-v2__navbar-row">
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <div class="s-header-v2__navbar-col">
+                            <button type="button" class="collapsed s-header-v2__toggle" data-toggle="collapse" data-target="#nav-collapse" aria-expanded="false">
+                                <span class="s-header-v2__toggle-icon-bar"></span>
+                            </button>
+                        </div>
+
+                        <div class="s-header-v2__navbar-col s-header-v2__navbar-col-width--180">
+                            <!-- Logo -->
+                            <div class="s-header-v2__logo">
+                                <a href="index.html" class="s-header-v2__logo-link">
+                                    <img class="s-header-v2__logo-img s-header-v2__logo-img--default" src="img/watanabeclancrest.svg" width="35%" alt="Hotel Asia Logo">
+                                    <img class="s-header-v2__logo-img s-header-v2__logo-img--shrink" src="img/watanabeclancrest_white.svg" width="30%" alt="Hotel Asia Logo">
+                                </a>
+                            </div>
+                            <!-- End Logo -->
+                        </div>
+                        
+                        <div class="s-header-v2__navbar-col s-header-v2__navbar-col--right">
+                            <!-- Collect the nav links, forms, and other content for toggling -->
+                            <div class="collapse navbar-collapse s-header-v2__navbar-collapse" id="nav-collapse">
+                                <ul class="s-header-v2__nav">
+                                    <!-- Home -->
+                                    <li class="dropdown s-header-v2__nav-item s-header-v2__dropdown-on-hover">
+                                        <a href="room.html" class="s-header-v2__nav-link translate" role="button" aria-haspopup="true" aria-expanded="false">Room</a>
+                                    </li>
+                                    <!-- End Home -->
+                                    
+                                    <!-- Pages -->
+                                    <li class="dropdown s-header-v2__nav-item s-header-v2__dropdown-on-hover">
+                                        <a href="roomrates.html" class="s-header-v2__nav-link translate"  role="button" aria-haspopup="true" aria-expanded="false">Room Rates</a>
+                                    </li>
+                                    <!-- End Pages -->
+
+                                    <li class="s-header-v2__nav-item"><a href="restaurant.html" class="s-header-v2__nav-link translate">Restaurant</a></li>
+                                    <li class="s-header-v2__nav-item"><a href="contacts.html" class="s-header-v2__nav-link translate">Location</a></li>
+                                    <li class="s-header-v2__nav-item"><a href="reservation/reservation.html" class="s-header-v2__nav-link translate">Reservations</a></li>
+                                    <li class="s-header-v2__nav-item">
+                                        <a href="https://caea-ph.com/" class="s-header-v2__nav-link s-header-v2__nav-link--dark text-uppercase -is-active"><img class="g-width-150--xs g-height-auto--xs" src="img/Asia_index_caea.jpg" alt=""></a>
+                                    </li>
+                                    <li class="s-header-v2__nav-item">
+                                       <a href="" id="japaneseButton" class="s-header-v2__nav-link-btn text-uppercase s-btn s-btn--xs s-btn--white-brd g-radius--50">日本語</a>
+                                       <a href="" id="englishButton" class="s-header-v2__nav-link-btn text-uppercase s-btn s-btn--xs s-btn--white-brd g-radius--50">English</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- End Nav Menu -->
+                        </div>
+                    </div>
+                    <!-- End Navbar Row -->
+                </div>
+            </nav>
+            <!-- End Navbar -->
+        </header>
+        <div class="container mt-5">
+            <div class="panel panel-default">
+                <div class="panel-heading" style="padding:5%">
+                    <h2 style="font-weight: bold;text-align: center;">Reservation Form</h2>
+                    <p style="color:red;text-align: left;font-size:17px">PLEASE MAKE A RESERVATION FIRST before inquiring for room availability since we are often fully-booked by the time you place or confirm your booking.
+                        We will give you a reply whether your reservation is confirmed or not within 18 hours. We always reply to your application, but there are cases that we can't receive your email.
+                        When you don't get any reply from us within 18 hours, please e-mail/contact us again. We will call you by phone.</p>
+                </div>
+                <div class="panel-body">
+                    <form novalidate="novalidate" id="kt_create_reservation_form" data-toggle="validator" role="form">
+                        <!-- First Form Section -->
+                        <div class="panel-heading">
+                            <h4 style="border-bottom: solid 1px rgba(95, 95, 95, 0.609);font-weight: bold">VERY IMPORTANT!!!</h4>
+	    					<h5 class="notice">Please fill out everything below.</h5>
+	    					
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4"><label for="account_name">Name:</label></div>
+                            <div class="col-md-8 form-group">
+                                <input type="text" class="form-control" id="account_name" name="account_name" required>
+                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4"><label for="address">Address:</label></div>
+                            <div class="col-md-8 form-group">
+                                <input type="text" class="form-control" id="address" name="address" required>
+                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4"><label>Gender:</label></div>
+                            <div class="col-md-6 form-group">
+                                <label class="radio-inline">
+                                    <input type="radio" name="gender" value="Male" required> Male
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" name="gender" value="Female" required> Female
+                                </label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4"><label for="tel_num">Telephone Number:</label></div>
+                            <div class="col-md-8 form-group">
+                                <input type="tel" class="form-control" id="tel_num" name="tel_num" required>
+                                    <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4"><label for="email">Email:</label></div>
+                            <div class="col-md-8 form-group">
+                                <input type="email" class="form-control" id="email" name="email" data-error="Email Address is invalid (メールアドレスが無効です)" required>
+                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4"><label for="c_email">Confirm Email:</label></div>
+                            <div class="col-md-8 form-group">
+                                <input type="email" class="form-control" id="c_email" name="c_email" required>
+                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+        
+                        <!-- Second Form Section -->
+                        <div class="panel-heading">
+                            <h4 style="border-bottom: solid 1px rgba(95, 95, 95, 0.609);font-weight: bold;">ARRIVAL AND DEPARTURE DATES</h4>
+	    					<h5 class="notice">Please choose the accommodation you want.</h5>
+	    					
+                        </div>
+                        <div class="row">
+                            <div class="col-md-2"><label>Check In:</label></div>
+                            <div class="col-md-3 form-group">
+                                <select name="Arrival_Month" id="arrivalMonth" class="form-control">
+                                    <option value="">Please select</option>
+                                    <option value="January">January</option>
+                                    <option value="February">February</option>
+                                    <option value="March">March</option>
+                                    <option value="April">April</option>
+                                    <option value="May">May</option>
+                                    <option value="June">June</option>
+                                    <option value="July">July</option>
+                                    <option value="August">August</option>
+                                    <option value="September">September</option>
+                                    <option value="October">October</option>
+                                    <option value="November">November</option>
+                                    <option value="December">December</option>
+                                </select>
+                            </div>
+                            <div class="col-md-3 form-group">
+                                <select name="Arrival_Day" id="arrivalDay" class="form-control">
+                                    <option value="">---</option>
+                                    <option value=" 01">1</option>
+                                    <option value=" 02">2</option>
+                                    <option value=" 03">3</option>
+                                    <option value=" 04">4</option>
+                                    <option value=" 05">5</option>
+                                    <option value=" 06">6</option>
+                                    <option value=" 07">7</option>
+                                    <option value=" 08">8</option>
+                                    <option value=" 09">9</option>
+                                    <option value=" 10">10</option>
+                                    <option value=" 11">11</option>
+                                    <option value=" 12">12</option>
+                                    <option value=" 13">12</option>
+                                    <option value=" 14">14</option>
+                                    <option value=" 15">15</option>
+                                    <option value=" 16">16</option>
+                                    <option value=" 17">17</option>
+                                    <option value=" 18">18</option>
+                                    <option value=" 19">19</option>
+                                    <option value=" 20">20</option>
+                                    <option value=" 21">21</option>
+                                    <option value=" 22">22</option>
+                                    <option value=" 23">23</option>
+                                    <option value=" 24">24</option>
+                                    <option value=" 25">25</option>
+                                    <option value=" 26">26</option>
+                                    <option value=" 27">27</option>
+                                    <option value=" 28">28</option>
+                                    <option value=" 29">29</option>
+                                    <option value=" 30">30</option>
+                                    <option value=" 31">31</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-2">
+                               <label> Time zone:</label>
+                            </div>
+                            <div class="col-md-3">
+                                    <select name="Arrival_Time" id="arrivalTime" class="form-control">
+                                        <option value="">Please select</option>
+                                        <option value="7:00 - 8:00">7:00 - 8:00</option>
+                                        <option value="8:00 - 9:00">8:00 - 9:00</option>
+                                        <option value="9:00 - 10:00">9:00 - 10:00</option>
+                                        <option value="10:00 - 11:00">10:00 - 11:00</option>
+                                        <option value="11:00 - 12:00">11:00 - 12:00</option>
+                                        <option value="12:00 - 1:00">12:00 - 1:00</option>
+                                        <option value="1:00 - 2:00">1:00 - 2:00</option>
+                                        <option value="2:00 - 3:00">2:00 - 3:00</option>
+                                        <option value="3:00 - 4:00">3:00 - 4:00</option>
+                                        <option value="4:00 - 5:00">4:00 - 5:00</option>
+                                        <option value="5:00 - 6:00">5:00 - 6:00</option>
+                                        <option value="6:00 - 7:00">6:00 - 7:00</option>
+                                    </select>
+                            </div>
+                            <div class="col-md-4 form-group">
+                                <label class="radio-inline">
+                                    <input type="radio" name="gender" value="Male" required> Morning /a.m
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" name="gender" value="Female" required> Afternoon /p.m.
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- check out -->
+                           <br>
+                        <div class="row">
+                            <div class="col-md-2"><label>Check Out:</label></div>
+                            <div class="col-md-3 form-group">
+                                <select name="Arrival_Month" id="arrivalMonth" class="form-control">
+                                    <option value="">Please select</option>
+                                    <option value="January">January</option>
+                                    <option value="February">February</option>
+                                    <option value="March">March</option>
+                                    <option value="April">April</option>
+                                    <option value="May">May</option>
+                                    <option value="June">June</option>
+                                    <option value="July">July</option>
+                                    <option value="August">August</option>
+                                    <option value="September">September</option>
+                                    <option value="October">October</option>
+                                    <option value="November">November</option>
+                                    <option value="December">December</option>
+                                </select>
+                            </div>
+                            <div class="col-md-3 form-group">
+                                <select name="Arrival_Day" id="arrivalDay" class="form-control">
+                                    <option value="">---</option>
+                                    <option value=" 01">1</option>
+                                    <option value=" 02">2</option>
+                                    <option value=" 03">3</option>
+                                    <option value=" 04">4</option>
+                                    <option value=" 05">5</option>
+                                    <option value=" 06">6</option>
+                                    <option value=" 07">7</option>
+                                    <option value=" 08">8</option>
+                                    <option value=" 09">9</option>
+                                    <option value=" 10">10</option>
+                                    <option value=" 11">11</option>
+                                    <option value=" 12">12</option>
+                                    <option value=" 13">12</option>
+                                    <option value=" 14">14</option>
+                                    <option value=" 15">15</option>
+                                    <option value=" 16">16</option>
+                                    <option value=" 17">17</option>
+                                    <option value=" 18">18</option>
+                                    <option value=" 19">19</option>
+                                    <option value=" 20">20</option>
+                                    <option value=" 21">21</option>
+                                    <option value=" 22">22</option>
+                                    <option value=" 23">23</option>
+                                    <option value=" 24">24</option>
+                                    <option value=" 25">25</option>
+                                    <option value=" 26">26</option>
+                                    <option value=" 27">27</option>
+                                    <option value=" 28">28</option>
+                                    <option value=" 29">29</option>
+                                    <option value=" 30">30</option>
+                                    <option value=" 31">31</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-2">
+                               <label> Time zone:</label>
+                            </div>
+                            <div class="col-md-3">
+                                    <select name="Arrival_Time" id="arrivalTime" class="form-control">
+                                        <option value="">Please select</option>
+                                        <option value="7:00 - 8:00">7:00 - 8:00</option>
+                                        <option value="8:00 - 9:00">8:00 - 9:00</option>
+                                        <option value="9:00 - 10:00">9:00 - 10:00</option>
+                                        <option value="10:00 - 11:00">10:00 - 11:00</option>
+                                        <option value="11:00 - 12:00">11:00 - 12:00</option>
+                                        <option value="12:00 - 1:00">12:00 - 1:00</option>
+                                        <option value="1:00 - 2:00">1:00 - 2:00</option>
+                                        <option value="2:00 - 3:00">2:00 - 3:00</option>
+                                        <option value="3:00 - 4:00">3:00 - 4:00</option>
+                                        <option value="4:00 - 5:00">4:00 - 5:00</option>
+                                        <option value="5:00 - 6:00">5:00 - 6:00</option>
+                                        <option value="6:00 - 7:00">6:00 - 7:00</option>
+                                    </select>
+                            </div>
+                            <div class="col-md-4 form-group">
+                                <label class="radio-inline">
+                                    <input type="radio" name="checkOutTimezone" value="Male" required> Morning /a.m
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" name="checkOutTimezone" value="Female" required> Afternoon /p.m.
+                                </label>
+                            </div>
+                        </div>
+        
+                        <!-- Credit Card Details Section -->
+                        <div class="panel-heading">
+                            <h4 style="border-bottom: solid 1px rgba(95, 95, 95, 0.609);font-weight: bold;">CREDIT CARD INFORMATION</h4>
+	    					<h5 class="notice">Your credit card information is SECURED by SSL.</h5>
+	    					
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6"><label for="card_name">Name as written in the credit card:</label></div>
+                            <div class="col-md-6 form-group">
+                                <input type="text" class="form-control" id="card_name" name="card_name" required>
+                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6"><label for="card_number">Card Number:</label></div>
+                                <div class="col-md-6 form-group">
+                                    <input type="number" class="form-control" id="card_number" name="card_number" required>
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6"><label for="card_expiry_month">Credit Card Type:</label></div>
+                            <div class="col-md-6 form-group">
+                                <select name="card_expiry_month" id="card_expiry_month" class="form-select form-control" data-control="select2" data-hide-search="true" data-placeholder="Month">
+                                    <option selected="selected" value="Select">Please select</option>
+                                    <option value="VISA">VISA</option>
+                                    <option value="MasterCard">MasterCard</option>
+                                    <option value="American Express">American Express</option>
+                                    <option value="JCB">JCB</option>
+                                    <option value="Diners Club">Diners Club</option>
+                                </select>
+                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6"> <label for="card_expiry_month">Expiry Month:</label></div>
+
+                                <div class="col-md-6 form-group">
+                                    <select name="card_expiry_month" id="card_expiry_month" class="form-select form-control" data-control="select2" data-hide-search="true" data-placeholder="Month">
+                                        <option></option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                        <option value="11">11</option>
+                                        <option value="12">12</option>
+                                    </select>
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6"><label for="card_expiry_year">Expiry Year:</label></div>
+                            <div class="col-md-6 form-group">
+                                
+                                <select name="card_expiry_year" id="card_expiry_year" class="form-select form-control" data-control="select2" data-hide-search="true" data-placeholder="Year">
+                                    <option></option>
+                                    <option value="2023">2023</option>
+                                    <option value="2024">2024</option>
+                                    <option value="2025">2025</option>
+                                    <option value="2026">2026</option>
+                                    <option value="2027">2027</option>
+                                    <option value="2028">2028</option>
+                                    <option value="2029">2029</option>
+                                    <option value="2030">2030</option>
+                                    <option value="2031">2031</option>
+                                    <option value="2032">2032</option>
+                                    <option value="2033">2033</option>
+                                </select>
+                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+        
+                        <!-- Fourth Form Section -->
+                        <div class="panel-heading">
+                            <h4 style="border-bottom: solid 1px rgba(95, 95, 95, 0.609);font-weight: bold;">PREFERENCES</h4>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6"> <label for="num_of_adults">Number of Adults (12 years old and over):</label></div>
+                            <div class="col-md-6 form-group">
+                                <input type="number" class="form-control" id="num_of_adults" name="num_of_adults" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6"> <label for="num_of_child">Number of Children (11 years old and under):</label></div>
+                            <div class="col-md-6 form-group">
+                                <input type="number" class="form-control" id="num_of_child" name="num_of_child" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label for="roomType">Room Type:</label>
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <select id="roomType" name="roomType" aria-label="Select a Room Type" data-control="select2" data-placeholder="*" class="form-control">
+                                    <option value="" class="translate">Select a Room Type...</option>
+                                    <option value="Economy Plus" class="translate">Economy Plus</option>
+                                    <option value="Standard" class="translate">Standard</option>
+                                    <option value="Deluxe" class="translate">Deluxe</option>
+                                    <option value="Deluxe Plus" class="translate">Deluxe Plus</option>
+                                    <option value="Tatami room" class="translate">Tatami room</option>
+                                    <option value="Superior" class="translate">Superior</option>
+                                    <option value="Executive" class="translate">Executive</option>
+                                    <option value="Junior Suite" class="translate">Junior Suite</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6"> <label for="num_rooms">Number of Rooms:</label></div>
+                            <div class="col-md-6 form-group">
+                                <select name="num_rooms" aria-label="Select a Number of Rooms" data-control="select2" data-placeholder="*" class="form-control">
+                                    <option value="" class="translate">Select a Number of Rooms...</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">  <label for="numGuest">Number of Guests:</label></div>
+                            <div class="col-md-6 form-group">
+                                <input type="number" class="form-control" id="numGuest" name="numGuest" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label for="preBedType">Preferred Bed Type:</label>
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <select id="preBedType" name="preBedType" aria-label="Select a Preferred bed type" data-control="select2" data-placeholder="*" class="form-control">
+                                    <option value="" class="translate">Select a Preferred bed type..</option>
+                                    <option value="twin" class="translate">Twin</option>
+                                    <option value="doublesize" class="translate">Double size</option>
+                                    <option value="kingsize" class="translate">King Size</option>
+                                    <option value="semidoublesize" class="translate">Semi Double size</option>
+                                    <option value="queensize" class="translate">Queen Size</option>
+                                    <option value="single" class="translate">Single</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row" id="extraBedRow" style="display: none;">
+                            <div class="col-md-6"><label for="extrabedselect">Extra Bed:</label></div>
+                            <div class="col-md-6 form-group">
+                                <select name="extrabedselect" aria-label="Select a Extra Bed" data-control="select2" data-placeholder="*" class="form-control">
+                                    <option value="">Select a Extra Bed..</option>
+                                    <option data-kt-flag="flags/united-states.svg" value="0">0</option>
+                                    <option data-kt-flag="flags/united-states.svg" value="1">1</option>
+                                </select>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-md-12 form-group">
+                                <label for="flightAndArrival">Flight and Arrival Information<b style="color:red;">(Please indicate here including FLIGHT NO. and ARRIVAL TIME in case of AIRPORT PICK-UP)</b></label>
+                                <textarea type="text" class="form-control" id="flightAndArrival" name="flightAndArrival" required></textarea>
+                            </div>
+                        </div>
+                        <div style="padding:2%" class="uk-alert-danger uk-alert" data-uk-alert="">
+                            <p>
+                                If online reservation fails or to make sure that your reservation is confirmed, please email to info@hotelasiacebu.com. Even if you book online, please contact info@hotelasiacebu.com.
+                                <br>
+                                <br>
+                                Check in : 2 pm
+                                <br>
+                                Check out:12 pm
+                                <br>
+                                <br>
+                                <b style="font-weight: 100px;">IN CASE OF CANCELLATION,</b> the following charges will apply: 100% of 1 night per room reserved when you cancelled 7 days to 4days before check in date, 100% of 3 nights per room reserved if you reserved 3nights or more when you cancelled 3days to1 day before check in date. Full charge of the whole reservation when you cancelled on the day or no show. The same rule will apply for shortening of stay.</p>
+                        </div>
+                        <br>
+                        <!-- Submit Button -->
+                        <button type="button" id="submit_btn" class="btn btn-primary translate">Send</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!--========== FOOTER ==========-->
+        <footer class="g-bg-color--darkgreen pattern-1">
+            <!-- Links -->
+            <div class="g-hor-divider__dashed--golden-opacity-lightest">
+                <div class="container g-padding-y-80--xs">
+                    <div class="row">
+                        <div class="col-sm-2 g-margin-b-20--xs g-margin-b-0--md">
+                            <ul class="list-unstyled g-ul-li-tb-5--xs g-margin-b-0--xs">
+                                <li><a class="g-font-size-15--xs g-color--white-opacity translate" href="room.html">Room</a></li>
+                                <li><a class="g-font-size-15--xs g-color--white-opacity translate" href="roomrates.html">Room Rates</a></li>
+                                <li><a class="g-font-size-15--xs g-color--white-opacity translate" href="restaurant.html">Restaurant</a></li>
+                                <li><a class="g-font-size-15--xs g-color--white-opacity translate" href="contacts.html">Location</a></li>
+                                <li><a class="g-font-size-15--xs g-color--white-opacity translate" href="reservation/reservation.html">Reservations</a></li>
+                                <li><a class="g-font-size-15--xs g-color--white-opacity translate" href="">Caea School</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-2 g-margin-b-20--xs g-margin-b-0--md">
+                            <ul class="list-unstyled g-ul-li-tb-5--xs g-margin-b-0--xs">
+                                <li><a class="g-font-size-15--xs g-color--white-opacity translate" href="">Twitter</a></li>
+                                <li><a class="g-font-size-15--xs g-color--white-opacity translate" href="">Facebook</a></li>
+                                <li><a class="g-font-size-15--xs g-color--white-opacity translate" href="">Instagram</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4 col-md-offset-2 col-sm-5 col-sm-offset-1 s-footer__logo g-padding-y-50--xs g-padding-y-0--md">
+                            <h3 class="g-font-size-18--xs g-color--gold translate">Hotel Asia Cebu</h3>
+                            <p class="g-color--white-opacity translate">If you are in Cebu Island, Philippines, please enjoy a delicious and comfortable time at Hotel ASIA</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Links -->
+
+           <!-- Copyright -->
+           <div class="container g-padding-y-50--xs">
+            <div class="row">
+                <div class="col-xs-2">
+                    <a href="index.html">
+                        <img class="g-width-50--xs g-height-auto--xs" src="img/watanabeclancrest_white.svg" alt="">
+                    </a>
+                </div>
+                <div class="col-xs-2">
+                    <a href="index.html">
+                        <img class="g-width-300--xs g-height-auto--xs" src="img/Asia_index_work.gif" alt="">
+                    </a>
+                </div>
+                <div class="col-xs-2">
+                    <a href="index.html">
+                        <img class="g-width-300--xs g-height-auto--xs" src="img/Asia_index_cebuPot.jpg" alt="">
+                    </a>
+                </div>
+                <div class="col-xs-6 g-text-right--xs">
+                    <p class="g-font-size-14--xs g-margin-b-0--xs g-color--white-opacity-light translate"><a href="">Hotel Asia Cebu</a></p>
+                </div>
+            </div>
+        </div>
+        <!-- End Copyright -->
+        </footer>
+        <!--========== END FOOTER ==========-->
+
+        <!-- Back To Top -->
+        <a href="javascript:void(0);" class="s-back-to-top js__back-to-top"></a>
+
+        <!--========== JAVASCRIPTS (Load javascripts at bottom, this will reduce page load time) ==========-->
+        <!-- Vendor -->
+        <script type="text/javascript" src="vendor/jquery.min.js"></script>
+        <script type="text/javascript" src="vendor/jquery.migrate.min.js"></script>
+        <script type="text/javascript" src="vendor/bootstrap/js/bootstrap.min.js"></script>
+        <!-- <script type="text/javascript" src="vendor/jquery.smooth-scroll.min.js"></script> -->
+        <script type="text/javascript" src="vendor/jquery.back-to-top.min.js"></script>
+        <script type="text/javascript" src="vendor/scrollbar/jquery.scrollbar.min.js"></script>
+        <!-- <script type="text/javascript" src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script> -->
+        <script type="text/javascript" src="vendor/swiper/swiper.jquery.min.js"></script>
+        <script type="text/javascript" src="vendor/waypoint.min.js"></script>
+        <script type="text/javascript" src="vendor/counterup.min.js"></script>
+        <script type="text/javascript" src="vendor/cubeportfolio/js/jquery.cubeportfolio.min.js"></script>
+        <script type="text/javascript" src="vendor/jquery.parallax.min.js"></script>
+        <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBsXUGTFS09pLVdsYEE9YrO2y4IAncAO2U"></script> -->
+        <script type="text/javascript" src="vendor/jquery.wow.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>  
+
+        <!-- General Components and Settings -->
+        <script type="text/javascript" src="js/global.min.js"></script>
+        <script type="text/javascript" src="js/components/header-sticky.min.js"></script>
+        <script type="text/javascript" src="js/components/scrollbar.min.js"></script>
+        <script type="text/javascript" src="js/components/wow.min.js"></script>
+        <script src="reservation/assets/js/custom/googleT/translate.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="reservation/src/js/reservation/mail.js"></script>
+        <script src="js/filteredroom.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.min.js" charset="utf-8"></script>
+        <!--========== END JAVASCRIPTS ==========-->
+        <script>
+            $(document).ready(function () {
+                                // Get references to the select elements
+                    const roomTypeSelect = $('#roomType');	
+                    const extraBedRow = $('#extraBedRow');
+
+                    $('input[name="CheckInOut"]').daterangepicker({
+                    timePicker: true,
+                    startDate: moment().startOf('hour'),
+                    endDate: moment().startOf('hour').add(32, 'hour'),
+                    locale: {
+                    format: 'M/DD hh:mm A'
+                    }
+                });
+
+            // Add event listener to the room type select element
+            roomTypeSelect.change(function() {
+                // Check if the selected room type is Executive or Junior Suite
+                const selectedRoomType = roomTypeSelect.val();
+                if (selectedRoomType === 'Executive' || selectedRoomType === 'Junior Suite') {
+                    // Show the extra bed select element
+                    extraBedRow.show();
+                } else {
+                    // Hide the extra bed select element
+                    extraBedRow.hide();
+                }
+            });
+            });
+        </script>
+       <script>
+            function validateEmails() {
+            var email = document.getElementById('email').value;
+            var c_email = document.getElementById('c_email').value;
+
+            // Regular expression for email validation
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (!emailRegex.test(email)) {
+                alert('Please enter a valid email address for Email.');
+                return false;
+            }
+
+            if (!emailRegex.test(c_email)) {
+                alert('Please enter a valid email address for Confirm Email.');
+                return false;
+            }
+
+            if (email !== c_email) {
+                alert('Email addresses do not match.');
+                return false;
+            }
+            return true;
+        }
+        $('#kt_create_reservation_form').validator()
+        </script>
+        
+    </body>
+    <!-- End Body -->
+</html>
