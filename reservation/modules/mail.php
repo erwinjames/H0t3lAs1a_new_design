@@ -116,9 +116,9 @@ E-mail: '.$email.'
 <br>
 <h4><b>ARRIVAL AND DEPARTURE DATES</b></h4>
 <br>
-Check in: '.$Arrival_month.','.$Arrival_Day.'&nbsp;'.$Arrival_Time.'&nbsp;'.$checkInTimezone.'
+Check in: '.$Arrival_month.','.$Arrival_Day.'&nbsp;&nbsp;'.$Arrival_Time.'&nbsp;'.$checkInTimezone.'
 <br>
-Check out: '.$Depart_Month.','.$Arrival_Day.'&nbsp;'.$Depart_Time.'&nbsp;'.$checkOutTimezone.'
+Check out: '.$Depart_Month.','.$Arrival_Day.'&nbsp;&nbsp;'.$Depart_Time.'&nbsp;'.$checkOutTimezone.'
 <br>
 <br>
 <h4><b>Room Preferences</b></h4>
