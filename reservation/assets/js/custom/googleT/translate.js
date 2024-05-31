@@ -14,6 +14,9 @@ const customTranslations = {
   },
   'IN CASE OF CANCELLATION, the following charges will apply: 100% of 1 night per room reserved when you cancelled 7 days to 4days before check in date, 100% of 3 nights per room reserved if you reserved 3 nights or more when you cancelled 3 days to 1 day before check in date. Full charge of the whole reservation when you cancelled on the day or no show. The same rule will apply for shortening of stay.':{
     'ja': '到着日の３日前キャンセルは一夜分の50％、2日前、1日前、当日キャンセルは100％を申し受けます。 予約日数が短縮された場合は、それをキャンセルされたものとみなし以上のルールに基づいたパーセンテージを申し受けます。' // Custom translation for Net in Japanese
+  },
+  'VERY IMPORTANT!!!': {
+    'ja': '重要事項' // Custom translation for Net in Japanese
   }
 };
 
