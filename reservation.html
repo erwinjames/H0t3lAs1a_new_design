@@ -135,12 +135,13 @@
                     <p style="color:red;text-align: left;font-size:17px" class="translate">PLEASE MAKE A RESERVATION FIRST before inquiring for room availability since we are often fully-booked by the time you place or confirm your booking.
                         We will give you a reply whether your reservation is confirmed or not within 18 hours. We always reply to your application, but there are cases that we can't receive your email.
                         <br>When you don't get any reply from us within 18 hours, please e-mail/contact us again. We will call you by phone.</p>
+                        
                 </div>
                 <div class="panel-body">
                     <form novalidate="novalidate" id="kt_create_reservation_form" data-toggle="validator" role="form">
                         <!-- First Form Section -->
                         <div class="panel-heading">
-                            <h4 style="border-bottom: solid 1px rgba(95, 95, 95, 0.609);font-weight: bold" class="translate">VERY IMPORTANT!!!</h4>
+                            <h4 style="border-bottom: solid 1px rgba(95, 95, 95, 0.609);font-weight: bold" class="translate">VERY IMPORTANT!!! </h4>
 	    					<h5 class="notice translate">Please fill out everything below.</h5>
 	    					
                         </div>
@@ -490,6 +491,7 @@
                             <div class="col-md-6 form-group">
                                 <select id="roomType" name="roomType" aria-label="Select a Room Type" data-control="select2" data-placeholder="*" class="form-control">
                                     <option value="" class="translate">Please Select</option>
+                                    <option value="Economy" class="translate">Economy</option>
                                     <option value="Economy Plus" class="translate">Economy Plus</option>
                                     <option value="Standard" class="translate">Standard</option>
                                     <option value="Deluxe" class="translate">Deluxe</option>
@@ -553,7 +555,7 @@
                         <br>
                         <div class="row">
                             <div class="col-md-12 form-group">
-                                <label for="flightAndArrival" class="translate">Flight and Arrival Information<b style="color:red;">(Please indicate here including FLIGHT NO. and ARRIVAL TIME in case of AIRPORT PICK-UP)</b></label>
+                                <label for="flightAndArrival" class="translate">Flight and Arrival Information (Please indicate here including FLIGHT NO. and ARRIVAL TIME in case of AIRPORT PICK-UP)</label>
                                 <textarea type="text" class="form-control" id="flightAndArrival" name="flightAndArrival" required></textarea>
                             </div>
                         </div>
@@ -572,10 +574,10 @@
                         <br>
                         <!-- Submit Button -->
                         <center><button type="button" id="submit_btn" class="text-uppercase s-btn s-btn--md s-btn--primary-bg g-radius--50 g-padding-x-80--xs translate">Send</button></center>
-                        
                     </form>
-                   
                 </div>
+                <p style="margin-left: 20px;" id="jpversion" class="translate">You can also check out the other version of the website.<a style="font-size: 12px;" href="#">▶クリックしてください</a></p>
+                   
             </div>
         </div>
         <!--========== FOOTER ==========-->

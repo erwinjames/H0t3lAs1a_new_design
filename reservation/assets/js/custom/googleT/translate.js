@@ -17,6 +17,9 @@ const customTranslations = {
   },
   'VERY IMPORTANT!!!': {
     'ja': '重要事項' // Custom translation for Net in Japanese
+  },
+  'Flight and Arrival Information (Please indicate here including FLIGHT NO. and ARRIVAL TIME in case of AIRPORT PICK-UP)': {
+    'ja': '送迎が必要の場合にはフライトナンバーと到着時間もお知らせください。その他ご要望をご記入ください。' // Custom translation for Net in Japanese
   }
 };
 

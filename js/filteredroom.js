@@ -2,11 +2,12 @@ $(document).ready(function() {
     const bedTypeOptions = {
         "Standard": ["semidouble size", "single", "double size", "Queen Size"],
         "Deluxe": ["semidouble size", "single", "double size"],
-        "Deluxe Plus": ["double"],
+        "Deluxe Plus": ["double size"],
         "Junior Suite": ["queen size"],
         "Superior": ["queen size"],
-        "Executive": ["twin", "queen size", "single"],
-        "Economy Plus": ["double size", "semidouble size"]
+        "Executive": ["twin Bed", "queen size", "single"],
+        "Economy": ["semidouble size"],
+        "Economy Plus": ["double size"]
     };
 
     $('#roomType').change(function() {
