@@ -1,6 +1,19 @@
 // Variable to track if translation is on or off
 let isTranslationOn = false;
 
+// Custom translations for specific terms and phrases
+const customTranslations = {
+  'Superior': {
+    'ja': 'スーペリア' // Custom translation for Superior in Japanese
+  },
+  '24/7 Reception': {
+    'ja': '24時間受付' // Custom translation for 24/7 Reception in Japanese
+  },
+  'NET': {
+    'ja': 'ネット' // Custom translation for Net in Japanese
+  }
+};
+
 // Function to toggle translation mode
 function toggleTranslation() {
   isTranslationOn = !isTranslationOn; // Flip the toggle
@@ -27,13 +40,17 @@ function getTranslationPreference() {
 function toggleLanguageButtons() {
   const englishButton = document.getElementById('englishButton');
   const japaneseButton = document.getElementById('japaneseButton');
+  const jpversionButton = document.getElementById('jpversion');
 
   if (isTranslationOn) {
     englishButton.style.display = 'inline-block'; // Offer "Off" button when translation is on
     japaneseButton.style.display = 'none';
+    jpversionButton.style.display = 'inline-block';
+
   } else {
     japaneseButton.style.display = 'inline-block'; // Offer "On" button when translation is off
     englishButton.style.display = 'none';
+    jpversionButton.style.display = 'none';
   }
 }
 
@@ -62,25 +79,41 @@ async function translatePage(targetLanguage) {
     }
 
     const originalHTML = element.innerHTML.trim();
-    const segments = originalHTML.split(/(<br>)/i); // Split by <br> tags
 
-    let translatedHTML = '';
+    // Check if the originalHTML matches any custom translation
+    let translatedHTML = customTranslations[originalHTML]?.[targetLanguage];
 
-    for (const segment of segments) {
-      if (segment.toLowerCase() === '<br>') {
-        translatedHTML += segment; // Preserve the <br> tags
-      } else {
-        const sentences = segment.split(/[.!?]/).filter(sentence => sentence.trim());
+    if (!translatedHTML) {
+      // If no custom translation, perform the translation
+      const segments = originalHTML.split(/(<br>)/i); // Split by <br> tags
+      translatedHTML = '';
 
-        for (const sentence of sentences) {
-          const translatedSentence = await googleTranslate(targetLanguage, sentence.trim());
-          translatedHTML += `${translatedSentence}. `;
+      for (const segment of segments) {
+        if (segment.toLowerCase() === '<br>') {
+          translatedHTML += segment; // Preserve the <br> tags
+        } else {
+          const sentences = segment.split(/[.!?]/).filter(sentence => sentence.trim());
+
+          for (const sentence of sentences) {
+            let translatedSentence;
+
+            // Check if the sentence has a custom translation
+            if (customTranslations[sentence]) {
+              translatedSentence = customTranslations[sentence][targetLanguage];
+            } else {
+              translatedSentence = await googleTranslate(targetLanguage, sentence.trim());
+            }
+
+            translatedHTML += `${translatedSentence}. `;
+          }
         }
       }
     }
 
     element.innerHTML = translatedHTML.trim(); // Translate and update
   }
+
+  manualAdjustments(targetLanguage); // Perform manual adjustments after translation
 }
 
 // Google Translate function with promise-based approach
@@ -99,6 +132,17 @@ function googleTranslate(targetLanguage, text) {
         console.error('Error translating:', error);
         reject(error);
       });
+  });
+}
+
+// Manual adjustments for specific translations
+function manualAdjustments(targetLanguage) {
+  const elementsToAdjust = document.querySelectorAll('.translate');
+
+  elementsToAdjust.forEach(element => {
+    if (element.innerHTML.includes('excellent') && targetLanguage === 'ja') {
+      element.innerHTML = element.innerHTML.replace('excellent', 'スーペリア');
+    }
   });
 }
 

@@ -6,7 +6,7 @@
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Homepage</title>
+        <title>Reservation</title>
 
         <!-- Web Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i|Montserrat:400,700" rel="stylesheet">
@@ -115,6 +115,9 @@
                                        <a href="" id="japaneseButton" class="s-header-v2__nav-link-btn text-uppercase s-btn s-btn--xs s-btn--white-brd g-radius--50">日本語</a>
                                        <a href="" id="englishButton" class="s-header-v2__nav-link-btn text-uppercase s-btn s-btn--xs s-btn--white-brd g-radius--50">English</a>
                                     </li>
+                                    <li class="s-header-v2__nav-item">
+										<a style="margin-left:4px;" id="jpversion" href="https://hotelasiacebu.com/jp/reservation.html" class="s-header-v2__nav-link-btn s-btn s-btn--xs s-btn--white-brd g-radius--50">バージョン1</a>
+									 </li>
                                 </ul>
                             </div>
                             <!-- End Nav Menu -->
@@ -144,15 +147,15 @@
                         <div class="row">
                             <div class="col-md-4"><label class="translate" for="account_name">Name:</label></div>
                             <div class="col-md-8 form-group">
-                                <input type="text" class="form-control translate" id="account_name" name="account_name" placeholder="Name ( 名前 )" required>
-                                <div class="help-block with-errors"></div>
+                                <input type="text" class="form-control translate" id="account_name" name="account_name" placeholder="Name ( 名前を入力してください )" required>
+                                <div class="help-block with-errors translate"></div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-4"><label class="translate" for="address">Address:</label></div>
                             <div class="col-md-8 form-group">
-                                <input type="text" class="form-control" id="address" name="address" placeholder="Address ( ご住所 )" required>
-                                <div class="help-block with-errors"></div>
+                                <input type="text" class="form-control translate" id="address" name="address" placeholder="Address ( 都道府県から住所を入力してください )" required>
+                                <div class="help-block with-errors translate"></div>
                             </div>
                         </div>
                         <div class="row">
@@ -169,22 +172,22 @@
                         <div class="row">
                             <div class="col-md-4"><label class="translate" for="tel_num">Telephone Number:</label></div>
                             <div class="col-md-8 form-group">
-                                <input type="tel" class="form-control" id="tel_num" name="tel_num" placeholder="Telephone ( 電話番号 )" required>
-                                    <div class="help-block with-errors"></div>
+                                <input type="tel" class="form-control" id="tel_num translate" name="tel_num" placeholder="Telephone ( 電話番号 )" required>
+                                    <div class="help-block with-errors translate"></div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-4"><label class="translate" for="email">E-mail Address:</label></div>
                             <div class="col-md-8 form-group">
-                                <input type="email" class="form-control" id="email" name="email" data-error="Email Address is invalid (メールアドレスが無効です)" required>
-                                <div class="help-block with-errors"></div>
+                                <input type="email" class="form-control translate" id="email" name="email" placeholder="Enter your PC e-mail (PCメールを受け取れるアドレスを入力してください)" data-error="Email Address is invalid (メールアドレスが無効です)" required>
+                                <div class="help-block with-errors translate"></div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-4"><label class="translate" for="c_email">Confirm E-mail:</label></div>
                             <div class="col-md-8 form-group">
-                                <input type="email" class="form-control" id="c_email" name="c_email" required>
-                                <div class="help-block with-errors"></div>
+                                <input type="email" class="form-control translate" placeholder="Enter the same e-mail again to avoid typo (再度同じアドレスを入力してください)" id="c_email" name="c_email" required>
+                                <div class="help-block with-errors translate"></div>
                             </div>
                         </div>
         
@@ -197,20 +200,20 @@
                         <div class="row">
                             <div class="col-md-2"><label class="translate">Check In:</label></div>
                             <div class="col-md-3 form-group">
-                                <select name="Arrival_Month" id="arrivalMonth" class="form-control translate">
-                                    <option value="">Please select</option>
-                                    <option value="January">January</option>
-                                    <option value="February">February</option>
-                                    <option value="March">March</option>
-                                    <option value="April">April</option>
-                                    <option value="May">May</option>
-                                    <option value="June">June</option>
-                                    <option value="July">July</option>
-                                    <option value="August">August</option>
-                                    <option value="September">September</option>
-                                    <option value="October">October</option>
-                                    <option value="November">November</option>
-                                    <option value="December">December</option>
+                                <select name="Arrival_Month" id="arrivalMonth" class="form-control">
+                                    <option value="" class="translate">Please select</option>
+                                    <option value="January" class="translate">January</option>
+                                    <option value="February" class="translate">February</option>
+                                    <option value="March" class="translate">March</option>
+                                    <option value="April" class="translate">April</option>
+                                    <option value="May" class="translate">May</option>
+                                    <option value="June" class="translate">June</option>
+                                    <option value="July" class="translate">July</option>
+                                    <option value="August" class="translate">August</option>
+                                    <option value="September" class="translate">September</option>
+                                    <option value="October" class="translate">October</option>
+                                    <option value="November" class="translate">November</option>
+                                    <option value="December" class="translate">December</option>
                                 </select>
                             </div>
                             <div class="col-md-3 form-group">
@@ -255,8 +258,8 @@
                                <label class="translate"> Check in Time Zone:</label>
                             </div>
                             <div class="col-md-3">
-                                    <select name="Arrival_Time" id="arrivalTime" class="form-control translate">
-                                        <option value="">Please select</option>
+                                    <select name="Arrival_Time" id="arrivalTime" class="form-control">
+                                        <option value="" class="translate">Please select</option>
                                         <option value="7:00 - 8:00">7:00 - 8:00</option>
                                         <option value="8:00 - 9:00">8:00 - 9:00</option>
                                         <option value="9:00 - 10:00">9:00 - 10:00</option>
@@ -286,20 +289,20 @@
                         <div class="row">
                             <div class="col-md-2"><label class="translate">Check Out:</label></div>
                             <div class="col-md-3 form-group">
-                                <select name="Depart_Month" id="DepartMonth" class="form-control translate">
-                                    <option value="">Please select</option>
-                                    <option value="January">January</option>
-                                    <option value="February">February</option>
-                                    <option value="March">March</option>
-                                    <option value="April">April</option>
-                                    <option value="May">May</option>
-                                    <option value="June">June</option>
-                                    <option value="July">July</option>
-                                    <option value="August">August</option>
-                                    <option value="September">September</option>
-                                    <option value="October">October</option>
-                                    <option value="November">November</option>
-                                    <option value="December">December</option>
+                                <select name="Depart_Month" id="DepartMonth" class="form-control">
+                                    <option value="" class="translate">Please select</option>
+                                    <option value="January" class="translate">January</option>
+                                    <option value="February" class="translate">February</option>
+                                    <option value="March" class="translate">March</option>
+                                    <option value="April" class="translate">April</option>
+                                    <option value="May" class="translate">May</option>
+                                    <option value="June" class="translate">June</option>
+                                    <option value="July" class="translate">July</option>
+                                    <option value="August" class="translate">August</option>
+                                    <option value="September" class="translate">September</option>
+                                    <option value="October" class="translate">October</option>
+                                    <option value="November" class="translate">November</option>
+                                    <option value="December" class="translate">December</option>
                                 </select>
                             </div>
                             <div class="col-md-3 form-group">
@@ -345,7 +348,7 @@
                             </div>
                             <div class="col-md-3">
                                     <select name="Depart_Time" id="DepartTime" class="form-control">
-                                        <option value="">Please select</option>
+                                        <option value="" class="translate">Please select</option>
                                         <option value="7:00 - 8:00">7:00 - 8:00</option>
                                         <option value="8:00 - 9:00">8:00 - 9:00</option>
                                         <option value="9:00 - 10:00">9:00 - 10:00</option>
@@ -380,28 +383,28 @@
                             <div class="col-md-6"><label for="card_name" class="translate">Name as written in the credit card:</label></div>
                             <div class="col-md-6 form-group">
                                 <input type="text" class="form-control" id="card_name" name="card_name" required>
-                                <div class="help-block with-errors"></div>
+                                <div class="help-block with-errors translate"></div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-6"><label for="card_number" class="translate">Card Number:</label></div>
                                 <div class="col-md-6 form-group">
                                     <input type="number" class="form-control" id="card_number" name="card_number" required>
-                                    <div class="help-block with-errors"></div>
+                                    <div class="help-block with-errors translate"></div>
                                 </div>
                         </div>
                         <div class="row">
                             <div class="col-md-6"><label for="Card_Type" class="translate">Credit Card Type:</label></div>
                             <div class="col-md-6 form-group">
-                                <select name="card_Type" id="cardType" class="form-select form-control translate" data-control="select2" data-hide-search="true" data-placeholder="Month">
-                                    <option selected="selected" value="Select">Please select</option>
-                                    <option value="VISA">VISA</option>
+                                <select name="card_Type" id="cardType" class="form-select form-control" data-control="select2" data-hide-search="true" data-placeholder="Month">
+                                    <option selected="selected" value="Select" class="translate">Please select</option>
+                                    <option value="VISA" >VISA</option>
                                     <option value="MasterCard">MasterCard</option>
                                     <option value="American Express">American Express</option>
                                     <option value="JCB">JCB</option>
                                     <option value="Diners Club">Diners Club</option>
                                 </select>
-                                <div class="help-block with-errors"></div>
+                                <div class="help-block with-errors translate"></div>
                             </div>
                         </div>
                         <div class="row">
@@ -423,7 +426,7 @@
                                         <option value="11">11</option>
                                         <option value="12">12</option>
                                     </select>
-                                    <div class="help-block with-errors"></div>
+                                    <div class="help-block with-errors translate"></div>
                                 </div>
                         </div>
                         <div class="row">
@@ -444,7 +447,7 @@
                                     <option value="2032">2032</option>
                                     <option value="2033">2033</option>
                                 </select>
-                                <div class="help-block with-errors"></div>
+                                <div class="help-block with-errors translate"></div>
                             </div>
                         </div>
         
@@ -470,12 +473,11 @@
                             </div>
                             <div class="col-md-6 form-group">
                                 <select id="roomType" name="roomType" aria-label="Select a Room Type" data-control="select2" data-placeholder="*" class="form-control">
-                                    <option value="" class="translate">Select a Room Type...</option>
+                                    <option value="" class="translate">Please Select</option>
                                     <option value="Economy Plus" class="translate">Economy Plus</option>
                                     <option value="Standard" class="translate">Standard</option>
                                     <option value="Deluxe" class="translate">Deluxe</option>
                                     <option value="Deluxe Plus" class="translate">Deluxe Plus</option>
-                                    <option value="Tatami room" class="translate">Tatami room</option>
                                     <option value="Superior" class="translate">Superior</option>
                                     <option value="Executive" class="translate">Executive</option>
                                     <option value="Junior Suite" class="translate">Junior Suite</option>
@@ -486,7 +488,7 @@
                             <div class="col-md-6"> <label for="num_rooms" class="translate">Number of Rooms:</label></div>
                             <div class="col-md-6 form-group">
                                 <select name="num_rooms" aria-label="Select a Number of Rooms" data-control="select2" data-placeholder="*" class="form-control">
-                                    <option value="" class="translate">Select a Number of Rooms...</option>
+                                    <option value="" class="translate">Please Select</option>
                                     <option value="1">1</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>
@@ -512,7 +514,7 @@
                             </div>
                             <div class="col-md-6 form-group">
                                 <select id="preBedType" name="preBedType" aria-label="Select a Preferred bed type" data-control="select2" data-placeholder="*" class="form-control">
-                                    <option value="" class="translate">Select a Preferred bed type..</option>
+                                    <option value="" class="translate">Please Select</option>
                                     <option value="single" class="translate">Single</option>
                                     <option value="twin" class="translate">Twin Bed</option>
                                     <option value="doublesize" class="translate">Double size</option>

@@ -96,6 +96,9 @@
                                        <a href="" id="japaneseButton" class="s-header-v2__nav-link-btn text-uppercase s-btn s-btn--xs s-btn--white-brd g-radius--50">日本語</a>
                                        <a href="" id="englishButton" class="s-header-v2__nav-link-btn text-uppercase s-btn s-btn--xs s-btn--white-brd g-radius--50">English</a>
                                     </li>
+									<li class="s-header-v2__nav-item">
+										<a style="margin-left:4px;" id="jpversion" href="https://hotelasiacebu.com/jp/reservation.html" class="s-header-v2__nav-link-btn s-btn s-btn--xs s-btn--white-brd g-radius--50">バージョン1</a>
+									 </li>
                                 </ul>
                             </div>
                             <!-- End Nav Menu -->
@@ -113,8 +116,8 @@
                         <div class="uk-width-1-1">
                             <div class="uk-flex uk-flex-left">
                                 <div class="uk-light uk-position-relative uk-text-left page-title">
-                                    <h1 class="uk-margin-remove">Room Detail</h1><!-- page title -->
-                                    <p class="impx-text-large uk-margin-remove">Browse &amp; Choose Your Choice</p><!-- page subtitle -->
+                                    <h1 class="uk-margin-remove translate">Room Detail</h1><!-- page title -->
+                                    <p class="impx-text-large uk-margin-remove translate" style="color:#ffffff">Browse &amp; Choose Your Choice</p><!-- page subtitle -->
                                 </div>
                             </div>
                         </div>
@@ -152,21 +155,21 @@
 						    <li class="uk-text-center uk-first-column">
 						    	<div class="uk-card uk-card-default uk-card-body impx-padding-medium"><!-- highlight item #1 -->
 							    	<i class="fa fa-wifi fa-2x impx-text-gold"></i>
-							    	<h3 class="uk-margin-remove-bottom uk-margin-small-top" style="font-weight: bold;">Free Wi-fi</h3>
+							    	<h3 class="uk-margin-remove-bottom uk-margin-small-top translate" style="font-weight: bold;">Free Wi-fi</h3>
 							    	
 						    	</div>
 						    </li><!-- highlight item #1 end -->
 						    <li class="uk-text-center"><!-- highlight item #2 -->
 						    	<div class="uk-card uk-card-default uk-card-body impx-padding-medium">
 							    	<i class="fa fa-bathtub fa-2x impx-text-gold"></i>
-							    	<h3 class="uk-margin-remove-bottom uk-margin-small-top" style="font-weight: bold;">Bathtub</h3>
+							    	<h3 class="uk-margin-remove-bottom uk-margin-small-top translate" style="font-weight: bold;">Bathtub</h3>
 							    	
 						    	</div>
 						    </li><!-- highlight item #2 end -->
 						    <li class="uk-text-center"><!-- highlight item #3 -->
 						    	<div class="uk-card uk-card-default uk-card-body impx-padding-medium">
 							    	<i class="fa fa-tv fa-2x impx-text-gold"></i>
-							    	<h3 class="uk-margin-remove-bottom uk-margin-small-top" style="font-weight: bold;">Widescreen TV</h3>
+							    	<h3 class="uk-margin-remove-bottom uk-margin-small-top translate" style="font-weight: bold;">Widescreen TV</h3>
 							    	
 							    </div>
 						    </li><!-- highlight item #3 end -->
@@ -174,15 +177,15 @@
 						<!-- highlight end -->
 						<!-- room description -->
 						<h4 style="font-weight: bold;">Room Type</h4>
-						<p class="impx-text-large"  id="room-name"></p>
+						<p class="impx-text-large translate" id="room-name"></p>
 						<!-- room features list -->
 						<div data-uk-grid="" class="uk-grid">
 							<div class="uk-width-1-2@xl uk-width-1-2@l uk-width-1-2@m uk-width-1-2@s uk-first-column">
-								<h5 style="font-weight: bold;">Additional Description</h5>
-								<p id="room-description"></p>
+								<h5 style="font-weight: bold;" class="translate">Additional Description</h5>
+								<p id="room-description" class="translate"></p>
 							</div>
 							<div class="uk-width-1-2@xl uk-width-1-2@l uk-width-1-2@m uk-width-1-2@s">
-								<h5 style="font-weight: bold;">Room number</h5>
+								<h5 style="font-weight: bold;" class="translate">Room number</h5>
 								<ul class="uk-list uk-list-bullet impx-list" id="room-number-list">
 									<!-- Room numbers will be dynamically inserted here -->
 								</ul>
@@ -196,95 +199,8 @@
 
 							<div class="uk-card uk-card-default uk-margin-medium-bottom">
 								<!-- Review comment -->
-								<div class="uk-card-body impx-padding-medium">
-									<h4 class="uk-margin-medium-bottom uk-heading-bullet uk-heading-line" style="font-weight: bold;"><span>Reviews &amp; Comments</span></h4>
-
-									<!-- <ul class="uk-comment-list">
-									    <li>
-									        <article class="uk-comment">
-									            <header class="uk-comment-header uk-position-relative">
-									                <div class="uk-grid-medium uk-flex-middle uk-grid" data-uk-grid="">
-									                    <div class="uk-width-auto uk-first-column">
-									                        <img class="uk-comment-avatar" src="images/peoples/testi-people1.jpg" width="80" height="80" alt="">
-									                    </div>
-									                    <div class="uk-width-expand">
-									                        <h4 class="uk-comment-title uk-margin-remove"><a class="uk-link-reset" href="#">Author</a></h4>
-									                        <ul class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top uk-margin-small-bottom">
-												                <li>
-												                	<div class="br-wrapper br-theme-fontawesome-stars-o"><select id="review-rating1" style="display: none;">
-																		<option value="1">1</option>
-																		<option value="2">2</option>
-																		<option value="3">3</option>
-																		<option value="4">4</option>
-																		<option value="5">5</option>
-																	</select><div class="br-widget"><a href="#" data-rating-value="1" data-rating-text="1" class="br-selected"></a><a href="#" data-rating-value="2" data-rating-text="2" class="br-selected"></a><a href="#" data-rating-value="3" data-rating-text="3" class="br-selected"></a><a href="#" data-rating-value="4" data-rating-text="4" class="br-selected br-current"></a><a href="#" data-rating-value="5" data-rating-text="5"></a><div class="br-current-rating">4</div></div></div>
-												                </li>
-												            </ul>
-									                    </div>
-									                </div>									                
-									            </header>
-									            <div class="uk-comment-body">
-									                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-									            </div>
-									        </article>
-									    </li>
-									    <li>
-							                <article class="uk-comment">
-							                    <header class="uk-comment-header uk-position-relative">
-							                        <div class="uk-grid-medium uk-flex-middle uk-grid" data-uk-grid="">
-							                            <div class="uk-width-auto uk-first-column">
-							                                <img class="uk-comment-avatar" src="images/peoples/testi-people2.jpg" width="80" height="80" alt="">
-							                            </div>
-							                            <div class="uk-width-expand">
-							                                <h4 class="uk-comment-title uk-margin-remove"><a class="uk-link-reset" href="#">Author</a></h4>
-							                                <ul class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top uk-margin-small-bottom">
-												                <li>
-												                	<div class="br-wrapper br-theme-fontawesome-stars-o"><select id="review-rating2" style="display: none;">
-																		<option value="1">1</option>
-																		<option value="2">2</option>
-																		<option value="3">3</option>
-																		<option value="4">4</option>
-																		<option value="5">5</option>
-																	</select><div class="br-widget"><a href="#" data-rating-value="1" data-rating-text="1" class="br-selected"></a><a href="#" data-rating-value="2" data-rating-text="2" class="br-selected"></a><a href="#" data-rating-value="3" data-rating-text="3" class="br-selected"></a><a href="#" data-rating-value="4" data-rating-text="4" class="br-selected"></a><a href="#" data-rating-value="5" data-rating-text="5" class="br-selected br-current"></a><div class="br-current-rating">5</div></div></div>
-												                </li>
-												            </ul>
-							                            </div>
-							                        </div>
-							                    </header>
-							                    <div class="uk-comment-body">
-							                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-							                    </div>
-							                </article>
-							            </li>
-							            <li>
-							                <article class="uk-comment">
-							                    <header class="uk-comment-header uk-position-relative">
-							                        <div class="uk-grid-medium uk-flex-middle uk-grid" data-uk-grid="">
-							                            <div class="uk-width-auto uk-first-column">
-							                                <img class="uk-comment-avatar" src="images/peoples/testi-people3.jpg" width="80" height="80" alt="">
-							                            </div>
-							                            <div class="uk-width-expand">
-							                                <h4 class="uk-comment-title uk-margin-remove"><a class="uk-link-reset" href="#">Author</a></h4>
-							                                <ul class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top uk-margin-small-bottom">
-												                <li>
-												                	<div class="br-wrapper br-theme-fontawesome-stars-o"><select id="review-rating3" style="display: none;">
-																		<option value="1">1</option>
-																		<option value="2">2</option>
-																		<option value="3">3</option>
-																		<option value="4">4</option>
-																		<option value="5">5</option>
-																	</select><div class="br-widget"><a href="#" data-rating-value="1" data-rating-text="1" class="br-selected"></a><a href="#" data-rating-value="2" data-rating-text="2" class="br-selected"></a><a href="#" data-rating-value="3" data-rating-text="3" class="br-selected"></a><a href="#" data-rating-value="4" data-rating-text="4" class="br-selected"></a><a href="#" data-rating-value="5" data-rating-text="5" class="br-selected br-current"></a><div class="br-current-rating">5</div></div></div>
-												                </li>
-												            </ul>
-							                            </div>
-							                        </div>
-							                    </header>
-							                    <div class="uk-comment-body">
-							                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-							                    </div>
-							                </article>
-							            </li>
-									</ul> -->
+								<div class="uk-card-body impx-padding-medium translate">
+									<h4 class="uk-margin-medium-bottom uk-heading-bullet uk-heading-line translate" style="font-weight: bold;"><span>Reviews &amp; Comments</span></h4>
 
 								</div>
 							</div>
@@ -345,7 +261,7 @@
 
 						<!-- related rooms -->
 						<div class="uk-margin-large-bottom uk-padding impx-padding-medium bg-color-white uk-box-shadow-medium related-rooms">
-							<h4 class="uk-heading-line uk-text-center" style="font-weight: bold;">Other Rooms</h4><!-- title -->
+							<h4 class="uk-heading-line uk-text-center translate" style="font-weight: bold;">Other Rooms</h4><!-- title -->
 							<!-- room items -->
 					        <ul class="uk-child-width-1-1@xl uk-child-width-1-1@l uk-child-width-1-1@m uk-child-width-1-3@s impx-rooms style3 uk-margin-small-top uk-margin-remove-bottom data-uk-grid uk-grid uk-grid-stack" data-uk-grid="">
 								<li class="uk-first-column"><!-- room item #1 -->
@@ -357,8 +273,8 @@
 									                <div class="impx-overlay light overlay-squared padding-xwide"></div>
 									            </div>
 								                <div class="uk-card-body impx-padding-small uk-position-relative uk-position-z-index">
-								                	<h4 class="uk-card-title uk-margin-remove-bottom impx-text-white">Superior</h4>
-								                	<div class="uk-card-badge uk-label bg-color-gold impx-text-white small">start from 2800/net</div>
+								                	<h4 class="uk-card-title uk-margin-remove-bottom impx-text-white translate">Superior</h4>
+								                	<div class="uk-card-badge uk-label bg-color-gold impx-text-white small translate">start from 2800/net</div>
 									            </div>
 								            </div>
 							        	</div>
@@ -373,8 +289,8 @@
 									                <div class="impx-overlay light overlay-squared padding-xwide"></div>
 									            </div>
 								                <div class="uk-card-body impx-padding-small uk-position-relative uk-position-z-index">
-								                	<h4 class="uk-card-title uk-margin-remove-bottom impx-text-white">Executive</h4>
-								                	<div class="uk-card-badge uk-label bg-color-gold impx-text-white small">start from 2500/net</div>
+								                	<h4 class="uk-card-title uk-margin-remove-bottom impx-text-white translate">Executive</h4>
+								                	<div class="uk-card-badge uk-label bg-color-gold impx-text-white small translate">start from 2500/net</div>
 									            </div>
 								            </div>
 								        </div>
@@ -389,8 +305,8 @@
 									                <div class="impx-overlay light overlay-squared padding-xwide"></div>
 									            </div>
 								                <div class="uk-card-body impx-padding-small uk-position-relative uk-position-z-index">
-								                	<h4 class="uk-card-title uk-margin-remove-bottom impx-text-white">Junior Suite</h4>
-								                	<div class="uk-card-badge uk-label bg-color-gold impx-text-white small">start from 4200/net</div>
+								                	<h4 class="uk-card-title uk-margin-remove-bottom impx-text-white translate">Junior Suite</h4>
+								                	<div class="uk-card-badge uk-label bg-color-gold impx-text-white small translate">start from 4200/net</div>
 									            </div>
 								            </div>
 								        </div>
@@ -398,7 +314,7 @@
 								</li><!-- room item #3 end -->
 								<li class="uk-margin-remove-bottom uk-grid-margin uk-first-column"><!-- room item #3 -->
 									<center>
-										<a href="room.html" class="uk-button uk-button-default uk-button-small impx-button gold impx-button-outline outline-gold button-wide impx-button-rounded small-border">See More »</a>
+										<a href="room.html" class="uk-button uk-button-default uk-button-small impx-button gold impx-button-outline outline-gold button-wide impx-button-rounded small-border translate">See More »</a>
 									</center>
 								</li><!-- room item #3 end -->
 							</ul>
