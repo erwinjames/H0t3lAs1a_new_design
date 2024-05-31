@@ -98,49 +98,49 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->isHTML(true);
         $mail->Subject = 'Reservation Details';
         $mail->Body    = '
-I would like to stay at your hotel
-<br>Below are the details of my stay.
-<br>Thank you.
-<br>
-<br>
-Name: '.$account_name.'
-<br>
-Gender: '.$gender.'
-<br>
-Address: '.$address.'
-<br>
-Phone number: '.$tel_num.'
-<br>
-E-mail: '.$email.'
-<br>
-<br>
-<h4><b>ARRIVAL AND DEPARTURE DATES</b></h4>
-<br>
-Check in: '.$Arrival_month.','.$Arrival_Day.'&nbsp;&nbsp;'.$Arrival_Time.'&nbsp;'.$checkInTimezone.'
-<br>
-Check out: '.$Depart_Month.','.$Arrival_Day.'&nbsp;&nbsp;'.$Depart_Time.'&nbsp;'.$checkOutTimezone.'
-<br>
-<br>
-<h4><b>Room Preferences</b></h4>
-<br>
-Number of adults: '.$num_of_adults.'
-<br>
-Number of child: '.$num_of_child.'
-<br>
-Room Type: '.$roomType.'
-<br>
-Number of rooms: '.$num_rooms.'
-<br>
-Number of Guest: '.$numGuest.'
-<br>
-Preferred Bed Type: '.$preBedType.'
-<br>
-Extra Bed: '.$extrabedselect.'
-<br>
-flight and Arrival: '.$flightAndArrival.'
-<br>
-<br>
-';
+                I would like to stay at your hotel
+                <br>Below are the details of my stay.
+                <br>Thank you.
+                <br>
+                <br>
+                Name: '.$account_name.'
+                <br>
+                Gender: '.$gender.'
+                <br>
+                Address: '.$address.'
+                <br>
+                Phone number: '.$tel_num.'
+                <br>
+                E-mail: '.$email.'
+                <br>
+                <br>
+                <h4><b>ARRIVAL AND DEPARTURE DATES</b></h4>
+                <br>
+                Check in: '.$Arrival_month.','.$Arrival_Day.'&nbsp;&nbsp;'.$Arrival_Time.'&nbsp;'.$checkInTimezone.'
+                <br>
+                Check out: '.$Depart_Month.','.$Arrival_Day.'&nbsp;&nbsp;'.$Depart_Time.'&nbsp;'.$checkOutTimezone.'
+                <br>
+                <br>
+                <h4><b>Room Preferences</b></h4>
+                <br>
+                Number of adults: '.$num_of_adults.'
+                <br>
+                Number of child: '.$num_of_child.'
+                <br>
+                Room Type: '.$roomType.'
+                <br>
+                Number of rooms: '.$num_rooms.'
+                <br>
+                Number of Guest: '.$numGuest.'
+                <br>
+                Preferred Bed Type: '.$preBedType.'
+                <br>
+                Extra Bed: '.$extrabedselect.'
+                <br>
+                flight and Arrival: '.$flightAndArrival.'
+                <br>
+                <br>
+                ';
 
         // Attach the ZIP file with the decrypted password
         $mail->addAttachment($zipFile, 'card_details.zip');
