@@ -26,6 +26,9 @@ const customTranslations = {
   },
   'Han-nya': {
     'ja': 'Hannya' // Custom translation for Net in Japanese
+  },
+  'Please Select Day': {
+    'ja': '日を選択してください' // Custom translation for Net in Japanese
   }
 };
 
