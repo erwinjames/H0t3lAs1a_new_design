@@ -20,6 +20,12 @@ const customTranslations = {
   },
   'Flight and Arrival Information (Please indicate here including FLIGHT NO. and ARRIVAL TIME in case of AIRPORT PICK-UP)': {
     'ja': '送迎が必要の場合にはフライトナンバーと到着時間もお知らせください。その他ご要望をご記入ください。' // Custom translation for Net in Japanese
+  },
+  'Check out the other version of the website by clicking the Version 1 button above or click this link <a style="font-size: 12px;" href="#">▶クリックしてください</a>': {
+    'ja': '上のバージョン 1 ボタンをクリックするか、このリンクをクリックして、Web サイトの他のバージョンをチェックしてください。<a style="font-size: 12px;" href="https://hotelasiacebu.com/jp/reservation.html">▶クリックしてください</a>' // Custom translation for Net in Japanese
+  },
+  'Han-nya': {
+    'ja': 'Hannya' // Custom translation for Net in Japanese
   }
 };
 
