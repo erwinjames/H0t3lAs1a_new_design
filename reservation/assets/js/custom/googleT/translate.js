@@ -19,9 +19,9 @@ const customTranslations = {
     'ja': '重要事項' // Custom translation for Net in Japanese
   },
   'Flight and Arrival Information (Please indicate here including FLIGHT NO. and ARRIVAL TIME in case of AIRPORT PICK-UP)': {
-    'ja': '送迎が必要の場合にはフライトナンバーと到着時間もお知らせください。その他ご要望をご記入ください。' // Custom translation for Net in Japanese
+    'ja': '空港お迎えの場合は、フライト番号と到着時刻をここに入力してください' // Custom translation for Net in Japanese
   },
-  'Check out the other version of the website by clicking the Version 1 button above or click this link <a style="font-size: 12px;" href="#">▶クリックしてください</a>': {
+  'Check out the other version of the website by clicking the Version 1 button above or click this link <a style="font-size: 12px;" href="#">▶ライトバージョン</a>': {
     'ja': '上のバージョン 1 ボタンをクリックするか、このリンクをクリックして、Web サイトの他のバージョンをチェックしてください。<a style="font-size: 12px;" href="https://hotelasiacebu.com/jp/reservation.html">▶クリックしてください</a>' // Custom translation for Net in Japanese
   },
   'Han-nya': {
@@ -29,7 +29,32 @@ const customTranslations = {
   },
   'Please Select Day': {
     'ja': '日を選択してください' // Custom translation for Net in Japanese
+  },
+  'Please make a reservation before inquiring about room availability to avoid any issues when booking. We will confirm your reservation within 18 hours. If you dont receive a reply within 18 hours, please email us again and we will also follow up with a phone call.': {
+    'ja': 'ご予約時またはご予約確定時にトラブルを避けるため、空室状況をお問い合わせいただく前に、まずご予約をお願いいたします。 ご予約が確定するかどうかは18時間以内に返信させていただきます。 お申し込みには必ず返信しておりますが 18時間以内に返信がない場合は、お手数ですが再度メールにてご連絡ください お電話にてご連絡させていただきます。' // Custom translation for Net in Japanese
+  },
+  'Room rates for January 16, 17, 18, and 19, 2025 will be regular prices reservations for these dates require prepayment for at least 3 consecutive nights. Crowds are expected as it is Sinulog, the biggest festival in the Philippines.<br>Reservations for January 18th, 19th, and 20th will also be at regular price.<br>If you choose to book by credit card at this point, the amount may be debited upon confirmation of your booking. Please note that reservations made during the regular price period will not be refunded even if canceled.': {
+    'ja': '2025年1月16日、17日、18日、19日の宿泊料金は通常料金となります。これらの日付の予約には、少なくとも連続 3 泊分の事前支払いが必要です。フィリピン最大のお祭り「シヌログ」なので混雑が予想されます。1月18日、19日、20日のご予約も通常価格となります。この時点でクレジット カードでの予約を選択した場合、予約確認時に金額が引き落とされる場合があります。通常価格期間中のご予約はキャンセルされても払い戻しはできませんので、予めご了承ください。' // Custom translation for Net in Japanese
+  },
+  '※ SPECIAL (SINULOG) RATE': {
+    'ja': '※ スペシャル（シヌログ）レート' // Custom translation for Net in Japanese
+  },
+  '【Single Occupancy】': {
+    'ja': '【おひとりで】' // Custom translation for Net in Japanese
+  },
+  '【Double Occupancy】': {
+    'ja': '【おふたりで】' // Custom translation for Net in Japanese
+  },
+  'Pick up': {
+    'ja': 'お迎え' // Custom translation for Net in Japanese
+  },
+  'Drop off': {
+    'ja': 'お送り' // Custom translation for Net in Japanese
+  },
+  'If online reservation fails or to make sure that your reservation is confirmed, please email to info@hotelasiacebu.com. Even if you book online, please contact info@hotelasiacebu.com.': {
+    'ja': 'オンライン予約の場合も確認を含めinfo@hotlasiacebu.comまでご連絡ください。' // Custom translation for Net in Japanese
   }
+  
 };
 
 // Function to toggle translation mode
@@ -122,7 +147,7 @@ async function translatePage(targetLanguage) {
               translatedSentence = await googleTranslate(targetLanguage, sentence.trim());
             }
 
-            translatedHTML += `${translatedSentence}. `;
+            translatedHTML += `${translatedSentence}  `;
           }
         }
       }
