@@ -53,6 +53,9 @@ const customTranslations = {
   },
   'If online reservation fails or to make sure that your reservation is confirmed, please email to info@hotelasiacebu.com. Even if you book online, please contact info@hotelasiacebu.com.': {
     'ja': 'オンライン予約の場合も確認を含めinfo@hotlasiacebu.comまでご連絡ください。' // Custom translation for Net in Japanese
+  },
+  'We dont charge your credit card right away. Typically, we only process your credit card when you check in.': {
+    'ja': 'クレジットカードにすぐに請求することはありません。通常、チェックイン時にのみクレジットカードが処理されます。' // Custom translation for Net in Japanese
   }
   
 };
