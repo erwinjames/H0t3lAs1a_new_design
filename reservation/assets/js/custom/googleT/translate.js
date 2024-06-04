@@ -56,6 +56,9 @@ const customTranslations = {
   },
   'We dont charge your credit card right away. Typically, we only process your credit card when you check in.': {
     'ja': 'クレジットカードにすぐに請求することはありません。通常、チェックイン時にのみクレジットカードが処理されます。' // Custom translation for Net in Japanese
+  },
+  'Sinulog rate is only 500+.': {
+    'ja': 'Sinulogレートは500 +のみです' // Custom translation for Net in Japanese
   }
   
 };
