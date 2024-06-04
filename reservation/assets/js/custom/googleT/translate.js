@@ -57,8 +57,8 @@ const customTranslations = {
   'We dont charge your credit card right away. Typically, we only process your credit card when you check in.': {
     'ja': 'クレジットカードにすぐに請求することはありません。通常、チェックイン時にのみクレジットカードが処理されます。' // Custom translation for Net in Japanese
   },
-  'Sinulog rate is only 500+.': {
-    'ja': 'Sinulogレートは500 +のみです' // Custom translation for Net in Japanese
+  'Sinulog Rate [plus 500 pesos per room]': {
+    'ja': 'シヌログ料金 [各部屋毎にプラス 500 ペソ]' // Custom translation for Net in Japanese
   },
   'BPI Capitol, Cebu City<br>Current Account#:9061001481<br>Account Name : HOTEL ASIA': {
     'ja': '三井住友銀行、恵比寿支店、普通預金 <br> 預金名義：ホテル アジア ゲナ コーポレーション <br>口座番号：８２４６７１７' // Custom translation for Net in Japanese
