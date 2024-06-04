@@ -33,11 +33,11 @@ const customTranslations = {
   'Please make a reservation before inquiring about room availability to avoid any issues when booking. We will confirm your reservation within 18 hours. If you dont receive a reply within 18 hours, please email us again and we will also follow up with a phone call.': {
     'ja': 'ご予約時またはご予約確定時にトラブルを避けるため、空室状況をお問い合わせいただく前に、まずご予約をお願いいたします。 ご予約が確定するかどうかは18時間以内に返信させていただきます。 お申し込みには必ず返信しておりますが 18時間以内に返信がない場合は、お手数ですが再度メールにてご連絡ください お電話にてご連絡させていただきます。' // Custom translation for Net in Japanese
   },
-  'Room rates for January 16, 17, 18, and 19, 2025 will be regular prices reservations for these dates require prepayment for at least 3 consecutive nights. Crowds are expected as it is Sinulog, the biggest festival in the Philippines.<br>Reservations for January 18th, 19th, and 20th will also be at regular price.<br>If you choose to book by credit card at this point, the amount may be debited upon confirmation of your booking. Please note that reservations made during the regular price period will not be refunded even if canceled.': {
-    'ja': '2025年1月16日、17日、18日、19日の宿泊料金は通常料金となります。これらの日付の予約には、少なくとも連続 3 泊分の事前支払いが必要です。フィリピン最大のお祭り「シヌログ」なので混雑が予想されます。1月18日、19日、20日のご予約も通常価格となります。この時点でクレジット カードでの予約を選択した場合、予約確認時に金額が引き落とされる場合があります。通常価格期間中のご予約はキャンセルされても払い戻しはできませんので、予めご了承ください。' // Custom translation for Net in Japanese
+  'Room rates for January 16, 17, 18, and 19, 2025 will be Sinulog rate reservations for these dates require prepayment for at least 3 consecutive nights. Crowds are expected as it is Sinulog, the biggest festival in the Philippines.<br>Reservations for January 18th, 19th, and 20th will also be at Sinulog rate.<br>If you choose to book by credit card at this point, the amount may be debited upon confirmation of your booking. Please note that reservations made during the Sinulog rate period will not be refunded even if canceled.': {
+    'ja': '2025年1月16日、17日、18日、19日の料金はSinulogの料金で請求されます。この日程の予約には、3連泊以上の前払いが必要です。また、フィリピン最大のお祭り「シヌログ」のため、混雑が予想されます。1月18日、19日、20日に行われた予約もSinulogレートで請求されます。この時点でクレジットカードで予約した場合、金額が差し引かれる場合があります。' // Custom translation for Net in Japanese
   },
-  '※ SPECIAL (SINULOG) RATE': {
-    'ja': '※ スペシャル（シヌログ）レート' // Custom translation for Net in Japanese
+  '※ SINULOG RATE IS PLUS 500pesos': {
+    'ja': '※ Sinulogレートはプラス500ペソです' // Custom translation for Net in Japanese
   },
   '【Single Occupancy】': {
     'ja': '【おひとりで】' // Custom translation for Net in Japanese
@@ -59,6 +59,39 @@ const customTranslations = {
   },
   'Sinulog rate is only 500+.': {
     'ja': 'Sinulogレートは500 +のみです' // Custom translation for Net in Japanese
+  },
+  'BPI Capitol, Cebu City<br>Current Account#:9061001481<br>Account Name : HOTEL ASIA': {
+    'ja': '三井住友銀行、恵比寿支店、普通預金 <br> 預金名義：ホテル アジア ゲナ コーポレーション <br>口座番号：８２４６７１７' // Custom translation for Net in Japanese
+  },
+  'Drop-off': {
+    'ja': 'お送り' // Custom translation for Net in Japanese
+  },
+  'Airport Pick up': {
+    'ja': 'お迎え' // Custom translation for Net in Japanese
+  },
+  'Send': {
+    'ja': '送信' // Custom translation for Net in Japanese
+  },
+  'Han-nya Japanese Restaurant is open 24 hours daily. It is located at the ground floor of Hotel Asia. For breakfast choices, you can have Japanese, American/Western and Filipino dishes. You can enjoy more than 100 kinds of dishes such as fried or grilled fish, nigiri sushi, buckwheat noodle, etc. at very affordable prices.You can also enjoy different dishes every day for one month!We serve not only meals but also fresh fruits, ice cream, coffee, etc..': {
+    'ja': '日本食レストラン『はんにゃ』はホテル内にあり24時間営業しています。和食・洋食・セブ食からの選べる朝食。定番のからあげや焼き魚・生姜焼き定食、にぎり寿司・そばなど、常時100種類以上の豊富なメニューがお手頃価格で味わえます。1ヵ月間毎日違うものを楽しむことも可能！お食事だけでなく、フルーツやアイスクリーム・コーヒー等もご用意しています。' // Custom translation for Net in Japanese
+  },
+  'Executive': {
+    'ja': 'エグゼクティブ' // Custom translation for Net in Japanese
+  },
+  'Per room': {
+    'ja': '一部屋' // Custom translation for Net in Japanese
+  },
+  'This room has one Double sized bed. It is one size smaller than the standard room. It has a shower and doesnt have a bathtub.': {
+    'ja': 'ダブルサイズベッド1台が備わるお部屋です。スタンダードルームより一回り小さいお部屋です。シャワーはありますが、バスタブはありません。' // Custom translation for Net in Japanese
+  },
+  'This room has one Semi Double sized bed. It has a shower and doesnt have a bathtub.': {
+    'ja': 'セミダブルサイズのベッドが1台あるお部屋です。シャワーはありますが、バスタブはありません。' // Custom translation for Net in Japanese
+  },
+  'You can choose from the following types of room. <br/> <br/> - One Bed Room (Room has one Queen sized bed). <br/> - Twin Bed Room (Room has one queen sized bed plus one single sized bed). <br/> <br/> This room is much bigger than the Deluxe Plus, and has a very comfortable sofa.': {
+    'ja': 'お部屋は以下のタイプからお選びいただけます。 <br/> <br/> - 1 ベッドルーム (部屋にはクイーンサイズのベッドが 1 台あります)。 <br/> - ツインベッドルーム（クイーンサイズベッド1台とシングルサイズベッド1台が備わる客室）。 <br/> <br/> この部屋はデラックス プラスよりもはるかに広く、非常に快適なソファが備わっています。' // Custom translation for Net in Japanese
+  },
+  'If you wish to deposit to the following account, please take a photo of the transfer receipt and contact us by e-mail (info@hotelasiacebu.com). We will then confirm your reservation.<br>': {
+    'ja': '下記口座にご入金の場合、振込レシートを写真に撮り、メール（info@hotelasiacebu.com）にてご連絡ください。 その後、ご予約を確認させていただきます。' // Custom translation for Net in Japanese
   }
   
 };
