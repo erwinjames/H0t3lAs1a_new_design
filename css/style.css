@@ -1645,7 +1645,7 @@ fieldset[disabled] .s-btn {
   transition-duration: 300ms;
   transition-property: all;
   transition-timing-function: cubic-bezier(0.7, 1, 0.7, 1);
-  background-color:#d6ad6096;
+  background-color:#d6ad60e0;
 }
 
 .s-header-v2__navbar:before, .s-header-v2__navbar:after {
@@ -1901,7 +1901,7 @@ fieldset[disabled] .s-btn {
   position: relative;
   display: block;
   font-size: 0.8125rem;
-  /* font-weight: 700; */
+  font-weight: 700;
   font-family: Montserrat, sans-serif;
   color: #ffffff;
   text-transform: uppercase;
@@ -1916,9 +1916,9 @@ fieldset[disabled] .s-btn {
   position: relative;
   display: block;
   font-size: 0.8125rem;
-  /* font-weight: 700; */
+  font-weight: 700;
   font-family: Montserrat, sans-serif;
-  color: #ffffff;
+  color: #122620;
   text-decoration: none;
   line-height: 5.5rem;
   text-transform: uppercase;
@@ -1929,16 +1929,16 @@ fieldset[disabled] .s-btn {
 }
 
 .s-header-v2__nav-link:hover {
-  color: #c4c4c4;
+  color: #ffffff;
   text-decoration: none;
 }
 
 .s-header-v2__nav-link:focus {
-  color: rgba(255, 255, 255, 0.75);
+  color: #ffffff;
 }
 
 .s-header-v2__nav-link.-is-active {
-  color: #303030;
+  color: #ffffff;
 }
 
 @media (max-width: 61.9em) {

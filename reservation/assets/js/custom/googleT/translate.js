@@ -30,10 +30,10 @@ const customTranslations = {
   'Please Select Day': {
     'ja': '日を選択してください' // Custom translation for Net in Japanese
   },
-  'Please make a reservation before inquiring about room availability to avoid any issues when booking. We will confirm your reservation within 18 hours. If you dont receive a reply within 18 hours, please email us again and we will also follow up with a phone call.': {
-    'ja': 'ご予約時またはご予約確定時にトラブルを避けるため、空室状況をお問い合わせいただく前に、まずご予約をお願いいたします。 ご予約が確定するかどうかは18時間以内に返信させていただきます。 お申し込みには必ず返信しておりますが 18時間以内に返信がない場合は、お手数ですが再度メールにてご連絡ください お電話にてご連絡させていただきます。' // Custom translation for Net in Japanese
+  'In order to avoid any problems when making a reservation or confirming your reservation, please make a reservation first before inquiring about availability. We always reply to your application.': {
+    'ja': 'ご予約時またはご予約確定時にトラブルを避けるため、空室状況をお問い合わせいただく前に、まずご予約をお願いいたします。 お申し込みには必ず返信しております。' // Custom translation for Net in Japanese
   },
-  'Room rates for January 16, 17, 18, and 19, 2025 will be Sinulog rate reservations for these dates require prepayment for at least 3 consecutive nights. Crowds are expected as it is Sinulog, the biggest festival in the Philippines.<br>Reservations for January 18th, 19th, and 20th will also be at Sinulog rate.<br>If you choose to book by credit card at this point, the amount may be debited upon confirmation of your booking. Please note that reservations made during the Sinulog rate period will not be refunded even if canceled.': {
+  'SINULOG RATE on January 16, 17, 18, and 19, 2025. reservations for these dates require prepayment for at least 3 consecutive nights. Crowds are expected as it is Sinulog, the biggest festival in the Philippines. Reservations for January 18th, 19th, and 20th will also be at Sinulog rate.Please note that reservations made during the Sinulog rate period will not be refunded even if canceled.': {
     'ja': '2025年1月16日、17日、18日、19日の料金はSinulogの料金で請求されます。この日程の予約には、3連泊以上の前払いが必要です。また、フィリピン最大のお祭り「シヌログ」のため、混雑が予想されます。1月18日、19日、20日に行われた予約もSinulogレートで請求されます。この時点でクレジットカードで予約した場合、金額が差し引かれる場合があります。' // Custom translation for Net in Japanese
   },
   '※ SINULOG RATE IS PLUS 500pesos': {
@@ -123,6 +123,7 @@ function toggleLanguageButtons() {
   const englishButton = document.getElementById('englishButton');
   const japaneseButton = document.getElementById('japaneseButton');
   const jpversionButton = document.getElementById('jpversion');
+  const jpinputNamePronouce = document.getElementById('forJapanese');
 
   if (isTranslationOn) {
     englishButton.style.display = 'inline-block'; // Offer "Off" button when translation is on
@@ -133,6 +134,7 @@ function toggleLanguageButtons() {
     japaneseButton.style.display = 'inline-block'; // Offer "On" button when translation is off
     englishButton.style.display = 'none';
     jpversionButton.style.display = 'none';
+    jpinputNamePronouce.style.display = 'none'
   }
 }
 

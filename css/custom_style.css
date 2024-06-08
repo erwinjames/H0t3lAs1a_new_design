@@ -1703,16 +1703,16 @@ ul.impx-list {
 	padding-left: 40px !important;
 }
 .impx-hp-booking-form button {
-	padding-left: 14px;
-	padding-right: 14px;
-	background: #f857a6;  /* fallback for old browsers */
-	background: -webkit-linear-gradient(to right, #ff5858, #f857a6);  /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(to right, #ff5858, #f857a6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-	color: #ffffff;
-	font-family: 'Poppins', Arial, sans-serif;
-	text-transform: uppercase;
-	border-radius: 20px;
-	font-weight: 400;
+    padding-left: 14px;
+    padding-right: 14px;
+    background: #122620;
+    background: -webkit-linear-gradient(to right, #ff5858, #f857a6);
+    background: linear-gradient(to right, #b68d40, #122620);
+    color: #ffffff;
+    font-family: 'Poppins', Arial, sans-serif;
+    text-transform: uppercase;
+    border-radius: 20px;
+    font-weight: 400;
 }
 .impx-hp-booking-form button.rooms,
 .impx-hp-booking-form button.guests {
