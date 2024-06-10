@@ -12,7 +12,7 @@ const customTranslations = {
   'NET': {
     'ja': 'ネット' // Custom translation for Net in Japanese
   },
-  'IN CASE OF CANCELLATION, the following charges will apply: 100% of 1 night per room reserved when you cancelled 7 days to 4days before check in date, 100% of 3 nights per room reserved if you reserved 3 nights or more when you cancelled 3 days to 1 day before check in date. Full charge of the whole reservation when you cancelled on the day or no show. The same rule will apply for shortening of stay.':{
+  'The following charges will apply: 100% of 1 night per room reserved when you cancelled 7 days to 4days before check in date, 100% of 3 nights per room reserved if you reserved 3 nights or more when you cancelled 3 days to 1 day before check in date. Full charge of the whole reservation when you cancelled on the day or no show. The same rule will apply for shortening of stay.':{
     'ja': '到着日の３日前キャンセルは一夜分の50％、2日前、1日前、当日キャンセルは100％を申し受けます。 予約日数が短縮された場合は、それをキャンセルされたものとみなし以上のルールに基づいたパーセンテージを申し受けます。' // Custom translation for Net in Japanese
   },
   'VERY IMPORTANT!!!': {
@@ -60,7 +60,7 @@ const customTranslations = {
   'Sinulog Rate [plus 500 pesos per room]': {
     'ja': 'シヌログ料金 [各部屋毎にプラス 500 ペソ]' // Custom translation for Net in Japanese
   },
-  'BPI Capitol, Cebu City<br>Current Account#:9061001481<br>Account Name : HOTEL ASIA': {
+  'BDO Peso Account<br>Current Account#:293-8004748<br>Account Name : HOTEL ASIA GENA CORPORATION': {
     'ja': '三井住友銀行、恵比寿支店、普通預金 <br> 預金名義：ホテル アジア ゲナ コーポレーション <br>口座番号：８２４６７１７' // Custom translation for Net in Japanese
   },
   'Drop-off': {
