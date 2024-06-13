@@ -92,6 +92,33 @@ const customTranslations = {
   },
   'If you wish to deposit to the following account, please take a photo of the transfer receipt and contact us by e-mail (info@hotelasiacebu.com). We will then confirm your reservation.<br>': {
     'ja': '下記口座にご入金の場合、振込レシートを写真に撮り、メール（info@hotelasiacebu.com）にてご連絡ください。 その後、ご予約を確認させていただきます。' // Custom translation for Net in Japanese
+  },
+  'FREE Wifi (fiber optic cable) available anywhere in the hotel': {
+    'ja': 'Wifiは全館 無料で使用可能（光ケーブル）' // Custom translation for Net in Japanese
+  },
+  'Bathroom with hot &amp; cold shower. Bathtubs in some rooms.': {
+    'ja': 'バスルームではお湯が使えます' // Custom translation for Net in Japanese
+  },
+  'Washlet (Toilet with bidet)': {
+    'ja': 'ウォッシュレット付トイレ' // Custom translation for Net in Japanese
+  },
+  'Split type aircon': {
+    'ja': 'エアコン(音の静かなタイプです）' // Custom translation for Net in Japanese
+  },
+  'Hair dryer, refrigerator, safety box': {
+    'ja': '21インチテレビ(ケーブルテレビ)' // Custom translation for Net in Japanese
+  },
+  'Telephone IDD (International Direct Dialing) and NDD (National Direct Dialing) in each room': {
+    'ja': 'ヘアードライヤー　・冷蔵庫' // Custom translation for Net in Japanese
+  },
+  'Main facilities': {
+    'ja': 'Hotel Asiaの主な設備' // Custom translation for Net in Japanese
+  },
+  'Room': {
+    'ja': 'ゲストルーム' // Custom translation for Net in Japanese
+  },
+  'Location': {
+    'ja': 'ロケーション' // Custom translation for Net in Japanese
   }
   
 };
