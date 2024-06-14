@@ -135,7 +135,7 @@ const customTranslations = {
   'Japanese fried rice, features vegetables, eggs, and sometimes meat or seafood, seasoned with soy sauce. Its a versatile dish, popular as a side or main course, and a favorite comfort food in Japan.': {
     'ja': '.' // Custom translation for Net in Japanese
   },
-  'Chahan': {
+  'Chahan and Ramen Soup': {
     'ja': 'チャーハンとラーメンのスープ' // Custom translation for Net in Japanese
   },
   'Tonkatsu Set': {
