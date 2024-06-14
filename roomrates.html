@@ -21,16 +21,39 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 		<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+		
+		<link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.4.0/uicons-thin-straight/css/uicons-thin-straight.css'>
 		<!-- Theme Styles -->
         <link href="css/style.css" rel="stylesheet" type="text/css"/>
         <link href="css/global/global.css" rel="stylesheet" type="text/css"/>
+		<link rel="stylesheet" href="css/roomrates.css">
+		<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+		<link rel="stylesheet" href="css/jquery.animatedheadline.css">
+		<link rel="stylesheet" href="css/magnific-popup.min.css">
+		<link rel="stylesheet" href="css/nice-select.min.css">
+		<link rel="stylesheet" href="css/slick.min.css">
         <link rel="stylesheet" href="css/custom_style.css">
         <!-- Favicon -->
         <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
         <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+		<style>
+			@media only screen and (min-width: 992px) {
+			.room-list-item .contact-content {
+				max-width: 565px;
+				margin-left: 25px;
+			}
+		}
+
+		.room-list-item .contact-content {
+			background: white;
+			padding: 40px 50px;
+			position: relative;
+			-webkit-box-shadow: 0px 4px 60px 0px rgba(0, 0, 0, 0.07);
+			box-shadow: 0px 4px 60px 0px rgba(0, 0, 0, 0.07);
+		}
+		</style>
     </head>
     <!-- End Head -->
-
     <!-- Body -->
     <body>
         <!--========== HEADER ==========-->
@@ -95,340 +118,393 @@
         </header>
         <!--========== END HEADER ==========-->
         <!--========== PROMO BLOCK ==========-->
-        <section class="s-video-v2__bg" data-vidbg-bg="mp4: include/media/mp4_video.mp4, webm: include/media/webm_video.webm, poster: include/media/fallback.jpg" data-vidbg-options="loop: true, muted: true, overlay: false">
-            <div class="container g-position--overlay ">
-                <div class="g-margin-t-100--xs">
-					
-                </div>
-            </div>
-        </section>
+		<section class="main-slider-area bgc-black-with-lighting rel z-1 pattern-1">
+			<div class="main-slider-active slick-initialized slick-slider slick-dotted">
+				 <div class="slick-list draggable">
+					<div class="slick-track" style="opacity: 1; width: 5396px;"><div class="slider-item slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" tabindex="0" role="tabpanel" id="slick-slide00" aria-describedby="slick-slide-control00" style="width: 1349px; position: relative; left: 0px; top: 0px; z-index: 999; opacity: 1;">
+					 <div class="container">
+						 <div class="row justify-content-end align-items-center">
+							 <div class="col-xl-3">
+								 <div class="slider-content">
+									 <h1>Stay in first class room at<span> very affordable prices! </span></h1>
+									 <a href="room.html" class="theme-btn" tabindex="0">Explore Our Rooms <i class="fa fa-angle-right"></i></a>
+								 </div>
+							 </div>
+						 </div>
+					 </div>
+				 </div>
+				</div>
+			</div>
+				 
+				 
+				 
+			</div>
+			 <div class="slider-shapes">
+				<img class="shape circle-half" src="img/shapes/slider-circle-half.png" alt="Shape">
+				<img class="shape circle" src="img/shapes/slider-circle.png" alt="Shape">
+			 </div>
+			 <div class="bg-lines">
+				<span></span><span></span>
+				<span></span><span></span>
+				<span></span><span></span>
+				<span></span><span></span>
+				<span></span><span></span>
+			 </div>
+		 </section>
         <!--========== END PROMO BLOCK ==========-->
 		<!-- =========== sample roomrates=========== -->
-		<div class="g-promo-section">
-			<!-- g-padding-y-10--sm -->
-            <div class="container g-padding-y-80--xs ">
-                <div class="row">
-                    <div class="col-sm-5 col-sm-push-7">
-                        <div class="g-margin-b-30--xs">
-                            <h3 class="g-font-size-32--xs g-font-size-30--sm "><a href="">エコノミープラス /Economy Plus</a></h3>
-                            <p class=" translate">
-								This room has one Double sized bed. It is one size smaller than the standard room. It has a shower and doesn't have a bathtub.
-							</p>
+		<section class="rooms-list-area pb-120 rpb-90 rel z-2">
+            <div class="container">
+                <div class="room-list-item wow fadeInUp delay-0-2s animated" style="visibility: visible; animation-name: fadeInUp;">
+                    <div class="image">
+                        <img src="img/room/Economy-Plus/IMG_5515.JPG" alt="Room">
+                    </div>
+                    <div class="content">
+                        <h3><a href="room_details.html?id=1">Economy Plus</a></h3>
+                        <!-- <ul class="blog-meta">
+                            <li>
+                                <i class="far fa-drafting-compass"></i>
+                            </li>
+                        </ul> -->
+                        <hr>
+                        <div class="price-more">
+							<div class="uk-card uk-card-default table-responsive">
+								<table class="table table-striped table-rounded table-bordered table-gray-300 gy-7 gs-7">
+									<thead>
+										<tr class="g-font-size-13--sm text-gray-800">
+											<th scope="col" class="text-center translate">Room Type</th>
+											<th scope="col" class="text-center translate">Per room</th>
+											<th scope="col" class="text-center translate">Regular price: pesos (breakfast included)</th>
+										</tr>
+									</thead>
+									<thead>
+										<tr class="fw-semibold fs-6 text-gray-800">
+											<th colspan="4" scope="col" class="g-font-size-13--sm bg-coral text-center translate"><b>Price is subject to change without prior notice</b></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr class="bg-beige">
+											<td rowspan="2" class="g-font-size-13--sm bg-aquamarine text-center translate"><b class="g-font-size-13--sm">Economy Plus</b></td>
+											<td class="g-font-size-13--sm text-center translate"><b>Single Occupancy</b></td>
+											<td class="g-font-size-13--sm text-center translate"><b>1650/net</b></td>
+										</tr>
+										<tr class="bg-burlywood">
+											<td class="g-font-size-13--sm text-center translate"><b>Double Occupancy</b></td>
+											<td class="g-font-size-13--sm text-center translate"><b>2200/net</b></td>
+										</tr>
+										<!-- Add more rows if needed -->
+									</tbody>
+								</table>
+							</div>
                         </div>
-						<div class="table-responsive">
-							<table class="table table-striped table-rounded table-bordered table-gray-300 gy-7 gs-7">
-								<thead>
-									<tr class="g-font-size-13--sm text-gray-800">
-										<th scope="col" class="text-center translate">Room Type</th>
-										<th scope="col" class="text-center translate">Per room</th>
-										<th scope="col" class="text-center translate">Regular price: pesos (breakfast included)</th>
-									</tr>
-								</thead>
-								<thead>
-									<tr class="fw-semibold fs-6 text-gray-800">
-										<th colspan="4" scope="col" class="g-font-size-13--sm bg-coral text-center translate"><b>Price is subject to change without prior notice</b></th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr class="bg-beige">
-										<td rowspan="2" class="g-font-size-13--sm bg-aquamarine text-center translate"><b class="g-font-size-13--sm">エコノミープラス /Economy Plus</b></td>
-										<td class="g-font-size-13--sm text-center translate"><b>Alone</b></td>
-										<td class="g-font-size-13--sm text-center translate"><b>1650/net</b></td>
-									</tr>
-									<tr class="bg-burlywood">
-										<td class="g-font-size-13--sm text-center translate"><b>For the two of you</b></td>
-										<td class="g-font-size-13--sm text-center translate"><b>2200/net</b></td>
-									</tr>
-									<!-- Add more rows if needed -->
-								</tbody>
-							</table>
-						</div>
+                    </div>
+                </div>
+				<div class="room-list-item wow fadeInUp delay-0-2s animated" style="visibility: visible; animation-name: fadeInUp;">
+                    <div class="image">
+                        <img src="img/room/Standard/edited/IMG_5339.jpg" alt="Room">
+                    </div>
+                    <div class="content">
+                        <h3><a href="room_details.html?id=3">Standard</a></h3>
+                        <!-- <ul class="blog-meta">
+                            <li>
+                                <i class="far fa-drafting-compass"></i>
+                            </li>
+                        </ul> -->
+                        <hr>
+                        <div class="price-more">
+							<div class="uk-card uk-card-default table-responsive">
+								<table class="table table-striped table-rounded table-bordered table-gray-300 gy-7 gs-7">
+									<thead>
+										<tr class="g-font-size-13--sm text-gray-800">
+											<th scope="col" class="text-center translate">Room Type</th>
+											<th scope="col" class="text-center translate">Per room</th>
+											<th scope="col" class="text-center translate">Regular price: pesos (breakfast included)</th>
+										</tr>
+									</thead>
+									<thead>
+										<tr class="fw-semibold fs-6 text-gray-800">
+											<th colspan="4" scope="col" class="g-font-size-13--sm bg-coral text-center translate"><b>Price is subject to change without prior notice</b></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr class="bg-beige">
+											<td rowspan="2" class="g-font-size-13--sm bg-aquamarine text-center translate"><b class="g-font-size-13--sm">Standard</b></td>
+											<td class="g-font-size-13--sm text-center translate"><b>Single Occupancy</b></td>
+											<td class="g-font-size-13--sm text-center translate"><b>1800/net</b></td>
+										</tr>
+										<tr class="bg-burlywood">
+											<td class="g-font-size-13--sm text-center translate"><b>Double Occupancy</b></td>
+											<td class="g-font-size-13--sm text-center translate"><b>2400/net</b></td>
+										</tr>
+										<!-- Add more rows if needed -->
+									</tbody>
+								</table>
+							</div>
+                        </div>
+                    </div>
+                </div>
+				<div class="room-list-item wow fadeInUp delay-0-2s animated" style="visibility: visible; animation-name: fadeInUp;">
+                    <div class="image">
+                        <img src="img/room/Deluxe-Single/IMG_5438.JPG" alt="Room">
+                    </div>
+                    <div class="content">
+                        <h3><a href="room_details.html?id=4">Deluxe</a></h3>
+                        <!-- <ul class="blog-meta">
+                            <li>
+                                <i class="far fa-drafting-compass"></i>
+                            </li>
+                        </ul> -->
+                        <hr>
+                        <div class="price-more">
+							<div class="uk-card uk-card-default table-responsive">
+								<table class="table table-striped table-rounded table-bordered table-gray-300 gy-7 gs-7">
+									<thead>
+										<tr class="g-font-size-13--sm text-gray-800">
+											<th scope="col" class="text-center translate">Room Type</th>
+											<th scope="col" class="text-center translate">Per room</th>
+											<th scope="col" class="text-center translate">Regular price: pesos (breakfast included)</th>
+										</tr>
+									</thead>
+									<thead>
+										<tr class="fw-semibold fs-6 text-gray-800">
+											<th colspan="4" scope="col" class="g-font-size-13--sm bg-coral text-center translate"><b>Price is subject to change without prior notice</b></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr class="bg-beige">
+											<td rowspan="2" class="g-font-size-13--sm bg-aquamarine text-center translate"><b class="g-font-size-13--sm">Deluxe</b></td>
+											<td class="g-font-size-13--sm text-center translate"><b>Single Occupancy</b></td>
+											<td class="g-font-size-13--sm text-center translate"><b>2000/net</b></td>
+										</tr>
+										<tr class="bg-burlywood">
+											<td class="g-font-size-13--sm text-center translate"><b>Double Occupancy</b></td>
+											<td class="g-font-size-13--sm text-center translate"><b>2600/net</b></td>
+										</tr>
+										<!-- Add more rows if needed -->
+									</tbody>
+								</table>
+							</div>
+                        </div>
+                    </div>
+                </div>
+				<div class="room-list-item wow fadeInUp delay-0-2s animated" style="visibility: visible; animation-name: fadeInUp;">
+                    <div class="image">
+                        <img src="img/room/Deluxe-Plus/IMG_5200.jpg" alt="Room">
+                    </div>
+                    <div class="content">
+                        <h3><a href="room_details.html?id=5">Deluxe Plus</a></h3>
+                        <!-- <ul class="blog-meta">
+                            <li>
+                                <i class="far fa-drafting-compass"></i>
+                            </li>
+                        </ul> -->
+                        <hr>
+                        <div class="price-more">
+							<div class="uk-card uk-card-default table-responsive">
+								<table class="table table-striped table-rounded table-bordered table-gray-300 gy-7 gs-7">
+									<thead>
+										<tr class="g-font-size-13--sm text-gray-800">
+											<th scope="col" class="text-center translate">Room Type</th>
+											<th scope="col" class="text-center translate">Per room</th>
+											<th scope="col" class="text-center translate">Regular price: pesos (breakfast included)</th>
+										</tr>
+									</thead>
+									<thead>
+										<tr class="fw-semibold fs-6 text-gray-800">
+											<th colspan="4" scope="col" class="g-font-size-13--sm bg-coral text-center translate"><b>Price is subject to change without prior notice</b></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr class="bg-beige">
+											<td rowspan="2" class="g-font-size-13--sm bg-aquamarine text-center translate"><b class="g-font-size-13--sm">Deluxe Plus</b></td>
+											<td class="g-font-size-13--sm text-center translate"><b>Single Occupancy</b></td>
+											<td class="g-font-size-13--sm text-center translate"><b>2500/net</b></td>
+										</tr>
+										<tr class="bg-burlywood">
+											<td class="g-font-size-13--sm text-center translate"><b>Double Occupancy</b></td>
+											<td class="g-font-size-13--sm text-center translate"><b>3100/net</b></td>
+										</tr>
+										<!-- Add more rows if needed -->
+									</tbody>
+								</table>
+							</div>
+                        </div>
+                    </div>
+                </div>
+				<div class="room-list-item wow fadeInUp delay-0-2s animated" style="visibility: visible; animation-name: fadeInUp;">
+                    <div class="image">
+                        <img src="img/room/Superior/Edited/IMG_5477 (1).jpg" alt="Room">
+                    </div>
+                    <div class="content">
+                        <h3><a href="room_details.html?id=6">Superior</a></h3>
+                        <!-- <ul class="blog-meta">
+                            <li>
+                                <i class="far fa-drafting-compass"></i>
+                            </li>
+                        </ul> -->
+                        <hr>
+                        <div class="price-more">
+							<div class="uk-card uk-card-default table-responsive">
+								<table class="table table-striped table-rounded table-bordered table-gray-300 gy-7 gs-7">
+									<thead>
+										<tr class="g-font-size-13--sm text-gray-800">
+											<th scope="col" class="text-center translate">Room Type</th>
+											<th scope="col" class="text-center translate">Per room</th>
+											<th scope="col" class="text-center translate">Regular price: pesos (breakfast included)</th>
+										</tr>
+									</thead>
+									<thead>
+										<tr class="fw-semibold fs-6 text-gray-800">
+											<th colspan="4" scope="col" class="g-font-size-13--sm bg-coral text-center translate"><b>Price is subject to change without prior notice</b></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr class="bg-beige">
+											<td rowspan="2" class="g-font-size-13--sm bg-aquamarine text-center translate"><b class="g-font-size-13--sm">Superior</b></td>
+											<td class="g-font-size-13--sm text-center translate"><b>Single Occupancy</b></td>
+											<td class="g-font-size-13--sm text-center translate"><b>2800/net</b></td>
+										</tr>
+										<tr class="bg-burlywood">
+											<td class="g-font-size-13--sm text-center translate"><b>Double Occupancy</b></td>
+											<td class="g-font-size-13--sm text-center translate"><b>3500/net</b></td>
+										</tr>
+										<!-- Add more rows if needed -->
+									</tbody>
+								</table>
+							</div>
+                        </div>
+                    </div>
+                </div>
+				<div class="room-list-item wow fadeInUp delay-0-2s animated" style="visibility: visible; animation-name: fadeInUp;">
+                    <div class="image">
+                        <img src="img/room/Executive/IMG_5362.JPG" alt="Room">
+                    </div>
+                    <div class="content">
+                        <h3><a href="room_details.html?id=7">Executive</a></h3>
+                        <!-- <ul class="blog-meta">
+                            <li>
+                                <i class="far fa-drafting-compass"></i>
+                            </li>
+                        </ul> -->
+                        <hr>
+                        <div class="price-more">
+							<div class="uk-card uk-card-default table-responsive">
+								<table class="table table-striped table-rounded table-bordered table-gray-300 gy-7 gs-7">
+									<thead>
+										<tr class="g-font-size-13--sm text-gray-800">
+											<th scope="col" class="text-center translate">Room Type</th>
+											<th scope="col" class="text-center translate">Per room</th>
+											<th scope="col" class="text-center translate">Regular price: pesos (breakfast included)</th>
+										</tr>
+									</thead>
+									<thead>
+										<tr class="fw-semibold fs-6 text-gray-800">
+											<th colspan="4" scope="col" class="g-font-size-13--sm bg-coral text-center translate"><b>Price is subject to change without prior notice</b></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr class="bg-beige">
+											<td rowspan="2" class="g-font-size-13--sm bg-aquamarine text-center translate"><b class="g-font-size-13--sm">エコノミープラス /Economy Plus</b></td>
+											<td class="g-font-size-13--sm text-center translate"><b>Single Occupancy</b></td>
+											<td class="g-font-size-13--sm text-center translate"><b>3500/net</b></td>
+										</tr>
+										<tr class="bg-burlywood">
+											<td class="g-font-size-13--sm text-center translate"><b>Double Occupancy</b></td>
+											<td class="g-font-size-13--sm text-center translate"><b>4300/net</b></td>
+										</tr>
+										<!-- Add more rows if needed -->
+									</tbody>
+								</table>
+							</div>
+                        </div>
+                    </div>
+                </div>
+				<div class="room-list-item wow fadeInUp delay-0-2s animated" style="visibility: visible; animation-name: fadeInUp;">
+                    <div class="image">
+                        <img src="img/room/Junior-Suite/IMG_5459.JPG" alt="Room">
+                    </div>
+                    <div class="content">
+                        <h3><a href="room_details.html?id=8">Junior Suite</a></h3>
+                        <!-- <ul class="blog-meta">
+                            <li>
+                                <i class="far fa-drafting-compass"></i>
+                            </li>
+                        </ul> -->
+                        <hr>
+                        <div class="price-more">
+							<div class="uk-card uk-card-default table-responsive">
+								<table class="table table-striped table-rounded table-bordered table-gray-300 gy-7 gs-7">
+									<thead>
+										<tr class="g-font-size-13--sm text-gray-800">
+											<th scope="col" class="text-center translate">Room Type</th>
+											<th scope="col" class="text-center translate">Per room</th>
+											<th scope="col" class="text-center translate">Regular price: pesos (breakfast included)</th>
+										</tr>
+									</thead>
+									<thead>
+										<tr class="fw-semibold fs-6 text-gray-800">
+											<th colspan="4" scope="col" class="g-font-size-13--sm bg-coral text-center translate"><b>Price is subject to change without prior notice</b></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr class="bg-beige">
+											<td rowspan="2" class="g-font-size-13--sm bg-aquamarine text-center translate"><b class="g-font-size-13--sm">Junior Suite</b></td>
+											<td class="g-font-size-13--sm text-center translate"><b>Single Occupancy</b></td>
+											<td class="g-font-size-13--sm text-center translate"><b>4200/net</b></td>
+										</tr>
+										<tr class="bg-burlywood">
+											<td class="g-font-size-13--sm text-center translate"><b>Double Occupancy</b></td>
+											<td class="g-font-size-13--sm text-center translate"><b>5000/net</b></td>
+										</tr>
+										<!-- Add more rows if needed -->
+									</tbody>
+								</table>
+							</div>
+                        </div>
+                    </div>
+                </div>
+				<div class="room-list-item wow fadeInUp delay-0-2s animated" style="visibility: visible; animation-name: fadeInUp;">
+                    <div class="image">
+							<div class="table-responsive">
+								<table class="table table-striped table-rounded table-bordered table-gray-300 gy-7 gs-7">
+									<tbody><tr><th colspan="4">Airport Transfer Rates / Price is subject to change without prior notice</th></tr>
+									
+									<tr><th class="ar6">am 06:00 - pm 06:00</th><td class="ar6" rowspan="2">Pick up</td><td>1000 pesos</td><td>Van 1200 pesos</td></tr>
+									<tr><td class="ar6">pm 06:01 - am 05:59</td><td class="ar5"> 1200 pesos</td><td class="ar5">Van 1400 pesos</td></tr>
+									<tr><th class="ar7">am 06:00 - pm 06:00</th><td class="ar7" rowspan="2">Drop off</td><td>800 pesos</td><td>Van 1000 pesos</td></tr>
+									<tr><td class="ar7">pm 06:01 - am 05:59</td><td class="ar5"> 1000 pesos</td><td class="ar5">Van 1200 pesos</td></tr>
+									</tbody></table>
+							
+							</div>
+                    </div>
+					<div class="contact-content g-bg-color--darkgreen">
+                        <h3 class="g-color--gold">Contact information / Contact Us</h3>
+                        <hr>
+                        <div class="price-more g-color--white-opacity">
+							Address:&nbsp;
+							11 Don Jose Avila St., Capitol Site,
+							6000 <br>Cebu City Philippines<br>
+							Tel No.:&nbsp;
+							(63.32) 255 8533,
+							(63.32) 255 8534,
+							(63.32) 255 8535<br>
+							E-mail:&nbsp;
+							info@hotelasiacebu.com
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-sm-6 col-sm-pull-6 g-promo-section__img-right--md g-promo-section__img-left--md g-bg-position--center g-height-400--xs g-height-100-percent--md js__fullwidth-img" style="background-image: url(&quot;img/970x970/01.jpg&quot;);">
-                <img class="img-responsive" src="img/room/Economy-Plus/IMG_5515.JPG" alt="Image" style="display: none;">
+            <div class="bg-lines for-bg-white">
+               <span></span><span></span>
+               <span></span><span></span>
+               <span></span><span></span>
+               <span></span><span></span>
+               <span></span><span></span>
             </div>
-        </div>
-		<div class="g-promo-section">
-            <div class="container g-padding-y-80--xs">
-                <div class="row">
-                    <div class="col-sm-5">
-                        <div class="g-margin-b-30--xs">
-                            <h3 class="translate">スタンダード/Standard</a></h3>
-							<p class="translate">
-								You can choose from the following types of rooms:
-								<br>- One Double-sized bed Room (ダブルサイズベッド1台)
-								<br>- Twin bed Room
-								<br>The standard room has a bathtub.
-							</p>
-                        </div>
-						<div class="table-responsive">
-							<table class="table table-striped table-rounded table-bordered table-gray-300 gy-7 gs-7">
-								<thead>
-									<tr class="g-font-size-13--sm text-gray-800">
-										<th scope="col" class="text-center translate">Room Type</th>
-										<th scope="col" class="text-center translate">Per room</th>
-										<th scope="col" class="text-center translate">Regular price: pesos (breakfast included)</th>
-									</tr>
-								</thead>
-								<thead>
-									<tr class="g-font-size-8--sm text-gray-800">
-										<th colspan="4" scope="col" class="g-font-size-13--sm bg-coral text-center translate"><b>Price is subject to change without prior notice</b></th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr class="bg-beige">
-										<td rowspan="2" class="g-font-size-13--sm bg-aquamarine text-center translate"><b class="g-font-size-13--sm">スタンダード/Standard</b></td>
-										<td class="g-font-size-13--sm text-center translate"><b>Alone</b></td>
-										<td class="g-font-size-13--sm text-center translate"><b>1800/net</b></td>
-									</tr>
-									<tr class="bg-burlywood">
-										<td class="g-font-size-13--sm text-center translate"><b>For the two of you</b></td>
-										<td class="g-font-size-13--sm text-center translate"><b>2400/net</b></td>
-									</tr>
-									<!-- Add more rows if needed -->
-								</tbody>
-							</table>
-						</div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 g-promo-section__img-right--md g-bg-position--center g-height-400--xs g-height-100-percent--md js__fullwidth-img" style="background-image: url(&quot;img/970x970/02.jpg&quot;);">
-                <img class="img-responsive" src="img/room/Standard/edited/IMG_5346.jpg" alt="Image" style="display: none;">
-            </div>
-        </div>
-		<div class="g-promo-section">
-			<!-- g-padding-y-10--sm -->
-            <div class="container g-padding-y-80--xs ">
-                <div class="row">
-                    <div class="col-sm-5 col-sm-push-7">
-                        <div class="g-margin-b-30--xs">
-                            <h3 class="g-font-size-32--xs g-font-size-36--sm translate"><a href="">デラックス/Deluxe</a></h3>
-                            <p class=" translate">You can choose from the following types of room.
-								<br/>- One Double sized bed Room (ダブルサイズベッド1台)
-								<br/>- Twin bed Room
-								<br/>  Deluxe Room and higher have a bathtub made of stone.</p>
-                        </div>
-						<div class="table-responsive">
-							<table class="table table-striped table-rounded table-bordered table-gray-300 gy-7 gs-7">
-								<thead>
-									<tr class="g-font-size-13--sm text-gray-800">
-										<th scope="col" class="text-center translate">Room Type</th>
-										<th scope="col" class="text-center translate">Per room</th>
-										<th scope="col" class="text-center translate">Regular price: pesos (breakfast included)</th>
-									</tr>
-								</thead>
-								<thead>
-									<tr class="fw-semibold fs-6 text-gray-800">
-										<th colspan="4" scope="col" class="g-font-size-13--sm bg-coral text-center translate"><b>Price is subject to change without prior notice</b></th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr class="bg-beige">
-										<td rowspan="2" class="g-font-size-13--sm bg-aquamarine text-center translate"><b>デラックス/Deluxe</b></td>
-										<td class="g-font-size-13--sm price-cell text-center translate"><b>Alone</b></td>
-										<td class="g-font-size-13--sm price-cell text-center translate"><b>2000/net</b></td>
-									</tr>
-									<tr class="bg-burlywood">
-										<td class="g-font-size-13--sm price-cell text-center translate"><b>For the two of you</b></td>
-										<td class="g-font-size-13--sm price-cell text-center translate"><b>2600/net</b></td>
-									</tr>
-									<!-- Add more rows if needed -->
-								</tbody>
-							</table>
-						</div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-sm-pull-6 g-promo-section__img-right--md g-promo-section__img-left--md g-bg-position--center g-height-400--xs g-height-100-percent--md js__fullwidth-img" style="background-image: url(&quot;img/970x970/01.jpg&quot;);">
-                <img class="img-responsive" src="img/room/Deluxe-Single/IMG_5444.JPG" alt="Image" style="display: none;">
-            </div>
-        </div>
-		<div class="g-promo-section">
-            <div class="container g-padding-y-80--xs">
-                <div class="row">
-                    <div class="col-sm-5">
-                        <div class="g-margin-b-30--xs">
-                            <h3 class=" translate">デラックスプラス/Deluxe Plus</a></h3>
-                            <p class=" translate">
-								You can choose from the following types of room.
-								<br/>- One Double sized bed Room (ダブルサイズベッド1台)
-								<br/> - Twin bed Room
-								<br/>This room is more spacious than the Deluxe Room, so you can be more comfortable.
-							</p>
-                        </div>
-						<div class="table-responsive">
-							<table class="table table-striped table-rounded table-bordered table-gray-300 gy-7 gs-7">
-								<thead>
-									<tr class="g-font-size-13--sm text-gray-800">
-										<th scope="col" class="text-center translate">Room Type</th>
-										<th scope="col" class="text-center translate">Per room</th>
-										<th scope="col" class="text-center translate">Regular price: pesos (breakfast included)</th>
-									</tr>
-								</thead>
-								<thead>
-									<tr class="g-font-size-5--sm text-gray-800">
-										<th colspan="4" scope="col" class="g-font-size-13--sm bg-coral text-center translate"><b>Price is subject to change without prior notice</b></th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr class="bg-beige">
-										<td rowspan="2" class="g-font-size-13--sm bg-aquamarine text-center translate"><b>デラックスプラス/Deluxe Plus</b></td>
-										<td class="g-font-size-13--sm price-cell text-center translate"><b>Alone</b></td>
-										<td class="g-font-size-13--sm price-cell text-center translate"><b>2500/net</b></td>
-									</tr>
-									<tr class="bg-burlywood">
-										<td class="g-font-size-13--sm price-cell text-center translate"><b>For the two of you</b></td>
-										<td class="g-font-size-13--sm price-cell text-center translate"><b>3100/net</b></td>
-									</tr>
-									<!-- Add more rows if needed -->
-								</tbody>
-							</table>
-						</div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 g-promo-section__img-right--md g-bg-position--center g-height-400--xs g-height-100-percent--md js__fullwidth-img" style="background-image: url(&quot;img/970x970/02.jpg&quot;);">
-                <img class="img-responsive" src="img/room/Deluxe-Plus/IMG_5200.jpg" alt="Image" style="display: none;">
-            </div>
-        </div>
-		<div class="g-promo-section">
-            <div class="container g-padding-y-80--xs">
-                <div class="row">
-                    <div class="col-sm-5 col-sm-push-7">
-                        <div class="g-margin-b-30--xs">
-                            <h3 class="g-font-size-32--xs g-font-size-30--sm translate"><a href="">スーペリア /Superior</a></h3>
-                            <p class=" translate">This room has One Queen Sized Bed.<br/>
-								It has a kitchen where you can cook by yourself in this room.</p>
-                        </div>
-						<div class="table-responsive">
-							<table class="table table-striped table-rounded table-bordered table-gray-300 gy-7 gs-7">
-								<thead>
-									<tr class="g-font-size-13--sm text-gray-800">
-										<th scope="col" class="text-center translate">Room Type</th>
-										<th scope="col" class="text-center translate">Per room</th>
-										<th scope="col" class="text-center translate">Regular price: pesos (breakfast included)</th>
-									</tr>
-								</thead>
-								<thead>
-									<tr class="fw-semibold fs-6 text-gray-800">
-										<th colspan="4" scope="col" class="g-font-size-13--sm bg-coral text-center translate"><b>Price is subject to change without prior notice</b></th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr class="bg-beige">
-										<td rowspan="2" class="g-font-size-13--sm bg-aquamarine text-center translate">スーペリア /Superior</td>
-										<td class="g-font-size-13--sm price-cell text-center translate"><b>Alone</b></td>
-										<td class="g-font-size-13--sm price-cell text-center translate"><b>2800/net</b></td>
-									</tr>
-									<tr class="bg-burlywood">
-										<td class="g-font-size-13--sm price-cell text-center translate"><b>For the two of you</b></td>
-										<td class="g-font-size-13--sm price-cell text-center translate"><b>3500/net</b></td>
-									</tr>
-									<!-- Add more rows if needed -->
-								</tbody>
-							</table>
-						</div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-sm-pull-6 g-promo-section__img-right--md g-promo-section__img-left--md g-bg-position--center g-height-400--xs g-height-100-percent--md js__fullwidth-img" style="background-image: url(&quot;img/970x970/01.jpg&quot;);">
-                <img class="img-responsive" src="img/room/Superior/IMG_5477.JPG" alt="Image" style="display: none;">
-            </div>
-        </div>
-		<div class="g-promo-section">
-            <div class="container g-padding-y-80--xs">
-                <div class="row">
-                    <div class="col-sm-5">
-						<div class="g-margin-b-30--xs">
-                            <h3 class="g-font-size-32--xs g-font-size-30--sm translate"><a href="">エグゼクティブ /Executive</a></h3>
-                            <p class=" translate">You can choose from the following types of room.<br/>- One Bed Room (Room has one Queen sized bed)<br/>- Twin Bed Room (Room has one queen sized bed plus one single sized bed)<br/>This room is much bigger than the Deluxe Plus, and has a very comfortable sofa.</p>
-                        </div>
-						<div class="table-responsive">
-							<table class="table table-striped table-rounded table-bordered table-gray-300 gy-7 gs-7">
-								<thead>
-									<tr class="g-font-size-13--sm text-gray-800">
-										<th scope="col" class="text-center translate">Room Type</th>
-										<th scope="col" class="text-center translate">Per room</th>
-										<th scope="col" class="text-center translate">Regular price: pesos (breakfast included)</th>
-									</tr>
-								</thead>
-								<thead>
-									<tr class="fw-semibold fs-6 text-gray-800">
-										<th colspan="4" scope="col" class="g-font-size-13--sm bg-coral text-center translate"><b>Price is subject to change without prior notice</b></th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr class="bg-beige">
-										<td rowspan="2" class="g-font-size-13--sm bg-aquamarine text-center ">エグゼクティブ /Executive</td>
-										<td class="g-font-size-13--sm price-cell text-center translate"><b>Alone</b></td>
-										<td class="g-font-size-13--sm price-cell text-center translate"><b>3500/net</b></td>
-									</tr>
-									<tr class="bg-burlywood">
-										<td class="g-font-size-13--sm price-cell text-center translate"><b>For the two of you</b></td>
-										<td class="g-font-size-13--sm price-cell text-center translate"><b>4300/net</b></td>
-									</tr>
-									<!-- Add more rows if needed -->
-								</tbody>
-							</table>
-						</div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 g-promo-section__img-right--md g-bg-position--center g-height-400--xs g-height-100-percent--md js__fullwidth-img" style="background-image: url(&quot;img/970x970/02.jpg&quot;);">
-                <img class="img-responsive" src="img/room/Executive-twin/IMG_5396.JPG" alt="Image" style="display: none;">
-            </div>
-        </div>
-		<div class="g-promo-section">
-            <div class="container g-padding-y-80--xs">
-                <div class="row">
-                    <div class="col-sm-5 col-sm-push-7">
-						<div class="g-margin-b-30--xs">
-                            <h3 class="g-font-size-32--xs g-font-size-30--sm translate"><a href="">ジュニアスイート /Junior Suite</a></h3>
-                            <p class=" translate">
-															You can choose from one queen-size bed or twin beds.<br/>
-							This room has a wide kitchen and a sofa set, and is the best room in Hotel asia.<br/>
-							It is highly recommended for a long-term stay because you can relax comfortably here.
-							</p>
-                        </div>
-						<div class="table-responsive">
-							<table class="table table-striped table-rounded table-bordered table-gray-300 gy-7 gs-7">
-								<thead>
-									<tr class="g-font-size-13--sm text-gray-800">
-										<th scope="col" class="text-center translate">Room Type</th>
-										<th scope="col" class="text-center translate">Per room</th>
-										<th scope="col" class="text-center translate">Regular price: pesos (breakfast included)</th>
-									</tr>
-								</thead>
-								<thead>
-									<tr class="fw-semibold fs-6 text-gray-800">
-										<th colspan="4" scope="col" class="g-font-size-13--sm bg-coral text-center translate"><b>Price is subject to change without prior notice</b></th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr class="bg-beige">
-										<td rowspan="2" class="g-font-size-13--sm bg-aquamarine text-center ">ジュニアスイート /Junior Suite</td>
-										<td class="g-font-size-13--sm price-cell text-center translate"><b>Alone</b></td>
-										<td class="g-font-size-13--sm price-cell text-center translate"><b>4200/net</b></td>
-									</tr>
-									<tr class="bg-burlywood">
-										<td class="g-font-size-13--sm price-cell text-center translate"><b>For the two of you</b></td>
-										<td class="g-font-size-13--sm price-cell text-center translate"><b>5000/net</b></td>
-									</tr>
-									<!-- Add more rows if needed -->
-								</tbody>
-							</table>
-						</div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-sm-pull-6 g-promo-section__img-right--md g-promo-section__img-left--md g-bg-position--center g-height-400--xs g-height-100-percent--md js__fullwidth-img" style="background-image: url(&quot;img/970x970/01.jpg&quot;);">
-                <img class="img-responsive" src="img/room/Junior-Suite/IMG_5461.JPG" alt="Image" style="display: none;">
-            </div>
-        </div>
+        </section>
 		<!-- =========== end of sample roomrates ===========-->
         <!--========== PAGE CONTENT ==========-->
+
         <!-- Mockup -->
         <!-- End Mockup -->
        <!--========== FOOTER ==========-->
@@ -522,6 +598,15 @@
         <script src="js/custom_script.js"></script>
 		<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 		<script src="reservation/assets/js/custom/googleT/translate.js"></script>
+		<script src="js/roomrates/appear.min.js"></script>
+		<script src="js/roomrates/calendar.global.min.js"></script>
+		<script src="js/roomrates/circle-progress.min.js"></script>
+		<script src="js/roomrates/imagesloaded.pkgd.min.js"></script>
+		<script src="js/roomrates/isotope.min.js"></script>
+		<script src="js/roomrates/jquery.ajaxchimp.min.js"></script>
+		<script src="js/roomrates/jquery.animatedheadline.min.js"></script>
+		<script src="js/roomrates/jquery.magnific-popup.min.js"></script>
+		<script src="js/roomrates/skill.bars.jquery.min.js"></script>
 		<script>
 			var swiper = new Swiper("#js-swiper-hotels", {
 			slidesPerView: 2,

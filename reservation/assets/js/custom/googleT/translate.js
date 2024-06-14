@@ -73,7 +73,7 @@ const customTranslations = {
     'ja': '送信' // Custom translation for Net in Japanese
   },
   'Han-nya Japanese Restaurant is open 24 hours daily. It is located at the ground floor of Hotel Asia. For breakfast choices, you can have Japanese, American/Western and Filipino dishes. You can enjoy more than 100 kinds of dishes such as fried or grilled fish, nigiri sushi, buckwheat noodle, etc. at very affordable prices.You can also enjoy different dishes every day for one month!We serve not only meals but also fresh fruits, ice cream, coffee, etc..': {
-    'ja': '日本食レストラン『はんにゃ』はホテル内にあり24時間営業しています。和食・洋食・セブ食からの選べる朝食。定番のからあげや焼き魚・生姜焼き定食、にぎり寿司・そばなど、常時100種類以上の豊富なメニューがお手頃価格で味わえます。1ヵ月間毎日違うものを楽しむことも可能！お食事だけでなく、フルーツやアイスクリーム・コーヒー等もご用意しています。' // Custom translation for Net in Japanese
+    'ja': '日本食レストラン『はんにゃ』はホテル内にあり24時間営業しています。和食・洋食・セブ食からの選べる朝食。定番の唐揚げや焼き魚、生姜焼き定食、にぎり寿司、そばなど、常時100種類以上の豊富なメニューがお手頃価格で味わえます。1ヵ月間毎日違うものを楽しむことも可能！お食事だけでなく、フルーツやアイスクリーム・コーヒー等もご用意しています。' // Custom translation for Net in Japanese
   },
   'Executive': {
     'ja': 'エグゼクティブ' // Custom translation for Net in Japanese
@@ -119,6 +119,27 @@ const customTranslations = {
   },
   'Location': {
     'ja': 'ロケーション' // Custom translation for Net in Japanese
+  },
+  'Han-nya Japanese Restaurant': {
+    'ja': '般若日本食レストラン' // Custom translation for Net in Japanese
+  },
+  'Gyouza, a Japanese dumpling, is a delicious blend of flavors and textures.': {
+    'ja': '.' // Custom translation for Net in Japanese
+  },
+  'Salmon sashimi is a Japanese dish featuring thin slices of fresh, raw salmon. With its silky texture and rich flavor, it’s often served with soy sauce, wasabi, and pickled ginger.': {
+    'ja': '.' // Custom translation for Net in Japanese
+  },
+  'A Tonkatsu set is a Japanese meal featuring a crispy breaded pork cutlet with rice, miso soup, and shredded cabbage. Served with tangy tonkatsu sauce, its a satisfying and hearty dish.': {
+    'ja': '.' // Custom translation for Net in Japanese
+  },
+  'Japanese fried rice, features vegetables, eggs, and sometimes meat or seafood, seasoned with soy sauce. Its a versatile dish, popular as a side or main course, and a favorite comfort food in Japan.': {
+    'ja': '.' // Custom translation for Net in Japanese
+  },
+  'Chahan': {
+    'ja': 'チャーハンとラーメンのスープ' // Custom translation for Net in Japanese
+  },
+  'Tonkatsu Set': {
+    'ja': 'とんかつセット' // Custom translation for Net in Japanese
   }
   
 };
@@ -150,17 +171,23 @@ function toggleLanguageButtons() {
   const englishButton = document.getElementById('englishButton');
   const japaneseButton = document.getElementById('japaneseButton');
   const jpinputNamePronouce = document.getElementById('forJapanese');
+  const jp_version = document.getElementById('jp_version');
+  const english_version = document.getElementById('english_version');
 
   if (isTranslationOn) {
-    englishButton.style.display = 'inline-block'; // Offer "Off" button when translation is on
-    japaneseButton.style.display = 'none';
-
+    if (englishButton) englishButton.style.display = 'inline-block'; // Offer "Off" button when translation is on
+    if (japaneseButton) japaneseButton.style.display = 'none';
+    if (english_version) english_version.style.display = 'none';
+    console.log('Translation is ON');
   } else {
-    japaneseButton.style.display = 'inline-block'; // Offer "On" button when translation is off
-    englishButton.style.display = 'none';
-    jpinputNamePronouce.style.display = 'none'
+    if (japaneseButton) japaneseButton.style.display = 'inline-block'; // Offer "On" button when translation is off
+    if (englishButton) englishButton.style.display = 'none';
+    if (jpinputNamePronouce) jpinputNamePronouce.style.display = 'none';
+    if (jp_version) jp_version.style.display = 'none'; // Hide the Japanese version
+    console.log('Translation is OFF');
   }
 }
+
 
 // Function to reset elements to original text
 function resetToOriginal() {
