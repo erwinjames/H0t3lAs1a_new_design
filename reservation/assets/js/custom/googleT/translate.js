@@ -106,12 +106,12 @@ const customTranslations = {
     'ja': 'エアコン(音の静かなタイプです）' // Custom translation for Net in Japanese
   },
   'Hair dryer, refrigerator, safety box': {
-    'ja': '21インチテレビ(ケーブルテレビ)' // Custom translation for Net in Japanese
-  },
-  'Telephone IDD (International Direct Dialing) and NDD (National Direct Dialing) in each room': {
     'ja': 'ヘアードライヤー　・冷蔵庫' // Custom translation for Net in Japanese
   },
-  'Main facilities': {
+  'Telephone IDD(International Direct Dialing) and NDD(National Direct Dialing) in each room': {
+    'ja': 'セーフティボックス・国内外に直接電話可' // Custom translation for Net in Japanese
+  },
+  'The Main facilities of Hotel': {
     'ja': 'Hotel Asiaの主な設備' // Custom translation for Net in Japanese
   },
   'Room': {
@@ -149,18 +149,15 @@ function getTranslationPreference() {
 function toggleLanguageButtons() {
   const englishButton = document.getElementById('englishButton');
   const japaneseButton = document.getElementById('japaneseButton');
-  const jpversionButton = document.getElementById('jpversion');
   const jpinputNamePronouce = document.getElementById('forJapanese');
 
   if (isTranslationOn) {
     englishButton.style.display = 'inline-block'; // Offer "Off" button when translation is on
     japaneseButton.style.display = 'none';
-    jpversionButton.style.display = 'inline-block';
 
   } else {
     japaneseButton.style.display = 'inline-block'; // Offer "On" button when translation is off
     englishButton.style.display = 'none';
-    jpversionButton.style.display = 'none';
     jpinputNamePronouce.style.display = 'none'
   }
 }
