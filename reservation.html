@@ -76,7 +76,7 @@
     <!-- End Head -->
 
     <!-- Body -->
-    <body class="g-bg-color--lightgold pattern-1">
+    <body class="g-color--white-opacity">
 
         <header class="navbar-fixed-top s-header-v2 js__header-sticky">
             <!-- Navbar -->
@@ -138,520 +138,591 @@
             </nav>
             <!-- End Navbar -->
         </header>
-        <div class="container mt-5">
-            <div class="panel panel-default">
-                <section class="festival-container">
-                    <h3 class="translate">※ Sinulog Rate [plus 500 pesos per room]</h3>
-                    <p class="festival translate" style="background: whitesmoke; border-left: 6px solid #DF3B1E; padding: 15px 20px; margin: 20px 0; box-shadow: 0 10px 6px -6px grey;"> SINULOG RATE on January 16, 17, 18, and 19, 2025. reservations for these dates require prepayment for at least 3 consecutive nights. Crowds are expected as it is Sinulog, the biggest festival in the Philippines. Reservations for January 18th, 19th, and 20th will also be at Sinulog rate.Please note that reservations made during the Sinulog rate period will not be refunded even if canceled.</p>
-                    </section>
-                <div class="panel-heading" style="padding:1.5rem 2rem 1rem 2rem;">
-                    <h2 style="font-weight: bold;text-align: center;" class="translate">Reservation Form</h2>
-                    <p style="background: rgb(255, 255, 255); border-left: 6px solid #DF3B1E; padding: 15px 20px; margin: 20px 0; box-shadow: 0 10px 6px -6px grey;"><strong class="translate" style="color: #DF3B1E"> In order to avoid any problems when making a reservation or confirming your reservation, please make a reservation first before inquiring about availability. We always reply to your application.</strong> </p>
+        <div class="uk-position-relative impx-section-rooms bg1 uk-position-relative uk-background-fixed uk-background-center-center uk-height-1-1">
+        <div class="impx-overlay"></div>
+        <div class="uk-padding uk-padding-remove-horizontal">
+            <div class="uk-container">
+                <div data-uk-grid="" class="uk-grid">
+                    <div class="uk-width-2-3@xl uk-width-2-3@l uk-width-2-3@m uk-width-1-1@s uk-margin-small-top uk-first-column">
+                        <div class="uk-position-relative uk-visible-toggle">
+                            <div class="panel panel-default">
+                                <section style="display: none;" class="festival-container">
+                                    <h3 class="translate">※ Sinulog Rate [plus 500 pesos per room]</h3>
+                                    <p class="festival translate" style="background: whitesmoke; border-left: 6px solid #DF3B1E; padding: 15px 20px; margin: 20px 0; box-shadow: 0 10px 6px -6px grey;display:none;"> SINULOG RATE on January 16, 17, 18, and 19, 2025. reservations for these dates require prepayment for at least 3 consecutive nights. Crowds are expected as it is Sinulog, the biggest festival in the Philippines. Reservations for January 18th, 19th, and 20th will also be at Sinulog rate.Please note that reservations made during the Sinulog rate period will not be refunded even if canceled.</p>
+                                    </section>
+                                <div class="panel-heading  pattern-1" style="padding:1.5rem 2rem 1rem 2rem;">
+                                    <h2 style="font-weight: bold;text-align: center;" class="translate">Reservation Form</h2>
+                                    <p style="background: rgb(255, 255, 255); border-left: 6px solid #DF3B1E; padding: 15px 20px; margin: 20px 0; box-shadow: 0 10px 6px -6px grey;display:none;"><strong class="translate" style="color: #DF3B1E"> In order to avoid any problems when making a reservation or confirming your reservation, please make a reservation first before inquiring about availability. We always reply to your application.</strong> </p>
+                                        
+                                </div>
+                                <div class="panel-body ">
+                                    <form novalidate="novalidate" id="kt_create_reservation_form" data-toggle="validator" role="form">
+                                        <!-- First Form Section -->
+                                        <div class="panel-heading" style="display:none;">
+                                            <h4 style="border-bottom: solid 1px rgba(95, 95, 95, 0.609);font-weight: bold;" class="translate">VERY IMPORTANT!!! </h4>
+                                            <h5 style="display: none;" class="notice translate">Please fill out everything below.</h5>
+                                            
+                                            
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4"><label class="translate" for="account_name">Name:</label></div>
+                                            <div class="col-md-8 form-group">
+                                                <input type="text" class="form-control translate" id="account_name" name="account_name" placeholder="Name ( 名前を入力してください )" required>
+                                                <div class="help-block with-errors translate"></div>
+                                            </div>
+                                        </div>
+                                        <div class="row"  id="forJapanese">
+                                            <div class="col-md-4"><label for="p_name">名前のふりがな：</label></div>
+                                            <div class="col-md-8 form-group">
+                                                <input type="text" class="form-control" id="p_name" name="p_name" placeholder="ふりがなを入力してください" required>
+                                                <div class="help-block with-errors translate"></div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4"><label class="translate" for="address">Address:</label></div>
+                                            <div class="col-md-8 form-group">
+                                                <input type="text" class="form-control translate" id="address" name="address" placeholder="Address ( 都道府県から住所を入力してください )" required>
+                                                <div class="help-block with-errors translate"></div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4"><label class="translate">Gender:</label></div>
+                                            <div class="col-md-6 form-group">
+                                                <label class="radio-inline translate">
+                                                    <input type="radio" name="gender" value="Male" required> Male
+                                                </label>
+                                                <label class="radio-inline translate">
+                                                    <input type="radio" name="gender" value="Female" required> Female
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4"><label class="translate" for="tel_num">Telephone Number:</label></div>
+                                            <div class="col-md-8 form-group">
+                                                <input type="tel" class="form-control" id="tel_num translate" name="tel_num" placeholder="Telephone ( 電話番号 )" required>
+                                                    <div class="help-block with-errors translate"></div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4"><label class="translate" for="email">E-mail Address:</label></div>
+                                            <div class="col-md-8 form-group">
+                                                <input type="email" class="form-control translate" id="email" name="email" placeholder="Enter your PC e-mail (PCメールを受け取れるアドレスを入力してください)" data-error="Email Address is invalid (メールアドレスが無効です)" required>
+                                                <div class="help-block with-errors translate"></div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4"><label class="translate" for="c_email">Confirm E-mail:</label></div>
+                                            <div class="col-md-8 form-group">
+                                                <input type="email" class="form-control translate" placeholder="Enter the same e-mail again to avoid typo (再度同じアドレスを入力してください)" id="c_email" name="c_email" required>
+                                                <div class="help-block with-errors translate"></div>
+                                            </div>
+                                        </div>
                         
-                </div>
-                <div class="panel-body">
-                    <form novalidate="novalidate" id="kt_create_reservation_form" data-toggle="validator" role="form">
-                        <!-- First Form Section -->
-                        <div class="panel-heading">
-                            <h4 style="border-bottom: solid 1px rgba(95, 95, 95, 0.609);font-weight: bold" class="translate">VERY IMPORTANT!!! </h4>
-	    					<h5 class="notice translate">Please fill out everything below.</h5>
+                                        <!-- Second Form Section -->
+                                        <div class="panel-heading">
+                                            <h4 style="border-bottom: solid 1px rgba(95, 95, 95, 0.609);font-weight: bold;" class="translate">ARRIVAL AND DEPARTURE DATES</h4>
+                                            <h5 style="display: none;" class="notice translate">Please choose the accommodation you want.</h5>
+                                            
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-2"><label class="translate">Check In:</label></div>
+                                            <div class="col-md-3 form-group">
+                                                <select name="Arrival_Month" id="arrivalMonth" class="form-control">
+                                                    <option value="" class="translate">Please Select Month</option>
+                                                    <option value="January" class="translate">January</option>
+                                                    <option value="February" class="translate">February</option>
+                                                    <option value="March" class="translate">March</option>
+                                                    <option value="April" class="translate">April</option>
+                                                    <option value="May" class="translate">May</option>
+                                                    <option value="June" class="translate">June</option>
+                                                    <option value="July" class="translate">July</option>
+                                                    <option value="August" class="translate">August</option>
+                                                    <option value="September" class="translate">September</option>
+                                                    <option value="October" class="translate">October</option>
+                                                    <option value="November" class="translate">November</option>
+                                                    <option value="December" class="translate">December</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-md-3 form-group">
+                                                <select name="Arrival_Day" id="arrivalDay" class="form-control">
+                                                    <option value="" class="translate">Please Select Day</option>
+                                                    <option value=" 01">1</option>
+                                                    <option value=" 02">2</option>
+                                                    <option value=" 03">3</option>
+                                                    <option value=" 04">4</option>
+                                                    <option value=" 05">5</option>
+                                                    <option value=" 06">6</option>
+                                                    <option value=" 07">7</option>
+                                                    <option value=" 08">8</option>
+                                                    <option value=" 09">9</option>
+                                                    <option value=" 10">10</option>
+                                                    <option value=" 11">11</option>
+                                                    <option value=" 12">12</option>
+                                                    <option value=" 13">12</option>
+                                                    <option value=" 14">14</option>
+                                                    <option value=" 15">15</option>
+                                                    <option value=" 16">16</option>
+                                                    <option value=" 17">17</option>
+                                                    <option value=" 18">18</option>
+                                                    <option value=" 19">19</option>
+                                                    <option value=" 20">20</option>
+                                                    <option value=" 21">21</option>
+                                                    <option value=" 22">22</option>
+                                                    <option value=" 23">23</option>
+                                                    <option value=" 24">24</option>
+                                                    <option value=" 25">25</option>
+                                                    <option value=" 26">26</option>
+                                                    <option value=" 27">27</option>
+                                                    <option value=" 28">28</option>
+                                                    <option value=" 29">29</option>
+                                                    <option value=" 30">30</option>
+                                                    <option value=" 31">31</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-2">
+                                            <label class="translate"> Check in Time Zone:</label>
+                                            </div>
+                                            <div class="col-md-3">
+                                                    <select name="Arrival_Time" id="arrivalTime" class="form-control">
+                                                        <option value="" class="translate">Please Select Time</option>
+                                                        <option value="7:00 - 8:00">7:00 - 8:00</option>
+                                                        <option value="8:00 - 9:00">8:00 - 9:00</option>
+                                                        <option value="9:00 - 10:00">9:00 - 10:00</option>
+                                                        <option value="10:00 - 11:00">10:00 - 11:00</option>
+                                                        <option value="11:00 - 12:00">11:00 - 12:00</option>
+                                                        <option value="12:00 - 1:00">12:00 - 1:00</option>
+                                                        <option value="1:00 - 2:00">1:00 - 2:00</option>
+                                                        <option value="2:00 - 3:00">2:00 - 3:00</option>
+                                                        <option value="3:00 - 4:00">3:00 - 4:00</option>
+                                                        <option value="4:00 - 5:00">4:00 - 5:00</option>
+                                                        <option value="5:00 - 6:00">5:00 - 6:00</option>
+                                                        <option value="6:00 - 7:00">6:00 - 7:00</option>
+                                                    </select>
+                                            </div>
+                                            <div class="col-md-4 form-group">
+                                                <label class="radio-inline translate">
+                                                    <input type="radio" name="checkInTimezone" value="Morning /a.m" required> AM
+                                                </label>
+                                                <label class="radio-inline translate">
+                                                    <input type="radio" name="checkInTimezone" value="Afternoon /p.m." required> PM
+                                                </label>
+                                            </div>
+                                        </div>
+
+                                        <!-- check out -->
+                                        <br>
+                                        <div class="row">
+                                            <div class="col-md-2"><label class="translate">Check Out:</label></div>
+                                            <div class="col-md-3 form-group">
+                                                <select name="Depart_Month" id="DepartMonth" class="form-control">
+                                                    <option value="" class="translate">Please Select Month</option>
+                                                    <option value="January" class="translate">January</option>
+                                                    <option value="February" class="translate">February</option>
+                                                    <option value="March" class="translate">March</option>
+                                                    <option value="April" class="translate">April</option>
+                                                    <option value="May" class="translate">May</option>
+                                                    <option value="June" class="translate">June</option>
+                                                    <option value="July" class="translate">July</option>
+                                                    <option value="August" class="translate">August</option>
+                                                    <option value="September" class="translate">September</option>
+                                                    <option value="October" class="translate">October</option>
+                                                    <option value="November" class="translate">November</option>
+                                                    <option value="December" class="translate">December</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-md-3 form-group">
+                                                <select name="Depart_Day" id="DepartDay" class="form-control">
+                                                    <option value="" class="translate">Please Select Day</option>
+                                                    <option value=" 01">1</option>
+                                                    <option value=" 02">2</option>
+                                                    <option value=" 03">3</option>
+                                                    <option value=" 04">4</option>
+                                                    <option value=" 05">5</option>
+                                                    <option value=" 06">6</option>
+                                                    <option value=" 07">7</option>
+                                                    <option value=" 08">8</option>
+                                                    <option value=" 09">9</option>
+                                                    <option value=" 10">10</option>
+                                                    <option value=" 11">11</option>
+                                                    <option value=" 12">12</option>
+                                                    <option value=" 13">12</option>
+                                                    <option value=" 14">14</option>
+                                                    <option value=" 15">15</option>
+                                                    <option value=" 16">16</option>
+                                                    <option value=" 17">17</option>
+                                                    <option value=" 18">18</option>
+                                                    <option value=" 19">19</option>
+                                                    <option value=" 20">20</option>
+                                                    <option value=" 21">21</option>
+                                                    <option value=" 22">22</option>
+                                                    <option value=" 23">23</option>
+                                                    <option value=" 24">24</option>
+                                                    <option value=" 25">25</option>
+                                                    <option value=" 26">26</option>
+                                                    <option value=" 27">27</option>
+                                                    <option value=" 28">28</option>
+                                                    <option value=" 29">29</option>
+                                                    <option value=" 30">30</option>
+                                                    <option value=" 31">31</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-2">
+                                            <label class="translate"> Check Out Time Zone:</label>
+                                            </div>
+                                            <div class="col-md-3">
+                                                    <select name="Depart_Time" id="DepartTime" class="form-control">
+                                                        <option value="" class="translate">Please Select Time</option>
+                                                        <option value="7:00 - 8:00">7:00 - 8:00</option>
+                                                        <option value="8:00 - 9:00">8:00 - 9:00</option>
+                                                        <option value="9:00 - 10:00">9:00 - 10:00</option>
+                                                        <option value="10:00 - 11:00">10:00 - 11:00</option>
+                                                        <option value="11:00 - 12:00">11:00 - 12:00</option>
+                                                        <option value="12:00 - 1:00">12:00 - 1:00</option>
+                                                        <option value="1:00 - 2:00">1:00 - 2:00</option>
+                                                        <option value="2:00 - 3:00">2:00 - 3:00</option>
+                                                        <option value="3:00 - 4:00">3:00 - 4:00</option>
+                                                        <option value="4:00 - 5:00">4:00 - 5:00</option>
+                                                        <option value="5:00 - 6:00">5:00 - 6:00</option>
+                                                        <option value="6:00 - 7:00">6:00 - 7:00</option>
+                                                    </select>
+                                            </div>
+                                            <div class="col-md-4 form-group">
+                                                <label class="radio-inline translate">
+                                                    <input type="radio" name="checkOutTimezone" value="Morning /AM" required> AM
+                                                </label>
+                                                <label class="radio-inline translate">
+                                                    <input type="radio" name="checkOutTimezone" value="Afternoon /PM" required> PM
+                                                </label>
+                                            </div>
+                                        </div>
+                        
+                                        <!-- Credit Card Details Section -->
+                                        <div class="panel-heading">
+                                            <h4 style="border-bottom: solid 1px rgba(95, 95, 95, 0.609);font-weight: bold;" class="translate">CREDIT CARD INFORMATION</h4>
+                                            <h5 style="display: none;" class="notice translate">Your credit card information is SECURED by SSL.</h5>
+                                            
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6"><label for="card_name" class="translate">Name as written in the credit card:</label></div>
+                                            <div class="col-md-6 form-group">
+                                                <input type="text" class="form-control" id="card_name" name="card_name" required>
+                                                <div class="help-block with-errors translate"></div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6"><label for="card_number" class="translate">Card Number:</label></div>
+                                                <div class="col-md-6 form-group">
+                                                    <input type="number" class="form-control" id="card_number" name="card_number" required>
+                                                    <div class="help-block with-errors translate"></div>
+                                                </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6"><label for="Card_Type" class="translate">Credit Card Type:</label></div>
+                                            <div class="col-md-6 form-group">
+                                                <select name="card_Type" id="cardType" class="form-select form-control" data-control="select2" data-hide-search="true" data-placeholder="Month">
+                                                    <option selected="selected" value="Select" class="translate">Please select</option>
+                                                    <option value="VISA" >VISA</option>
+                                                    <option value="MasterCard">MasterCard</option>
+                                                    <option value="American Express">American Express</option>
+                                                    <option value="JCB">JCB</option>
+                                                    <option value="Diners Club">Diners Club</option>
+                                                </select>
+                                                <div class="help-block with-errors translate"></div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6"> <label for="card_expiry_month" class="translate">Expiry Month:</label></div>
+
+                                                <div class="col-md-6 form-group">
+                                                    <select name="card_expiry_month" id="card_expiry_month" class="form-select form-control" data-control="select2" data-hide-search="true" data-placeholder="Month">
+                                                        <option></option>
+                                                        <option value="1">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                        <option value="4">4</option>
+                                                        <option value="5">5</option>
+                                                        <option value="6">6</option>
+                                                        <option value="7">7</option>
+                                                        <option value="8">8</option>
+                                                        <option value="9">9</option>
+                                                        <option value="10">10</option>
+                                                        <option value="11">11</option>
+                                                        <option value="12">12</option>
+                                                    </select>
+                                                    <div class="help-block with-errors translate"></div>
+                                                </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6"><label for="card_expiry_year" class="translate">Expiry Year:</label></div>
+                                            <div class="col-md-6 form-group">
+                                                
+                                                <select name="card_expiry_year" id="card_expiry_year" class="form-select form-control" data-control="select2" data-hide-search="true" data-placeholder="Year">
+                                                    <option></option>
+                                                    <option value="2023">2023</option>
+                                                    <option value="2024">2024</option>
+                                                    <option value="2025">2025</option>
+                                                    <option value="2026">2026</option>
+                                                    <option value="2027">2027</option>
+                                                    <option value="2028">2028</option>
+                                                    <option value="2029">2029</option>
+                                                    <option value="2030">2030</option>
+                                                    <option value="2031">2031</option>
+                                                    <option value="2032">2032</option>
+                                                    <option value="2033">2033</option>
+                                                </select>
+                                                <div class="help-block with-errors translate"></div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <p style="border-left: 5px solid #eb1f1f; padding-left: 20px;color:#eb1f1f;display:none;" class="translate">We dont charge your credit card right away. Typically, we only process your credit card when you check in.</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                    <div style="padding: 20px 20px 20px 50px; background-color: #E8F4ED; border: 1px solid #45A169; border-radius: 5px;display:none;">
+                                                        <p style="margin-top: 0; margin-bottom: .5rem;color: #3f4347; position: relative; margin-left: -30px; padding-left: 30px;"><span style="color: #45A169; font-size: 1rem; position: absolute; left: 0;">🛈</span><span class="translate">If you wish to deposit to the following account, please take a photo of the transfer receipt and contact us by e-mail (info@hotelasiacebu.com). We will then confirm your reservation.</span> </p>
+                                                        <p style="margin-bottom: 0;" class="translate">BDO Peso Account<br>Current Account#:293-8004748<br>Account Name : HOTEL ASIA GENA CORPORATION</p>
+                                                    </div>
+                                                </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                            <p style="color:#FF0000" class="translate">
+                                            </p>
+                                            </div>
+                                        </div>
+                                        <!-- Fourth Form Section -->
+                                        <div class="panel-heading">
+                                            <h4 style="border-bottom: solid 1px rgba(95, 95, 95, 0.609);font-weight: bold;" class="translate">PREFERENCES</h4>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6"> <label for="num_of_adults" class="translate">Number of Adults (12 years old and over):</label></div>
+                                            <div class="col-md-6 form-group">
+                                                <input type="number" class="form-control" id="num_of_adults" name="num_of_adults" required>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6"> <label for="num_of_child" class="translate">Number of Children (11 years old and under):</label></div>
+                                            <div class="col-md-6 form-group">
+                                                <input type="number" class="form-control" id="num_of_child" name="num_of_child" required>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label for="roomType" class="translate">Room Type:</label>
+                                            </div>
+                                            <div class="col-md-6 form-group">
+                                                <select id="roomType" name="roomType" aria-label="Select a Room Type" data-control="select2" data-placeholder="*" class="form-control">
+                                                    <option value="" class="translate">Please Select</option>
+                                                    <option value="Economy" class="translate">Economy</option>
+                                                    <option value="Economy Plus" class="translate">Economy Plus</option>
+                                                    <option value="Standard" class="translate">Standard</option>
+                                                    <option value="Deluxe" class="translate">Deluxe</option>
+                                                    <option value="Deluxe Plus" class="translate">Deluxe Plus</option>
+                                                    <option value="Superior" class="translate">Superior</option>
+                                                    <option value="Executive" class="translate">Executive</option>
+                                                    <option value="Junior Suite" class="translate">Junior Suite</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6"> <label for="num_rooms" class="translate">Number of Rooms:</label></div>
+                                            <div class="col-md-6 form-group">
+                                                <select name="num_rooms" aria-label="Select a Number of Rooms" data-control="select2" data-placeholder="*" class="form-control">
+                                                    <option value="" class="translate">Please Select</option>
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                    <option value="5">5</option>
+                                                    <option value="6">6</option>
+                                                    <option value="7">7</option>
+                                                    <option value="8">8</option>
+                                                    <option value="9">9</option>
+                                                    <option value="10">10</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">  <label for="numGuest" class="translate">Number of Guests:</label></div>
+                                            <div class="col-md-6 form-group">
+                                                <input type="number" class="form-control" id="numGuest" name="numGuest" required>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label for="preBedType" class="translate">Preferred Bed Type:</label>
+                                            </div>
+                                            <div class="col-md-6 form-group">
+                                                <select id="preBedType" name="preBedType" aria-label="Select a Preferred bed type" data-control="select2" data-placeholder="*" class="form-control">
+                                                    <option value="" class="translate">Please Select</option>
+                                                    <option value="single" class="translate">Single</option>
+                                                    <option value="twin" class="translate">Twin Bed</option>
+                                                    <option value="doublesize" class="translate">Double size</option>
+                                                    <option value="semidoublesize" class="translate">Semi Double size</option>
+                                                    <option value="kingsize" class="translate">King Size</option>
+                                                    <option value="queensize" class="translate">Queen Size</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="row" id="extraBedRow" style="display: none;">
+                                            <div class="col-md-6"><label for="extrabedselect" class="translate">Extra Bed:</label></div>
+                                            <div class="col-md-6 form-group">
+                                                <select name="extrabedselect" aria-label="Select a Extra Bed" data-control="select2" data-placeholder="*" class="form-control">
+                                                    <option value="">Select a Extra Bed..</option>
+                                                    <option value="0">0</option>
+                                                    <option value="1">1</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <div class="row">
+                                            <div class="col-md-12 form-group">
+                                                <label for="flightAndArrival" style="font-size:0.8rem;" class="translate">Flight and Arrival Information (Please indicate here including FLIGHT NO. and ARRIVAL TIME in case of AIRPORT PICK-UP)</label>
+                                                <textarea type="text" class="form-control" id="flightAndArrival" name="flightAndArrival" required></textarea>
+                                            </div>
+                                        </div>
+                                        
+                                        <div style="border: 2px solid #45A169; box-shadow: 15px 15px #45A169; padding: 15px; margin: 20px 0;display:none;">
+                                            <p class="translate">
+                                                If online reservation fails or to make sure that your reservation is confirmed, please email to info@hotelasiacebu.com. Even if you book online, please contact info@hotelasiacebu.com.
+                                            </p>
+                                            <p class="translate">
+                                                Check in : 2 pm
+                                                <br>
+                                                Check out:12 pm
+                                            </p>
+                                        </div>
+                                        <br>
+                                        
+                                        <h3 style="background-color: firebrick; color: white; margin: 20px 0 0 0; padding: 20px; font-weight: bold;display:none;" class="translate">IN CASE OF CANCELLATION</h3>
+                                        <div style="border: 2px solid firebrick; border-top: none; padding: 20px; margin: 0 0 20px 0;display:none;">
+                                        <p class="translate">The following charges will apply: 100% of 1 night per room reserved when you cancelled 7 days to 4days before check in date, 100% of 3 nights per room reserved if you reserved 3 nights or more when you cancelled 3 days to 1 day before check in date. Full charge of the whole reservation when you cancelled on the day or no show. The same rule will apply for shortening of stay.</p>
+                                        </div>
+                                        <br>
+                                        <!-- Submit Button -->
+                                        <center><button type="button" id="submit_btn" class="text-uppercase s-btn s-btn--md s-btn--primary-bg g-radius--50 g-padding-x-80--xs translate">Send</button></center>
+                                    </form>
+                                </div>
+                                <aside style="border:solid 1.5px black;padding: 5%;width: 75%; margin: auto;display:none;">
+                                    <h2 style="border-bottom: solid 1px black" class="translate">Price per room</h2>
+                                    <p class="bk">※ <span class="translate">All tax and service charge included</span>/Price is subject to change  without prior notice</p>
+                                    <dl>
+                                    <dt class="roomrate_m">エコノミープラス／Economy Plus</dt>
+                                    <dd><span class="translate">【Single Occupancy】</span>usually(通常)：1650<span class="translate">pesos（Breakfast included）</span><br>
+                                        <span class="translate">【Double Occupancy】</span>usually(通常)：2200<span class="translate">pesos（Breakfast included）</span></dd>
+                                    <dt class="roomrate_m">スタンダード／Standard</dt>
+                                    <dd><span class="translate">【Single Occupancy】</span>usually(通常)：1800<span class="translate">pesos（Breakfast included）</span><br>
+                                        <span class="translate">【Double Occupancy】</span>usually(通常)：2400<span class="translate">pesos（Breakfast included）</span></dd>
+                                    <dt class="roomrate_m">デラックス／Deluxe</dt>
+                                    <dd><span class="translate">【Single Occupancy】</span>usually(通常)：2000<span class="translate">pesos（Breakfast included）</span><br>
+                                        <span class="translate">【Double Occupancy】</span>usually(通常)：2600<span class="translate">pesos（Breakfast included）</span></dd>
+                                    <dt class="roomrate_m">デラックスプラス／Deluxe Plus</dt>
+                                    <dd><span class="translate">【Single Occupancy】</span>usually(通常)：2500<span class="translate">pesos（Breakfast included）</span><br>
+                                        <span class="translate">【Double Occupancy】</span>usually(通常)：3100<span class="translate">pesos（Breakfast included）</span></dd>
+                                    <dt class="roomrate_m">スーペリア／Superior</dt>
+                                    <dd><span class="translate">【Single Occupancy】</span>usually(通常)：2800<span class="translate">pesos（Breakfast included）</span><br>
+                                        <span class="translate">【Double Occupancy】</span>usually(通常)：3500<span class="translate">pesos（Breakfast included）</span></dd>
+                                    <dt class="roomrate_m">エグゼクティブ／Executive</dt>
+                                    <dd><span class="translate">【Single Occupancy】</span>usually(通常)：3500<span class="translate">pesos（Breakfast included）</span><br>
+                                        <span class="translate">【Double Occupancy】</span>usually(通常)：4300<span class="translate">pesos（Breakfast included）</span></dd>
+                                    <dt class="roomrate_m">ジュニアスイート／Junior Suite</dt>
+                                    <dd><span class="translate">【Single Occupancy】</span>usually(通常)：4200<span class="translate">pesos（Breakfast included）</span><br>
+                                        <span class="translate">【Double Occupancy】</span>usually(通常)：5000<span class="translate">pesos（Breakfast included）</span></dd>
+                                    <dt class="roomrate_m translate">Per Additional Person (12 years old and above)</dt>
+                                    <dd>usually(通常)：800<span class="translate">pesos（Breakfast included）</span></dd>
+                                    </dl>
+                                    <h2 class="translate" style="border-bottom: solid 1.5px black;">Airport Transfer fees</h2>
+                                    <dl>
+                                    <dt class="roomrate_m"><span class="translate">Airport Pick up</span></dt>
+                                    <dd class="translate">6:00am - 6:00pm = 1000pesos <br>6:01pm - 5:59am = 1200pesos</dd>
+                                    <dt class="roomrate_m"><span class="translate">Airport Pick up</span><span class="translate">(Van)</span></dt>
+                                    <dd class="translate">6:00am - 6:00pm = 1200pesos <br>6:01pm - 5:59am = 1400pesos</dd>
+                                    <dt class="roomrate_m"><span class="translate">Drop-off</span></dt>
+                                    <dd class="translate">6:00am - 6:00pm = 800pesos <br>6:01pm - 5:59am = 1000pesos</dd>
+                                    <dt class="roomrate_m"><span class="translate">Drop-off</span><span class="translate">(Van)</span></dt>
+                                    <dd class="translate">6:00am - 6:00pm = 1000pesos <br>6:01pm - 5:59am = 1200pesos</dd>
+                                    </dl>
+                                </aside>
                             
-	    					
-                        </div>
-                        <div class="row">
-                            <div class="col-md-4"><label class="translate" for="account_name">Name:</label></div>
-                            <div class="col-md-8 form-group">
-                                <input type="text" class="form-control translate" id="account_name" name="account_name" placeholder="Name ( 名前を入力してください )" required>
-                                <div class="help-block with-errors translate"></div>
                             </div>
                         </div>
-                        <div class="row"  id="forJapanese">
-                            <div class="col-md-4"><label for="p_name">名前のふりがな：</label></div>
-                            <div class="col-md-8 form-group">
-                                <input type="text" class="form-control" id="p_name" name="p_name" placeholder="ふりがなを入力してください" required>
-                                <div class="help-block with-errors translate"></div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-4"><label class="translate" for="address">Address:</label></div>
-                            <div class="col-md-8 form-group">
-                                <input type="text" class="form-control translate" id="address" name="address" placeholder="Address ( 都道府県から住所を入力してください )" required>
-                                <div class="help-block with-errors translate"></div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-4"><label class="translate">Gender:</label></div>
-                            <div class="col-md-6 form-group">
-                                <label class="radio-inline translate">
-                                    <input type="radio" name="gender" value="Male" required> Male
-                                </label>
-                                <label class="radio-inline translate">
-                                    <input type="radio" name="gender" value="Female" required> Female
-                                </label>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-4"><label class="translate" for="tel_num">Telephone Number:</label></div>
-                            <div class="col-md-8 form-group">
-                                <input type="tel" class="form-control" id="tel_num translate" name="tel_num" placeholder="Telephone ( 電話番号 )" required>
-                                    <div class="help-block with-errors translate"></div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-4"><label class="translate" for="email">E-mail Address:</label></div>
-                            <div class="col-md-8 form-group">
-                                <input type="email" class="form-control translate" id="email" name="email" placeholder="Enter your PC e-mail (PCメールを受け取れるアドレスを入力してください)" data-error="Email Address is invalid (メールアドレスが無効です)" required>
-                                <div class="help-block with-errors translate"></div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-4"><label class="translate" for="c_email">Confirm E-mail:</label></div>
-                            <div class="col-md-8 form-group">
-                                <input type="email" class="form-control translate" placeholder="Enter the same e-mail again to avoid typo (再度同じアドレスを入力してください)" id="c_email" name="c_email" required>
-                                <div class="help-block with-errors translate"></div>
-                            </div>
-                        </div>
-        
-                        <!-- Second Form Section -->
-                        <div class="panel-heading">
-                            <h4 style="border-bottom: solid 1px rgba(95, 95, 95, 0.609);font-weight: bold;" class="translate">ARRIVAL AND DEPARTURE DATES</h4>
-	    					<h5 class="notice translate">Please choose the accommodation you want.</h5>
-	    					
-                        </div>
-                        <div class="row">
-                            <div class="col-md-2"><label class="translate">Check In:</label></div>
-                            <div class="col-md-3 form-group">
-                                <select name="Arrival_Month" id="arrivalMonth" class="form-control">
-                                    <option value="" class="translate">Please Select Month</option>
-                                    <option value="January" class="translate">January</option>
-                                    <option value="February" class="translate">February</option>
-                                    <option value="March" class="translate">March</option>
-                                    <option value="April" class="translate">April</option>
-                                    <option value="May" class="translate">May</option>
-                                    <option value="June" class="translate">June</option>
-                                    <option value="July" class="translate">July</option>
-                                    <option value="August" class="translate">August</option>
-                                    <option value="September" class="translate">September</option>
-                                    <option value="October" class="translate">October</option>
-                                    <option value="November" class="translate">November</option>
-                                    <option value="December" class="translate">December</option>
-                                </select>
-                            </div>
-                            <div class="col-md-3 form-group">
-                                <select name="Arrival_Day" id="arrivalDay" class="form-control">
-                                    <option value="" class="translate">Please Select Day</option>
-                                    <option value=" 01">1</option>
-                                    <option value=" 02">2</option>
-                                    <option value=" 03">3</option>
-                                    <option value=" 04">4</option>
-                                    <option value=" 05">5</option>
-                                    <option value=" 06">6</option>
-                                    <option value=" 07">7</option>
-                                    <option value=" 08">8</option>
-                                    <option value=" 09">9</option>
-                                    <option value=" 10">10</option>
-                                    <option value=" 11">11</option>
-                                    <option value=" 12">12</option>
-                                    <option value=" 13">12</option>
-                                    <option value=" 14">14</option>
-                                    <option value=" 15">15</option>
-                                    <option value=" 16">16</option>
-                                    <option value=" 17">17</option>
-                                    <option value=" 18">18</option>
-                                    <option value=" 19">19</option>
-                                    <option value=" 20">20</option>
-                                    <option value=" 21">21</option>
-                                    <option value=" 22">22</option>
-                                    <option value=" 23">23</option>
-                                    <option value=" 24">24</option>
-                                    <option value=" 25">25</option>
-                                    <option value=" 26">26</option>
-                                    <option value=" 27">27</option>
-                                    <option value=" 28">28</option>
-                                    <option value=" 29">29</option>
-                                    <option value=" 30">30</option>
-                                    <option value=" 31">31</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-2">
-                               <label class="translate"> Check in Time Zone:</label>
-                            </div>
-                            <div class="col-md-3">
-                                    <select name="Arrival_Time" id="arrivalTime" class="form-control">
-                                        <option value="" class="translate">Please Select Time</option>
-                                        <option value="7:00 - 8:00">7:00 - 8:00</option>
-                                        <option value="8:00 - 9:00">8:00 - 9:00</option>
-                                        <option value="9:00 - 10:00">9:00 - 10:00</option>
-                                        <option value="10:00 - 11:00">10:00 - 11:00</option>
-                                        <option value="11:00 - 12:00">11:00 - 12:00</option>
-                                        <option value="12:00 - 1:00">12:00 - 1:00</option>
-                                        <option value="1:00 - 2:00">1:00 - 2:00</option>
-                                        <option value="2:00 - 3:00">2:00 - 3:00</option>
-                                        <option value="3:00 - 4:00">3:00 - 4:00</option>
-                                        <option value="4:00 - 5:00">4:00 - 5:00</option>
-                                        <option value="5:00 - 6:00">5:00 - 6:00</option>
-                                        <option value="6:00 - 7:00">6:00 - 7:00</option>
-                                    </select>
-                            </div>
-                            <div class="col-md-4 form-group">
-                                <label class="radio-inline translate">
-                                    <input type="radio" name="checkInTimezone" value="Morning /a.m" required> AM
-                                </label>
-                                <label class="radio-inline translate">
-                                    <input type="radio" name="checkInTimezone" value="Afternoon /p.m." required> PM
-                                </label>
-                            </div>
-                        </div>
-
-                        <!-- check out -->
-                           <br>
-                        <div class="row">
-                            <div class="col-md-2"><label class="translate">Check Out:</label></div>
-                            <div class="col-md-3 form-group">
-                                <select name="Depart_Month" id="DepartMonth" class="form-control">
-                                    <option value="" class="translate">Please Select Month</option>
-                                    <option value="January" class="translate">January</option>
-                                    <option value="February" class="translate">February</option>
-                                    <option value="March" class="translate">March</option>
-                                    <option value="April" class="translate">April</option>
-                                    <option value="May" class="translate">May</option>
-                                    <option value="June" class="translate">June</option>
-                                    <option value="July" class="translate">July</option>
-                                    <option value="August" class="translate">August</option>
-                                    <option value="September" class="translate">September</option>
-                                    <option value="October" class="translate">October</option>
-                                    <option value="November" class="translate">November</option>
-                                    <option value="December" class="translate">December</option>
-                                </select>
-                            </div>
-                            <div class="col-md-3 form-group">
-                                <select name="Depart_Day" id="DepartDay" class="form-control">
-                                    <option value="" class="translate">Please Select Day</option>
-                                    <option value=" 01">1</option>
-                                    <option value=" 02">2</option>
-                                    <option value=" 03">3</option>
-                                    <option value=" 04">4</option>
-                                    <option value=" 05">5</option>
-                                    <option value=" 06">6</option>
-                                    <option value=" 07">7</option>
-                                    <option value=" 08">8</option>
-                                    <option value=" 09">9</option>
-                                    <option value=" 10">10</option>
-                                    <option value=" 11">11</option>
-                                    <option value=" 12">12</option>
-                                    <option value=" 13">12</option>
-                                    <option value=" 14">14</option>
-                                    <option value=" 15">15</option>
-                                    <option value=" 16">16</option>
-                                    <option value=" 17">17</option>
-                                    <option value=" 18">18</option>
-                                    <option value=" 19">19</option>
-                                    <option value=" 20">20</option>
-                                    <option value=" 21">21</option>
-                                    <option value=" 22">22</option>
-                                    <option value=" 23">23</option>
-                                    <option value=" 24">24</option>
-                                    <option value=" 25">25</option>
-                                    <option value=" 26">26</option>
-                                    <option value=" 27">27</option>
-                                    <option value=" 28">28</option>
-                                    <option value=" 29">29</option>
-                                    <option value=" 30">30</option>
-                                    <option value=" 31">31</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-2">
-                               <label class="translate"> Check Out Time Zone:</label>
-                            </div>
-                            <div class="col-md-3">
-                                    <select name="Depart_Time" id="DepartTime" class="form-control">
-                                        <option value="" class="translate">Please Select Time</option>
-                                        <option value="7:00 - 8:00">7:00 - 8:00</option>
-                                        <option value="8:00 - 9:00">8:00 - 9:00</option>
-                                        <option value="9:00 - 10:00">9:00 - 10:00</option>
-                                        <option value="10:00 - 11:00">10:00 - 11:00</option>
-                                        <option value="11:00 - 12:00">11:00 - 12:00</option>
-                                        <option value="12:00 - 1:00">12:00 - 1:00</option>
-                                        <option value="1:00 - 2:00">1:00 - 2:00</option>
-                                        <option value="2:00 - 3:00">2:00 - 3:00</option>
-                                        <option value="3:00 - 4:00">3:00 - 4:00</option>
-                                        <option value="4:00 - 5:00">4:00 - 5:00</option>
-                                        <option value="5:00 - 6:00">5:00 - 6:00</option>
-                                        <option value="6:00 - 7:00">6:00 - 7:00</option>
-                                    </select>
-                            </div>
-                            <div class="col-md-4 form-group">
-                                <label class="radio-inline translate">
-                                    <input type="radio" name="checkOutTimezone" value="Morning /AM" required> AM
-                                </label>
-                                <label class="radio-inline translate">
-                                    <input type="radio" name="checkOutTimezone" value="Afternoon /PM" required> PM
-                                </label>
-                            </div>
-                        </div>
-        
-                        <!-- Credit Card Details Section -->
-                        <div class="panel-heading">
-                            <h4 style="border-bottom: solid 1px rgba(95, 95, 95, 0.609);font-weight: bold;" class="translate">CREDIT CARD INFORMATION</h4>
-	    					<h5 class="notice translate">Your credit card information is SECURED by SSL.</h5>
-	    					
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6"><label for="card_name" class="translate">Name as written in the credit card:</label></div>
-                            <div class="col-md-6 form-group">
-                                <input type="text" class="form-control" id="card_name" name="card_name" required>
-                                <div class="help-block with-errors translate"></div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6"><label for="card_number" class="translate">Card Number:</label></div>
-                                <div class="col-md-6 form-group">
-                                    <input type="number" class="form-control" id="card_number" name="card_number" required>
-                                    <div class="help-block with-errors translate"></div>
+                    </div>
+                    <div  class="uk-width-1-3@xl uk-width-1-3@l uk-width-1-3@m uk-width-1-1@s" style="margin-top:8rem;">
+						<div>
+                        <!-- booking form -->
+						<div class="g-bg-color--darkgreen uk-padding impx-padding-medium">
+							<div class="impx-hp-booking-form side-form uk-margin-bottom uk-margin-remove-top">
+								<h6 class="uk-heading-line uk-text-center impx-text-white uk-text-uppercase translate"><span></span></h6>
+                                <div>
+                                    <label class="uk-form-label empty-label">&nbsp;</label>
+                                    <p class="translate g-color--white-opacity" >The following charges will apply: 100% of 1 night per room reserved when you cancelled 7 days to 4days before check in date, 100% of 3 nights per room reserved if you reserved 3 nights or more when you cancelled 3 days to 1 day before check in date. Full charge of the whole reservation when you cancelled on the day or no show. The same rule will apply for shortening of stay.</p>
                                 </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6"><label for="Card_Type" class="translate">Credit Card Type:</label></div>
-                            <div class="col-md-6 form-group">
-                                <select name="card_Type" id="cardType" class="form-select form-control" data-control="select2" data-hide-search="true" data-placeholder="Month">
-                                    <option selected="selected" value="Select" class="translate">Please select</option>
-                                    <option value="VISA" >VISA</option>
-                                    <option value="MasterCard">MasterCard</option>
-                                    <option value="American Express">American Express</option>
-                                    <option value="JCB">JCB</option>
-                                    <option value="Diners Club">Diners Club</option>
-                                </select>
-                                <div class="help-block with-errors translate"></div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6"> <label for="card_expiry_month" class="translate">Expiry Month:</label></div>
-
-                                <div class="col-md-6 form-group">
-                                    <select name="card_expiry_month" id="card_expiry_month" class="form-select form-control" data-control="select2" data-hide-search="true" data-placeholder="Month">
-                                        <option></option>
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                        <option value="4">4</option>
-                                        <option value="5">5</option>
-                                        <option value="6">6</option>
-                                        <option value="7">7</option>
-                                        <option value="8">8</option>
-                                        <option value="9">9</option>
-                                        <option value="10">10</option>
-                                        <option value="11">11</option>
-                                        <option value="12">12</option>
-                                    </select>
-                                    <div class="help-block with-errors translate"></div>
-                                </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6"><label for="card_expiry_year" class="translate">Expiry Year:</label></div>
-                            <div class="col-md-6 form-group">
-                                
-                                <select name="card_expiry_year" id="card_expiry_year" class="form-select form-control" data-control="select2" data-hide-search="true" data-placeholder="Year">
-                                    <option></option>
-                                    <option value="2023">2023</option>
-                                    <option value="2024">2024</option>
-                                    <option value="2025">2025</option>
-                                    <option value="2026">2026</option>
-                                    <option value="2027">2027</option>
-                                    <option value="2028">2028</option>
-                                    <option value="2029">2029</option>
-                                    <option value="2030">2030</option>
-                                    <option value="2031">2031</option>
-                                    <option value="2032">2032</option>
-                                    <option value="2033">2033</option>
-                                </select>
-                                <div class="help-block with-errors translate"></div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <p style="border-left: 5px solid #eb1f1f; padding-left: 20px;color:#eb1f1f" class="translate">We dont charge your credit card right away. Typically, we only process your credit card when you check in.</p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                    <div style="padding: 20px 20px 20px 50px; background-color: #E8F4ED; border: 1px solid #45A169; border-radius: 5px;">
-                                        <p style="margin-top: 0; margin-bottom: .5rem;color: #3f4347; position: relative; margin-left: -30px; padding-left: 30px;"><span style="color: #45A169; font-size: 1rem; position: absolute; left: 0;">🛈</span><span class="translate">If you wish to deposit to the following account, please take a photo of the transfer receipt and contact us by e-mail (info@hotelasiacebu.com). We will then confirm your reservation.</span> </p>
-                                        <p style="margin-bottom: 0;" class="translate">BDO Peso Account<br>Current Account#:293-8004748<br>Account Name : HOTEL ASIA GENA CORPORATION</p>
-                                    </div>
-                                </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                               <p style="color:#FF0000" class="translate">
-                            </p>
-                            </div>
-                        </div>
-                        <!-- Fourth Form Section -->
-                        <div class="panel-heading">
-                            <h4 style="border-bottom: solid 1px rgba(95, 95, 95, 0.609);font-weight: bold;" class="translate">PREFERENCES</h4>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6"> <label for="num_of_adults" class="translate">Number of Adults (12 years old and over):</label></div>
-                            <div class="col-md-6 form-group">
-                                <input type="number" class="form-control" id="num_of_adults" name="num_of_adults" required>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6"> <label for="num_of_child" class="translate">Number of Children (11 years old and under):</label></div>
-                            <div class="col-md-6 form-group">
-                                <input type="number" class="form-control" id="num_of_child" name="num_of_child" required>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <label for="roomType" class="translate">Room Type:</label>
-                            </div>
-                            <div class="col-md-6 form-group">
-                                <select id="roomType" name="roomType" aria-label="Select a Room Type" data-control="select2" data-placeholder="*" class="form-control">
-                                    <option value="" class="translate">Please Select</option>
-                                    <option value="Economy" class="translate">Economy</option>
-                                    <option value="Economy Plus" class="translate">Economy Plus</option>
-                                    <option value="Standard" class="translate">Standard</option>
-                                    <option value="Deluxe" class="translate">Deluxe</option>
-                                    <option value="Deluxe Plus" class="translate">Deluxe Plus</option>
-                                    <option value="Superior" class="translate">Superior</option>
-                                    <option value="Executive" class="translate">Executive</option>
-                                    <option value="Junior Suite" class="translate">Junior Suite</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6"> <label for="num_rooms" class="translate">Number of Rooms:</label></div>
-                            <div class="col-md-6 form-group">
-                                <select name="num_rooms" aria-label="Select a Number of Rooms" data-control="select2" data-placeholder="*" class="form-control">
-                                    <option value="" class="translate">Please Select</option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                    <option value="6">6</option>
-                                    <option value="7">7</option>
-                                    <option value="8">8</option>
-                                    <option value="9">9</option>
-                                    <option value="10">10</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6">  <label for="numGuest" class="translate">Number of Guests:</label></div>
-                            <div class="col-md-6 form-group">
-                                <input type="number" class="form-control" id="numGuest" name="numGuest" required>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <label for="preBedType" class="translate">Preferred Bed Type:</label>
-                            </div>
-                            <div class="col-md-6 form-group">
-                                <select id="preBedType" name="preBedType" aria-label="Select a Preferred bed type" data-control="select2" data-placeholder="*" class="form-control">
-                                    <option value="" class="translate">Please Select</option>
-                                    <option value="single" class="translate">Single</option>
-                                    <option value="twin" class="translate">Twin Bed</option>
-                                    <option value="doublesize" class="translate">Double size</option>
-                                    <option value="semidoublesize" class="translate">Semi Double size</option>
-                                    <option value="kingsize" class="translate">King Size</option>
-                                    <option value="queensize" class="translate">Queen Size</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="row" id="extraBedRow" style="display: none;">
-                            <div class="col-md-6"><label for="extrabedselect" class="translate">Extra Bed:</label></div>
-                            <div class="col-md-6 form-group">
-                                <select name="extrabedselect" aria-label="Select a Extra Bed" data-control="select2" data-placeholder="*" class="form-control">
-                                    <option value="">Select a Extra Bed..</option>
-                                    <option value="0">0</option>
-                                    <option value="1">1</option>
-                                </select>
-                            </div>
-                        </div>
-                        <br>
-                        <div class="row">
-                            <div class="col-md-12 form-group">
-                                <label for="flightAndArrival" style="font-size:0.8rem;" class="translate">Flight and Arrival Information (Please indicate here including FLIGHT NO. and ARRIVAL TIME in case of AIRPORT PICK-UP)</label>
-                                <textarea type="text" class="form-control" id="flightAndArrival" name="flightAndArrival" required></textarea>
-                            </div>
-                        </div>
-                        
-                        <div style="border: 2px solid #45A169; box-shadow: 15px 15px #45A169; padding: 15px; margin: 20px 0;">
-                            <p class="translate">
-                                If online reservation fails or to make sure that your reservation is confirmed, please email to info@hotelasiacebu.com. Even if you book online, please contact info@hotelasiacebu.com.
-                            </p>
-                            <p class="translate">
-                                Check in : 2 pm
-                                <br>
-                                Check out:12 pm
-                               </p>
-                        </div>
-                        <br>
-                        
-                        <h3 style="background-color: firebrick; color: white; margin: 20px 0 0 0; padding: 20px; font-weight: bold;" class="translate">IN CASE OF CANCELLATION</h3>
-                        <div style="border: 2px solid firebrick; border-top: none; padding: 20px; margin: 0 0 20px 0">
-                        <p class="translate">The following charges will apply: 100% of 1 night per room reserved when you cancelled 7 days to 4days before check in date, 100% of 3 nights per room reserved if you reserved 3 nights or more when you cancelled 3 days to 1 day before check in date. Full charge of the whole reservation when you cancelled on the day or no show. The same rule will apply for shortening of stay.</p>
-                        </div>
-                        <br>
-                        <!-- Submit Button -->
-                        <center><button type="button" id="submit_btn" class="text-uppercase s-btn s-btn--md s-btn--primary-bg g-radius--50 g-padding-x-80--xs translate">Send</button></center>
-                    </form>
+							</div>
+						</div>
+						<!-- booking form -->
+						<!-- features -->
+						<div class="bg-color-white uk-padding  impx-padding-medium uk-box-shadow-small">
+							<h4 class="uk-heading-line uk-margin-medium-bottom translate"><span></span></h4>
+							<ul class="uk-list uk-list-divider uk-list-large">
+							    <li>
+							    	<div data-uk-grid="" class="uk-grid-medium uk-grid">
+								    	<div class="uk-width-auto uk-first-column">
+									    </div>
+									    <div class="uk-width-expand">
+									    	<h6 class="uk-margin-remove translate"></h6>
+									    	<p class="uk-margin-remove-bottom uk-margin-small-top translate">
+                                                
+                                            </p>
+                                            <p class="translate">
+                                                If online reservation fails or to make sure that your reservation is confirmed, please email to info@hotelasiacebu.com. Even if you book online, please contact info@hotelasiacebu.com.
+                                            </p>
+                                            <p class="translate">
+                                                Check in : 2 pm
+                                                <br>
+                                                Check out:12 pm
+                                            </p>
+									    </div>
+									</div>
+							    </li>
+							     <li>
+							     	<div data-uk-grid="" class="uk-grid-medium uk-grid">
+								    	<div class="uk-width-auto uk-first-column">
+									    </div>
+									    <div class="uk-width-expand">
+									    	<h6 class="uk-margin-remove translate"></h6>
+									    	<p class="uk-margin-remove-bottom uk-margin-small-top translate">
+                                                
+                                            </p>
+									    </div>
+									</div>
+							    </li>
+							    <li>
+							    	<div data-uk-grid="" class="uk-grid-medium uk-grid">
+								    	<div class="uk-width-auto uk-first-column">
+									    </div>
+									    <div class="uk-width-expand">
+									    	<h6 class="uk-margin-remove translate"></h6>
+									    	<p class="uk-margin-remove-bottom uk-margin-small-top translate">
+                                               
+                                            </p>
+									    </div>
+									</div>
+							    </li>
+							</ul>
+						</div>
+                      </div>
+					</div>
                 </div>
-                <br>
-                <br>
-                <aside style="border:solid 1.5px black;padding: 5%;width: 75%; margin: auto;">
-                    <h2 style="border-bottom: solid 1px black" class="translate">Price per room</h2>
-                    <p class="bk">※ <span class="translate">All tax and service charge included</span>/Price is subject to change  without prior notice</p>
-                    <dl>
-                      <dt class="roomrate_m">エコノミープラス／Economy Plus</dt>
-                      <dd><span class="translate">【Single Occupancy】</span>usually(通常)：1650<span class="translate">pesos（Breakfast included）</span><br>
-                        <span class="translate">【Double Occupancy】</span>usually(通常)：2200<span class="translate">pesos（Breakfast included）</span></dd>
-                      <dt class="roomrate_m">スタンダード／Standard</dt>
-                      <dd><span class="translate">【Single Occupancy】</span>usually(通常)：1800<span class="translate">pesos（Breakfast included）</span><br>
-                        <span class="translate">【Double Occupancy】</span>usually(通常)：2400<span class="translate">pesos（Breakfast included）</span></dd>
-                      <dt class="roomrate_m">デラックス／Deluxe</dt>
-                      <dd><span class="translate">【Single Occupancy】</span>usually(通常)：2000<span class="translate">pesos（Breakfast included）</span><br>
-                        <span class="translate">【Double Occupancy】</span>usually(通常)：2600<span class="translate">pesos（Breakfast included）</span></dd>
-                      <dt class="roomrate_m">デラックスプラス／Deluxe Plus</dt>
-                      <dd><span class="translate">【Single Occupancy】</span>usually(通常)：2500<span class="translate">pesos（Breakfast included）</span><br>
-                        <span class="translate">【Double Occupancy】</span>usually(通常)：3100<span class="translate">pesos（Breakfast included）</span></dd>
-                      <dt class="roomrate_m">スーペリア／Superior</dt>
-                      <dd><span class="translate">【Single Occupancy】</span>usually(通常)：2800<span class="translate">pesos（Breakfast included）</span><br>
-                        <span class="translate">【Double Occupancy】</span>usually(通常)：3500<span class="translate">pesos（Breakfast included）</span></dd>
-                      <dt class="roomrate_m">エグゼクティブ／Executive</dt>
-                      <dd><span class="translate">【Single Occupancy】</span>usually(通常)：3500<span class="translate">pesos（Breakfast included）</span><br>
-                        <span class="translate">【Double Occupancy】</span>usually(通常)：4300<span class="translate">pesos（Breakfast included）</span></dd>
-                      <dt class="roomrate_m">ジュニアスイート／Junior Suite</dt>
-                      <dd><span class="translate">【Single Occupancy】</span>usually(通常)：4200<span class="translate">pesos（Breakfast included）</span><br>
-                        <span class="translate">【Double Occupancy】</span>usually(通常)：5000<span class="translate">pesos（Breakfast included）</span></dd>
-                      <dt class="roomrate_m translate">Per Additional Person (12 years old and above)</dt>
-                      <dd>usually(通常)：800<span class="translate">pesos（Breakfast included）</span></dd>
-                    </dl>
-                    <h2 class="translate" style="border-bottom: solid 1.5px black;">Airport Transfer fees</h2>
-                    <dl>
-                      <dt class="roomrate_m"><span class="translate">Airport Pick up</span></dt>
-                      <dd class="translate">6:00am - 6:00pm = 1000pesos <br>6:01pm - 5:59am = 1200pesos</dd>
-                      <dt class="roomrate_m"><span class="translate">Airport Pick up</span><span class="translate">(Van)</span></dt>
-                      <dd class="translate">6:00am - 6:00pm = 1200pesos <br>6:01pm - 5:59am = 1400pesos</dd>
-                      <dt class="roomrate_m"><span class="translate">Drop-off</span></dt>
-                      <dd class="translate">6:00am - 6:00pm = 800pesos <br>6:01pm - 5:59am = 1000pesos</dd>
-                      <dt class="roomrate_m"><span class="translate">Drop-off</span><span class="translate">(Van)</span></dt>
-                      <dd class="translate">6:00am - 6:00pm = 1000pesos <br>6:01pm - 5:59am = 1200pesos</dd>
-                    </dl>
-                  </aside>
-                <br>
-                <br>
-                <br>
-                <p style="margin-left: 20px;" class="translate">Check out the other version of the website by clicking the Lite Version button above or click this link <a style="font-size: 12px;" href="https://hotelasiacebu.com/jp/reservation.html">▶ライトバージョン</a></p>
-                   
             </div>
         </div>
+        </div>
+   
         <!--========== FOOTER ==========-->
         <footer class="g-bg-color--darkgreen pattern-1">
             <!-- Links -->

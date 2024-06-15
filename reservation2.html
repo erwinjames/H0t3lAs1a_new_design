@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+    <!-- Begin Head -->
+    <head>
+        <!-- Basic -->
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Reservation</title>
+
+        <!-- Web Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i|Montserrat:400,700" rel="stylesheet">
+
+        <!-- Vendor Styles -->
+        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="css/animate.css" rel="stylesheet" type="text/css"/>
+        <link href="vendor/themify/themify.css" rel="stylesheet" type="text/css"/>
+        <link href="vendor/scrollbar/scrollbar.min.css" rel="stylesheet" type="text/css"/>
+        <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css"/>
+        <link href="vendor/swiper/swiper.min.css" rel="stylesheet" type="text/css"/>
+        <link href="vendor/cubeportfolio/css/cubeportfolio.min.css" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+        <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/formvalidation/0.6.2-dev/css/formValidation.min.css" integrity="sha512-B9GRVQaYJ7aMZO3WC2UvS9xds1D+gWQoNiXiZYRlqIVszL073pHXi0pxWxVycBk0fnacKIE3UHuWfSeETDCe7w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        
+        <!-- Theme Styles -->
+        <link href="css/style.css" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" href="css/custom_style.css">
+        <link rel="stylesheet" href="css/uikit.min.css">
+        <link rel="stylesheet" href="css/media-query.css">
+        <link href="css/global/global.css" rel="stylesheet" type="text/css"/>
+
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+        <style>
+         
+            .panel {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adding box shadow */
+            margin-top: 120px; /* Adjust this value as needed */
+           
+        }
+        .panel-body{
+            padding: 4% 8% 10% 8%;
+        }
+        .panel-heading{
+            padding: 5% 0 5% 0;
+        }
+        .notice{
+            font-weight: bold;
+            font-size: 16px;
+            color: #F00;
+            margin-bottom: 20px;
+            border-left: #FF0000 12px solid;
+            padding-left: 5px;
+        }
+        label{
+            font-weight: bold;
+            font-size:16px;
+            color:rgba(94, 94, 94, 0.959);
+        }
+        .festival-container{
+            padding: 2%;
+        }
+        .roomrate_m{
+            font-size:20px;
+            border-left: #484848 11px solid;
+            padding-left: 6px;
+            padding: 0.5rem;
+        }
+        dd{
+            font-size: 16px;
+            padding: 1rem;
+        }
+        </style>
+    </head>
+    <!-- End Head -->
+
+    <!-- Body -->
+    <body class="g-bg-color--lightgold pattern-1">
+
+        <header class="navbar-fixed-top s-header-v2 js__header-sticky">
+            <!-- Navbar -->
+            <nav class="s-header-v2__navbar">
+                <div class="container g-display-table--lg">
+                    <!-- Navbar Row -->
+                    <div class="s-header-v2__navbar-row">
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <div class="s-header-v2__navbar-col">
+                            <button type="button" class="collapsed s-header-v2__toggle" data-toggle="collapse" data-target="#nav-collapse" aria-expanded="false">
+                                <span class="s-header-v2__toggle-icon-bar"></span>
+                            </button>
+                        </div>
+
+                        <div class="s-header-v2__navbar-col s-header-v2__navbar-col-width--180">
+                            <!-- Logo -->
+                            <div class="s-header-v2__logo">
+                                <a href="index.html" class="s-header-v2__logo-link">
+                                    <img class="s-header-v2__logo-img s-header-v2__logo-img--default" src="img/watanabeclancrest.svg" width="35%" alt="Hotel Asia Logo">
+                                    <img class="s-header-v2__logo-img s-header-v2__logo-img--shrink" src="img/watanabeclancrest_white.svg" width="30%" alt="Hotel Asia Logo">
+                                </a>
+                            </div>
+                            <!-- End Logo -->
+                        </div>
+                        
+                        <div class="s-header-v2__navbar-col s-header-v2__navbar-col--right">
+                            <!-- Collect the nav links, forms, and other content for toggling -->
+                            <div class="collapse navbar-collapse s-header-v2__navbar-collapse" id="nav-collapse">
+                                <ul class="s-header-v2__nav">
+                                    <!-- Home -->
+                                    <li class="dropdown s-header-v2__nav-item s-header-v2__dropdown-on-hover">
+                                        <a href="room.html" class="s-header-v2__nav-link translate" role="button" aria-haspopup="true" aria-expanded="false">Room</a>
+                                    </li>
+                                    <!-- End Home -->
+                                    
+                                    <!-- Pages -->
+                                    <li class="dropdown s-header-v2__nav-item s-header-v2__dropdown-on-hover">
+                                        <a href="roomrates.html" class="s-header-v2__nav-link translate"  role="button" aria-haspopup="true" aria-expanded="false">Room Rates</a>
+                                    </li>
+                                    <!-- End Pages -->
+
+                                    <li class="s-header-v2__nav-item"><a href="restaurant.html" class="s-header-v2__nav-link translate">Restaurant</a></li>
+                                    <li class="s-header-v2__nav-item"><a href="contacts.html" class="s-header-v2__nav-link translate">Location</a></li>
+                                    <li class="s-header-v2__nav-item"><a href="reservation.html" class="s-header-v2__nav-link translate -is-active">Reservations</a></li>
+                                    <li class="s-header-v2__nav-item">
+                                        <a href="https://caea-ph.com/" class="s-header-v2__nav-link s-header-v2__nav-link--dark text-uppercase"><img class="g-width-150--xs g-height-auto--xs" src="img/Asia_index_caea.jpg" alt=""></a>
+                                    </li>
+                                    <li class="s-header-v2__nav-item">
+                                       <a href="" id="japaneseButton" class="s-header-v2__nav-link-btn text-uppercase s-btn s-btn--xs s-btn--white-brd g-radius--50">日本語</a>
+                                       <a href="" id="englishButton" class="s-header-v2__nav-link-btn text-uppercase s-btn s-btn--xs s-btn--white-brd g-radius--50">English</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- End Nav Menu -->
+                        </div>
+                    </div>
+                    <!-- End Navbar Row -->
+                </div>
+            </nav>
+            <!-- End Navbar -->
+        </header>
+<div class="container mt-5 mb-5">
+    <div class="card mx-auto" style="max-width: 600px;">
+        <div class="card-body">
+            <h5 class="card-title">Account Information</h5>
+            <form action="your-action-url" method="POST">
+                
+                <!-- Account Information -->
+                <div class="form-group">
+                    <label for="account_name">Account Name</label>
+                    <input type="text" class="form-control" id="account_name" name="account_name" required>
+                </div>
+                <div class="form-group">
+                    <label for="address">Address</label>
+                    <input type="text" class="form-control" id="address" name="address" required>
+                </div>
+                <div class="form-group">
+                    <label for="gender">Gender</label>
+                    <select class="form-control" id="gender" name="gender" required>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="tel_num">Telephone Number</label>
+                    <input type="tel" class="form-control" id="tel_num" name="tel_num" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+
+                <h5 class="card-title mt-4">Arrival and Departure Information</h5>
+                
+                <!-- Arrival and Departure Information -->
+                <div class="form-group">
+                    <label for="Arrival_Month">Arrival Month</label>
+                    <input type="text" class="form-control" id="Arrival_Month" name="Arrival_Month" required>
+                </div>
+                <div class="form-group">
+                    <label for="Arrival_Day">Arrival Day</label>
+                    <input type="text" class="form-control" id="Arrival_Day" name="Arrival_Day" required>
+                </div>
+                <div class="form-group">
+                    <label for="Arrival_Time">Arrival Time</label>
+                    <input type="time" class="form-control" id="Arrival_Time" name="Arrival_Time" required>
+                </div>
+                <div class="form-group">
+                    <label for="checkInTimezone">Check-In Timezone</label>
+                    <input type="text" class="form-control" id="checkInTimezone" name="checkInTimezone" required>
+                </div>
+                <div class="form-group">
+                    <label for="Depart_Month">Departure Month</label>
+                    <input type="text" class="form-control" id="Depart_Month" name="Depart_Month" required>
+                </div>
+                <div class="form-group">
+                    <label for="Depart_Day">Departure Day</label>
+                    <input type="text" class="form-control" id="Depart_Day" name="Depart_Day" required>
+                </div>
+                <div class="form-group">
+                    <label for="Depart_Time">Departure Time</label>
+                    <input type="time" class="form-control" id="Depart_Time" name="Depart_Time" required>
+                </div>
+                <div class="form-group">
+                    <label for="checkOutTimezone">Check-Out Timezone</label>
+                    <input type="text" class="form-control" id="checkOutTimezone" name="checkOutTimezone" required>
+                </div>
+
+                <h5 class="card-title mt-4">Credit Card Details</h5>
+                
+                <!-- Credit Card Details -->
+                <div class="form-group">
+                    <label for="card_name">Card Name</label>
+                    <input type="text" class="form-control" id="card_name" name="card_name" required>
+                </div>
+                <div class="form-group">
+                    <label for="card_number">Card Number</label>
+                    <input type="text" class="form-control" id="card_number" name="card_number" required>
+                </div>
+                <div class="form-group">
+                    <label for="card_expiry_month">Expiry Month</label>
+                    <input type="text" class="form-control" id="card_expiry_month" name="card_expiry_month" required>
+                </div>
+                <div class="form-group">
+                    <label for="card_expiry_year">Expiry Year</label>
+                    <input type="text" class="form-control" id="card_expiry_year" name="card_expiry_year" required>
+                </div>
+                <div class="form-group">
+                    <label for="card_Type">Card Type</label>
+                    <input type="text" class="form-control" id="card_Type" name="card_Type" required>
+                </div>
+
+                <h5 class="card-title mt-4">Room and Guest Information</h5>
+                
+                <!-- Room and Guest Information -->
+                <div class="form-group">
+                    <label for="num_of_adults">Number of Adults</label>
+                    <input type="number" class="form-control" id="num_of_adults" name="num_of_adults" required>
+                </div>
+                <div class="form-group">
+                    <label for="num_of_child">Number of Children</label>
+                    <input type="number" class="form-control" id="num_of_child" name="num_of_child" required>
+                </div>
+                <div class="form-group">
+                    <label for="roomType">Room Type</label>
+                    <input type="text" class="form-control" id="roomType" name="roomType" required>
+                </div>
+                <div class="form-group">
+                    <label for="num_rooms">Number of Rooms</label>
+                    <input type="number" class="form-control" id="num_rooms" name="num_rooms" required>
+                </div>
+                <div class="form-group">
+                    <label for="numGuest">Number of Guests</label>
+                    <input type="number" class="form-control" id="numGuest" name="numGuest" required>
+                </div>
+                <div class="form-group">
+                    <label for="preBedType">Preferred Bed Type</label>
+                    <input type="text" class="form-control" id="preBedType" name="preBedType" required>
+                </div>
+                <div class="form-group">
+                    <label for="extrabedselect">Extra Bed</label>
+                    <input type="text" class="form-control" id="extrabedselect" name="extrabedselect" required>
+                </div>
+                <div class="form-group">
+                    <label for="flightAndArrival">Flight and Arrival Information</label>
+                    <input type="text" class="form-control" id="flightAndArrival" name="flightAndArrival" required>
+                </div>
+                
+                <button type="submit" class="btn btn-primary btn-block">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+ <!--========== FOOTER ==========-->
+ <footer class="g-bg-color--darkgreen pattern-1">
+    <!-- Links -->
+    <div class="g-hor-divider__dashed--golden-opacity-lightest">
+        <div class="container g-padding-y-80--xs">
+            <div class="row">
+                <div class="col-sm-2 g-margin-b-20--xs g-margin-b-0--md">
+                    <ul class="list-unstyled g-ul-li-tb-5--xs g-margin-b-0--xs">
+                        <li><a class="g-font-size-15--xs g-color--white-opacity translate" href="room.html">Room</a></li>
+                        <li><a class="g-font-size-15--xs g-color--white-opacity translate" href="roomrates.html">Room Rates</a></li>
+                        <li><a class="g-font-size-15--xs g-color--white-opacity translate" href="restaurant.html">Restaurant</a></li>
+                        <li><a class="g-font-size-15--xs g-color--white-opacity translate" href="contacts.html">Location</a></li>
+                        <li><a class="g-font-size-15--xs g-color--white-opacity translate" href="reservation.html">Reservations</a></li>
+                        <li><a class="g-font-size-15--xs g-color--white-opacity translate" href="https://caea-ph.com">Caea School</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-2 g-margin-b-20--xs g-margin-b-0--md">
+                    <ul class="list-unstyled g-ul-li-tb-5--xs g-margin-b-0--xs">
+                        <li><a class="g-font-size-15--xs g-color--white-opacity translate" href="">Twitter</a></li>
+                        <li><a class="g-font-size-15--xs g-color--white-opacity translate" href="">Facebook</a></li>
+                        <li><a class="g-font-size-15--xs g-color--white-opacity translate" href="">Instagram</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 col-md-offset-2 col-sm-5 col-sm-offset-1 s-footer__logo g-padding-y-50--xs g-padding-y-0--md">
+                    <h3 class="g-font-size-18--xs g-color--gold translate">Hotel Asia Cebu</h3>
+                    <p class="g-color--white-opacity translate">If you are in Cebu Island, Philippines, please enjoy a delicious and comfortable time at Hotel ASIA</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Links -->
+
+   <!-- Copyright -->
+   <div class="container g-padding-y-50--xs">
+    <div class="row">
+        <div class="col-xs-2">
+            <a href="index.html">
+                <img class="g-width-50--xs g-height-auto--xs" src="img/watanabeclancrest_white.svg" alt="">
+            </a>
+        </div>
+        <div class="col-xs-2">
+            <a href="index.html">
+                <img class="g-width-300--xs g-height-auto--xs" src="img/Asia_index_work.gif" alt="">
+            </a>
+        </div>
+        <div class="col-xs-2">
+            <a href="index.html">
+                <img class="g-width-300--xs g-height-auto--xs" src="img/Asia_index_cebuPot.jpg" alt="">
+            </a>
+        </div>
+        <div class="col-xs-6 g-text-right--xs">
+            <p class="g-font-size-14--xs g-margin-b-0--xs g-color--white-opacity-light translate"><a href="">Hotel Asia Cebu</a></p>
+        </div>
+    </div>
+</div>
+<!-- End Copyright -->
+</footer>
+<!--========== END FOOTER ==========-->
+
+<!-- Back To Top -->
+<a href="javascript:void(0);" class="s-back-to-top js__back-to-top"></a>
+
+<!--========== JAVASCRIPTS (Load javascripts at bottom, this will reduce page load time) ==========-->
+<!-- Vendor -->
+<script type="text/javascript" src="vendor/jquery.min.js"></script>
+<script type="text/javascript" src="vendor/jquery.migrate.min.js"></script>
+<script type="text/javascript" src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!-- <script type="text/javascript" src="vendor/jquery.smooth-scroll.min.js"></script> -->
+<script type="text/javascript" src="vendor/jquery.back-to-top.min.js"></script>
+<script type="text/javascript" src="vendor/scrollbar/jquery.scrollbar.min.js"></script>
+<!-- <script type="text/javascript" src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script> -->
+<script type="text/javascript" src="vendor/swiper/swiper.jquery.min.js"></script>
+<script type="text/javascript" src="vendor/waypoint.min.js"></script>
+<script type="text/javascript" src="vendor/counterup.min.js"></script>
+<script type="text/javascript" src="vendor/cubeportfolio/js/jquery.cubeportfolio.min.js"></script>
+<script type="text/javascript" src="vendor/jquery.parallax.min.js"></script>
+<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBsXUGTFS09pLVdsYEE9YrO2y4IAncAO2U"></script> -->
+<script type="text/javascript" src="vendor/jquery.wow.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>  
+
+<!-- General Components and Settings -->
+<script type="text/javascript" src="js/global.min.js"></script>
+<script type="text/javascript" src="js/components/header-sticky.min.js"></script>
+<script type="text/javascript" src="js/components/scrollbar.min.js"></script>
+<script type="text/javascript" src="js/components/wow.min.js"></script>
+<script src="reservation/assets/js/custom/googleT/translate.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="reservation/src/js/reservation/mail.js"></script>
+<script src="js/filteredroom.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.min.js" charset="utf-8"></script>
+<!--========== END JAVASCRIPTS ==========-->
+<script>
+    $(document).ready(function () {
+                        // Get references to the select elements
+            const roomTypeSelect = $('#roomType');	
+            const extraBedRow = $('#extraBedRow');
+
+            $('input[name="CheckInOut"]').daterangepicker({
+            timePicker: true,
+            startDate: moment().startOf('hour'),
+            endDate: moment().startOf('hour').add(32, 'hour'),
+            locale: {
+            format: 'M/DD hh:mm A'
+            }
+        });
+
+    // Add event listener to the room type select element
+    roomTypeSelect.change(function() {
+        // Check if the selected room type is Executive or Junior Suite
+        const selectedRoomType = roomTypeSelect.val();
+        if (selectedRoomType === 'Executive' || selectedRoomType === 'Junior Suite') {
+            // Show the extra bed select element
+            extraBedRow.show();
+        } else {
+            // Hide the extra bed select element
+            extraBedRow.hide();
+        }
+    });
+    });
+</script>
+<script>
+    function validateEmails() {
+    var email = document.getElementById('email').value;
+    var c_email = document.getElementById('c_email').value;
+
+    // Regular expression for email validation
+    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!emailRegex.test(email)) {
+        alert('Please enter a valid email address for Email.');
+        return false;
+    }
+
+    if (!emailRegex.test(c_email)) {
+        alert('Please enter a valid email address for Confirm Email.');
+        return false;
+    }
+
+    if (email !== c_email) {
+        alert('Email addresses do not match.');
+        return false;
+    }
+    return true;
+}
+$('#kt_create_reservation_form').validator()
+</script>
+
+</body>
+<!-- End Body -->
+</html>
+
