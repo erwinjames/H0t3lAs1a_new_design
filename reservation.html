@@ -71,12 +71,129 @@
             font-size: 16px;
             padding: 1rem;
         }
+        .modal-body {
+            max-height: 75vh;
+            overflow-y: auto;
+        }
+        table th, table td {
+            vertical-align: middle !important;
+            color:#3f4347;
+            font-size:1rem;
+        }
         </style>
     </head>
     <!-- End Head -->
 
     <!-- Body -->
     <body class="g-color--white-opacity">
+        <div class="preloader">
+            <img src="img/preloader.gif" alt="Loading...">
+          </div>
+
+        <div class="modal fade" id="priceModal" tabindex="-1" aria-labelledby="priceModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <!-- <h5 class="modal-title translate" id="priceModalLabel">Price Details</h5> -->
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <h4 class="translate">Price per Room</h4>
+                  <p class="translate">※ All tax and service charge included. Price is subject to change without prior notice.</p>
+                  <table class="table table-bordered table-striped">
+                    <thead>
+                      <tr>
+                        <th class="translate">Room Type</th>
+                        <th class="translate">Single Occupancy</th>
+                        <th class="translate">Double Occupancy</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="translate">Economy Plus</td>
+                        <td class="translate">1650 pesos (Breakfast included)</td>
+                        <td class="translate">2200 pesos (Breakfast included)</td>
+                      </tr>
+                      <tr>
+                        <td class="translate">Standard</td>
+                        <td class="translate">1800 pesos (Breakfast included)</td>
+                        <td class="translate">2400 pesos (Breakfast included)</td>
+                      </tr>
+                      <tr>
+                        <td class="translate">Deluxe</td>
+                        <td class="translate">2000 pesos (Breakfast included)</td>
+                        <td class="translate">2600 pesos (Breakfast included)</td>
+                      </tr>
+                      <tr>
+                        <td class="translate">Deluxe Plus</td>
+                        <td class="translate">2500 pesos (Breakfast included)</td>
+                        <td class="translate">3100 pesos (Breakfast included)</td>
+                      </tr>
+                      <tr>
+                        <td class="translate">Superior</td>
+                        <td class="translate">2800 pesos (Breakfast included)</td>
+                        <td class="translate">3500 pesos (Breakfast included)</td>
+                      </tr>
+                      <tr>
+                        <td class="translate">Executive</td>
+                        <td class="translate">3500 pesos (Breakfast included)</td>
+                        <td class="translate">4300 pesos (Breakfast included)</td>
+                      </tr>
+                      <tr>
+                        <td class="translate">Junior Suite</td>
+                        <td class="translate">4200 pesos (Breakfast included)</td>
+                        <td class="translate">5000 pesos (Breakfast included)</td>
+                      </tr>
+                      <tr>
+                        <td class="translate">Per Additional Person (12 years old and above)</td>
+                        <td class="translate" colspan="2">800 pesos (Breakfast included)</td>
+                      </tr>
+                    </tbody>
+                  </table>
+          
+                  <h4 class="translate">Airport Transfer Fees</h4>
+                  <table class="table table-bordered table-striped">
+                    <thead>
+                      <tr>
+                        <th class="translate">Service</th>
+                        <th class="translate">6:00am - 6:00pm</th>
+                        <th class="translate">6:01pm - 5:59am</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="translate">Airport Pick up</td>
+                        <td class="translate">1000 pesos</td>
+                        <td class="translate">1200 pesos</td>
+                      </tr>
+                      <tr>
+                        <td class="translate">Airport Pick up (Van)</td>
+                        <td class="translate">1200 pesos</td>
+                        <td class="translate">1400 pesos</td>
+                      </tr>
+                      <tr>
+                        <td class="translate">Drop-off</td>
+                        <td class="translate">800 pesos</td>
+                        <td class="translate">1000 pesos</td>
+                      </tr>
+                      <tr>
+                        <td class="translate">Drop-off (Van)</td>
+                        <td class="translate">1000 pesos</td>
+                        <td class="translate">1200 pesos</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-danger translate" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+        </div>
+
+
 
         <header class="navbar-fixed-top s-header-v2 js__header-sticky">
             <!-- Navbar -->
@@ -225,8 +342,8 @@
                                             
                                         </div>
                                         <div class="row">
-                                            <div class="col-md-2"><label class="translate">Check In:</label></div>
-                                            <div class="col-md-3 form-group">
+                                            <div class="col-md-4"><label class="translate">Check In:</label></div>
+                                            <div class="col-md-4 form-group">
                                                 <select name="Arrival_Month" id="arrivalMonth" class="form-control">
                                                     <option value="" class="translate">Please Select Month</option>
                                                     <option value="January" class="translate">January</option>
@@ -243,7 +360,7 @@
                                                     <option value="December" class="translate">December</option>
                                                 </select>
                                             </div>
-                                            <div class="col-md-3 form-group">
+                                            <div class="col-md-4 form-group">
                                                 <select name="Arrival_Day" id="arrivalDay" class="form-control">
                                                     <option value="" class="translate">Please Select Day</option>
                                                     <option value=" 01">1</option>
@@ -281,10 +398,10 @@
                                             </div>
                                         </div>
                                         <div class="row">
-                                            <div class="col-md-2">
+                                            <div class="col-md-4">
                                             <label class="translate"> Check in Time Zone:</label>
                                             </div>
-                                            <div class="col-md-3">
+                                            <div class="col-md-4">
                                                     <select name="Arrival_Time" id="arrivalTime" class="form-control">
                                                         <option value="" class="translate">Please Select Time</option>
                                                         <option value="7:00 - 8:00">7:00 - 8:00</option>
@@ -314,8 +431,8 @@
                                         <!-- check out -->
                                         <br>
                                         <div class="row">
-                                            <div class="col-md-2"><label class="translate">Check Out:</label></div>
-                                            <div class="col-md-3 form-group">
+                                            <div class="col-md-4"><label class="translate">Check Out:</label></div>
+                                            <div class="col-md-4 form-group">
                                                 <select name="Depart_Month" id="DepartMonth" class="form-control">
                                                     <option value="" class="translate">Please Select Month</option>
                                                     <option value="January" class="translate">January</option>
@@ -332,7 +449,7 @@
                                                     <option value="December" class="translate">December</option>
                                                 </select>
                                             </div>
-                                            <div class="col-md-3 form-group">
+                                            <div class="col-md-4 form-group">
                                                 <select name="Depart_Day" id="DepartDay" class="form-control">
                                                     <option value="" class="translate">Please Select Day</option>
                                                     <option value=" 01">1</option>
@@ -370,10 +487,10 @@
                                             </div>
                                         </div>
                                         <div class="row">
-                                            <div class="col-md-2">
+                                            <div class="col-md-4">
                                             <label class="translate"> Check Out Time Zone:</label>
                                             </div>
-                                            <div class="col-md-3">
+                                            <div class="col-md-4">
                                                     <select name="Depart_Time" id="DepartTime" class="form-control">
                                                         <option value="" class="translate">Please Select Time</option>
                                                         <option value="7:00 - 8:00">7:00 - 8:00</option>
@@ -606,50 +723,14 @@
                                         </div>
                                         <br>
                                         <!-- Submit Button -->
-                                        <center><button type="button" id="submit_btn" class="text-uppercase s-btn s-btn--md s-btn--primary-bg g-radius--50 g-padding-x-80--xs translate">Send</button></center>
+                                        <center>
+                                      
+                                          &nbsp;
+                                          <button type="button" id="submit_btn" class="text-uppercase s-btn s-btn--md s-btn--primary-bg g-radius--50 g-padding-x-80--xs translate">Send</button></center>
+                                        
                                     </form>
                                 </div>
-                                <aside style="border:solid 1.5px black;padding: 5%;width: 75%; margin: auto;display:none;">
-                                    <h2 style="border-bottom: solid 1px black" class="translate">Price per room</h2>
-                                    <p class="bk">※ <span class="translate">All tax and service charge included</span>/Price is subject to change  without prior notice</p>
-                                    <dl>
-                                    <dt class="roomrate_m">エコノミープラス／Economy Plus</dt>
-                                    <dd><span class="translate">【Single Occupancy】</span>usually(通常)：1650<span class="translate">pesos（Breakfast included）</span><br>
-                                        <span class="translate">【Double Occupancy】</span>usually(通常)：2200<span class="translate">pesos（Breakfast included）</span></dd>
-                                    <dt class="roomrate_m">スタンダード／Standard</dt>
-                                    <dd><span class="translate">【Single Occupancy】</span>usually(通常)：1800<span class="translate">pesos（Breakfast included）</span><br>
-                                        <span class="translate">【Double Occupancy】</span>usually(通常)：2400<span class="translate">pesos（Breakfast included）</span></dd>
-                                    <dt class="roomrate_m">デラックス／Deluxe</dt>
-                                    <dd><span class="translate">【Single Occupancy】</span>usually(通常)：2000<span class="translate">pesos（Breakfast included）</span><br>
-                                        <span class="translate">【Double Occupancy】</span>usually(通常)：2600<span class="translate">pesos（Breakfast included）</span></dd>
-                                    <dt class="roomrate_m">デラックスプラス／Deluxe Plus</dt>
-                                    <dd><span class="translate">【Single Occupancy】</span>usually(通常)：2500<span class="translate">pesos（Breakfast included）</span><br>
-                                        <span class="translate">【Double Occupancy】</span>usually(通常)：3100<span class="translate">pesos（Breakfast included）</span></dd>
-                                    <dt class="roomrate_m">スーペリア／Superior</dt>
-                                    <dd><span class="translate">【Single Occupancy】</span>usually(通常)：2800<span class="translate">pesos（Breakfast included）</span><br>
-                                        <span class="translate">【Double Occupancy】</span>usually(通常)：3500<span class="translate">pesos（Breakfast included）</span></dd>
-                                    <dt class="roomrate_m">エグゼクティブ／Executive</dt>
-                                    <dd><span class="translate">【Single Occupancy】</span>usually(通常)：3500<span class="translate">pesos（Breakfast included）</span><br>
-                                        <span class="translate">【Double Occupancy】</span>usually(通常)：4300<span class="translate">pesos（Breakfast included）</span></dd>
-                                    <dt class="roomrate_m">ジュニアスイート／Junior Suite</dt>
-                                    <dd><span class="translate">【Single Occupancy】</span>usually(通常)：4200<span class="translate">pesos（Breakfast included）</span><br>
-                                        <span class="translate">【Double Occupancy】</span>usually(通常)：5000<span class="translate">pesos（Breakfast included）</span></dd>
-                                    <dt class="roomrate_m translate">Per Additional Person (12 years old and above)</dt>
-                                    <dd>usually(通常)：800<span class="translate">pesos（Breakfast included）</span></dd>
-                                    </dl>
-                                    <h2 class="translate" style="border-bottom: solid 1.5px black;">Airport Transfer fees</h2>
-                                    <dl>
-                                    <dt class="roomrate_m"><span class="translate">Airport Pick up</span></dt>
-                                    <dd class="translate">6:00am - 6:00pm = 1000pesos <br>6:01pm - 5:59am = 1200pesos</dd>
-                                    <dt class="roomrate_m"><span class="translate">Airport Pick up</span><span class="translate">(Van)</span></dt>
-                                    <dd class="translate">6:00am - 6:00pm = 1200pesos <br>6:01pm - 5:59am = 1400pesos</dd>
-                                    <dt class="roomrate_m"><span class="translate">Drop-off</span></dt>
-                                    <dd class="translate">6:00am - 6:00pm = 800pesos <br>6:01pm - 5:59am = 1000pesos</dd>
-                                    <dt class="roomrate_m"><span class="translate">Drop-off</span><span class="translate">(Van)</span></dt>
-                                    <dd class="translate">6:00am - 6:00pm = 1000pesos <br>6:01pm - 5:59am = 1200pesos</dd>
-                                    </dl>
-                                </aside>
-                            
+                             
                             </div>
                         </div>
                     </div>
@@ -658,34 +739,20 @@
                         <!-- booking form -->
 						<div class="g-bg-color--darkgreen uk-padding impx-padding-medium">
 							<div class="impx-hp-booking-form side-form uk-margin-bottom uk-margin-remove-top">
-								<h6 class="uk-heading-line uk-text-center impx-text-white uk-text-uppercase translate"><span></span></h6>
+								<h6 class="uk-heading-line uk-text-center impx-text-white uk-text-uppercase translate"><span>Sinulog Rate [plus 500 pesos per room]</span></h6>
                                 <div>
-                                    <label class="uk-form-label empty-label">&nbsp;</label>
-                                    <p class="translate g-color--white-opacity" >The following charges will apply: 100% of 1 night per room reserved when you cancelled 7 days to 4days before check in date, 100% of 3 nights per room reserved if you reserved 3 nights or more when you cancelled 3 days to 1 day before check in date. Full charge of the whole reservation when you cancelled on the day or no show. The same rule will apply for shortening of stay.</p>
+                                    <p class="translate g-color--white-opacity">SINULOG RATE on January 16, 17, 18, and 19, 2025. reservations for these dates require prepayment for at least 3 consecutive nights. Crowds are expected as it is Sinulog, the biggest festival in the Philippines. Reservations for January 18th, 19th, and 20th will also be at Sinulog rate.Please note that reservations made during the Sinulog rate period will not be refunded even if canceled.</p>
                                 </div>
 							</div>
 						</div>
 						<!-- booking form -->
 						<!-- features -->
-						<div class="bg-color-white uk-padding  impx-padding-medium uk-box-shadow-small">
-							<h4 class="uk-heading-line uk-margin-medium-bottom translate"><span></span></h4>
+						<div class="uk-position-relative bg-color-white uk-padding  impx-padding-medium uk-box-shadow-small">
 							<ul class="uk-list uk-list-divider uk-list-large">
 							    <li>
 							    	<div data-uk-grid="" class="uk-grid-medium uk-grid">
 								    	<div class="uk-width-auto uk-first-column">
-									    </div>
-									    <div class="uk-width-expand">
-									    	<h6 class="uk-margin-remove translate"></h6>
-									    	<p class="uk-margin-remove-bottom uk-margin-small-top translate">
-                                                
-                                            </p>
-                                            <p class="translate">
-                                                If online reservation fails or to make sure that your reservation is confirmed, please email to info@hotelasiacebu.com. Even if you book online, please contact info@hotelasiacebu.com.
-                                            </p>
-                                            <p class="translate">
-                                                Check in : 2 pm
-                                                <br>
-                                                Check out:12 pm
+                                            <p class="translate">In order to avoid any problems when making a reservation or confirming your reservation, please make a reservation first before inquiring about availability. We always reply to your application.
                                             </p>
 									    </div>
 									</div>
@@ -693,11 +760,13 @@
 							     <li>
 							     	<div data-uk-grid="" class="uk-grid-medium uk-grid">
 								    	<div class="uk-width-auto uk-first-column">
+                                            <p class="translate">We dont charge your credit card right away. Typically, we only process your credit card when you check in.
+                                            </p>
 									    </div>
 									    <div class="uk-width-expand">
 									    	<h6 class="uk-margin-remove translate"></h6>
 									    	<p class="uk-margin-remove-bottom uk-margin-small-top translate">
-                                                
+                                                If you wish to deposit to the following account, please take a photo of the transfer receipt and contact us by e-mail (info@hotelasiacebu.com). We will then confirm your reservation.
                                             </p>
 									    </div>
 									</div>
@@ -705,12 +774,43 @@
 							    <li>
 							    	<div data-uk-grid="" class="uk-grid-medium uk-grid">
 								    	<div class="uk-width-auto uk-first-column">
+                                           <p class="translate" style="color:#DF3B1E">BDO Peso Account<br>Current Account#:293-8004748<br>Account Name : HOTEL ASIA GENA CORPORATION</p>
 									    </div>
 									    <div class="uk-width-expand">
 									    	<h6 class="uk-margin-remove translate"></h6>
-									    	<p class="uk-margin-remove-bottom uk-margin-small-top translate">
-                                               
+									    	<p style="color:#0a8b4b" class="uk-margin-remove-bottom uk-margin-small-top translate" >Please contact us after you made a deposit to the above account through E-mail . We will check with the bank. We will then confirm your reservation. After confirmation of your reservation, your reservation is now guaranteed.
                                             </p>
+									    </div>
+									</div>
+							    </li>
+                                <li>
+							    	<div data-uk-grid="" class="uk-grid-medium uk-grid">
+								    	<div class="uk-width-auto uk-first-column">
+                                           <p class="translate" style="color:#DF3B1E">If online reservation fails or to make sure that your reservation is confirmed, please email to info@hotelasiacebu.com. Even if you book online, please contact info@hotelasiacebu.com.</p>
+									    </div>
+									    <div class="uk-width-expand">
+									    	<p style="color:#0a8b4b" class="uk-margin-remove-bottom uk-margin-small-top translate" >Check in : 2 pm</p>
+                                            <p style="color:#0a8b4b" class="uk-margin-remove-bottom uk-margin-small-top translate" >Check out: 12 pm</p>
+                                        </div>
+									</div>
+							    </li>
+                                <li>
+							    	<div data-uk-grid="" class="uk-grid-medium uk-grid">
+								    	<div class="uk-width-auto uk-first-column">
+                                           <p class="translate" style="color:#DF3B1E">The following charges will apply: 100% of 1 night per room reserved when you cancelled 7 days to 4days before check in date, 100% of 3 nights per room reserved if you reserved 3 nights or more when you cancelled 3 days to 1 day before check in date. Full charge of the whole reservation when you cancelled on the day or no show. The same rule will apply for shortening of stay.</p>
+									    </div>
+									</div>
+							    </li>
+							</ul>
+						</div>
+                        <div class="uk-position-relative bg-color-white uk-padding  impx-padding-medium uk-box-shadow-small">
+							<ul class="uk-list uk-list-divider uk-list-large">
+							    <li>
+							    	<div data-uk-grid="" class="uk-grid-medium uk-grid">
+								    	<div class="uk-width-auto uk-first-column">
+                                            <button type="button" class="text-uppercase s-btn s-btn--md s-btn--primary-bg g-radius--50 g-padding-x-80--xs translate" data-toggle="modal" data-target="#priceModal">
+                                                Open Price Details
+                                              </button>
 									    </div>
 									</div>
 							    </li>
@@ -813,7 +913,10 @@
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <script src="reservation/src/js/reservation/mail.js"></script>
         <script src="js/filteredroom.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.2.0/jquery.magnific-popup.min.js" integrity="sha512-fCRpXk4VumjVNtE0j+OyOqzPxF1eZwacU3kN3SsznRPWHgMTSSo7INc8aY03KQDBWztuMo5KjKzCFXI/a5rVYQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.min.js" charset="utf-8"></script>
+        <!-- <script src="js/loader.js"></script> -->
         <!--========== END JAVASCRIPTS ==========-->
         <script>
             $(document).ready(function () {

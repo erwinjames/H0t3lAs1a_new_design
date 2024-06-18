@@ -199,15 +199,13 @@ function resetToOriginal() {
   elementsToTranslate.forEach(element => {
     const originalHTML = element.getAttribute('data-original-html') || element.innerHTML.trim(); // Get original HTML
     element.innerHTML = originalHTML; // Reset to original
-    $(".preloader").fadeIn("slow");
   });
-  $(".preloader").fadeOut("slow");
+
   toggleLanguageButtons(); // Update button visibility
 }
 
 // Function to translate specific elements on the page with proper synchronization
 async function translatePage(targetLanguage) {
-    $(".preloader").fadeIn("slow");
   toggleLanguageButtons(); // Adjust button visibility
 
   const elementsToTranslate = document.querySelectorAll('.translate');
@@ -254,7 +252,6 @@ async function translatePage(targetLanguage) {
   }
 
   manualAdjustments(targetLanguage); // Perform manual adjustments after translation
-  $(".preloader").fadeOut("slow");
 }
 
 // Google Translate function with promise-based approach
