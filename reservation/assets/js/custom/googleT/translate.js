@@ -21,9 +21,6 @@ const customTranslations = {
   'Flight and Arrival Information (Please indicate here including FLIGHT NO. and ARRIVAL TIME in case of AIRPORT PICK-UP)': {
     'ja': '空港お迎えの場合は、フライト番号と到着時刻をここに入力してください' // Custom translation for Net in Japanese
   },
-  'Check out the other version of the website by clicking the Version 1 button above or click this link <a style="font-size: 12px;" href="#">▶ライトバージョン</a>': {
-    'ja': '上のバージョン 1 ボタンをクリックするか、このリンクをクリックして、Web サイトの他のバージョンをチェックしてください。<a style="font-size: 12px;" href="https://hotelasiacebu.com/jp/reservation.html">▶クリックしてください</a>' // Custom translation for Net in Japanese
-  },
   'Han-nya': {
     'ja': 'Hannya' // Custom translation for Net in Japanese
   },
@@ -136,16 +133,59 @@ const customTranslations = {
     'ja': '.' // Custom translation for Net in Japanese
   },
   'Chahan and Ramen Soup': {
-    'ja': 'チャーハンとラーメンのスープ' // Custom translation for Net in Japanese
+    'ja': 'チャーハンとラーメンスープ' // Custom translation for Net in Japanese
   },
   'Tonkatsu Set': {
     'ja': 'とんかつセット' // Custom translation for Net in Japanese
   },
   'Gindara Saikyo Yaki': {
     'ja': '銀だら 西京焼き' // Custom translation for Net in Japanese
+  },
+  'Airport Transfer Rates <br>/ Price is subject to change without prior notice': {
+    'ja': '空港送迎料金　 <br>/ Price is subject to change without prior notice' // Custom translation for Net in Japanese
   }
   
+  
 };
+const translationCache = {}; // In-memory cache for storing translations
+let cookiesAccepted = getCookie('cookiesAccepted') === 'true';
+
+// Function to set a cookie
+function setCookie(name, value, days) {
+  const date = new Date();
+  date.setTime(date.getTime() + (days*24*60*60*1000));
+  const expires = "expires=" + date.toUTCString();
+  document.cookie = name + "=" + value + ";" + expires + ";path=/";
+}
+
+// Function to get a cookie
+function getCookie(name) {
+  const cname = name + "=";
+  const decodedCookie = decodeURIComponent(document.cookie);
+  const ca = decodedCookie.split(';');
+  for(let i = 0; i < ca.length; i++) {
+    let c = ca[i];
+    while (c.charAt(0) === ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(cname) === 0) {
+      return c.substring(cname.length, c.length);
+    }
+  }
+  return "";
+}
+
+// Show cookie alert if not accepted
+if (!cookiesAccepted) {
+  document.querySelector('.cookie-alert').classList.add('show');
+}
+
+// Handle cookie acceptance
+document.querySelector('.accept-cookies').addEventListener('click', () => {
+  setCookie('cookiesAccepted', 'true', 365);
+  cookiesAccepted = true;
+  document.querySelector('.cookie-alert').classList.remove('show');
+});
 
 // Function to toggle translation mode
 function toggleTranslation() {
@@ -191,7 +231,6 @@ function toggleLanguageButtons() {
   }
 }
 
-
 // Function to reset elements to original text
 function resetToOriginal() {
   const elementsToTranslate = document.querySelectorAll('.translate');
@@ -207,7 +246,7 @@ function resetToOriginal() {
 
 // Function to translate specific elements on the page with proper synchronization
 async function translatePage(targetLanguage) {
-    $(".preloader").fadeIn("slow");
+  $(".preloader").fadeIn("slow");
   toggleLanguageButtons(); // Adjust button visibility
 
   const elementsToTranslate = document.querySelectorAll('.translate');
@@ -224,28 +263,41 @@ async function translatePage(targetLanguage) {
     let translatedHTML = customTranslations[originalHTML]?.[targetLanguage];
 
     if (!translatedHTML) {
-      // If no custom translation, perform the translation
-      const segments = originalHTML.split(/(<br>)/i); // Split by <br> tags
-      translatedHTML = '';
+      // Check if translation exists in cache
+      const cachedTranslation = cookiesAccepted ? getCookie(originalHTML + '_' + targetLanguage) : null;
+      if (cachedTranslation) {
+        translatedHTML = cachedTranslation;
+      } else {
+        // If no custom translation and not in cache, perform the translation
+        const segments = originalHTML.split(/(<br>)/i); // Split by <br> tags
+        translatedHTML = '';
 
-      for (const segment of segments) {
-        if (segment.toLowerCase() === '<br>') {
-          translatedHTML += segment; // Preserve the <br> tags
-        } else {
-          const sentences = segment.split(/[.!?]/).filter(sentence => sentence.trim());
+        for (const segment of segments) {
+          if (segment.toLowerCase() === '<br>') {
+            translatedHTML += segment; // Preserve the <br> tags
+          } else {
+            const sentences = segment.split(/[.!?]/).filter(sentence => sentence.trim());
 
-          for (const sentence of sentences) {
-            let translatedSentence;
+            for (const sentence of sentences) {
+              let translatedSentence;
 
-            // Check if the sentence has a custom translation
-            if (customTranslations[sentence]) {
-              translatedSentence = customTranslations[sentence][targetLanguage];
-            } else {
-              translatedSentence = await googleTranslate(targetLanguage, sentence.trim());
+              // Check if the sentence has a custom translation
+              if (customTranslations[sentence]) {
+                translatedSentence = customTranslations[sentence][targetLanguage];
+              } else {
+                translatedSentence = await googleTranslate(targetLanguage, sentence.trim());
+                if (cookiesAccepted) {
+                  setCookie(sentence.trim() + '_' + targetLanguage, translatedSentence, 30); // Cache for 30 days
+                }
+              }
+
+              translatedHTML += `${translatedSentence}  `;
             }
-
-            translatedHTML += `${translatedSentence}  `;
           }
+        }
+
+        if (cookiesAccepted) {
+          setCookie(originalHTML + '_' + targetLanguage, translatedHTML.trim(), 30); // Cache for 30 days
         }
       }
     }

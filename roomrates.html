@@ -45,17 +45,69 @@
 		}
 
 		.room-list-item .contact-content {
-			background: white;
+			/* background: white; */
 			padding: 40px 50px;
 			position: relative;
 			-webkit-box-shadow: 0px 4px 60px 0px rgba(0, 0, 0, 0.07);
 			box-shadow: 0px 4px 60px 0px rgba(0, 0, 0, 0.07);
+		}  /* Additional styling if needed */
+        .table-responsive {
+            overflow-x:auto;
+			width: 100%;
+        }
+        th, td {
+            white-space: nowrap;
+			color:#ffff;
+        }
+        @media (max-width: 767.98px) {
+            .table th, .table td {
+                display: block;
+                width: 100%;
+                box-sizing: border-box;
+            }
+            .table thead {
+                display: none;
+            }
+			.table-room-type{
+				background-color: #ffffff;
+				color: #122620;
+				font-weight: bold;
+				font-size:2rem;
+			}
+        }
+		.single-occu{
+			background-color: #b68d4066;
 		}
+		.double-occu{
+			background-color: #122620a8;
+			color: #d6ad60;
+		}
+		.extra-per{
+			background-color: #d6ad60;
+			color: #122620;
+		}
+		.table-room-type{
+			background-color: #ffffff;
+			color: #122620;
+			font-weight: bold;
+			font-size:1rem;
+		}
+		
 		</style>
     </head>
     <!-- End Head -->
     <!-- Body -->
     <body>
+		<div class="card cookie-alert">
+            <div class="card-body">
+              <h5 class="card-title">&#x1F36A; Do you like cookies?</h5>
+              <p class="card-text">We use cookies to ensure you get the best experience on our website.</p>
+              <div class="btn-toolbar justify-content-end">
+                <a href="http://cookiesandyou.com/" target="_blank" class="btn btn-link">Learn more</a>
+                <a href="#" class="btn btn-primary accept-cookies">Accept</a>
+              </div>
+            </div>
+          </div>
 		<div class="preloader">
             <img src="img/preloader.gif" alt="Loading...">
           </div>
@@ -124,12 +176,12 @@
 		<section class="main-slider-area bgc-black-with-lighting rel z-1 pattern-1">
 			<div class="main-slider-active slick-initialized slick-slider slick-dotted">
 				 <div class="slick-list draggable">
-					<div class="slick-track" style="opacity: 1; width: 5396px;"><div class="slider-item slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" tabindex="0" role="tabpanel" id="slick-slide00" aria-describedby="slick-slide-control00" style="width: 1349px; position: relative; left: 0px; top: 0px; z-index: 999; opacity: 1;">
+					<div class="slick-track" style="opacity: 1;"><div class="slider-item slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" tabindex="0" role="tabpanel" id="slick-slide00" aria-describedby="slick-slide-control00" style="width: 1349px; position: relative; left: 0px; top: 0px; z-index: 999; opacity: 1;padding: 40px 40px 0px 40px">
 					 <div class="container">
 						 <div class="row justify-content-end align-items-center">
 							 <div class="col-xl-3">
 								 <div class="slider-content">
-									 <h1>Stay in first class room at<span> very affordable prices! </span></h1>
+									 <h1 class="translate">Stay in first class room at <br><span class="translate"> very affordable prices! </span></h1>
 									 <a href="room.html" class="theme-btn" tabindex="0">Explore Our Rooms <i class="fa fa-angle-right"></i></a>
 								 </div>
 							 </div>
@@ -159,25 +211,18 @@
 		<section class="rooms-list-area pb-120 rpb-90 rel z-2">
             <div class="container">
                 <div class="room-list-item wow fadeInUp delay-0-2s animated" style="visibility: visible; animation-name: fadeInUp;">
-                    <div class="image">
-                        <img src="img/room/Economy-Plus/IMG_5515.JPG" alt="Room">
-                    </div>
-                    <div class="content">
-                        <h3><a href="room_details.html?id=1">Economy Plus</a></h3>
-                        <!-- <ul class="blog-meta">
-                            <li>
-                                <i class="far fa-drafting-compass"></i>
-                            </li>
-                        </ul> -->
-                        <hr>
-                        <div class="price-more">
+					<div class="image">
+						<img src="img/room/Economy-Plus/IMG_5515.JPG" alt="Room" class="img-fluid">
+					</div>
+					<div class="content g-bg-color--darkgreen pattern-1">
+						<div class="price-more">
 							<div class="uk-card uk-card-default table-responsive">
-								<table class="table table-striped table-rounded table-bordered table-gray-300 gy-7 gs-7">
+								<table class="table table-rounded table-bordered table-gray-300 gy-7 gs-7">
 									<thead>
 										<tr class="g-font-size-13--sm text-gray-800">
 											<th scope="col" class="text-center translate">Room Type</th>
 											<th scope="col" class="text-center translate">Per room</th>
-											<th scope="col" class="text-center translate">Regular price: pesos (breakfast included)</th>
+											<th scope="col" class="text-center translate">Regular price: pesos <br>(breakfast included)</th>
 										</tr>
 									</thead>
 									<thead>
@@ -187,41 +232,38 @@
 									</thead>
 									<tbody>
 										<tr class="bg-beige">
-											<td rowspan="2" class="g-font-size-13--sm bg-aquamarine text-center translate"><b class="g-font-size-13--sm">Economy Plus</b></td>
-											<td class="g-font-size-13--sm text-center translate"><b>Single Occupancy</b></td>
-											<td class="g-font-size-13--sm text-center translate"><b>1650/net</b></td>
+											<td rowspan="2" class="g-font-size-13--sm bg-aquamarine text-center table-room-type"> エコノミープラス<br>Economy Plus</td>
+											<td class="g-font-size-13--sm text-center translate single-occu">Single Occupancy</td>
+											<td class="g-font-size-13--sm text-center translate single-occu">1650/net</td>
 										</tr>
 										<tr class="bg-burlywood">
-											<td class="g-font-size-13--sm text-center translate"><b>Double Occupancy</b></td>
-											<td class="g-font-size-13--sm text-center translate"><b>2200/net</b></td>
+											<td class="g-font-size-13--sm text-center translate double-occu">Double Occupancy</td>
+											<td class="g-font-size-13--sm text-center translate double-occu">2200/net</td>
+										</tr>
+										<tr class="bg-burlywood">
+											<td class="g-font-size-13--sm text-center translate extra-per">Extra Person</td>
+											<td colspan="4" class="g-font-size-13--sm text-center translate extra-per">800/net</td>
 										</tr>
 										<!-- Add more rows if needed -->
 									</tbody>
 								</table>
 							</div>
-                        </div>
-                    </div>
-                </div>
+						</div>
+					</div>
+				</div>
 				<div class="room-list-item wow fadeInUp delay-0-2s animated" style="visibility: visible; animation-name: fadeInUp;">
                     <div class="image">
                         <img src="img/room/Standard-twin/IMG_5331.JPG" alt="Room">
                     </div>
-                    <div class="content">
-                        <h3><a href="room_details.html?id=3">Standard</a></h3>
-                        <!-- <ul class="blog-meta">
-                            <li>
-                                <i class="far fa-drafting-compass"></i>
-                            </li>
-                        </ul> -->
-                        <hr>
+                    <div class="content g-bg-color--darkgreen pattern-1">
                         <div class="price-more">
 							<div class="uk-card uk-card-default table-responsive">
-								<table class="table table-striped table-rounded table-bordered table-gray-300 gy-7 gs-7">
+								<table class="table table-rounded table-bordered table-gray-300 gy-7 gs-7">
 									<thead>
 										<tr class="g-font-size-13--sm text-gray-800">
 											<th scope="col" class="text-center translate">Room Type</th>
 											<th scope="col" class="text-center translate">Per room</th>
-											<th scope="col" class="text-center translate">Regular price: pesos (breakfast included)</th>
+											<th scope="col" class="text-center translate">Regular price: pesos <br>(breakfast included)</th>
 										</tr>
 									</thead>
 									<thead>
@@ -231,13 +273,17 @@
 									</thead>
 									<tbody>
 										<tr class="bg-beige">
-											<td rowspan="2" class="g-font-size-13--sm bg-aquamarine text-center translate"><b class="g-font-size-13--sm">Standard</b></td>
-											<td class="g-font-size-13--sm text-center translate"><b>Single Occupancy</b></td>
-											<td class="g-font-size-13--sm text-center translate"><b>1800/net</b></td>
+											<td rowspan="2" class="g-font-size-13--sm bg-aquamarine text-center table-room-type">スタンダード<br>Standard</td>
+											<td class="g-font-size-13--sm text-center translate single-occu">Single Occupancy</td>
+											<td class="g-font-size-13--sm text-center translate single-occu">1800/net</td>
 										</tr>
 										<tr class="bg-burlywood">
-											<td class="g-font-size-13--sm text-center translate"><b>Double Occupancy</b></td>
-											<td class="g-font-size-13--sm text-center translate"><b>2400/net</b></td>
+											<td class="g-font-size-13--sm text-center translate double-occu">Double Occupancy</td>
+											<td class="g-font-size-13--sm text-center translate double-occu">2400/net</td>
+										</tr>
+										<tr class="bg-burlywood">
+											<td class="g-font-size-13--sm text-center translate extra-per">Extra Person</td>
+											<td colspan="4" class="g-font-size-13--sm text-center translate extra-per">800/net</td>
 										</tr>
 										<!-- Add more rows if needed -->
 									</tbody>
@@ -250,22 +296,15 @@
                     <div class="image">
                         <img src="img/room/Deluxe-Single/IMG_5438.JPG" alt="Room">
                     </div>
-                    <div class="content">
-                        <h3><a href="room_details.html?id=4">Deluxe</a></h3>
-                        <!-- <ul class="blog-meta">
-                            <li>
-                                <i class="far fa-drafting-compass"></i>
-                            </li>
-                        </ul> -->
-                        <hr>
+                    <div class="content g-bg-color--darkgreen pattern-1">
                         <div class="price-more">
 							<div class="uk-card uk-card-default table-responsive">
-								<table class="table table-striped table-rounded table-bordered table-gray-300 gy-7 gs-7">
+								<table class="table table-rounded table-bordered table-gray-300 gy-7 gs-7">
 									<thead>
 										<tr class="g-font-size-13--sm text-gray-800">
 											<th scope="col" class="text-center translate">Room Type</th>
 											<th scope="col" class="text-center translate">Per room</th>
-											<th scope="col" class="text-center translate">Regular price: pesos (breakfast included)</th>
+											<th scope="col" class="text-center translate">Regular price: pesos <br>(breakfast included)</th>
 										</tr>
 									</thead>
 									<thead>
@@ -275,13 +314,17 @@
 									</thead>
 									<tbody>
 										<tr class="bg-beige">
-											<td rowspan="2" class="g-font-size-13--sm bg-aquamarine text-center translate"><b class="g-font-size-13--sm">Deluxe</b></td>
-											<td class="g-font-size-13--sm text-center translate"><b>Single Occupancy</b></td>
-											<td class="g-font-size-13--sm text-center translate"><b>2000/net</b></td>
+											<td rowspan="2" class="g-font-size-13--sm bg-aquamarine text-center table-room-type">デラックス<br>Deluxe</td>
+											<td class="g-font-size-13--sm text-center translate single-occu">Single Occupancy</td>
+											<td class="g-font-size-13--sm text-center translate single-occu">2000/net</td>
 										</tr>
 										<tr class="bg-burlywood">
-											<td class="g-font-size-13--sm text-center translate"><b>Double Occupancy</b></td>
-											<td class="g-font-size-13--sm text-center translate"><b>2600/net</b></td>
+											<td class="g-font-size-13--sm text-center translate double-occu">Double Occupancy</td>
+											<td class="g-font-size-13--sm text-center translate double-occu">2600/net</td>
+										</tr>
+										<tr class="bg-burlywood">
+											<td class="g-font-size-13--sm text-center translate extra-per">Extra Person</td>
+											<td colspan="4" class="g-font-size-13--sm text-center translate extra-per">800/net</td>
 										</tr>
 										<!-- Add more rows if needed -->
 									</tbody>
@@ -294,22 +337,15 @@
                     <div class="image">
                         <img src="img/room/Deluxe-Plus/IMG_5200.jpg" alt="Room">
                     </div>
-                    <div class="content">
-                        <h3><a href="room_details.html?id=5">Deluxe Plus</a></h3>
-                        <!-- <ul class="blog-meta">
-                            <li>
-                                <i class="far fa-drafting-compass"></i>
-                            </li>
-                        </ul> -->
-                        <hr>
+                    <div class="content g-bg-color--darkgreen pattern-1">
                         <div class="price-more">
 							<div class="uk-card uk-card-default table-responsive">
-								<table class="table table-striped table-rounded table-bordered table-gray-300 gy-7 gs-7">
+								<table class="table table-rounded table-bordered table-gray-300 gy-7 gs-7">
 									<thead>
 										<tr class="g-font-size-13--sm text-gray-800">
 											<th scope="col" class="text-center translate">Room Type</th>
 											<th scope="col" class="text-center translate">Per room</th>
-											<th scope="col" class="text-center translate">Regular price: pesos (breakfast included)</th>
+											<th scope="col" class="text-center translate">Regular price: pesos <br>(breakfast included)</th>
 										</tr>
 									</thead>
 									<thead>
@@ -319,13 +355,17 @@
 									</thead>
 									<tbody>
 										<tr class="bg-beige">
-											<td rowspan="2" class="g-font-size-13--sm bg-aquamarine text-center translate"><b class="g-font-size-13--sm">Deluxe Plus</b></td>
-											<td class="g-font-size-13--sm text-center translate"><b>Single Occupancy</b></td>
-											<td class="g-font-size-13--sm text-center translate"><b>2500/net</b></td>
+											<td rowspan="2" class="g-font-size-13--sm bg-aquamarine text-center table-room-type">デラックスプラス<br>Deluxe Plus</td>
+											<td class="g-font-size-13--sm text-center translate single-occu">Single Occupancy</td>
+											<td class="g-font-size-13--sm text-center translate single-occu">2500/net</td>
 										</tr>
 										<tr class="bg-burlywood">
-											<td class="g-font-size-13--sm text-center translate"><b>Double Occupancy</b></td>
-											<td class="g-font-size-13--sm text-center translate"><b>3100/net</b></td>
+											<td class="g-font-size-13--sm text-center translate double-occu">Double Occupancy</td>
+											<td class="g-font-size-13--sm text-center translate double-occu">3100/net</td>
+										</tr>
+										<tr class="bg-burlywood">
+											<td class="g-font-size-13--sm text-center translate extra-per">Extra Person</td>
+											<td colspan="4" class="g-font-size-13--sm text-center translate extra-per">800/net</td>
 										</tr>
 										<!-- Add more rows if needed -->
 									</tbody>
@@ -338,22 +378,15 @@
                     <div class="image">
                         <img src="img/room/Superior/Edited/IMG_5477 (1).jpg" alt="Room">
                     </div>
-                    <div class="content">
-                        <h3><a href="room_details.html?id=6">Superior</a></h3>
-                        <!-- <ul class="blog-meta">
-                            <li>
-                                <i class="far fa-drafting-compass"></i>
-                            </li>
-                        </ul> -->
-                        <hr>
+                    <div class="content g-bg-color--darkgreen pattern-1">
                         <div class="price-more">
 							<div class="uk-card uk-card-default table-responsive">
-								<table class="table table-striped table-rounded table-bordered table-gray-300 gy-7 gs-7">
+								<table class="table table-rounded table-bordered table-gray-300 gy-7 gs-7">
 									<thead>
 										<tr class="g-font-size-13--sm text-gray-800">
 											<th scope="col" class="text-center translate">Room Type</th>
 											<th scope="col" class="text-center translate">Per room</th>
-											<th scope="col" class="text-center translate">Regular price: pesos (breakfast included)</th>
+											<th scope="col" class="text-center translate">Regular price: pesos <br>(breakfast included)</th>
 										</tr>
 									</thead>
 									<thead>
@@ -363,13 +396,17 @@
 									</thead>
 									<tbody>
 										<tr class="bg-beige">
-											<td rowspan="2" class="g-font-size-13--sm bg-aquamarine text-center translate"><b class="g-font-size-13--sm">Superior</b></td>
-											<td class="g-font-size-13--sm text-center translate"><b>Single Occupancy</b></td>
-											<td class="g-font-size-13--sm text-center translate"><b>2800/net</b></td>
+											<td rowspan="2" class="g-font-size-13--sm bg-aquamarine text-center table-room-type">スーペリア<br>Superior</td>
+											<td class="g-font-size-13--sm text-center translate single-occu">Single Occupancy</td>
+											<td class="g-font-size-13--sm text-center translate single-occu"><b>2800/net</b></td>
 										</tr>
 										<tr class="bg-burlywood">
-											<td class="g-font-size-13--sm text-center translate"><b>Double Occupancy</b></td>
-											<td class="g-font-size-13--sm text-center translate"><b>3500/net</b></td>
+											<td class="g-font-size-13--sm text-center translate double-occu">Double Occupancy</td>
+											<td class="g-font-size-13--sm text-center translate double-occu">3500/net</td>
+										</tr>
+										<tr class="bg-burlywood">
+											<td class="g-font-size-13--sm text-center translate extra-per">Extra Person</td>
+											<td colspan="4" class="g-font-size-13--sm text-center translate extra-per">800/net</td>
 										</tr>
 										<!-- Add more rows if needed -->
 									</tbody>
@@ -382,22 +419,15 @@
                     <div class="image">
                         <img src="img/room/Executive/IMG_5362.JPG" alt="Room">
                     </div>
-                    <div class="content">
-                        <h3><a href="room_details.html?id=7">Executive</a></h3>
-                        <!-- <ul class="blog-meta">
-                            <li>
-                                <i class="far fa-drafting-compass"></i>
-                            </li>
-                        </ul> -->
-                        <hr>
+                    <div class="content g-bg-color--darkgreen pattern-1">
                         <div class="price-more">
 							<div class="uk-card uk-card-default table-responsive">
-								<table class="table table-striped table-rounded table-bordered table-gray-300 gy-7 gs-7">
+								<table class="table table-rounded table-bordered table-gray-300 gy-7 gs-7">
 									<thead>
 										<tr class="g-font-size-13--sm text-gray-800">
 											<th scope="col" class="text-center translate">Room Type</th>
 											<th scope="col" class="text-center translate">Per room</th>
-											<th scope="col" class="text-center translate">Regular price: pesos (breakfast included)</th>
+											<th scope="col" class="text-center translate">Regular price: pesos <br>(breakfast included)</th>
 										</tr>
 									</thead>
 									<thead>
@@ -407,13 +437,17 @@
 									</thead>
 									<tbody>
 										<tr class="bg-beige">
-											<td rowspan="2" class="g-font-size-13--sm bg-aquamarine text-center translate"><b class="g-font-size-13--sm">エコノミープラス /Economy Plus</b></td>
-											<td class="g-font-size-13--sm text-center translate"><b>Single Occupancy</b></td>
-											<td class="g-font-size-13--sm text-center translate"><b>3500/net</b></td>
+											<td rowspan="2" class="g-font-size-13--sm bg-aquamarine text-center table-room-type">エグゼクティブ<br>Economy Plus</td>
+											<td class="g-font-size-13--sm text-center translate single-occu">Single Occupancy</td>
+											<td class="g-font-size-13--sm text-center translate single-occu">3500/net</td>
 										</tr>
 										<tr class="bg-burlywood">
-											<td class="g-font-size-13--sm text-center translate"><b>Double Occupancy</b></td>
-											<td class="g-font-size-13--sm text-center translate"><b>4300/net</b></td>
+											<td class="g-font-size-13--sm text-center translate double-occu">Double Occupancy</td>
+											<td class="g-font-size-13--sm text-center translate double-occu">4300/net</td>
+										</tr>
+										<tr class="bg-burlywood">
+											<td class="g-font-size-13--sm text-center translate extra-per">Extra Person</td>
+											<td colspan="4" class="g-font-size-13--sm text-center translate extra-per">800/net</td>
 										</tr>
 										<!-- Add more rows if needed -->
 									</tbody>
@@ -426,22 +460,15 @@
                     <div class="image">
                         <img src="img/room/Junior-Suite/IMG_5459.JPG" alt="Room">
                     </div>
-                    <div class="content">
-                        <h3><a href="room_details.html?id=8">Junior Suite</a></h3>
-                        <!-- <ul class="blog-meta">
-                            <li>
-                                <i class="far fa-drafting-compass"></i>
-                            </li>
-                        </ul> -->
-                        <hr>
+                    <div class="content g-bg-color--darkgreen pattern-1">
                         <div class="price-more">
 							<div class="uk-card uk-card-default table-responsive">
-								<table class="table table-striped table-rounded table-bordered table-gray-300 gy-7 gs-7">
+								<table class="table table-rounded table-bordered table-gray-300 gy-7 gs-7">
 									<thead>
 										<tr class="g-font-size-13--sm text-gray-800">
 											<th scope="col" class="text-center translate">Room Type</th>
 											<th scope="col" class="text-center translate">Per room</th>
-											<th scope="col" class="text-center translate">Regular price: pesos (breakfast included)</th>
+											<th scope="col" class="text-center translate">Regular price: pesos <br>(breakfast included)</th>
 										</tr>
 									</thead>
 									<thead>
@@ -451,13 +478,17 @@
 									</thead>
 									<tbody>
 										<tr class="bg-beige">
-											<td rowspan="2" class="g-font-size-13--sm bg-aquamarine text-center translate"><b class="g-font-size-13--sm">Junior Suite</b></td>
-											<td class="g-font-size-13--sm text-center translate"><b>Single Occupancy</b></td>
-											<td class="g-font-size-13--sm text-center translate"><b>4200/net</b></td>
+											<td rowspan="2" class="g-font-size-13--sm bg-aquamarine text-center table-room-type">ジュニアスイート<br>Junior Suite</td>
+											<td class="g-font-size-13--sm text-center translate single-occu">Single Occupancy</td>
+											<td class="g-font-size-13--sm text-center translate single-occu">4200/net</td>
 										</tr>
 										<tr class="bg-burlywood">
-											<td class="g-font-size-13--sm text-center translate"><b>Double Occupancy</b></td>
-											<td class="g-font-size-13--sm text-center translate"><b>5000/net</b></td>
+											<td class="g-font-size-13--sm text-center translate double-occu">Double Occupancy</td>
+											<td class="g-font-size-13--sm text-center translate double-occu">5000/net</td>
+										</tr>
+										<tr class="bg-burlywood">
+											<td class="g-font-size-13--sm text-center translate extra-per">Extra Person</td>
+											<td colspan="4" class="g-font-size-13--sm text-center translate extra-per">800/net</td>
 										</tr>
 										<!-- Add more rows if needed -->
 									</tbody>
@@ -467,20 +498,38 @@
                     </div>
                 </div>
 				<div class="room-list-item wow fadeInUp delay-0-2s animated" style="visibility: visible; animation-name: fadeInUp;">
-                    <div class="image">
+                    <div class="image pattern-1" style="width: 100%;background-color: #b68d40;padding: 30px;text-align: center;padding:10px;">
 							<div class="table-responsive">
-								<table class="table table-striped table-rounded table-bordered table-gray-300 gy-7 gs-7">
-									<tbody><tr><th colspan="4">Airport Transfer Rates / Price is subject to change without prior notice</th></tr>
+								<table class="table table-rounded table-bordered">
+									<tbody><tr><th colspan="4" class="translate" style="text-align: center;">Airport Transfer Rates <br>/ Price is subject to change without prior notice</th></tr>
 									
-									<tr><th class="ar6">am 06:00 - pm 06:00</th><td class="ar6" rowspan="2">Pick up</td><td>1000 pesos</td><td>Van 1200 pesos</td></tr>
-									<tr><td class="ar6">pm 06:01 - am 05:59</td><td class="ar5"> 1200 pesos</td><td class="ar5">Van 1400 pesos</td></tr>
-									<tr><th class="ar7">am 06:00 - pm 06:00</th><td class="ar7" rowspan="2">Drop off</td><td>800 pesos</td><td>Van 1000 pesos</td></tr>
-									<tr><td class="ar7">pm 06:01 - am 05:59</td><td class="ar5"> 1000 pesos</td><td class="ar5">Van 1200 pesos</td></tr>
+									<tr>
+										<th class="table-room-type translate" style="text-align: center;"  rowspan="2">Pick up</th>
+											<td class="double-occu">am 06:00 - pm 06:00 </td>
+											<td class="double-occu translate">1000 pesos</td>
+											<td class="double-occu translate">Van /1200 <span class="translate">pesos</span></td>
+									</tr>
+									<tr>
+										<td class="ar6">pm 06:01 - am 05:59</td>
+										<td class="translate"> 1200 pesos</td>
+										<td class="translate">Van /1400 <span class="translate">pesos</span></td>
+									</tr>
+									<tr>
+										<th class="table-room-type translate" style="text-align: center;"  rowspan="2">Drop off</th>
+										<td class="double-occu">am 06:00 - pm 06:00 </td>
+										<td class="double-occu translate">800 pesos</td>
+										<td class="double-occu translate">Van /1000 <span class="translate">pesos</span></td>
+									</tr>
+									<tr>
+										<td class="ar7">pm 06:01 - am 05:59</td>
+										<td class="ar5">1000 <span class="translate">pesos</span></td>
+										<td class="ar5 translate">Van /1200 <span class="translate">pesos</span></td>
+									</tr>
 									</tbody></table>
 							
 							</div>
                     </div>
-					<div class="contact-content g-bg-color--darkgreen">
+					<div class="contact-content g-bg-color--darkgreen pattern-1">
                         <h3 class="g-color--gold">Contact information / Contact Us</h3>
                         <hr>
                         <div class="price-more g-color--white-opacity">

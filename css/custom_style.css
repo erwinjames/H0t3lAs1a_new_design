@@ -1336,11 +1336,11 @@ ul.impx-list {
 	height: 360px;
 	max-height: 360px;
 }
-.impx-page-heading.rooms {
+/* .impx-page-heading.rooms {
 	background-image: url('../img/room/Superior/Edited/IMG_5482\ \(1\).jpg');
 	background-repeat: no-repeat;
 	background-position: center center
-}
+} */
 .impx-page-heading.room-detail {
 	background-image: url('../img/room/Deluxe-Plus/IMG_5200.jpg');
 	background-repeat: no-repeat;
@@ -1378,7 +1378,7 @@ ul.impx-list {
 }
 .impx-page-heading .page-title {
 	z-index: 2;
-	top: 260px;
+	top: 235px;
 }
 .impx-page-heading .page-title h1 {
 	line-height: 1;
@@ -3551,3 +3551,21 @@ i.icon-bg {
     width: 60px; /* Adjust size as needed */
     height: 60px; /* Adjust size as needed */
     }
+	.cookie-alert {
+		position: fixed;
+		bottom: 15px;
+		right: 15px;
+		width: 320px;
+		margin: 0 !important;
+		z-index: 999;
+		opacity: 0;
+		transform: translateY(100%);
+		transition: all 500ms ease-out;
+	  }
+	  
+	  .cookie-alert.show {
+		opacity: 1;
+		transform: translateY(0%);
+		transition-delay: 1000ms;
+	  }
+	  

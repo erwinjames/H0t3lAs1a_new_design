@@ -3862,13 +3862,13 @@ h6, .h6 {
       font-style: italic; }
     @media only screen and (max-width: 767px) {
       .slider-content h1 {
-        font-size: 55px; } }
+        font-size: 35px; } }
     @media only screen and (max-width: 575px) {
       .slider-content h1 {
-        font-size: 45px; } }
+        font-size: 30px; } }
     @media only screen and (max-width: 375px) {
       .slider-content h1 {
-        font-size: 40px; } }
+        font-size: 30px; } }
 
 .slider-image,
 .slider-content > * {
@@ -5095,7 +5095,8 @@ h6, .h6 {
   .room-list-item .image img {
     width: 100%; }
   .room-list-item .content {
-    background: white;
+    width: 100%;
+    /* background: white; */
     padding: 40px 50px;
     position: relative;
     -webkit-box-shadow: 0px 4px 60px 0px rgba(0, 0, 0, 0.07);
