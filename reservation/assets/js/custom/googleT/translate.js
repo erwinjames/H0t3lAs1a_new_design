@@ -355,3 +355,4 @@ if (isTranslationOn) {
 } else {
   resetToOriginal(); // Otherwise, reset to original text
 }
+

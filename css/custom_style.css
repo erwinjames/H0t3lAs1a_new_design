@@ -3552,13 +3552,15 @@ i.icon-bg {
     height: 60px; /* Adjust size as needed */
     }
 	.cookie-alert {
-		position: fixed;
+	    position: fixed;
 		bottom: 15px;
 		right: 15px;
 		width: 320px;
+		padding: 20px;
 		margin: 0 !important;
 		z-index: 999;
 		opacity: 0;
+		background-color: white;
 		transform: translateY(100%);
 		transition: all 500ms ease-out;
 	  }
