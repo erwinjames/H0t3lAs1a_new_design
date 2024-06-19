@@ -3311,7 +3311,7 @@ i.icon-bg {
 	min-height: 660px;
 }
 .impx-slideshow-fw {
-	top: -60px;
+	top: 0px;
 	position: relative
 }
 .impx-slideshow:before, .impx-slideshow:after {
