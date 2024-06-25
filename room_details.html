@@ -33,13 +33,32 @@
         <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
         <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
 				<style>
-			    #room-number-list {
-					column-count: 2;
-					column-gap: 40px;
+					#room-number-list {
+						column-count: 2;
+						column-gap: 40px;
+						}
+					#room-number-list li {
+						break-inside: avoid-column;
 					}
-				#room-number-list li {
-					break-inside: avoid-column;
-				}
+					@media (min-width: 768px) {
+						#visibleOnDesktop {
+							display: block; /* Show desktop list */
+						}
+						#visibleOnMobile {
+							display: none; /* Hide mobile list */
+						}
+					}
+					@media (max-width: 767px) {
+						#visibleOnDisktop{
+							display: none; /* Hide desktop list */
+						}
+						#sliderOnPc{
+							display:none;
+						}
+						#visibleOnMobile {
+							display: block; /* Show mobile list */
+						}
+					}
 				</style>
     </head>
     <!-- End Head -->
@@ -138,7 +157,7 @@
 			<div class="uk-container">
 				<div data-uk-grid="" class="uk-grid">
 
-					<div class="uk-width-1-1 uk-margin-medium-top uk-first-column">
+					<div id="sliderOnPc" class="uk-width-1-1 uk-margin-medium-top uk-first-column">
 						<!-- slider -->
                         <div class="impx-room-slider">
                             <div class="uk-position-relative uk-slideshow" data-uk-slideshow="animation: fade">
@@ -160,8 +179,47 @@
 					<!-- MAIN CONTENT -->
 					<div class="uk-width-2-3@xl uk-width-2-3@l uk-width-2-3@m uk-width-1-1@s uk-first-column uk-grid-margin">
 						<!-- highlight -->
-						<ul id="slider-thumbnails" class="uk-child-width-1-5@xl uk-child-width-1-5@l uk-child-width-1-5@m uk-child-width-1-5@s uk-grid-medium uk-grid-match uk-grid" data-uk-grid="">
-						
+						<ul id="visibleOnDisktop" class="uk-child-width-1-5@xl uk-child-width-1-5@l uk-child-width-1-5@m uk-child-width-1-5@s uk-grid-medium uk-grid-match uk-grid" data-uk-grid="">
+						    <li class="uk-text-center uk-first-column">
+						    	<div class="uk-card uk-card-default uk-card-body impx-padding-medium"><!-- highlight item #1 -->
+                                    <i class="fi fi-ts-wifi fa-2x impx-text-gold"></i>
+							    	<h3 class="uk-margin-remove-bottom uk-margin-small-top translate" style="font-weight: bold;"></h3>
+							    	
+						    	</div>
+						    </li><!-- highlight item #1 end -->
+						    <li class="uk-text-center"><!-- highlight item #2 -->
+						    	<div class="uk-card uk-card-default uk-card-body impx-padding-medium">
+                                    <i class="fi fi-ts-bath fa-2x impx-text-gold"></i>
+							    	<h3 class="uk-margin-remove-bottom uk-margin-small-top translate" style="font-weight: bold;"></h3>
+							    	
+						    	</div>
+						    </li><!-- highlight item #2 end -->
+						    <li class="uk-text-center"><!-- highlight item #3 -->
+						    	<div class="uk-card uk-card-default uk-card-body impx-padding-medium">
+                                    <i class="fi fi-ts-screen fa-2x impx-text-gold"></i>
+							    	<h3 class="uk-margin-remove-bottom uk-margin-small-top translate" style="font-weight: bold;"></h3>
+							    	
+							    </div>
+						    </li><!-- highlight item #3 end -->
+                            <li class="uk-text-center"><!-- highlight item #3 -->
+						    	<div class="uk-card uk-card-default uk-card-body impx-padding-medium">
+                                    <i class="fi fi-ts-snow-blowing fa-2x impx-text-gold"></i>
+							    	<h3 class="uk-margin-remove-bottom uk-margin-small-top translate" style="font-weight: bold;"></h3>
+							    	
+							    </div>
+						    </li><!-- highlight item #3 end -->
+                            <li class="uk-text-center"><!-- highlight item #3 -->
+						    	<div class="uk-card uk-card-default uk-card-body impx-padding-medium">
+                                    <i class="fi fi-ts-phone-office fa-2x impx-text-gold"></i>
+							    	<h3 class="uk-margin-remove-bottom uk-margin-small-top translate" style="font-weight: bold;"></h3>
+							    	
+							    </div>
+						    </li><!-- highlight item #3 end -->
+                            
+						</ul>
+						<!-- mobile -->
+						<ul id="visibleOnMobile" class="uk-child-width-1-5@xl uk-child-width-1-5@l uk-child-width-1-5@m uk-child-width-1-5@s uk-grid-medium uk-grid-match uk-grid" data-uk-grid="">
+							<!-- List items will be dynamically populated -->
 						</ul>
 						<!-- highlight end -->
 						<!-- room description -->
@@ -444,6 +502,7 @@
 				},
 				error: function(xhr, status, error) {
 					console.error('Error fetching room data:', status, error);
+					// Optionally, handle error UI or retry logic here
 				}
 			});
 		
@@ -453,15 +512,21 @@
 				$('#room-description').html(room.room_description); // Use html() instead of text() to render HTML
 				$('#room-price').text(`$${room.room_price.toFixed(2)}`);
 		
-				const imageContainer = $('#room-images');
-				imageContainer.empty(); // Clear any existing images
+				const listContainer = $('#visibleOnMobile');
+				listContainer.empty(); // Clear any existing items
 		
 				// Add the new images
 				room.room_images.forEach(image => {
-					imageContainer.append(`<img src="${image}" alt="${room.room_name}" />`);
+					listContainer.append(`
+						<li class="uk-text-center uk-first-column">
+							<div class="uk-card uk-card-default uk-card-body impx-padding-medium">
+								<img src="${image}" alt="${room.room_name}" />
+							</div>
+						</li>
+					`);
 				});
 		
-				// Update room number
+				// Update room number list
 				const roomNumberContainer = $('#room-number-list');
 				roomNumberContainer.empty(); // Clear any existing room numbers
 		
@@ -471,10 +536,12 @@
 				const rows = Math.ceil(roomNumbers.length / numColumns);
 		
 				for (let i = 0; i < rows; i++) {
-					const col1 = roomNumbers[i] || "";
-					const col2 = roomNumbers[i + rows] || "";
+					const col1 = roomNumbers[i * numColumns] || "";
+					const col2 = roomNumbers[i * numColumns + 1] || "";
 					roomNumberContainer.append(`<li>${col1}</li><li>${col2}</li>`);
 				}
+		
+				// Optional: Update other UI elements as needed
 			}
 		
 			// Function to populate the UKit slider
@@ -506,6 +573,7 @@
 				UIkit.slideshow('.uk-slideshow', { animation: 'fade' });
 			}
 		</script>
+		
 		
     </body>
     <!-- End Body -->
