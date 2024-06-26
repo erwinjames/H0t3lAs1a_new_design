@@ -69,19 +69,7 @@ body {
   --black-color: #0C0B0B;
   --border-color: #D9DFE7; }
 
-a {
-  color: var(--base-color);
-  cursor: pointer;
-  outline: none;
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
-  text-decoration: none; }
-  a:hover, a:focus, a:visited {
-    text-decoration: none;
-    outline: none; }
-  a:hover {
-    color: var(--primary-color); }
+
 
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   color: var(--heading-color); }

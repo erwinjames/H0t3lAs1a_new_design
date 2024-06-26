@@ -3572,4 +3572,43 @@ i.icon-bg {
 		transform: translateY(0%);
 		transition-delay: 1000ms;
 	  }
-	  
+	  @media (max-width: 768px) { /* Adjust the max-width value as needed */
+		.page-link {
+			display: none;
+		}
+		.sticky {
+			background: #231f20;
+			position: sticky;
+			bottom: 0px;
+			text-align: center;
+			z-index:100;
+		  }
+		  .sticky a{
+			display: inline-block;
+			background: transparent;
+			text-transform: uppercase;
+			font-weight: 500;
+			font-style: normal;
+			font-size: 0.625rem;
+			letter-spacing: 0.3em;
+			color: rgba(223,190,106,0.7);
+			border-radius: 0;
+			padding: 18px 80px 20px;
+			transition: all 0.7s ease-out;
+			background: linear-gradient(270deg, rgba(223,190,106,0.8), rgba(146,111,52,0.8), rgba(34,34,34,0), rgba(34,34,34,0));
+			background-position: 1% 50%;
+			background-size: 300% 300%;
+			text-decoration: none;
+			margin: 0.625rem;
+			border: none;
+			border: 1px solid rgba(223,190,106,0.3);
+		  }
+		  .sticky a:hover{
+			color: #fff;
+			border: 1px solid rgba(223,190,106,0);
+			color: $white;
+			background-position: 99% 50%;
+			text-decoration: none;
+		  }
+		  
+	}
