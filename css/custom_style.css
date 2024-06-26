@@ -3572,6 +3572,9 @@ i.icon-bg {
 		transform: translateY(0%);
 		transition-delay: 1000ms;
 	  }
+	  .sticky{
+		display:none;
+	  }
 	  @media (max-width: 768px) { /* Adjust the max-width value as needed */
 		.page-link {
 			display: none;
@@ -3582,6 +3585,7 @@ i.icon-bg {
 			bottom: 0px;
 			text-align: center;
 			z-index:100;
+			display: block;
 		  }
 		  .sticky a{
 			display: inline-block;
@@ -3609,6 +3613,9 @@ i.icon-bg {
 			color: $white;
 			background-position: 99% 50%;
 			text-decoration: none;
+		  }
+		  .room-margin{
+			margin-top:50px;
 		  }
 		  
 	}
